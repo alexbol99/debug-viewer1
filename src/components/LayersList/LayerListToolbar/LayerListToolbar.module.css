@@ -1,0 +1,24 @@
+.Layer-list-toolbar {
+    background: rgba(147, 128, 108, 0.1);
+    /*padding: 10px;*/
+    text-align: left;
+}
+
+.Layer-list-toolbar button {
+    height:40px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-size: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+.Layer-list-toolbar button:hover {
+    background: rgba(147, 128, 115, 0.1);
+}
+
+.Layer-list-toolbar img {
+    height: 20px;
+}
+
+

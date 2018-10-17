@@ -1,0 +1,42 @@
+.Layer {
+    padding: 3px;
+    /*border-bottom: 1px solid black;*/
+    display: flex;
+    flex-direction: row;
+    tab-index: 1;
+    z-index: -1;
+    /*margin-bottom: 2px;*/
+    /*margin-right: 2px;*/
+    /*background-color: aliceblue;*/
+}
+
+.Layer h4 {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: left;
+}
+
+.LayerSelectionBox {
+    flex: 2;
+    marginRight: 3
+}
+
+.LayerSelectionMark {
+    width: 16px;
+    marginLeft: 2px;
+    cursor: default;
+}
+
+.LayerNameBox {
+    flex: 8;
+    cursor: default;
+    padding: 3px;
+}
+
+.Layer-displayed {
+    /*background-color: aquamarine;*/
+}
+
+.Layer-undisplayed {
+    /*background-color: aliceblue;*/
+}

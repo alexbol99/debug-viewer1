@@ -1,0 +1,22 @@
+.App-toolbar {
+    background: rgba(147, 128, 108, 0.1);
+    /*padding: 10px;*/
+    text-align: left;
+}
+
+.App-toolbar button {
+    height:40px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-size: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+.App-toolbar button:hover {
+    background: rgba(147, 128, 115, 0.1);
+}
+
+.App-toolbar img {
+    height: 20px;
+}

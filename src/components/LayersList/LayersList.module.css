@@ -1,0 +1,13 @@
+.App-layers {
+    /* put the layer list on the left */
+    /*list-style-type:none;*/
+    /* 12em is the width of the columns */
+    flex: 0 0 12em;
+    flex-grow: 0;
+    order: -1;
+    background: rgba(147, 128, 108, 0.1);
+    overflow-y: auto;
+    padding-left: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
+}

@@ -1,0 +1,18 @@
+.App-status-bar {
+    display: flex;
+    flex-direction: row;
+    background: rgba(147, 128, 108, 0.1);
+    align-items: center;
+}
+
+.App-status-bar div {
+    flex: 6;
+    textAlign: "left";
+    marginLeft: 10px;
+    padding: 5px
+}
+
+.App-status-bar h5 {
+    margin: 0;
+    padding: 0
+}
