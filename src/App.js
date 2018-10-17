@@ -1,15 +1,22 @@
 import React, {Component} from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import HeaderComponent from './components/HeaderComponent/HeaderComponent';
 import MainComponent from './components/MainComponent/MainComponent';
 import LayersList from './components/LayersList/LayersList';
 import AsideComponent from './components/AsideComponent/AsideComponent';
 
-import Demo from './components/Constructions/Demo';
-
 import * as ActionTypes from './actions/action-types';
 import './App.css';
+// import asyncComponent from "./components/HighOrderComponents/asyncComponent";
+
+import Demo from './components/Constructions/Demo';
+import BooleanTest from './components/Constructions/BooleanTest';
+
+// const AsyncDemo = asyncComponent( () => {
+//     return import("./components/Constructions/Demo");
+// });
+
 
 class App extends Component {
     constructor(props) {
@@ -52,21 +59,35 @@ class App extends Component {
             <BrowserRouter>
                 <div className="App">
                     <HeaderComponent title={this.state.app.title}/>
-                    <div className="App-body" onPaste={this.handlePaste}>
-                        <MainComponent {...this.props} />
-                        <LayersList
-                            dispatch={this.props.store.dispatch}
-                            stage={this.state.stage}
-                            layers={this.state.layers}
-                        />
-                        <AsideComponent/>
-                        <Route path="/demo" render={ (props) =>
+
+                    <Route path="/" render={(props) =>
+                        <div className="App-body" onPaste={this.handlePaste}>
+                            <MainComponent {...this.props} />
+                            <LayersList
+                                dispatch={this.props.store.dispatch}
+                                stage={this.state.stage}
+                                layers={this.state.layers}
+                            />
+                            <AsideComponent/>
+                        </div>
+                    }
+                    />
+
+                    <Switch>
+                        <Route path="/demo" render={(props) =>
                             <Demo {...props}
-                               dispatch={this.props.store.dispatch}
-                               stage={this.state.stage}
-                               layers={this.state.layers} /> }
+                                  dispatch={this.props.store.dispatch}
+                                  stage={this.state.stage}
+                                  layers={this.state.layers}/>}
                         />
-                    </div>
+
+                        <Route path="/boolean-test" render={(props) =>
+                            <BooleanTest {...props}
+                                  dispatch={this.props.store.dispatch}
+                                  stage={this.state.stage}
+                                  layers={this.state.layers}/>}
+                        />
+                    </Switch>
                 </div>
             </BrowserRouter>
         );

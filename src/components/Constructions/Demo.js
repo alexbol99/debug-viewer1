@@ -24,8 +24,7 @@ class Demo extends Component {
 
             axios("https://gist.githubusercontent.com/alexbol99/825fdf2dd508467cc852eb22aa36183d/raw/d10e853338afd8294eeb3ffdebe3bc380477a978/features")
                 .then( (resp) => {
-                    let text = resp.data;
-                    let job = parseODB("features", text);
+                    let job = parseODB("features", resp.data);
 
                     for (let shape of job.shapes) {
                         let model = new Model(shape, undefined, shape.label);
