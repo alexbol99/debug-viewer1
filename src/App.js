@@ -13,6 +13,8 @@ import './App.css';
 import Demo from './components/Constructions/Demo';
 import BooleanTest from './components/Constructions/BooleanTest';
 import SkeletonRecognition from './components/Constructions/SkeletonRecognition';
+import CollisionDemo from "./components/Constructions/CollisionDemo";
+
 // const AsyncDemo = asyncComponent( () => {
 //     return import("./components/Constructions/Demo");
 // });
@@ -94,6 +96,13 @@ class App extends Component {
                                              applySkeletonRecognition={this.state.app.applySkeletonRecognition}/>}
                     />
 
+                    <Route path="/collision-distance" render={ (props) =>
+                        <CollisionDemo {...props}
+                                       dispatch={this.props.store.dispatch}
+                                       stage={this.state.stage}
+                                       layers={this.state.layers}
+                                       parser={this.state.app.parser} />}
+                    />
                 </div>
             </BrowserRouter>
         );
