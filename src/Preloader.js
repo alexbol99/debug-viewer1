@@ -11,14 +11,14 @@ import pasteData from './middleware/pasteData';
 import stageController from './middleware/stageController';
 // import aabb_demo from './middleware/aabb_demo';
 // import collision_demo from './middleware/collision_demo';
-// import skeleton_recognition from './middleware/skeleton_recognition'
+import skeleton_recognition from './middleware/skeleton_recognition'
 
 const store = createStore(reducer, compose(applyMiddleware(
     log,
     readFiles,
     pasteData,
     /*aabb_demo,*/
-    /*skeleton_recognition,*/
+    skeleton_recognition,
     stageController,
 )));
 

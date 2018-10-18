@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route/*, Switch*/ } from 'react-router-dom';
 
 import HeaderComponent from './components/HeaderComponent/HeaderComponent';
 import MainComponent from './components/MainComponent/MainComponent';
@@ -12,7 +12,7 @@ import './App.css';
 
 import Demo from './components/Constructions/Demo';
 import BooleanTest from './components/Constructions/BooleanTest';
-
+import SkeletonRecognition from './components/Constructions/SkeletonRecognition';
 // const AsyncDemo = asyncComponent( () => {
 //     return import("./components/Constructions/Demo");
 // });
@@ -73,21 +73,27 @@ class App extends Component {
                     }
                     />
 
-                    <Switch>
-                        <Route path="/demo" render={(props) =>
-                            <Demo {...props}
-                                  dispatch={this.props.store.dispatch}
-                                  stage={this.state.stage}
-                                  layers={this.state.layers}/>}
-                        />
 
-                        <Route path="/boolean-test" render={(props) =>
-                            <BooleanTest {...props}
-                                  dispatch={this.props.store.dispatch}
-                                  stage={this.state.stage}
-                                  layers={this.state.layers}/>}
-                        />
-                    </Switch>
+                    <Route path="/demo" render={(props) =>
+                        <Demo {...props}
+                              dispatch={this.props.store.dispatch}
+                              stage={this.state.stage}
+                              layers={this.state.layers} />}
+                    />
+
+                    <Route path="/boolean-test" render={(props) =>
+                        <BooleanTest {...props}
+                                     dispatch={this.props.store.dispatch}
+                                     stage={this.state.stage}
+                                     layers={this.state.layers} />}
+                    />
+
+                    <Route path="/skeleton" render={ (props) =>
+                        <SkeletonRecognition {...props}
+                                             dispatch={this.props.store.dispatch}
+                                             applySkeletonRecognition={this.state.app.applySkeletonRecognition}/>}
+                    />
+
                 </div>
             </BrowserRouter>
         );
