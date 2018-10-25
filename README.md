@@ -11,7 +11,7 @@ This application supports propriate data formats defined in Frontline PCB Soluti
 Viewer is a static application and has no server interaction. All files are loaded from locally accessible places.
 
 Demo with preloaded data here:
-https://alexbol99.github.io/debug-viewer/#demo
+https://alexbol99.github.io/debug-viewer/demo
 
 ## Supported features
 
