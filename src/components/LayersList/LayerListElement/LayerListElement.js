@@ -3,7 +3,7 @@
  */
 
 import React, {Component} from 'react';
-import Modal from "../../UI/ModalPopup";
+import ModalPopup from "../../UI/ModalPopup/ModalPopup";
 import LayerEditForm from "../LayerEditForm/LayerEditForm";
 import styles from './LayerListElement.module.css';
 
@@ -72,14 +72,19 @@ class LayerListElement extends Component {
                 </div>
 
             </li>,
-            this.props.layer.edited ? (
-                <Modal key={2}>
-                    <LayerEditForm
-                        layer={this.props.layer}
-                        onSubmitLayerEditForm={this.props.onSubmitLayerEditForm}
-                        onEscapeLayerEditForm={this.props.onEscapeLayerEditForm}
-                    />
-                </Modal>) : null]
+
+            <ModalPopup
+                key={2}
+                showPopup={this.props.layer.edited}
+                closePopup={this.props.onEscapeLayerEditForm}
+            >
+                <LayerEditForm
+                    layer={this.props.layer}
+                    onSubmitLayerEditForm={this.props.onSubmitLayerEditForm}
+                    onEscapeLayerEditForm={this.props.onEscapeLayerEditForm}
+                />
+            </ModalPopup>
+        ]
     }
 }
 

@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import { BrowserRouter, Route/*, Switch*/ } from 'react-router-dom';
 
-import HeaderComponent from './components/HeaderComponent/HeaderComponent';
-import MainComponent from './components/MainComponent/MainComponent';
-import LayersList from './components/LayersList/LayersList';
-import AsideComponent from './components/AsideComponent/AsideComponent';
+import HeaderComponent from './components/Layout/HeaderComponent/HeaderComponent';
+import MainComponent from './containers/MainComponent/MainComponent';
+import LayersList from './containers/LayerList/LayersList';
+import AsideComponent from './components/Layout/AsideComponent/AsideComponent';
 
 import * as ActionTypes from './actions/action-types';
 import './App.css';

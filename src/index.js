@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 import * as serviceWorker from './serviceWorker';
-import asyncComponent from "./components/HighOrderComponents/asyncComponent";
+import asyncComponent from "./HighOrderComponents/asyncComponent";
 
 const AsyncPreloader = asyncComponent( () => {
     return import("./Preloader");

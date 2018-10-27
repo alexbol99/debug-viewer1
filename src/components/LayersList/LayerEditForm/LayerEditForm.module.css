@@ -1,26 +1,5 @@
-.modal {
-    background-color: rgba(0,0,0,0.2);
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .Layer-edit-form {
-    background-color: rgba(240, 240, 240, 1.0);
-    padding: 1.2em;
-    border-color: rgba(147, 128, 108, 0.1);
-    border-width: 0.1em;
-    border-top-width: 2.4em;
-    border-style: solid;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: move;
-    position: absolute;
+
 }
 
 .Layer-edit-form input, label, textarea {
@@ -29,9 +8,14 @@
 }
 
 .Layer-edit-form input, textarea {
-    font-size: 12px;
-    border: none;
-    padding: 0.2em;
+    outline: none;
+    border: 1px solid #ccc;
+    background-color: white;
+    font: inherit;
+    padding: 6px 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .Layer-edit-form button {

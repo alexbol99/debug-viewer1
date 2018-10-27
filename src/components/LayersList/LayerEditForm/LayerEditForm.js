@@ -14,41 +14,33 @@ const LayerEditForm = (props) => {
             name: form.layerName.value,
             title: form.layerTitle.value
         });
-        props.onSubmitLayerEditForm(props.layer, newLayer);
+        props.onSubmitLayerEditForm(newLayer);
         return false;
     };
+
     let setFocus = (ev) => {
         ev.stopPropagation();
         ev.target.focus();
     };
 
     let onCancelLayerEditForm = () => {
-        props.onEscapeLayerEditForm(props.layer);
+        props.onEscapeLayerEditForm();
     };
-
-    let handleKeyDown = (ev) => {
-        if (ev.code === "Escape") {
-            props.onEscapeLayerEditForm(props.layer);
-        }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
 
     return (
-        <div className={styles.modal}>
-            <form className={styles["Layer-edit-form"]}
-                  id="layerEditForm"
-                  draggable="true"
-                  onSubmit={onSubmitLayerEditForm}
-            >
-                <label>Layer name:</label><br/>
-                <input type="text" id="layer-name" name="layerName" size="80" defaultValue={props.layer.name} onClick={setFocus}/><br/>
-                <label>Layer info:</label><br/>
-                <textarea id="layer-title" name="layerTitle" cols="78" rows="3" defaultValue={props.layer.title} onClick={setFocus}></textarea><br/>
-                <button onClick={onCancelLayerEditForm}>Cancel</button>
-                <button onClick={onSubmitLayerEditForm}>OK</button>
-            </form>
-        </div>
+        <form className={styles["Layer-edit-form"]}
+              id="layerEditForm"
+              onSubmit={onSubmitLayerEditForm}
+        >
+            <label>Layer name:</label><br/>
+            <input type="text" id="layer-name" name="layerName" size="80" defaultValue={props.layer.name}
+                   onClick={setFocus}/><br/>
+            <label>Layer info:</label><br/>
+            <textarea id="layer-title" name="layerTitle" cols="78" rows="3" defaultValue={props.layer.title}
+                      onClick={setFocus}></textarea><br/>
+            <button onClick={onCancelLayerEditForm}>Cancel</button>
+            <button onClick={onSubmitLayerEditForm}>OK</button>
+        </form>
     )
 };
 

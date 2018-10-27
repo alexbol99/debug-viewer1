@@ -3,12 +3,12 @@
  */
 
 import React, {Component} from 'react';
-import ToolbarComponent from './ToolbarComponent/ToolbarComponent';
-import CanvasComponent from './CanvasComponent/CanvasComponent';
-import StatusComponent from './StatusComponent/StatusComponent';
+import ToolbarComponent from '../../components/MainComponent/ToolbarComponent/ToolbarComponent';
+import CanvasComponent from '../../components/MainComponent/CanvasComponent/CanvasComponent';
+import StatusComponent from '../../components/Layout/StatusComponent/StatusComponent';
 
-import {StageComponent} from "./GraphicsEditor/stageComponent";
-import LayersComponent from './GraphicsEditor/layersComponent';
+import {StageComponent} from "../../components/MainComponent/GraphicsEditor/stageComponent";
+import LayersComponent from '../../components/MainComponent/GraphicsEditor/layersComponent';
 
 import * as ActionTypes from '../../actions/action-types';
 import {Layers} from '../../models/layers';
@@ -17,8 +17,9 @@ import {MeasureShapesTool} from "../../tools/measureShapesTool";
 import {DisplayCoordsTool} from "../../tools/displayCoordsTool";
 import {AabbDemoTool} from "../../tools/aabbDemoTool";
 
-import Modal from "../UI/ModalPopup";
-import AboutPopup from "./AboutPopup/AboutPopup";
+import ModalPopup from "../../components/UI/ModalPopup/ModalPopup";
+
+import AboutPopup from "../../components/AboutPopup/AboutPopup";
 
 import styles from './MainComponent.module.css';
 
@@ -386,16 +387,17 @@ class MainComponent extends Component {
 
                 <StatusComponent />
 
-                {this.state.app.showAboutPopup ? (
-                    <Modal>
-                        <AboutPopup
-                            title={this.state.app.title}
-                            version={this.state.app.version}
-                            build={this.state.app.build}
-                            onCloseAboutPopupPressed={this.closeAboutPopup}
-                        />
-                    </Modal>
-                ) : null}
+                <ModalPopup
+                    showPopup={this.state.app.showAboutPopup}
+                    closePopup={this.closeAboutPopup}
+                >
+                    <AboutPopup
+                        title={this.state.app.title}
+                        version={this.state.app.version}
+                        build={this.state.app.build}
+                        // onCloseAboutPopupPressed={this.closeAboutPopup}
+                    />
+                </ModalPopup>
 
             </main>
         )

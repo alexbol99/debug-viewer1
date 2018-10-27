@@ -281,21 +281,21 @@ function layers(state = [], action) {
 
         case ActionTypes.SUBMIT_LAYER_EDIT_FORM_PRESSED:
             return state.map((layer) => {
-                if (layer !== action.layer) {
-                    return layer;
+                if (layer.edited) {
+                    return layer.setNameAndTitle(action.newLayer.name, action.newLayer.title);
                 }
                 else {
-                    return layer.setNameAndTitle(action.newLayer.name, action.newLayer.title);
+                    return layer;
                 }
             });
 
         case ActionTypes.ESCAPE_LAYER_EDIT_FORM_PRESSED:
             return state.map((layer) => {
-                if (layer !== action.layer) {
-                    return layer;
+                if (layer.edited) {             // !== action.layer) {
+                    return layer.setEdited(false);
                 }
                 else {
-                    return layer.setEdited(false);
+                    return layer;
                 }
             });
 

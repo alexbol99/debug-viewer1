@@ -3,8 +3,8 @@
  */
 
 import React, {Component} from 'react';
-import LayerListToolbar from "./LayerListToolbar/LayerListToolbar";
-import LayerListElement from './LayerListElement/LayerListElement';
+import LayerListToolbar from "../../components/LayersList/LayerListToolbar/LayerListToolbar";
+import LayerListElement from '../../components/LayersList/LayerListElement/LayerListElement';
 import * as ActionTypes from '../../actions/action-types';
 import { Layers } from '../../models/layers';
 
@@ -37,18 +37,16 @@ class LayersList extends Component {
         // });
     };
 
-    onSubmitLayerEditForm = (layer, newLayer) => {
+    onSubmitLayerEditForm = (newLayer) => {
         this.dispatch({
             type: ActionTypes.SUBMIT_LAYER_EDIT_FORM_PRESSED,
-            layer: layer,
             newLayer: newLayer
         });
     };
 
-    onEscapeLayerEditForm = (layer) => {
+    onEscapeLayerEditForm = () => {
         this.dispatch({
-            type: ActionTypes.ESCAPE_LAYER_EDIT_FORM_PRESSED,
-            layer: layer
+            type: ActionTypes.ESCAPE_LAYER_EDIT_FORM_PRESSED
         });
     };
 
