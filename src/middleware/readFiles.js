@@ -1,4 +1,4 @@
-import * as ActionTypes from '../actions/action-types';
+import * as ActionTypes from '../store/action-types';
 import { Layers } from '../models/layers';
 // import { Shape } from '../models/shape';
 import { Model } from "../models/model";

@@ -6,7 +6,7 @@ import MainComponent from './containers/MainComponent/MainComponent';
 import LayersList from './containers/LayerList/LayersList';
 import AsideComponent from './components/Layout/AsideComponent/AsideComponent';
 
-import * as ActionTypes from './actions/action-types';
+import * as ActionTypes from './store/action-types';
 import './App.css';
 // import asyncComponent from "./components/HighOrderComponents/asyncComponent";
 
@@ -39,7 +39,7 @@ class App extends Component {
     handleHashChange = (event) => {
         this.props.store.dispatch({
             type: ActionTypes.WINDOW_HASH_CHANGED,
-            stage: this.state.stage
+            stage: this.state.app.stage
         });
     };
 
@@ -60,14 +60,17 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <div className="App">
-                    <HeaderComponent title={this.state.app.title}/>
+                    <HeaderComponent
+                        title={this.state.app.title}
+                        version={this.state.app.version}
+                    />
 
                     <Route path="/" render={(props) =>
                         <div className="App-body" onPaste={this.handlePaste}>
                             <MainComponent {...this.props} />
                             <LayersList
                                 dispatch={this.props.store.dispatch}
-                                stage={this.state.stage}
+                                stage={this.state.app.stage}
                                 layers={this.state.layers}
                             />
                             <AsideComponent/>
@@ -79,14 +82,14 @@ class App extends Component {
                     <Route path="/demo" render={(props) =>
                         <Demo {...props}
                               dispatch={this.props.store.dispatch}
-                              stage={this.state.stage}
+                              stage={this.state.app.stage}
                               layers={this.state.layers} />}
                     />
 
                     <Route path="/boolean-test" render={(props) =>
                         <BooleanTest {...props}
                                      dispatch={this.props.store.dispatch}
-                                     stage={this.state.stage}
+                                     stage={this.state.app.stage}
                                      layers={this.state.layers} />}
                     />
 
@@ -99,7 +102,7 @@ class App extends Component {
                     <Route path="/collision-distance" render={ (props) =>
                         <CollisionDemo {...props}
                                        dispatch={this.props.store.dispatch}
-                                       stage={this.state.stage}
+                                       stage={this.state.app.stage}
                                        layers={this.state.layers}
                                        parser={this.state.app.parser} />}
                     />

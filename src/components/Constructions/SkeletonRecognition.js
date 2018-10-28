@@ -1,5 +1,5 @@
 import /*React,*/ {Component} from 'react';
-import * as ActionTypes from "../../actions/action-types";
+import * as ActionTypes from "../../store/action-types";
 
 class SkeletonRecognition extends Component {
     componentDidMount() {

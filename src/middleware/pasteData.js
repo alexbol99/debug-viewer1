@@ -1,4 +1,4 @@
-import * as ActionTypes from "../actions/action-types";
+import * as ActionTypes from "../store/action-types";
 import {Layers} from "../models/layers";
 
 const pasteData = ({ dispatch, getState }) => next => action => {
@@ -8,7 +8,7 @@ const pasteData = ({ dispatch, getState }) => next => action => {
     }
 
     let state = getState();
-    let stage = state.stage;
+    let stage = state.app.stage;
     let layers = state.layers;
     let parser = state.app.parser;
 

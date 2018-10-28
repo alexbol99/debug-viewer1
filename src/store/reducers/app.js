@@ -1,0 +1,151 @@
+import * as ActionTypes from "../action-types";
+import {Parser} from "../../models/parser";
+
+const unitsList = [
+    {
+        name: "pixels",
+        decimals: 0,
+        divisor: 1
+    },
+    {
+        name: "inch",
+        decimals: 7,
+        divisor: 10160000
+    },
+    {
+        name: "mm",
+        decimals: 6,
+        divisor: 400000
+    }];
+
+const defaultAppState = {
+    title: "Debug Viewer",
+    version: process.env.REACT_APP_VERSION,
+    build: "",
+    units: "pixels",
+    decimals: 0,
+    divisor: 1,
+    // bg: "#F1F1F1",
+    parser: new Parser(),
+    widthOn: true,
+    displayVertices: false,
+    displayLabels: true,
+    measurePointsActive: false,
+    zoomFactor: undefined,
+    originX: undefined,
+    originY: undefined,
+    showAboutPopup: false,
+    importDataToNewLayer: true,       // if false, import data to affected layer
+    showSkeletonRecognitionButton: false,
+    applySkeletonRecognition: false,
+    stage: null
+};
+
+const app = (state = defaultAppState, action) => {
+    switch (action.type) {
+        case ActionTypes.NEW_STAGE_CREATED:
+            return Object.assign({}, state, {
+                stage: action.stage,
+                zoomFactor: action.stage.zoomFactor * action.stage.resolution,
+                originX: action.stage.origin.x,
+                originY: action.stage.origin.y,
+            });
+
+        case ActionTypes.MOUSE_WHEEL_MOVE_ON_STAGE:
+        case ActionTypes.PAN_AND_ZOOM_TO_SHAPE:
+            return Object.assign({}, state, {
+                zoomFactor: action.stage.zoomFactor * action.stage.resolution,
+                originX: action.stage.origin.x,
+                originY: action.stage.origin.y,
+            });
+        case ActionTypes.MOUSE_MOVED_ON_STAGE:
+            return Object.assign({}, state, {
+                originX: action.stage.origin.x,
+                originY: action.stage.origin.y
+            });
+        case ActionTypes.TOGGLE_UNITS_CLICKED:
+            let curUnitsId = unitsList.findIndex(units => state.units === units.name);
+            let newUnits = unitsList[(curUnitsId + 1) % 3];
+            return Object.assign({}, state, {
+                units: newUnits.name,
+                decimals: newUnits.decimals,
+                divisor: newUnits.divisor
+            });
+        case ActionTypes.TOGGLE_WIDTH_MODE_CLICKED:
+            return Object.assign({}, state, {
+                widthOn: !state.widthOn,
+                displayVertices: state.widthOn ? state.displayVertices : false
+            });
+        case ActionTypes.TOGGLE_DISPLAY_VERTICES_CLICKED:
+            if (state.displayVertices) {
+                return Object.assign({}, state, {
+                    displayVertices: false
+                });
+            }
+            else {
+                return Object.assign({}, state, {
+                    widthOn: false,
+                    displayVertices: true
+                });
+            }
+
+        case ActionTypes.TOGGLE_DISPLAY_LABELS_CLICKED:
+            return Object.assign({}, state, {
+                displayLabels: !state.displayLabels
+            });
+
+        case ActionTypes.SHOW_ABOUT_POPUP_BUTTON_PRESSED:
+            return Object.assign({}, state, {
+                showAboutPopup: true
+            });
+        case ActionTypes.CLOSE_ABOUT_POPUP_BUTTON_PRESSED:
+            return Object.assign({}, state, {
+                showAboutPopup: false
+            });
+
+        case ActionTypes.PAN_BY_DRAG_BUTTON_CLICKED:
+            return Object.assign({}, state, {
+                measurePointsActive: false
+            });
+
+        case ActionTypes.MEASURE_POINTS_BUTTON_PRESSED:
+            return Object.assign({}, state, {
+                measurePointsActive: true
+            });
+        case ActionTypes.MEASURE_SHAPES_BUTTON_PRESSED:
+            return Object.assign({}, state, {
+                measurePointsActive: false
+            });
+        case ActionTypes.MOUSE_DOWN_ON_STAGE:
+            if (state.hoveredShape) {
+                return state
+            }
+            else {
+                return Object.assign({}, state, {
+                    measureShapesFirstClick: true,
+                    firstMeasuredShape: null,
+                    firstMeasuredLayer: null,
+                    secondMeasuredShape: null,
+                    secondMeasuredLayer: null,
+                    distance: undefined,
+                    shortestSegment: null
+                });
+            }
+        case ActionTypes.SKELETON_RECOGNITION_URI:
+            return Object.assign({}, state, {
+                showSkeletonRecognitionButton: true
+            });
+        case ActionTypes.SKELETON_RECOGNITION_BUTTON_PRESSED:
+            return Object.assign({}, state, {
+                applySkeletonRecognition: true
+            });
+        case ActionTypes.LAYER_LIST_PANEL_PRESSED:
+            return state;  // only to cause refresh of layers list component
+        case ActionTypes.AABB_TREE_NEXT_LEVEL:
+            return state;
+        default:
+            return state;
+    }
+};
+
+export default app;

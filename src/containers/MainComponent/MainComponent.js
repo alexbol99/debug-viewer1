@@ -10,7 +10,7 @@ import StatusComponent from '../../components/Layout/StatusComponent/StatusCompo
 import {StageComponent} from "../../components/MainComponent/GraphicsEditor/stageComponent";
 import LayersComponent from '../../components/MainComponent/GraphicsEditor/layersComponent';
 
-import * as ActionTypes from '../../actions/action-types';
+import * as ActionTypes from '../../store/action-types';
 import {Layers} from '../../models/layers';
 import {MeasurePointsTool} from '../../tools/measurePointsTool';
 import {MeasureShapesTool} from "../../tools/measureShapesTool";
@@ -35,7 +35,7 @@ class MainComponent extends Component {
         // alert("resized")
         this.dispatch({
             type: ActionTypes.STAGE_RESIZED,
-            stage: this.state.stage
+            stage: this.state.app.stage
         });
     };
 
@@ -48,7 +48,7 @@ class MainComponent extends Component {
     handleMouseMove = (stageX, stageY) => {
         this.dispatch({
             type: ActionTypes.MOUSE_MOVED_ON_STAGE,
-            stage: this.state.stage,
+            stage: this.state.app.stage,
             x: stageX,
             y: stageY,
             dx: this.state.mouse.startX ? stageX - this.state.mouse.startX : undefined,
@@ -60,7 +60,7 @@ class MainComponent extends Component {
         // start pan stage
         this.dispatch({
             type: ActionTypes.MOUSE_DOWN_ON_STAGE,
-            stage: this.state.stage,
+            stage: this.state.app.stage,
             x: stageX,
             y: stageY
         })
@@ -69,10 +69,10 @@ class MainComponent extends Component {
     handleMouseUp = (stageX, stageY) => {
         // stop pan stage
         // Patch bug in Firefox when dispatch is not fired
-        this.state.stage.panByMouseStop();
+        this.state.app.stage.panByMouseStop();
         this.dispatch({
             type: ActionTypes.MOUSE_UP_ON_STAGE,
-            state: this.state.stage,
+            state: this.state.app.stage,
             x: stageX,
             y: stageY
         })
@@ -82,7 +82,7 @@ class MainComponent extends Component {
         if (delta !== 0) {
             this.dispatch({
                 type: ActionTypes.MOUSE_WHEEL_MOVE_ON_STAGE,
-                stage: this.state.stage,
+                stage: this.state.app.stage,
                 x: stageX,
                 y: stageY,
                 delta: delta
@@ -119,7 +119,7 @@ class MainComponent extends Component {
         this.dispatch({
             type: ActionTypes.FILENAME_LIST_SELECTED,
             files: files,
-            stage: this.state.stage,
+            stage: this.state.app.stage,
             layers: this.state.layers
         });
     };
@@ -130,7 +130,7 @@ class MainComponent extends Component {
         // TODO: dispatch PAN_AND_ZOOM instead ?
         this.dispatch({
             type: ActionTypes.PAN_AND_ZOOM_TO_SHAPE,
-            stage: this.state.stage,
+            stage: this.state.app.stage,
             shape: layer
         })
     };
@@ -262,10 +262,10 @@ class MainComponent extends Component {
     }
 
     render() {
-        let displayCoordsTool = this.state.stage ? (
+        let displayCoordsTool = this.state.app.stage ? (
             <DisplayCoordsTool
                 key="displayCoordinatedTool"
-                stage={this.state.stage}
+                stage={this.state.app.stage}
                 units={this.state.app.units}
                 divisor={this.state.app.divisor}
                 decimals={this.state.app.decimals}
@@ -277,7 +277,7 @@ class MainComponent extends Component {
         let measurePointsTool =
             this.state.app.measurePointsActive ? (
                 <MeasurePointsTool
-                    stage={this.state.stage}
+                    stage={this.state.app.stage}
                     divisor={this.state.app.divisor}
                     decimals={this.state.app.decimals}
                     onMouseWheelMove={this.handleMouseWheelMove}
@@ -293,7 +293,7 @@ class MainComponent extends Component {
         this.state.measureShapesTool.shortestSegment && measuredLayersDisplayed ? (
             <MeasureShapesTool
                 key="MeasureShapesTool"
-                stage={this.state.stage}
+                stage={this.state.app.stage}
                 firstMeasuredShape={this.state.measureShapesTool.firstMeasuredShape}
                 secondMeasuredShape={this.state.measureShapesTool.secondMeasuredShape}
                 firstMeasuredLayer={this.state.measureShapesTool.firstMeasuredLayer}
@@ -308,7 +308,7 @@ class MainComponent extends Component {
         let aabbDemoTool = this.state.aabbDemoTool.aabbDemoToolActivated ? (
             <AabbDemoTool
                 key="AabbDemoTool"
-                stage={this.state.stage}
+                stage={this.state.app.stage}
                 firstMeasuredShape={this.state.measureShapesTool.firstMeasuredShape}
                 secondMeasuredShape={this.state.measureShapesTool.secondMeasuredShape}
                 firstMeasuredLayer={this.state.measureShapesTool.firstMeasuredLayer}
@@ -354,7 +354,7 @@ class MainComponent extends Component {
                 />
 
                 <CanvasComponent
-                    stage={this.state.stage}
+                    stage={this.state.app.stage}
                     onStageCreated={this.registerStage}
                     onMouseDown={this.handleMouseDown}
                     onMouseMove={this.handleMouseMove}
@@ -363,10 +363,10 @@ class MainComponent extends Component {
                 />
 
                 <StageComponent
-                    stage={this.state.stage}
+                    stage={this.state.app.stage}
                 >
                     <LayersComponent
-                        stage={this.state.stage}
+                        stage={this.state.app.stage}
                         layers={this.state.layers}
                         displayVertices={this.state.app.displayVertices}
                         displayLabels={this.state.app.displayLabels}

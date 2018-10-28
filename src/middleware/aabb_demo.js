@@ -1,4 +1,4 @@
-import * as ActionTypes from '../actions/action-types';
+import * as ActionTypes from '../store/action-types';
 // import { parseXML } from "../models/parserXML";
 // import { Layers } from '../models/layers';
 // import { Model } from "../models/model";

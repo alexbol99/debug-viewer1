@@ -5,7 +5,7 @@
 import React, {Component} from 'react';
 import LayerListToolbar from "../../components/LayersList/LayerListToolbar/LayerListToolbar";
 import LayerListElement from '../../components/LayersList/LayerListElement/LayerListElement';
-import * as ActionTypes from '../../actions/action-types';
+import * as ActionTypes from '../../store/action-types';
 import { Layers } from '../../models/layers';
 
 import styles from './LayersList.module.css';

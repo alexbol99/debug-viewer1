@@ -4,7 +4,7 @@ import axios from "axios";
 import {Layers} from "../../models/layers";
 import {parseODB} from "../../models/parserODB";
 import {Model} from "../../models/model";
-import * as ActionTypes from "../../actions/action-types";
+import * as ActionTypes from "../../store/action-types";
 
 class Demo extends Component {
     state={

@@ -1,4 +1,4 @@
-import * as ActionTypes from '../actions/action-types';
+import * as ActionTypes from '../store/action-types';
 
 const stageController = ({ getState, dispatch }) => next => action => {
 

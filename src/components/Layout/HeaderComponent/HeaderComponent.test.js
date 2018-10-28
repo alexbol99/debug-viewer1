@@ -6,7 +6,7 @@ import renderer from 'react-test-renderer';
 import {HeaderComponent} from './HeaderComponent';
 
 import { createStore } from 'redux';
-import { reducer } from '../../../reducer';
+import { reducer } from '../../../store/reducer';
 const store = createStore(reducer);
 
 describe('<HeaderComponent />', () => {

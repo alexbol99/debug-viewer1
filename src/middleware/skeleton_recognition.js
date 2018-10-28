@@ -1,4 +1,4 @@
-import * as ActionTypes from '../actions/action-types';
+import * as ActionTypes from '../store/action-types';
 import {Layers} from "../models/layers";
 
 import Flatten from 'flatten-js';
@@ -18,7 +18,7 @@ const skeleton_recognition = ({dispatch, getState}) => next => action => {
     if (action.type === ActionTypes.SKELETON_RECOGNITION_BUTTON_PRESSED) {
 
         let state = getState();
-        let stage = state.stage;
+        let stage = state.app.stage;
 
         let layers = state.layers;
         let currentLayer = Layers.getAffected(layers);

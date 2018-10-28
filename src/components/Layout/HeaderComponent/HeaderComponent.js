@@ -4,13 +4,13 @@
 
 import React from 'react';
 import classes from './HeaderComponent.module.css';
-// import Logo from '../Logo/Logo';
+import Logo from '../Logo/Logo';
 
 const HeaderComponent = (props) => {
     return (
         <header className={classes["App-header"]}>
-            {/*<Logo />*/}
-            <h2>{props.title} v{process.env.REACT_APP_VERSION}</h2>
+            <Logo />
+            <h2>{props.title} v{props.version}</h2>
         </header>
     )
 };

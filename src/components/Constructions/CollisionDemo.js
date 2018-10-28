@@ -4,7 +4,7 @@ import CollisionDistance from "../../models/collisionDistance";
 import axios from "axios";
 import {Layers} from "../../models/layers";
 // import {Model} from "../../models/model";
-import * as ActionTypes from "../../actions/action-types";
+import * as ActionTypes from "../../store/action-types";
 
 let {vector} = Flatten;
 
