@@ -4,6 +4,7 @@ import {Layers} from "../../models/layers";
 const layers = (state = [], action) => {
     let curLayer = state.find(layer => layer.affected);
     let curLayerId = state.findIndex(layer => layer.affected);
+    let newState;
 
     switch (action.type) {
         case ActionTypes.ADD_LAYER_PRESSED:

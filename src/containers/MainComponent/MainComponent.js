@@ -15,10 +15,8 @@ import {Layers} from '../../models/layers';
 import {MeasurePointsTool} from '../../tools/measurePointsTool';
 import {MeasureShapesTool} from "../../tools/measureShapesTool";
 import {DisplayCoordsTool} from "../../tools/displayCoordsTool";
-import {AabbDemoTool} from "../../tools/aabbDemoTool";
 
 import ModalPopup from "../../components/UI/ModalPopup/ModalPopup";
-
 import AboutPopup from "../../components/AboutPopup/AboutPopup";
 
 import styles from './MainComponent.module.css';
@@ -305,39 +303,10 @@ class MainComponent extends Component {
             />
         ) : null;
 
-        let aabbDemoTool = this.state.aabbDemoTool.aabbDemoToolActivated ? (
-            <AabbDemoTool
-                key="AabbDemoTool"
-                stage={this.state.app.stage}
-                firstMeasuredShape={this.state.measureShapesTool.firstMeasuredShape}
-                secondMeasuredShape={this.state.measureShapesTool.secondMeasuredShape}
-                firstMeasuredLayer={this.state.measureShapesTool.firstMeasuredLayer}
-                secondMeasuredLayer={this.state.measureShapesTool.secondMeasuredLayer}
-                firstMeasuredShapeLevel={this.state.aabbDemoTool.firstMeasuredShapeLevel}
-                secondMeasuredShapeLevel={this.state.aabbDemoTool.secondMeasuredShapeLevel}
-                distance={this.state.measureShapesTool.distance}
-                shortestSegment={this.state.measureShapesTool.shortestSegment}
-                selectedEdgesTree={this.state.aabbDemoTool.selectedEdgesTree}
-                minStop={this.state.aabbDemoTool.minStop}
-            />
-        ) : null;
-
-        // let collisionDemoTool = this.state.collisionDistanceDemoToolActivated ? (
-        //     <CollisionDistanceDemoTool
-        //         key="CollisionDemoTool"
-        //         stage={this.props.stage}
-        //         firstMeasuredShape={this.state.measureShapesTool.firstMeasuredShape}
-        //         secondMeasuredShape={this.state.measureShapesTool.secondMeasuredShape}
-        //         firstMeasuredLayer={this.state.measureShapesTool.firstMeasuredLayer}
-        //         secondMeasuredLayer={this.state.measureShapesTool.secondMeasuredLayer}
-        //     />
-        //     ) : null;
-
         return (
             <main className={styles["Main-content"]}>
                 <ToolbarComponent
                     units={this.state.app.units}
-                    aabbDemoToolActivated={this.state.aabbDemoTool.aabbDemoToolActivated}
                     showSkeletonRecognitionButton={this.state.app.showSkeletonRecognitionButton}
                     onFileSelected={this.handleFileSelect}
                     onHomeButtonPressed={this.setHomeView}
@@ -348,7 +317,6 @@ class MainComponent extends Component {
                     onToggleVerticesPressed={this.toggleDisplayVertices}
                     onToggleLabelsPressed={this.toggleDisplayLabels}
                     onShowAboutPopupPressed={this.showAboutPopup}
-                    onAabbToolNext={this.aabbToolNext}
                     onSkeletonRecognitionButtonPressed={this.onSkeletonRecognitionButtonPressed}
                     onUnitClicked={this.toggleUnits}
                 />
@@ -382,7 +350,6 @@ class MainComponent extends Component {
                     {displayCoordsTool}
                     {measurePointsTool}
                     {measureShapesTool}
-                    {aabbDemoTool}
                 </StageComponent>
 
                 <StatusComponent />

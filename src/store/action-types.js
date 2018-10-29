@@ -1,10 +1,8 @@
 /**
  * Created by alexanderbol on 13/04/2017.
  */
-// export const MAIN_CANVAS_MOUNTED = "MAIN_CANVAS_MOUNTED";
 export const NEW_STAGE_CREATED = "NEW_STAGE_CREATED";
 export const STAGE_RESIZED = "STAGE_RESIZED";
-export const WINDOW_HASH_CHANGED = "WINDOW_HASH_CHANGED";
 
 export const NEW_SHAPE_PASTED = "NEW_SHAPE_PASTED";
 

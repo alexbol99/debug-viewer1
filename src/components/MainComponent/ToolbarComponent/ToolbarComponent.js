@@ -75,15 +75,6 @@ class ToolbarComponent extends Component {
                 {/*<button title="Settings" onClick={this.notImplemented}>*/}
                     {/*<img src={setting} alt="setting" />*/}
                 {/*</button>*/}
-                {this.props.aabbDemoToolActivated ? (
-                    <button title="AABB Tree Demo" onClick={this.props.onAabbToolNext}>
-                        <FontAwesome
-                            name='tree'
-                            size='2x'
-                            style={{color: "grey"}}
-                        />
-                    </button>
-                ) : null}
 
                 {/*{this.props.showCollisionDemoToolButton ? (*/}
                     {/*<button title="Collision Distance Demo" onClick={this.props.onCollisionDemoButtonPressed}>*/}

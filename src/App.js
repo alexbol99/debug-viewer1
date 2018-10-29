@@ -8,7 +8,7 @@ import AsideComponent from './components/Layout/AsideComponent/AsideComponent';
 
 import * as ActionTypes from './store/action-types';
 import './App.css';
-// import asyncComponent from "./components/HighOrderComponents/asyncComponent";
+// import asyncComponent from "./components/hoc/asyncComponent";
 
 import Demo from './components/Constructions/Demo';
 import BooleanTest from './components/Constructions/BooleanTest';
@@ -36,12 +36,12 @@ class App extends Component {
         });
     };
 
-    handleHashChange = (event) => {
-        this.props.store.dispatch({
-            type: ActionTypes.WINDOW_HASH_CHANGED,
-            stage: this.state.app.stage
-        });
-    };
+    // handleHashChange = (event) => {
+    //     this.props.store.dispatch({
+    //         type: ActionTypes.WINDOW_HASH_CHANGED,
+    //         stage: this.state.app.stage
+    //     });
+    // };
 
     componentWillMount() {
         // this.dispatch = this.props.store.dispatch;
@@ -52,9 +52,9 @@ class App extends Component {
         this.setState(nextProps.store.getState());
     }
 
-    componentDidMount(e) {
-        window.onhashchange = this.handleHashChange;
-    }
+    // componentDidMount(e) {
+    //     window.onhashchange = this.handleHashChange;
+    // }
 
     render() {
         return (
@@ -71,7 +71,7 @@ class App extends Component {
                             <LayersList
                                 dispatch={this.props.store.dispatch}
                                 stage={this.state.app.stage}
-                                layers={this.state.layers}
+
                             />
                             <AsideComponent/>
                         </div>

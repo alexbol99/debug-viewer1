@@ -6,7 +6,9 @@ import React, {Component} from 'react';
 import LayerListToolbar from "../../components/LayersList/LayerListToolbar/LayerListToolbar";
 import LayerListElement from '../../components/LayersList/LayerListElement/LayerListElement';
 import * as ActionTypes from '../../store/action-types';
+import * as actions from '../../store/actions/LayerListActions';
 import { Layers } from '../../models/layers';
+import { connect } from 'react-redux';
 
 import styles from './LayersList.module.css';
 
@@ -17,18 +19,18 @@ class LayersList extends Component {
         this.dispatch = param.dispatch;
     }
 
-    onLayerListClicked = () => {
-        this.dispatch({
-            type: ActionTypes.LAYER_LIST_PANEL_PRESSED
-        });
-    };
+    // onLayerListClicked = () => {
+    //     this.dispatch({
+    //         type: ActionTypes.LAYER_LIST_PANEL_PRESSED
+    //     });
+    // };
 
-    onLayerClicked = (layer) => {
-        this.dispatch({
-            type: ActionTypes.TOGGLE_DISPLAY_LAYER_PRESSED,
-            layer: layer
-        });
-    };
+    // onLayerClicked = (layer) => {
+    //     this.dispatch({
+    //         type: ActionTypes.TOGGLE_DISPLAY_LAYER_PRESSED,
+    //         layer: layer
+    //     });
+    // };
 
     onLayerDoubleClicked = (layer) => {
         // this.dispatch({
@@ -159,7 +161,7 @@ class LayersList extends Component {
         return (
             <div className={styles["App-layers"]}
                  ref="layersComponent"
-                 onClick={this.onLayerListClicked}
+                 onClick={this.props.onLayerListClicked}
             >
                 {/*<h5>Layers</h5>*/}
                 <LayerListToolbar
@@ -172,13 +174,13 @@ class LayersList extends Component {
                     style={{maxHeight:0.82*(this.height-40),padding:0,overflow:'auto'}}>
                 { this.props.layers.map((layer) =>
                     <LayerListElement
-                        onLayerClicked={() => this.onLayerClicked(layer)}
+                        key={layer.name}
+                        layer={layer}
+                        onLayerClicked={() => this.props.onLayerClicked(layer)}
                         onLayerDoubleClicked={() => this.onLayerDoubleClicked(layer)}
                         onAffectedBoxClicked={(event) => this.onAffectedBoxClicked(event, layer)}
                         onSubmitLayerEditForm={this.onSubmitLayerEditForm}
                         onEscapeLayerEditForm={this.onEscapeLayerEditForm}
-                        key={layer.name}
-                        layer={layer}
                     />)
                 }
                 </ul>
@@ -189,4 +191,19 @@ class LayersList extends Component {
     }
 }
 
-export default LayersList;
+const mapStateToProps = state => {
+    return {
+        layers: state.layers
+    }
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onLayerListClicked: () => dispatch(actions.refreshLayerList()),
+        onLayerClicked: (layer) => dispatch(actions.toggleDisplayLayer(layer))
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(LayersList);
+
+// export default LayersList;

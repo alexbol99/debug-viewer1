@@ -10,19 +10,11 @@ import reducer from './store/reducer';
 import log from './middleware/log';
 import readFiles from './middleware/readFiles';
 import pasteData from './middleware/pasteData';
-import stageController from './middleware/stageController';
-// import aabb_demo from './middleware/aabb_demo';
-// import collision_demo from './middleware/collision_demo';
+import stageController from './middleware/stageController'
 import skeleton_recognition from './middleware/skeleton_recognition'
 
-const store = createStore(reducer, applyMiddleware(
-    log,
-    readFiles,
-    pasteData,
-    /*aabb_demo,*/
-    skeleton_recognition,
-    stageController,
-));
+const store = createStore(reducer,
+    applyMiddleware(log, readFiles, pasteData, skeleton_recognition, stageController));
 
 const Preloader = () => {
     return (
