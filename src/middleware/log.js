@@ -1,4 +1,4 @@
-import * as ActionTypes from '../store/action-types';
+import * as ActionTypes from '../store/actionTypes';
 
 const log = ({ getState, dispatch }) => next => action => {
 

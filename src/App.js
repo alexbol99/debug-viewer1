@@ -6,19 +6,15 @@ import MainComponent from './containers/MainComponent/MainComponent';
 import LayersList from './containers/LayerList/LayersList';
 import AsideComponent from './components/Layout/AsideComponent/AsideComponent';
 
-import * as ActionTypes from './store/action-types';
+import * as ActionTypes from './store/actionTypes';
+import { connect } from 'react-redux';
+
 import './App.css';
-// import asyncComponent from "./components/hoc/asyncComponent";
 
 import Demo from './components/Constructions/Demo';
 import BooleanTest from './components/Constructions/BooleanTest';
 import SkeletonRecognition from './components/Constructions/SkeletonRecognition';
 import CollisionDemo from "./components/Constructions/CollisionDemo";
-
-// const AsyncDemo = asyncComponent( () => {
-//     return import("./components/Constructions/Demo");
-// });
-
 
 class App extends Component {
     constructor(props) {
@@ -36,13 +32,6 @@ class App extends Component {
         });
     };
 
-    // handleHashChange = (event) => {
-    //     this.props.store.dispatch({
-    //         type: ActionTypes.WINDOW_HASH_CHANGED,
-    //         stage: this.state.app.stage
-    //     });
-    // };
-
     componentWillMount() {
         // this.dispatch = this.props.store.dispatch;
         this.setState(this.props.store.getState());
@@ -52,64 +41,54 @@ class App extends Component {
         this.setState(nextProps.store.getState());
     }
 
-    // componentDidMount(e) {
-    //     window.onhashchange = this.handleHashChange;
-    // }
-
     render() {
         return (
             <BrowserRouter>
                 <div className="App">
                     <HeaderComponent
-                        title={this.state.app.title}
-                        version={this.state.app.version}
+                        title={this.props.title}
+                        version={this.props.version}
                     />
 
                     <Route path="/" render={(props) =>
                         <div className="App-body" onPaste={this.handlePaste}>
                             <MainComponent {...this.props} />
-                            <LayersList
-                                dispatch={this.props.store.dispatch}
-                                stage={this.state.app.stage}
-
-                            />
-                            <AsideComponent/>
+                            <LayersList />
+                            <AsideComponent />
                         </div>
                     }
                     />
 
+                    <Route path="/demo" component={Demo} />
+                    <Route path="/boolean-test" component={BooleanTest} />
+                    <Route path="/skeleton" component={SkeletonRecognition} />
+                    <Route path="/collision-distance" component={CollisionDemo} />
 
-                    <Route path="/demo" render={(props) =>
-                        <Demo {...props}
-                              dispatch={this.props.store.dispatch}
-                              stage={this.state.app.stage}
-                              layers={this.state.layers} />}
-                    />
-
-                    <Route path="/boolean-test" render={(props) =>
-                        <BooleanTest {...props}
-                                     dispatch={this.props.store.dispatch}
-                                     stage={this.state.app.stage}
-                                     layers={this.state.layers} />}
-                    />
-
-                    <Route path="/skeleton" render={ (props) =>
-                        <SkeletonRecognition {...props}
-                                             dispatch={this.props.store.dispatch}
-                                             applySkeletonRecognition={this.state.app.applySkeletonRecognition}/>}
-                    />
-
-                    <Route path="/collision-distance" render={ (props) =>
-                        <CollisionDemo {...props}
-                                       dispatch={this.props.store.dispatch}
-                                       stage={this.state.app.stage}
-                                       layers={this.state.layers}
-                                       parser={this.state.app.parser} />}
-                    />
                 </div>
             </BrowserRouter>
         );
     }
 }
 
-export default App;
+const mapStateToProps = state => {
+    return {
+        title: state.app.title,
+        version: state.app.version
+    }
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        panAndZoomToShape: (stage, layer) => dispatch({
+            type: ActionTypes.PAN_AND_ZOOM_TO_SHAPE,
+            stage: stage,
+            shape: layer
+        }),
+        addNewLayer: (layer) => dispatch({
+            type: ActionTypes.ADD_NEW_LAYER,
+            layer: layer
+        })
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

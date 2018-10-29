@@ -11,3 +11,8 @@
     margin-top: 0;
     margin-bottom: 0;
 }
+
+.App-layers ul {
+    padding:0;
+    overflow:auto;
+}

@@ -1,15 +1,27 @@
 import /*React,*/ {Component} from 'react';
-import * as ActionTypes from "../../store/action-types";
+import * as ActionTypes from "../../store/actionTypes";
+import { connect } from 'react-redux';
 
 class SkeletonRecognition extends Component {
     componentDidMount() {
-        this.props.dispatch({
-            type: ActionTypes.SKELETON_RECOGNITION_URI
-        });
+        this.props.applySkeletonRecognition();
     }
     render() {
         return null;
     }
 }
 
-export default SkeletonRecognition;
+const mapStateToProps = state => {
+    return {
+        layers: state.layers,
+        stage: state.app.stage
+    }
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        applySkeletonRecognition: () => dispatch({type: ActionTypes.SKELETON_RECOGNITION_URI})
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SkeletonRecognition);

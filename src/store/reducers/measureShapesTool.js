@@ -1,4 +1,4 @@
-import * as ActionTypes from "../action-types";
+import * as ActionTypes from "../actionTypes";
 import Flatten from "flatten-js";
 
 const defaultMeasureShapesTool = {

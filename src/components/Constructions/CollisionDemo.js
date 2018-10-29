@@ -4,7 +4,8 @@ import CollisionDistance from "../../models/collisionDistance";
 import axios from "axios";
 import {Layers} from "../../models/layers";
 // import {Model} from "../../models/model";
-import * as ActionTypes from "../../store/action-types";
+import * as ActionTypes from "../../store/actionTypes";
+import connect from "react-redux/es/connect/connect";
 
 let {vector} = Flatten;
 
@@ -39,17 +40,11 @@ class CollisionDemo extends Component {
                     let polygon3 = polygon2.translate(vector(-collision, 0));
                     layer.add(polygon3);
 
-                    layers.push(layer);
+                    // layers.push(layer);
 
-                    this.props.dispatch({
-                        type: ActionTypes.PAN_AND_ZOOM_TO_SHAPE,
-                        stage: stage,
-                        shape: layer
-                    });
-
-                    this.props.dispatch({
-                        type: ActionTypes.COLLISION_DEMO_URI
-                    })
+                    this.props.panAndZoomToShape(stage, layer);
+                    this.props.addNewLayer(layer);
+                    this.props.applyCollisionDemo();
                 });
             this.setState({done:true})
         }
@@ -59,4 +54,29 @@ class CollisionDemo extends Component {
     }
 }
 
-export default CollisionDemo;
+const mapStateToProps = state => {
+    return {
+        layers: state.layers,
+        stage: state.app.stage,
+        parser: state.app.parser
+    }
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        panAndZoomToShape: (stage, layer) => dispatch({
+            type: ActionTypes.PAN_AND_ZOOM_TO_SHAPE,
+            stage: stage,
+            shape: layer
+        }),
+        addNewLayer: (layer) => dispatch({
+            type: ActionTypes.ADD_NEW_LAYER,
+            layer: layer
+        }),
+        applyCollisionDemo: () => dispatch({
+            type: ActionTypes.COLLISION_DEMO_URI
+        })
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(CollisionDemo);

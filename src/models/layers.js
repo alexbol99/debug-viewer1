@@ -83,8 +83,15 @@ export class Layers {
     }
 
     static delete(layers, layer) {
-        // let index = layers.findIndex((l) => l === layer);
+        let index = layers.findIndex((l) => l === layer);
         let newLayers = layers.filter(l => l !== layer);
+        if (index > 0) {
+            newLayers[index-1].affected = true;
+            if (newLayers[index-1].color === "") {
+                newLayers[index - 1].color = Layers.getNextColor(newLayers);
+            }
+            newLayers[index-1].displayed = true;
+        }
         return newLayers;
         // another option to delete from array:
         // const newLayers = [...layers]

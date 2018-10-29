@@ -1,4 +1,4 @@
-import * as ActionTypes from '../store/action-types';
+import * as ActionTypes from '../store/actionTypes';
 import {Layers} from "../models/layers";
 
 import Flatten from 'flatten-js';

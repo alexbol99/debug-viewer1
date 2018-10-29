@@ -10,7 +10,7 @@ import StatusComponent from '../../components/Layout/StatusComponent/StatusCompo
 import {StageComponent} from "../../components/MainComponent/GraphicsEditor/stageComponent";
 import LayersComponent from '../../components/MainComponent/GraphicsEditor/layersComponent';
 
-import * as ActionTypes from '../../store/action-types';
+import * as ActionTypes from '../../store/actionTypes';
 import {Layers} from '../../models/layers';
 import {MeasurePointsTool} from '../../tools/measurePointsTool';
 import {MeasureShapesTool} from "../../tools/measureShapesTool";

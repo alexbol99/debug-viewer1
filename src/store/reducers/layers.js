@@ -1,20 +1,29 @@
-import * as ActionTypes from "../action-types";
+import * as ActionTypes from "../actionTypes";
 import {Layers} from "../../models/layers";
 
 const layers = (state = [], action) => {
-    let curLayer = state.find(layer => layer.affected);
-    let curLayerId = state.findIndex(layer => layer.affected);
-    let newState;
+    let affectedLayer = state.find(layer => layer.affected);
+    let affectedLayerId = state.findIndex(layer => layer.affected);
+    let newLayer;
 
     switch (action.type) {
-        case ActionTypes.ADD_LAYER_PRESSED:
+        case ActionTypes.ADD_LAYER_BUTTON_PRESSED:
+            newLayer = Layers.newLayer(action.stage, state);
+            return [...state, newLayer];
+
+        case ActionTypes.ADD_NEW_LAYER:
             return [...state, action.layer];
 
         case ActionTypes.DELETE_LAYER_BUTTON_PRESSED:
-            return Layers.delete(action.layers, action.layer);
+            if (affectedLayer) {
+                return Layers.delete(state, affectedLayer);
+            }
+            else {
+                return state;
+            }
 
         case ActionTypes.SORT_LAYERS_BUTTON_PRESSED:
-            return Layers.sort(action.layers);
+            return Layers.sort(state);
 
         case ActionTypes.TOGGLE_DISPLAY_LAYER_PRESSED:
             let color = "";
@@ -52,19 +61,19 @@ const layers = (state = [], action) => {
                 }
             });
 
-        case ActionTypes.NEW_SHAPE_PASTED:
-            return state.map((layer) => {
-                if (layer.affected) {
-                    return layer.addShapesArray(action.shapesArray);
-                }
-                else {
-                    return layer;
-                }
-            });
+        // case ActionTypes.NEW_SHAPE_PASTED:
+        //     return state.map((layer) => {
+        //         if (layer.affected) {
+        //             return layer.addShapesArray(action.shapesArray);
+        //         }
+        //         else {
+        //             return layer;
+        //         }
+        //     });
 
         case ActionTypes.OPEN_LAYER_EDIT_FORM_PRESSED:
             return state.map((layer) => {
-                if (layer !== action.layer) {
+                if (layer !== affectedLayer) {
                     return layer;
                 }
                 else {
@@ -93,21 +102,21 @@ const layers = (state = [], action) => {
             });
 
         case ActionTypes.LAYERS_LIST_ARROW_DOWN_PRESSED:
-            if (curLayerId === state.length - 1) {
+            if (affectedLayerId === state.length - 1) {
                 return state;
             }
             else {
 
-                let nextLayer = state[curLayerId + 1];
+                let nextLayer = state[affectedLayerId + 1];
 
                 return state.map(layer => {
-                    if (layer === curLayer) {
+                    if (layer === affectedLayer) {
                         let newCurLayer = layer.toggleDisplayed("");
                         newCurLayer.affected = false;
                         return newCurLayer;
                     }
                     else if (layer === nextLayer) {
-                        let color = curLayer.color;
+                        let color = affectedLayer.color;
                         let newNextLayer = layer.toggleDisplayed(color);
                         newNextLayer.affected = true;
                         return newNextLayer;
@@ -119,20 +128,20 @@ const layers = (state = [], action) => {
             }
 
         case ActionTypes.LAYERS_LIST_ARROW_UP_PRESSED:
-            if (curLayerId === 0) {
+            if (affectedLayerId === 0) {
                 return state;
             }
             else {
-                let nextLayer = state[curLayerId - 1];
+                let nextLayer = state[affectedLayerId - 1];
 
                 return state.map(layer => {
-                    if (layer === curLayer) {
+                    if (layer === affectedLayer) {
                         let newCurLayer = layer.toggleDisplayed("");
                         newCurLayer.affected = false;
                         return newCurLayer;
                     }
                     else if (layer === nextLayer) {
-                        let newNextLayer = layer.toggleDisplayed(curLayer.color);
+                        let newNextLayer = layer.toggleDisplayed(affectedLayer.color);
                         newNextLayer.displayed = true;
                         newNextLayer.affected = true;
                         return newNextLayer;

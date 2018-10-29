@@ -1,4 +1,4 @@
-import * as ActionTypes from '../store/action-types';
+import * as ActionTypes from '../store/actionTypes';
 import { Layers } from '../models/layers';
 // import { Shape } from '../models/shape';
 import { Model } from "../models/model";
@@ -74,7 +74,7 @@ const readAsText = (reader, file, stage, layers, dispatch, files) => {
                 });
             }
             dispatch({
-                type: ActionTypes.ADD_LAYER_PRESSED,
+                type: ActionTypes.ADD_NEW_LAYER,
                 layer: layer
             })
 
@@ -123,7 +123,7 @@ const readAsImage = (reader, file, stage, layers, dispatch, files) => {
         }
 
         dispatch({
-            type: ActionTypes.ADD_LAYER_PRESSED,
+            type: ActionTypes.ADD_NEW_LAYER,
             layer: layer
         })
 

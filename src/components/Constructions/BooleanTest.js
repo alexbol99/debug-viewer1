@@ -2,7 +2,8 @@ import /*React,*/ {Component} from 'react';
 import Flatten from 'flatten-js';
 import BooleanOp from 'flatten-boolean-op';
 import {Layers} from "../../models/layers";
-import * as ActionTypes from '../../store/action-types';
+import * as ActionTypes from '../../store/actionTypes';
+import { connect } from 'react-redux';
 
 let {point, arc, Polygon} = Flatten;
 let {subtract, intersect} = BooleanOp;
@@ -70,11 +71,7 @@ class BooleanTest extends Component {
             layers[0].affected = true;
             layers[0].displayed = true;
 
-            this.props.dispatch({
-                type: ActionTypes.PAN_AND_ZOOM_TO_SHAPE,
-                stage: stage,
-                shape: layers[0]
-            });
+            this.props.panAndZoomToShape(stage, layers[0]);
 
             this.setState({done:true});
         }
@@ -84,4 +81,25 @@ class BooleanTest extends Component {
     }
 }
 
-export default BooleanTest;
+const mapStateToProps = state => {
+    return {
+        layers: state.layers,
+        stage: state.app.stage
+    }
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        panAndZoomToShape: (stage, layer) => dispatch({
+            type: ActionTypes.PAN_AND_ZOOM_TO_SHAPE,
+            stage: stage,
+            shape: layer
+        }),
+        addNewLayer: (layer) => dispatch({
+            type: ActionTypes.ADD_NEW_LAYER,
+            layer: layer
+        })
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(BooleanTest);

@@ -5,98 +5,12 @@
 import React, {Component} from 'react';
 import LayerListToolbar from "../../components/LayersList/LayerListToolbar/LayerListToolbar";
 import LayerListElement from '../../components/LayersList/LayerListElement/LayerListElement';
-import * as ActionTypes from '../../store/action-types';
-import * as actions from '../../store/actions/LayerListActions';
-import { Layers } from '../../models/layers';
+import * as actions from '../../store/actions/layersActions';
 import { connect } from 'react-redux';
-
 import styles from './LayersList.module.css';
 
 class LayersList extends Component {
-    constructor(param) {
-        super();
-        this.height = 0;
-        this.dispatch = param.dispatch;
-    }
-
-    // onLayerListClicked = () => {
-    //     this.dispatch({
-    //         type: ActionTypes.LAYER_LIST_PANEL_PRESSED
-    //     });
-    // };
-
-    // onLayerClicked = (layer) => {
-    //     this.dispatch({
-    //         type: ActionTypes.TOGGLE_DISPLAY_LAYER_PRESSED,
-    //         layer: layer
-    //     });
-    // };
-
-    onLayerDoubleClicked = (layer) => {
-        // this.dispatch({
-        //     type: ActionTypes.OPEN_LAYER_EDIT_FORM_PRESSED,
-        //     layer: layer
-        // });
-    };
-
-    onSubmitLayerEditForm = (newLayer) => {
-        this.dispatch({
-            type: ActionTypes.SUBMIT_LAYER_EDIT_FORM_PRESSED,
-            newLayer: newLayer
-        });
-    };
-
-    onEscapeLayerEditForm = () => {
-        this.dispatch({
-            type: ActionTypes.ESCAPE_LAYER_EDIT_FORM_PRESSED
-        });
-    };
-
-    onAffectedBoxClicked = (event, layer) => {
-        event.stopPropagation();
-        this.dispatch({
-            type: ActionTypes.TOGGLE_AFFECTED_LAYER_PRESSED,
-            layer: layer
-        });
-    };
-
-    onAddLayerSelected = () => {
-        let layer = Layers.newLayer(this.props.stage, this.props.layers);
-
-        this.dispatch({
-            type: ActionTypes.ADD_LAYER_PRESSED,
-            stage: this.props.stage,
-            layer: layer
-        })
-    };
-
-    onEditLayerSelected = () => {
-        let layer = Layers.getAffected(this.props.layers);
-        if (!layer) return;
-
-        this.dispatch({
-            type: ActionTypes.OPEN_LAYER_EDIT_FORM_PRESSED,
-            layer: layer
-        });
-    };
-
-    onDeleteLayerSelected = () => {
-        let layer = Layers.getAffected(this.props.layers);
-        if (!layer) return;
-
-        this.dispatch({
-            type: ActionTypes.DELETE_LAYER_BUTTON_PRESSED,
-            layers: this.props.layers,
-            layer: layer
-        });
-    };
-
-    onSortLayersSelected = () => {
-        this.dispatch({
-            type: ActionTypes.SORT_LAYERS_BUTTON_PRESSED,
-            layers: this.props.layers
-        });
-    };
+    height = 0;
 
     handleKeyDown = (e) => {
         // e.stopPropagation();
@@ -111,15 +25,17 @@ class LayersList extends Component {
             switch (e.code) {
                 case "ArrowRight":
                 case "ArrowDown":
-                    this.dispatch({
-                        type: ActionTypes.LAYERS_LIST_ARROW_DOWN_PRESSED
-                    });
+                    this.props.setAffectedNextLayer();
+                    // this.dispatch({
+                    //     type: ActionTypes.LAYERS_LIST_ARROW_DOWN_PRESSED
+                    // });
                     break;
                 case "ArrowLeft":
                 case "ArrowUp":
-                    this.dispatch({
-                        type: ActionTypes.LAYERS_LIST_ARROW_UP_PRESSED
-                    });
+                    this.props.setAffectedPrevLayer();
+                    // this.dispatch({
+                    //     type: ActionTypes.LAYERS_LIST_ARROW_UP_PRESSED
+                    // });
                     break;
                 /* tab does not work properly
             case "Tab":
@@ -165,22 +81,20 @@ class LayersList extends Component {
             >
                 {/*<h5>Layers</h5>*/}
                 <LayerListToolbar
-                    onAddLayerButtonClicked={this.onAddLayerSelected}
-                    onEditLayerButtonClicked={this.onEditLayerSelected}
-                    onDeleteLayerButtonClicked={this.onDeleteLayerSelected}
-                    onSortLayersButtonClicked={this.onSortLayersSelected}
+                    onAddLayerButtonClicked={() => this.props.onAddLayerButtonClicked(this.props.stage)}
+                    onEditLayerButtonClicked={this.props.onEditLayerButtonClicked}
+                    onDeleteLayerButtonClicked={this.props.onDeleteLayerButtonClicked}
+                    onSortLayersButtonClicked={this.props.onSortLayersButtonClicked}
                 />
-                <ul id="layersList"
-                    style={{maxHeight:0.82*(this.height-40),padding:0,overflow:'auto'}}>
+                <ul style={{maxHeight:0.82*(this.height-40)}}>
                 { this.props.layers.map((layer) =>
                     <LayerListElement
                         key={layer.name}
                         layer={layer}
                         onLayerClicked={() => this.props.onLayerClicked(layer)}
-                        onLayerDoubleClicked={() => this.onLayerDoubleClicked(layer)}
-                        onAffectedBoxClicked={(event) => this.onAffectedBoxClicked(event, layer)}
-                        onSubmitLayerEditForm={this.onSubmitLayerEditForm}
-                        onEscapeLayerEditForm={this.onEscapeLayerEditForm}
+                        onAffectedBoxClicked={(event) => this.props.onAffectedBoxClicked(event, layer)}
+                        onSubmitLayerEditForm={this.props.onSubmitLayerEditForm}
+                        onEscapeLayerEditForm={this.props.onEscapeLayerEditForm}
                     />)
                 }
                 </ul>
@@ -193,14 +107,24 @@ class LayersList extends Component {
 
 const mapStateToProps = state => {
     return {
-        layers: state.layers
+        layers: state.layers,
+        stage: state.app.stage
     }
 };
 
 const mapDispatchToProps = dispatch => {
     return {
+        onAddLayerButtonClicked: (stage) => dispatch(actions.addEmptyLayer(stage)),
+        onEditLayerButtonClicked: () => dispatch(actions.openAffectedLayerEditForm()),
+        onDeleteLayerButtonClicked: () => dispatch(actions.deleteAffectedLayer()),
+        onSortLayersButtonClicked: () => dispatch(actions.sortLayers()),
+        onLayerClicked: (layer) => dispatch(actions.toggleDisplayLayer(layer)),
+        onAffectedBoxClicked: (event, layer) => dispatch(actions.toggleAffectedLayer(event, layer)),
+        onSubmitLayerEditForm: (newLayer) => dispatch(actions.updateLayer(newLayer)),
+        onEscapeLayerEditForm: () => dispatch(actions.closeEditLayerForm()),
         onLayerListClicked: () => dispatch(actions.refreshLayerList()),
-        onLayerClicked: (layer) => dispatch(actions.toggleDisplayLayer(layer))
+        setAffectedNextLayer: () => dispatch(actions.setAffectedNextLayer()),
+        setAffectedPrevLayer: () => dispatch(actions.setAffectedPrevLayer())
     }
 };
 

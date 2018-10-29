@@ -1,4 +1,4 @@
-import * as ActionTypes from "../action-types";
+import * as ActionTypes from "../actionTypes";
 
 const defaultMouseState = {
     x: 0,
