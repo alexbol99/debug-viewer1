@@ -94,14 +94,15 @@ const app = (state = defaultAppState, action) => {
                 displayLabels: !state.displayLabels
             });
 
-        case ActionTypes.SHOW_ABOUT_POPUP_BUTTON_PRESSED:
+        case ActionTypes.TOGGLE_ABOUT_POPUP_CLICKED:
             return Object.assign({}, state, {
-                showAboutPopup: true
+                showAboutPopup: !state.showAboutPopup
             });
-        case ActionTypes.CLOSE_ABOUT_POPUP_BUTTON_PRESSED:
-            return Object.assign({}, state, {
-                showAboutPopup: false
-            });
+
+        // case ActionTypes.CLOSE_ABOUT_POPUP_BUTTON_PRESSED:
+        //     return Object.assign({}, state, {
+        //         showAboutPopup: false
+        //     });
 
         case ActionTypes.PAN_BY_DRAG_BUTTON_CLICKED:
             return Object.assign({}, state, {

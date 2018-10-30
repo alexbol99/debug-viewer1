@@ -1,9 +1,7 @@
-"use strict";
-
 import Flatten from "flatten-js";
 // let Flatten = require('flatten-js');
 
-let {Point, Vector, Segment, Arc, Line, Box, Polygon} = Flatten;
+let {Vector, Segment, Arc, Line, Box, Polygon} = Flatten;
 
 class CollisionDistance {
     static apply(polygon1, polygon2) {
@@ -54,6 +52,7 @@ class CollisionDistance {
         let intersections = line.intersect(shape);          // segment or arc
         let collision_distance = Number.POSITIVE_INFINITY;
         for (let ip of intersections) {
+            // eslint-disable-next-line
             let [distance, shortest_segment] = point.distanceTo(ip);
             if (distance < collision_distance) {
                 collision_distance = distance;
@@ -123,6 +122,7 @@ class CollisionDistance {
         distance = CollisionDistance.point2shape(arc2.center, arc_enlarged);
         if (distance < collision_distance) {
             // additional check that transformed arc actually touching
+            // eslint-disable-next-line
             let [dist_tmp, shortest_segment_tmp] =
                 arc1.distanceTo( CollisionDistance.translateArc(arc2, new Vector(-distance,0)));
             if (Flatten.Utils.EQ_0(dist_tmp)) {
@@ -137,6 +137,7 @@ class CollisionDistance {
             distance = CollisionDistance.point2shape(arc2.center, arc_reduced);
             if (distance < collision_distance) {
                 // additional check that transformed arc actually touching
+                // eslint-disable-next-line
                 let [dist_tmp, shortest_segment_tmp] =
                     arc1.distanceTo( CollisionDistance.translateArc(arc2, new Vector(-distance,0)));
                 if (Flatten.Utils.EQ_0(dist_tmp)) {
@@ -152,6 +153,7 @@ class CollisionDistance {
             distance = CollisionDistance.point2shape(arc1.center, arc_reduced);
             if (distance < collision_distance) {
                 // additional check that transformed arc actually touching
+                // eslint-disable-next-line
                 let [dist_tmp, shortest_segment_tmp] =
                     arc1.distanceTo( CollisionDistance.translateArc(arc2, new Vector(-distance,0)));
                 if (Flatten.Utils.EQ_0(dist_tmp)) {

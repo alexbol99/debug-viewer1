@@ -5,7 +5,7 @@ import axios from "axios";
 import {Layers} from "../../models/layers";
 // import {Model} from "../../models/model";
 import * as ActionTypes from "../../store/actionTypes";
-import connect from "react-redux/es/connect/connect";
+import { connect } from "react-redux";
 
 let {vector} = Flatten;
 

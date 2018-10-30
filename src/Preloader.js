@@ -19,7 +19,7 @@ const store = createStore(reducer,
 const Preloader = () => {
     return (
         <Provider store={store}>
-            <App store={store}/>
+            <App />
         </Provider>
     );
 };

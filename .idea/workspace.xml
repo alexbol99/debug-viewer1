@@ -1,29 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="Redesign ModalPopup component: logic and styling&#10;Redesign AboutPopup and LayerEditForm according to new ModalPopup&#10;Change folders tree&#10;Try to add logo (not completed)">
+    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/AppBody.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/appActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/stageActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Constructions/BooleanTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Constructions/BooleanTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Preloader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Preloader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Constructions/CollisionDemo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Constructions/CollisionDemo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Constructions/Demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Constructions/Demo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Constructions/SkeletonRecognition.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Constructions/SkeletonRecognition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/Logo/Logo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Logo/Logo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Layout/Logo/Logo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/Logo/Logo.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/LayerList/LayersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LayerList/LayersList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/CanvasComponent/CanvasComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/CanvasComponent/CanvasComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/log.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/log.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/pasteData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/pasteData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/readFiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/readFiles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/skeleton_recognition.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/skeleton_recognition.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/stageController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/stageController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/layers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/layers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/action-types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/LayerListActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/layersActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/collisionDistance.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/collisionDistance.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionTypes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/reducers/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/layers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/layers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/measureShapesTool.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/measureShapesTool.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/mouse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/mouse.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -85,8 +77,8 @@
     <session id="-1275844168">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="16" />
-          <entry key="js" value="61" />
+          <entry key="css" value="19" />
+          <entry key="js" value="76" />
           <entry key="json" value="2" />
           <entry key="png" value="4" />
           <entry key="svg" value="1" />
@@ -94,10 +86,10 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="16" />
+          <entry key="CSS" value="19" />
           <entry key="Image" value="4" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="61" />
+          <entry key="JavaScript" value="76" />
           <entry key="SVG" value="1" />
         </counts>
       </usages-collector>
@@ -119,16 +111,16 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="248" />
-          <entry key="JavaScript" value="3467" />
-          <entry key="PLAIN_TEXT" value="197" />
+          <entry key="CSS" value="249" />
+          <entry key="JavaScript" value="5957" />
+          <entry key="PLAIN_TEXT" value="228" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="248" />
-          <entry key="js" value="3467" />
-          <entry key="txt" value="197" />
+          <entry key="css" value="249" />
+          <entry key="js" value="5957" />
+          <entry key="txt" value="228" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -136,20 +128,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/LayerList/LayersList.js">
+        <entry file="file://$PROJECT_DIR$/src/components/MainComponent/CanvasComponent/CanvasComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="131" lean-forward="true" selection-start-line="107" selection-end-line="131" />
+            <state relative-caret-position="484">
+              <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
               <folding>
                 <element signature="e#51#90#0" expanded="true" />
               </folding>
@@ -158,31 +141,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/layers.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Layout/Logo/Logo.module.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-60">
-              <caret line="93" column="9" lean-forward="true" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
+            <state relative-caret-position="168">
+              <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/reducers/app.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Layout/Logo/Logo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="143" column="46" lean-forward="true" selection-start-line="143" selection-start-column="46" selection-end-line="143" selection-end-column="46" />
-              <folding>
-                <element signature="e#0#46#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Preloader.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+            <state relative-caret-position="216">
+              <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -191,10 +162,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/collisionDistance.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="430">
+              <caret line="209" lean-forward="true" selection-start-line="209" selection-end-line="209" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/actions/stageActions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBody.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6820">
-              <caret line="325" column="55" selection-start-line="325" selection-start-column="55" selection-end-line="325" selection-end-column="55" />
+            <state relative-caret-position="-2420">
+              <caret line="70" column="48" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="48" />
               <folding>
                 <element signature="e#51#90#0" expanded="true" />
               </folding>
@@ -203,50 +201,29 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Constructions/Demo.js">
+        <entry file="file://$PROJECT_DIR$/src/store/reducers/mouse.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1390">
-              <caret line="70" lean-forward="true" selection-start-line="48" selection-end-line="70" />
+            <state relative-caret-position="-135" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/reducers/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1222">
+              <caret line="102" column="40" selection-start-line="102" selection-start-column="40" selection-end-line="102" selection-end-column="40" />
               <folding>
-                <element signature="e#0#43#0" expanded="true" />
+                <element signature="e#0#46#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Constructions/BooleanTest.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/store/actions/appActions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Constructions/CollisionDemo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="44" column="63" lean-forward="true" selection-start-line="44" selection-start-column="63" selection-end-line="44" selection-end-column="63" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-                <element signature="e#258#313#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Constructions/SkeletonRecognition.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="502">
+              <caret line="105" column="2" lean-forward="true" selection-start-line="105" selection-start-column="2" selection-end-line="105" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -263,36 +240,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>offsetX</find>
-      <find>dragX</find>
-      <find>ESCAPE_LAYER_EDIT_FORM_PRESSED</find>
-      <find>edited</find>
-      <find>closePopup</find>
-      <find>backDrop</find>
-      <find>layerEditForm</find>
-      <find>Flatten</find>
-      <find>MOUSE_MOVED_ON_STAGE</find>
-      <find>unitsList</find>
-      <find>defaultMouseState</find>
-      <find>stage</find>
-      <find>state.stage</find>
-      <find>WINDOW_HASH_CHANGED</find>
+      <find>toggleDisplayVertices</find>
+      <find>toggleDisplayLabels</find>
+      <find>showAboutPopup</find>
+      <find>ABOUT_POPUP</find>
+      <find>toggleAboutPopup</find>
+      <find>AboutPopup</find>
+      <find>onMeasurePointsButtonPressed</find>
+      <find>onPanByDragPressed</find>
+      <find>setHomeView</find>
+      <find>handleFileSelect</find>
+      <find>PAN_AND_ZOOM_TO_SHAPE</find>
+      <find>PAN_BY_DRAG_BUTTON_CLICKED</find>
+      <find>registerStage</find>
+      <find>MOUSE_ROLL_OVER_SHAPE</find>
+      <find>onMouseRollOverShape</find>
+      <find>onMouseRollOutShape</find>
+      <find>onClickOnShape</find>
+      <find>onMeasureBetweenShapesButtonPressed</find>
+      <find>onSkeletonRecognitionButtonPressed</find>
+      <find>handleMouseWheelMove</find>
+      <find>handleMouseDown</find>
+      <find>ActionTypes</find>
+      <find>toggleUnits</find>
+      <find>coordX</find>
+      <find>mouse</find>
+      <find>state</find>
       <find>handlePaste</find>
-      <find>AabbDemoTool</find>
-      <find>LAYER_LIST_PANEL_PRESSED</find>
-      <find>onLayerListClicked</find>
-      <find>layers</find>
-      <find>actions</find>
-      <find>props</find>
-      <find>LayersList</find>
-      <find>affectedLayer</find>
-      <find>affectedLayerId</find>
-      <find>addNewLayer</find>
-      <find>ADD_LAYER_PRESSED</find>
-      <find>onAddLayerSelected</find>
-      <find>dispatch</find>
-      <find>onSubmitLayerEditForm</find>
-      <find>onLayerClicked</find>
+      <find>zoomFactor</find>
+      <find>handleMouseMove</find>
+      <find>resizeStage</find>
     </findStrings>
     <replaceStrings>
       <replace>state.app.stage</replace>
@@ -315,7 +292,6 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/middleware/skeleton_recognition.js" />
         <option value="$PROJECT_DIR$/node_modules/@alexbol99/collision_distance/package.json" />
-        <option value="$PROJECT_DIR$/src/models/collisionDistance.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/AboutPopup/AboutPopup.module.css" />
         <option value="$PROJECT_DIR$/src/components/UI/ModalPopup/ModalPopup.module.css" />
@@ -324,7 +300,6 @@
         <option value="$PROJECT_DIR$/src/reducer.js" />
         <option value="$PROJECT_DIR$/src/components/LayersList/LayerEditForm/LayerEditForm.js" />
         <option value="$PROJECT_DIR$/src/components/LayersList/LayerEditForm/LayerEditForm.module.css" />
-        <option value="$PROJECT_DIR$/src/components/Layout/Logo/Logo.js" />
         <option value="$PROJECT_DIR$/src/components/Layout/Logo/Logo.css" />
         <option value="$PROJECT_DIR$/src/components/Layout/HeaderComponent/HeaderComponent.module.css" />
         <option value="$PROJECT_DIR$/src/components/Layout/HeaderComponent/HeaderComponent.js" />
@@ -333,17 +308,13 @@
         <option value="$PROJECT_DIR$/src/store/reducers/measureShapesTool.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/aabbDemoTool.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/stage.js" />
-        <option value="$PROJECT_DIR$/src/store/reducers/app.js" />
         <option value="$PROJECT_DIR$/src/store/reducer.js" />
-        <option value="$PROJECT_DIR$/src/Preloader.js" />
         <option value="$PROJECT_DIR$/src/components/MainComponent/ToolbarComponent/ToolbarComponent.js" />
-        <option value="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" />
         <option value="$PROJECT_DIR$/src/store/actions/layers.js" />
         <option value="$PROJECT_DIR$/src/store/actions/LayerListActions.js" />
         <option value="$PROJECT_DIR$/src/store/action-types.js" />
         <option value="$PROJECT_DIR$/src/middleware/readFiles.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/layers.js" />
-        <option value="$PROJECT_DIR$/src/components/Layout/Logo/Logo.module.css" />
         <option value="$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css" />
         <option value="$PROJECT_DIR$/src/store/actions/layersActions.js" />
         <option value="$PROJECT_DIR$/src/containers/LayerList/LayersList.js" />
@@ -351,8 +322,19 @@
         <option value="$PROJECT_DIR$/src/components/Constructions/BooleanTest.js" />
         <option value="$PROJECT_DIR$/src/components/Constructions/Demo.js" />
         <option value="$PROJECT_DIR$/src/components/Constructions/SkeletonRecognition.js" />
+        <option value="$PROJECT_DIR$/src/AppBody.js" />
+        <option value="$PROJECT_DIR$/src/Preloader.js" />
         <option value="$PROJECT_DIR$/src/components/Constructions/CollisionDemo.js" />
+        <option value="$PROJECT_DIR$/src/store/actionTypes.js" />
+        <option value="$PROJECT_DIR$/src/store/reducers/app.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/Layout/Logo/Logo.module.css" />
+        <option value="$PROJECT_DIR$/src/store/actions/stageActions.js" />
+        <option value="$PROJECT_DIR$/src/store/actions/appActions.js" />
+        <option value="$PROJECT_DIR$/src/models/collisionDistance.js" />
+        <option value="$PROJECT_DIR$/src/components/Layout/Logo/Logo.js" />
+        <option value="$PROJECT_DIR$/src/components/MainComponent/CanvasComponent/CanvasComponent.js" />
+        <option value="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" />
       </list>
     </option>
   </component>
@@ -373,10 +355,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="53" />
-    <option name="y" value="15" />
-    <option name="width" value="1850" />
-    <option name="height" value="1005" />
+    <option name="x" value="78" />
+    <option name="y" value="19" />
+    <option name="width" value="1831" />
+    <option name="height" value="991" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -408,29 +390,7 @@
               <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Constructions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="LayersList" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Layout" type="462c0819:PsiDirectoryNode" />
-              <item name="HeaderComponent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
@@ -444,14 +404,22 @@
               <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
               <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
+              <item name="CanvasComponent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
               <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="LayerList" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
@@ -517,17 +485,17 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Alex Bol\WebstormProjects\debug-viewer1\src\assets\images" />
+      <recent name="C:\Users\Alex Bol\WebstormProjects\debug-viewer1\public" />
+      <recent name="C:\Users\Alex Bol\WebstormProjects\debug-viewer1\src\components\Layout" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Alex Bol\WebstormProjects\debug-viewer1\src\store" />
       <recent name="C:\Users\Alex Bol\WebstormProjects\debug-viewer1\src\components\Layout" />
       <recent name="C:\Users\Alex Bol\WebstormProjects\debug-viewer1\src\components" />
       <recent name="C:\Users\Alex Bol\WebstormProjects\debug-viewer1\src" />
       <recent name="C:\Users\Alex Bol\WebstormProjects\debug-viewer1\src\containers\LayerList" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Alex Bol\WebstormProjects\debug-viewer1\src\assets\images" />
-      <recent name="C:\Users\Alex Bol\WebstormProjects\debug-viewer1\public" />
-      <recent name="C:\Users\Alex Bol\WebstormProjects\debug-viewer1\src\components\Layout" />
     </key>
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
@@ -726,19 +694,25 @@
       <option name="project" value="LOCAL" />
       <updated>1540636959224</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Continue implement react-redux">
+      <created>1540844421592</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1540844421592</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66634000" />
+    <option name="totallyTimeSpent" value="81756000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="53" y="15" width="1850" height="1005" extended-state="0" />
-    <editor active="true" />
+    <frame x="78" y="19" width="1831" height="991" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7888386" visible="true" weight="0.21909492" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.78890604" visible="true" weight="0.22141662" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.21116139" side_tool="true" visible="true" weight="0.21909492" />
+      <window_info id="npm" order="2" sideWeight="0.20980091" side_tool="true" weight="0.22141662" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.31411764" />
@@ -750,7 +724,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32894737" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32894737" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.21908127" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2227545" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -786,59 +760,10 @@
     <MESSAGE value="Added route /boolean-test, refactoring" />
     <MESSAGE value="Added route /skeleton" />
     <MESSAGE value="Redesign ModalPopup component: logic and styling&#10;Redesign AboutPopup and LayerEditForm according to new ModalPopup&#10;Change folders tree&#10;Try to add logo (not completed)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Redesign ModalPopup component: logic and styling&#10;Redesign AboutPopup and LayerEditForm according to new ModalPopup&#10;Change folders tree&#10;Try to add logo (not completed)" />
+    <MESSAGE value="Continue implement react-redux" />
+    <option name="LAST_COMMIT_MESSAGE" value="Continue implement react-redux" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/LayersList/LayerListElement/LayerListElement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
-          <caret line="88" column="1" lean-forward="true" selection-start-line="88" selection-start-column="1" selection-end-line="88" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/LayersList/LayerEditForm/LayerEditForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="46" lean-forward="true" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Layout/HeaderComponent/HeaderComponent.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Layout/Logo/Logo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="63" selection-start-line="1" selection-start-column="63" selection-end-line="1" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Layout/HeaderComponent/HeaderComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="31" lean-forward="true" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/reducers/mouse.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/CanvasComponent/CanvasComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/middleware/stageController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-513" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/reducers/stage.js" />
     <entry file="file://$PROJECT_DIR$/src/assets/images/debug-viewer-logo5.png" />
     <entry file="file://$PROJECT_DIR$/src/assets/images/debug-viewer-logo6-notext.png" />
@@ -868,6 +793,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#51#89#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -925,13 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actionTypes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="33" column="26" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/AboutPopup/AboutPopup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -955,9 +876,6 @@
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/reducers/layers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -965,13 +883,6 @@
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Layout/Logo/Logo.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1000,13 +911,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/layersActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1113">
-          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/layers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-60">
@@ -1024,20 +928,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Constructions/BooleanTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructions/SkeletonRecognition.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        <state>
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
@@ -1046,29 +942,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructions/CollisionDemo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="44" column="63" lean-forward="true" selection-start-line="44" selection-start-column="63" selection-end-line="44" selection-end-column="63" />
+        <state relative-caret-position="147">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
-            <element signature="e#258#313#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/reducers/app.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Constructions/BooleanTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="143" column="46" lean-forward="true" selection-start-line="143" selection-start-column="46" selection-end-line="143" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Constructions/Demo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1390">
-          <caret line="70" lean-forward="true" selection-start-line="48" selection-end-line="70" />
+        <state>
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
@@ -1077,28 +961,133 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Preloader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        <state relative-caret-position="396">
+          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js">
+    <entry file="file://$PROJECT_DIR$/src/store/actions/layersActions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6820">
-          <caret line="325" column="55" selection-start-line="325" selection-start-column="55" selection-end-line="325" selection-end-column="55" />
+        <state relative-caret-position="147">
+          <caret line="7" column="2" lean-forward="true" selection-start-line="2" selection-end-line="7" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Constructions/Demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="38" lean-forward="true" selection-start-line="6" selection-end-line="7" selection-end-column="38" />
           <folding>
-            <element signature="e#51#90#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="480">
+          <caret line="38" column="28" lean-forward="true" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#504#542#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actionTypes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/middleware/stageController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="30" column="63" lean-forward="true" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducers/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1222">
+          <caret line="102" column="40" selection-start-line="102" selection-start-column="40" selection-end-line="102" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducers/mouse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBody.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/stageActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/collisionDistance.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="209" lean-forward="true" selection-start-line="209" selection-end-line="209" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Layout/Logo/Logo.module.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Layout/Logo/Logo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/CanvasComponent/CanvasComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
+          <folding>
+            <element signature="e#51#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2420">
+          <caret line="70" column="48" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="48" />
+          <folding>
+            <element signature="e#51#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/appActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="105" column="2" lean-forward="true" selection-start-line="105" selection-start-column="2" selection-end-line="105" selection-end-column="2" />
         </state>
       </provider>
     </entry>
