@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="Completed react-redux on all containers. TODO: asynchronous actions">
-      <change afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsEditor/LabelsLayerComponent/labelsLayer.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsEditor/LabelsLayerComponent/labelsLayerComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsEditor/domelements/labelComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsEditor/graphics/imageComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsEditor/graphics/imageComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsEditor/graphics/shapeComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsEditor/graphics/shapeComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsEditor/layerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsEditor/layerComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsEditor/layersComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsEditor/layersComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/readFiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/readFiles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/parserXML.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/parserXML.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tools/displayCoordsTool.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/displayCoordsTool.js" afterDir="false" />
+    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="Fix bug with labels transform in compiled mode&#10;- create separate LabelsLayerComponent">
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -110,14 +100,14 @@
         <counts>
           <entry key="CSS" value="378" />
           <entry key="JavaScript" value="6998" />
-          <entry key="PLAIN_TEXT" value="321" />
+          <entry key="PLAIN_TEXT" value="441" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="378" />
           <entry key="js" value="6998" />
-          <entry key="txt" value="321" />
+          <entry key="txt" value="441" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -151,7 +141,11 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -355,8 +349,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="140" />
-    <option name="y" value="59" />
+    <option name="x" value="120" />
+    <option name="y" value="38" />
     <option name="width" value="1768" />
     <option name="height" value="971" />
   </component>
@@ -372,6 +366,11 @@
             <path>
               <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
               <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
@@ -587,8 +586,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -611,7 +610,7 @@
       <workItem from="1540560619550" duration="15686000" />
       <workItem from="1540754454180" duration="6776000" />
       <workItem from="1541167495580" duration="621000" />
-      <workItem from="1541442128225" duration="13770000" />
+      <workItem from="1541442128225" duration="15529000" />
     </task>
     <task id="LOCAL-00001" summary="Added route /boolean-test, refactoring">
       <created>1539784239144</created>
@@ -648,19 +647,25 @@
       <option name="project" value="LOCAL" />
       <updated>1540905406687</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fix bug with labels transform in compiled mode&#10;- create separate LabelsLayerComponent">
+      <created>1541536931231</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1541536931231</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96702000" />
+    <option name="totallyTimeSpent" value="98461000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="140" y="59" width="1768" height="971" extended-state="0" />
-    <editor active="true" />
+    <frame x="120" y="38" width="1768" height="971" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.78855324" visible="true" weight="0.22947977" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7871854" visible="true" weight="0.22947977" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.21144675" side_tool="true" visible="true" weight="0.22947977" />
+      <window_info id="npm" order="2" sideWeight="0.21281464" side_tool="true" visible="true" weight="0.22947977" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.31411764" />
@@ -672,7 +677,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32883435" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32894737" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.22822087" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.46380368" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -710,7 +715,8 @@
     <MESSAGE value="Redesign ModalPopup component: logic and styling&#10;Redesign AboutPopup and LayerEditForm according to new ModalPopup&#10;Change folders tree&#10;Try to add logo (not completed)" />
     <MESSAGE value="Continue implement react-redux" />
     <MESSAGE value="Completed react-redux on all containers. TODO: asynchronous actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed react-redux on all containers. TODO: asynchronous actions" />
+    <MESSAGE value="Fix bug with labels transform in compiled mode&#10;- create separate LabelsLayerComponent" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix bug with labels transform in compiled mode&#10;- create separate LabelsLayerComponent" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/AppData/Local/Temp/index.js" />
@@ -1040,7 +1046,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
