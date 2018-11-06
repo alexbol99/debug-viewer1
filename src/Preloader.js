@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
-
+import {BrowserRouter} from 'react-router-dom';
 import reducer from './store/reducer';
 
 import log from './middleware/log';
@@ -19,7 +19,9 @@ const store = createStore(reducer,
 const Preloader = () => {
     return (
         <Provider store={store}>
-            <App />
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
+                <App/>
+            </BrowserRouter>
         </Provider>
     );
 };
