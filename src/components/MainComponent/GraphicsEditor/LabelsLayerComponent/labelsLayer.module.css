@@ -1,0 +1,14 @@
+.LabelsLayer {
+
+}
+
+.LabelComponent {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.LabelComponent h5 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}

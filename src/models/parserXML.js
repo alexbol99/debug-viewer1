@@ -7,7 +7,7 @@ let { vector } = Flatten;
 function parseEdges(edgesXML) {
     let edges = [];
 
-    for (let edge of edgesXML) {
+    for (let edge of Array.from(edgesXML)) {
         let type = edge.getAttribute('type');
 
         if (type === "segment") {
@@ -59,14 +59,14 @@ function parsePolygon(polygonsXML) {
 
     // Add islands
     let islands = polygonsXML.getElementsByTagName('island');
-    for (let island of islands) {
+    for (let island of Array.from(islands)) {
         let edgesXML = island.getElementsByTagName('edge');
         polygon.addFace(parseEdges(edgesXML));
     }
 
     // Add holes
     let holes = polygonsXML.getElementsByTagName('hole');
-    for (let hole of holes) {
+    for (let hole of Array.from(holes)) {
         let edgesXML = hole.getElementsByTagName('edge');
         polygon.addFace(parseEdges(edgesXML));
     }
@@ -137,35 +137,35 @@ export function parseXML(filename, str) {
 
     // Parse profiles and add polygons to the job
     let profilesXML = xmlDoc.getElementsByTagName('profile');
-    for (let profileXML of profilesXML) {
+    for (let profileXML of Array.from(profilesXML)) {
         let polygon = parsePolygon(profileXML);
         job.profiles.push(polygon);
     }
 
     // Parse materials and add polygons to the job
     let materialXML = xmlDoc.getElementsByTagName('material');
-    for (let shapeXML of materialXML) {
+    for (let shapeXML of Array.from(materialXML)) {
         let polygon = parsePolygon(shapeXML);
         job.materials.push(polygon);
     }
 
     // Parse segments
     let segmentsXML = xmlDoc.getElementsByTagName('segment');
-    for (let segmentXML of segmentsXML) {
+    for (let segmentXML of Array.from(segmentsXML)) {
         let segment = parseSegment(segmentXML);
         job.shapes.push(segment);
     }
 
     // Parse segments
     let curvesXML = xmlDoc.getElementsByTagName('curve');
-    for (let curveXML of curvesXML) {
+    for (let curveXML of Array.from(curvesXML)) {
         let curve = parseCurve(curveXML);
         job.shapes.push(curve);
     }
 
     // Parse points
     let pointsXML = xmlDoc.getElementsByTagName('point');
-    for (let pointXML of pointsXML) {
+    for (let pointXML of Array.from(pointsXML)) {
         let point = parsePoint(pointXML);
         job.shapes.push(point);
     }

@@ -15,23 +15,6 @@ export class ImageComponent extends Component {
 
         this.bitmap = new createjs.Bitmap(params.model.geom.uri);
         params.stage.addChild(this.bitmap);
-
-        this.labelShape = undefined;
-
-        if (params.model.label && params.model.label.trim() !== "") {
-            var html = document.createElement('div');
-            html.innerText = params.model.label;
-            html.style.position = "absolute";
-            html.style.top = 0;
-            html.style.left = 0;
-
-            document.body.appendChild(html);
-
-            this.labelShape = new createjs.DOMElement(html);
-
-            this.labelShape.geom = params.model.geom;     // augment label Shape with geom struct
-            params.stage.addChild(this.labelShape);
-        }
     }
 
     handleMouseOver = (event) => {
@@ -45,26 +28,6 @@ export class ImageComponent extends Component {
     handleClick = (event) => {
         this.props.onClick(this.props.model, this.props.layer);
     };
-
-    redrawLabels(showLabel) {
-        if (!this.labelShape) return;
-
-        let stage = this.props.stage;
-
-        this.labelShape.htmlElement.style.display = showLabel ? "block" : "none";
-
-        let box = this.props.model.geom.box;
-        let point = {x: (box.xmin + box.xmax) / 2, y: (box.ymin + box.ymax) / 2};
-        let dx = 6. / (stage.zoomFactor * stage.resolution);
-        let dy = 4. / (stage.zoomFactor * stage.resolution);
-
-        this.labelShape.htmlElement.style.font = "16px Arial";
-        let unscale = 1. / (stage.zoomFactor * stage.resolution);
-        let tx = stage.canvas.offsetLeft / (stage.zoomFactor * stage.resolution) + point.x + dx;
-        let ty = -stage.canvas.offsetTop / (stage.zoomFactor * stage.resolution) + point.y + dy;
-        this.labelShape.setTransform(tx, ty, unscale, -unscale);
-
-    }
 
     redraw() {
         // Draw shape
@@ -88,10 +51,6 @@ export class ImageComponent extends Component {
 
         // let box = this.state.polygon.geom.box;
         // this.shape.cache(box.xmin, box.ymin, box.xmax - box.xmin, box.ymax - box.ymin);
-
-        // Draw labels
-        let showLabel = this.props.displayed && this.props.displayLabels;
-        this.redrawLabels(showLabel);
     }
 
     componentDidMount() {

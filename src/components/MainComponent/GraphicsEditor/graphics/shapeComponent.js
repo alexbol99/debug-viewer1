@@ -16,7 +16,6 @@ export class ShapeComponent extends Component {
         params.stage.addChild(this.shape);
 
         this.vertexShapes = [];
-        this.labelShape = undefined;
 
         for (let vertex of params.model.geom.vertices) {
             let vertexShape = new createjs.Shape();
@@ -25,22 +24,6 @@ export class ShapeComponent extends Component {
             params.stage.addChild(vertexShape);
             this.vertexShapes.push(vertexShape);
         }
-
-        if (params.model.label && params.model.label.trim() !== "") {
-            var html = document.createElement('div');
-            html.innerText = params.model.label;
-            html.style.position = "absolute";
-            html.style.top = 0;
-            html.style.left = 0;
-
-            document.body.appendChild(html);
-
-            this.labelShape = new createjs.DOMElement(html);
-
-            this.labelShape.geom = params.model.geom;     // augment label Shape with geom struct
-            params.stage.addChild(this.labelShape);
-        }
-
     }
 
     handleMouseOver = (event) => {
@@ -74,25 +57,6 @@ export class ShapeComponent extends Component {
             }
             vertexShape.alpha = alpha;
         }
-    }
-
-    redrawLabels(showLabel) {
-        if (!this.labelShape) return;
-
-        let stage = this.props.stage;
-
-        this.labelShape.htmlElement.style.display = showLabel ? "block" : "none";
-
-        let box = this.props.model.geom.box;
-        let point = {x: (box.xmin + box.xmax) / 2, y: (box.ymin + box.ymax) / 2};
-        let dx = 6. / (stage.zoomFactor * stage.resolution);
-        let dy = 4. / (stage.zoomFactor * stage.resolution);
-
-        this.labelShape.htmlElement.style.font = "16px Arial";
-        let unscale = 1. / (stage.zoomFactor * stage.resolution);
-        let tx = stage.canvas.offsetLeft / (stage.zoomFactor * stage.resolution) + point.x + dx;
-        let ty = -stage.canvas.offsetTop / (stage.zoomFactor * stage.resolution) + point.y + dy;
-        this.labelShape.setTransform(tx, ty, unscale, -unscale);
     }
 
     redraw() {
@@ -139,10 +103,6 @@ export class ShapeComponent extends Component {
         // Draw vertices
         alpha = this.props.displayed && this.props.displayVertices ? 1.0 : 0.0;
         this.redrawVertices(color, color, alpha);
-
-        // Draw labels
-        let showLabel = this.props.displayed && this.props.displayLabels;
-        this.redrawLabels(showLabel);
     }
 
     componentDidMount() {
@@ -172,8 +132,6 @@ export class ShapeComponent extends Component {
         this.shape.off("click", this.handleClick);
         this.props.stage.removeChild(this.shape);
         this.shape.graphics.clear();
-        this.props.stage.removeChild(this.labelShape);
-        this.labelShape = undefined;
         for (let vertexShape of this.vertexShapes) {
             this.props.stage.removeChild(vertexShape);
         }

@@ -1,8 +1,8 @@
-import React, {PureComponent} from 'react';
+import React, {Component} from 'react';
 import {ShapeComponent} from './graphics/shapeComponent';
 import {ImageComponent} from "./graphics/imageComponent";
 
-export class LayerComponent extends PureComponent {
+export class LayerComponent extends Component {
     render() {
         return (
             this.props.layer.shapes.map((shape, index) => {
@@ -41,7 +41,6 @@ export class LayerComponent extends PureComponent {
                         color={this.props.layer.color}
                         widthOn={this.props.widthOn}
                         displayVertices={this.props.displayVertices}
-                        displayLabels={this.props.displayLabels}
                         zoomFactor={this.props.zoomFactor}
                         onMouseOver={this.props.onMouseOver}
                         onMouseOut={this.props.onMouseOut}

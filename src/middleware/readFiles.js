@@ -160,7 +160,11 @@ const readFiles = ({ dispatch, getState }) => next => action => {
     let layers = action.layers;
 
     // Load and parse files
-    for (let file of action.files) {
+    // in MS Edge FilesList is not array. It is indexable but not iterable
+    // for (let i=0; i < action.files.length; i++) {
+    //     readFile(action.files[i], stage, layers, dispatch, action.files);
+    // }
+    for (let file of Array.from(action.files)) {
         readFile(file, stage, layers, dispatch, action.files);
     }
 };
