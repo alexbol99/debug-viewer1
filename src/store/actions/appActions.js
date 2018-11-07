@@ -1,6 +1,5 @@
 import * as ActionTypes from '../actionTypes';
 
-/* not in use ?*/
 export const resizeStage = () => {
     return {
         type: ActionTypes.STAGE_RESIZED
@@ -64,17 +63,17 @@ export const applySkeletonRecognition = () => {
 export const handleFileSelect = (files, stage, layers) => {
     return {
         type: ActionTypes.FILENAME_LIST_SELECTED,
-        files: files,
-        stage: stage,
-        layers: layers
+        files,
+        stage,
+        layers
     }
 };
 
 export const setHomeView = (stage, shape) => {
     return {
         type: ActionTypes.PAN_AND_ZOOM_TO_SHAPE,
-        stage: stage,
-        shape: shape
+        stage,
+        shape
     }
 };
 
@@ -87,7 +86,7 @@ export const togglePanByDrag = () => {
 export const handleMouseRollOverShape = (shape) => {
     return {
         type: ActionTypes.MOUSE_ROLL_OVER_SHAPE,
-        shape: shape
+        shape
     }
 };
 
@@ -100,7 +99,19 @@ export const handleMouseRollOutShape = () => {
 export const handleClickOnShape = (shape, layer) => {
     return {
         type: ActionTypes.MOUSE_CLICKED_ON_SHAPE,
-        shape: shape,
-        layer: layer
+        shape,
+        layer
+    }
+};
+
+export const asyncOperationStarted = () => {
+    return {
+        type: ActionTypes.ASYNC_OPERATION_STARTED
+    }
+};
+
+export const asyncOperationEnded = () => {
+    return {
+        type: ActionTypes.ASYNC_OPERATION_ENDED
     }
 };

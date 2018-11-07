@@ -6,6 +6,7 @@ import {Layers} from "../../models/layers";
 // import {Model} from "../../models/model";
 import * as ActionTypes from "../../store/actionTypes";
 import { connect } from "react-redux";
+import * as actions from "../../store/actions/appActions";
 
 let {vector} = Flatten;
 
@@ -45,8 +46,10 @@ class CollisionDemo extends Component {
                     this.props.panAndZoomToShape(stage, layer);
                     this.props.addNewLayer(layer);
                     this.props.applyCollisionDemo();
+                    this.props.asyncOperationEnded();
                 });
-            this.setState({done:true})
+            this.setState({done:true});
+            this.props.asyncOperationStarted();
         }
     }
     render() {
@@ -75,7 +78,9 @@ const mapDispatchToProps = dispatch => {
         }),
         applyCollisionDemo: () => dispatch({
             type: ActionTypes.COLLISION_DEMO_URI
-        })
+        }),
+        asyncOperationStarted: () => dispatch(actions.asyncOperationStarted()),
+        asyncOperationEnded: () => dispatch(actions.asyncOperationEnded())
     }
 };
 

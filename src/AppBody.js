@@ -2,6 +2,7 @@ import React from 'react';
 import MainComponent from "./containers/MainComponent/MainComponent";
 import LayersList from "./containers/LayerList/LayersList";
 import AsideComponent from "./components/Layout/AsideComponent/AsideComponent";
+
 import * as ActionTypes from "./store/actionTypes";
 import { connect } from "react-redux";
 
@@ -15,11 +16,6 @@ const appBody = (props) => {
     );
 };
 
-const mapStateToProps = state => {
-    return {
-    }
-};
-
 const mapDispatchToProps = dispatch => {
     return {
         pasteDataFromBuffer: (event) => dispatch({
@@ -29,4 +25,4 @@ const mapDispatchToProps = dispatch => {
     }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(appBody);
+export default connect(null, mapDispatchToProps)(appBody);

@@ -12,6 +12,7 @@ import Demo from './components/Constructions/Demo';
 import BooleanTest from './components/Constructions/BooleanTest';
 import SkeletonRecognition from './components/Constructions/SkeletonRecognition';
 import CollisionDemo from "./components/Constructions/CollisionDemo";
+import Spinner from "./components/UI/Spinner/Spinner";
 
 class App extends Component {
     render() {
@@ -29,20 +30,18 @@ class App extends Component {
                 <Route path="/skeleton" component={SkeletonRecognition}/>
                 <Route path="/collision-distance" component={CollisionDemo}/>
 
+                {this.props.showSpinner ? <Spinner /> : null}
             </div>
         );
     }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = ({app}) => {
     return {
-        title: state.app.title,
-        version: state.app.version
+        title: app.title,
+        version: app.version,
+        showSpinner: app.showSpinner
     }
 };
 
-const mapDispatchToProps = dispatch => {
-    return {}
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, null)(App);

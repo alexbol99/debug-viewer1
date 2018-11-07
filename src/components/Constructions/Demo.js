@@ -5,6 +5,7 @@ import {Layers} from "../../models/layers";
 import {parseODB} from "../../models/parserODB";
 import {Model} from "../../models/model";
 import * as ActionTypes from "../../store/actionTypes";
+import * as actions from '../../store/actions/appActions';
 import { connect } from 'react-redux';
 
 class Demo extends Component {
@@ -34,8 +35,10 @@ class Demo extends Component {
 
                     this.props.panAndZoomToShape(stage, layer);
                     this.props.addNewLayer(layer);
+                    this.props.asyncOperationEnded();
                 });
-            this.setState({done:true})
+            this.setState({done:true});
+            this.props.asyncOperationStarted();
         }
     }
     componentDidMount() {
@@ -63,7 +66,9 @@ const mapDispatchToProps = dispatch => {
         addNewLayer: (layer) => dispatch({
             type: ActionTypes.ADD_NEW_LAYER,
             layer: layer
-        })
+        }),
+        asyncOperationStarted: () => dispatch(actions.asyncOperationStarted()),
+        asyncOperationEnded: () => dispatch(actions.asyncOperationEnded())
     }
 };
 

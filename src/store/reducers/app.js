@@ -38,7 +38,8 @@ const defaultAppState = {
     importDataToNewLayer: true,       // if false, import data to affected layer
     showSkeletonRecognitionButton: false,
     applySkeletonRecognition: false,
-    stage: null
+    stage: null,
+    showSpinner: false
 };
 
 const app = (state = defaultAppState, action) => {
@@ -139,6 +140,14 @@ const app = (state = defaultAppState, action) => {
         case ActionTypes.SKELETON_RECOGNITION_BUTTON_PRESSED:
             return Object.assign({}, state, {
                 applySkeletonRecognition: true
+            });
+        case ActionTypes.ASYNC_OPERATION_STARTED:
+            return Object.assign({}, state, {
+                showSpinner: true
+            });
+        case ActionTypes.ASYNC_OPERATION_ENDED:
+            return Object.assign({}, state, {
+                showSpinner: false
             });
         case ActionTypes.LAYER_LIST_PANEL_PRESSED:
             return state;  // only to cause refresh of layers list component

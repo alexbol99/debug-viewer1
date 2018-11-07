@@ -76,12 +76,20 @@ const readAsText = (reader, file, stage, layers, dispatch, files) => {
             dispatch({
                 type: ActionTypes.ADD_NEW_LAYER,
                 layer: layer
-            })
+            });
 
+            dispatch({
+                type: ActionTypes.ASYNC_OPERATION_ENDED
+            });
         }
     })(file, stage, layers, dispatch, files);
 
     reader.readAsText(file);
+
+    dispatch({
+        type: ActionTypes.ASYNC_OPERATION_STARTED
+    })
+
 };
 
 const readAsImage = (reader, file, stage, layers, dispatch, files) => {
@@ -109,7 +117,7 @@ const readAsImage = (reader, file, stage, layers, dispatch, files) => {
 
         layer.add(model);
 
-        layers.push(layer);
+        // layers.push(layer);
 
         if (file === files[0]) {
             Layers.setAffected(layers, layer);
@@ -125,8 +133,11 @@ const readAsImage = (reader, file, stage, layers, dispatch, files) => {
         dispatch({
             type: ActionTypes.ADD_NEW_LAYER,
             layer: layer
-        })
+        });
 
+        dispatch({
+            type: ActionTypes.ASYNC_OPERATION_ENDED
+        });
 
     }, false);
 
