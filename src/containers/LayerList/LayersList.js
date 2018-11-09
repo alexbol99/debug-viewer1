@@ -86,7 +86,8 @@ class LayersList extends Component {
                     onDeleteLayerButtonClicked={this.props.onDeleteLayerButtonClicked}
                     onSortLayersButtonClicked={this.props.onSortLayersButtonClicked}
                 />
-                <ul style={{maxHeight:0.82*(this.height-40)}}>
+                <ul id="layersList"
+                    style={{maxHeight:0.82*(this.height-40)}}>
                 { this.props.layers.map((layer) =>
                     <LayerListElement
                         key={layer.name}
