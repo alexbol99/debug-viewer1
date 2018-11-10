@@ -24,7 +24,7 @@ class ToolbarComponent extends Component {
         return (
             <div className={classes["App-toolbar"]}>
                 {/*<h4>Toolbar</h4>*/}
-                <Button type="trigger" title="Open file" iconName='folder-open'
+                <Button type="trigger" title="Open files" iconName='folder-open'
                     onClick={this.openJobButtonClicked}
                 />
 
@@ -40,6 +40,14 @@ class ToolbarComponent extends Component {
                 <input style={{fontSize: 16, marginTop: 5, marginBottom: 5, display: "none"}}
                        type="file" id="browseFiles" ref="browseFiles" name="files[]" multiple
                        onChange={this.props.onFileSelected}
+                />
+
+                <Button type="trigger" title="Save document on cloud" iconName='save'
+                        onClick={this.props.onSaveDocumentButtonClicked}
+                />
+
+                <Button type="trigger" title="Manage cloud documents" iconName='cloud'
+                        onClick={this.props.onManageCloudStorageButtonClicked}
                 />
 
                 <Separator />

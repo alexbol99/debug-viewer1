@@ -10,11 +10,14 @@ import reducer from './store/reducer';
 import log from './middleware/log';
 import readFiles from './middleware/readFiles';
 import pasteData from './middleware/pasteData';
-import stageController from './middleware/stageController'
-import skeleton_recognition from './middleware/skeleton_recognition'
+import stageController from './middleware/stageController';
+import skeleton_recognition from './middleware/skeleton_recognition';
+import saveDocumentOnCloud from './middleware/saveDocumentOnCloud';
+import openDocumentOnCloud from './middleware/openDocumentOnCloud';
 
 const store = createStore(reducer,
-    applyMiddleware(log, readFiles, pasteData, skeleton_recognition, stageController));
+    applyMiddleware(log, readFiles, pasteData, skeleton_recognition, stageController,
+        saveDocumentOnCloud, openDocumentOnCloud));
 
 const Preloader = () => {
     return (

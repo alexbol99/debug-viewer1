@@ -10,7 +10,7 @@ const HeaderComponent = (props) => {
     return (
         <header className={classes["App-header"]}>
             <Logo />
-            <h2>{props.title} v{props.version}</h2>
+            <h2>{props.title}</h2>
         </header>
     )
 };

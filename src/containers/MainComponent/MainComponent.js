@@ -129,6 +129,8 @@ class MainComponent extends Component {
                     onShowAboutPopupPressed={this.props.toggleAboutPopup}
                     onSkeletonRecognitionButtonPressed={this.props.applySkeletonRecognition}
                     onUnitClicked={this.props.toggleUnits}
+                    onSaveDocumentButtonClicked={this.props.onSaveDocumentButtonClicked}
+                    onManageCloudStorageButtonClicked={this.props.onManageCloudStorageButtonClicked}
                 />
 
                 <CanvasComponent />
@@ -213,6 +215,8 @@ const mapDispatchToProps = dispatch => {
         handleMouseRollOverShape: (shape) => dispatch(actions.handleMouseRollOverShape(shape)),
         handleMouseRollOutShape: () => dispatch(actions.handleMouseRollOutShape()),
         handleClickOnShape: (shape, layer) => dispatch(actions.handleClickOnShape(shape, layer)),
+        onSaveDocumentButtonClicked: () => dispatch(actions.saveDocumentOnCloud()),
+        onManageCloudStorageButtonClicked: () => dispatch(actions.openDocumentOnCloud()),
     }
 };
 
