@@ -26,16 +26,10 @@ class LayersList extends Component {
                 case "ArrowRight":
                 case "ArrowDown":
                     this.props.setAffectedNextLayer();
-                    // this.dispatch({
-                    //     type: ActionTypes.LAYERS_LIST_ARROW_DOWN_PRESSED
-                    // });
                     break;
                 case "ArrowLeft":
                 case "ArrowUp":
                     this.props.setAffectedPrevLayer();
-                    // this.dispatch({
-                    //     type: ActionTypes.LAYERS_LIST_ARROW_UP_PRESSED
-                    // });
                     break;
                 /* tab does not work properly
             case "Tab":
@@ -58,6 +52,10 @@ class LayersList extends Component {
 
     };
 
+    onLayerListClicked = () => {
+        this.forceUpdate();
+    };
+
     componentDidMount() {
         // Keyboard event
         // var _keydown = _.throttle(this.keydown, 100);
@@ -68,16 +66,13 @@ class LayersList extends Component {
 
     componentDidUpdate() {
         this.height = this.refs.layersComponent.clientHeight;
-        // let container = this.refs.watchContainer;
-        // let parentHeight = container.parentElement.clientHeight;
-        // container.style.maxHeight = 0.7*parentHeight;
     }
 
     render() {
         return (
             <div className={styles["App-layers"]}
                  ref="layersComponent"
-                 onClick={this.props.onLayerListClicked}
+                 onClick={this.onLayerListClicked}
             >
                 {/*<h5>Layers</h5>*/}
                 <LayerListToolbar
@@ -123,7 +118,6 @@ const mapDispatchToProps = dispatch => {
         onAffectedBoxClicked: (event, layer) => dispatch(actions.toggleAffectedLayer(event, layer)),
         onSubmitLayerEditForm: (newLayer) => dispatch(actions.updateLayer(newLayer)),
         onEscapeLayerEditForm: () => dispatch(actions.closeEditLayerForm()),
-        onLayerListClicked: () => dispatch(actions.refreshLayerList()),
         setAffectedNextLayer: () => dispatch(actions.setAffectedNextLayer()),
         setAffectedPrevLayer: () => dispatch(actions.setAffectedPrevLayer())
     }

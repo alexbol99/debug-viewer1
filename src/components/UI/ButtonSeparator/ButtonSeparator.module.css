@@ -1,0 +1,14 @@
+.ButtonSeparator {
+    height:40px;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-size: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+.IconSeparator {
+    color: white;
+    position: relative;
+    top: 3px;
+}

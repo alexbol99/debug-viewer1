@@ -2,7 +2,7 @@
  * Created by alexanderbol on 21/04/2017.
  */
 import React from 'react';
-export const DisplayCoordsTool = ({stage, coordX, coordY, divisor, decimals}) => {
+const DisplayCoordsTool = ({stage, coordX, coordY, divisor, decimals}) => {
     const format = (num) => {
         return (num/divisor).toFixed(decimals);
     };
@@ -19,4 +19,6 @@ export const DisplayCoordsTool = ({stage, coordX, coordY, divisor, decimals}) =>
             </h5>
         </div>
     )
-}
+};
+
+export default DisplayCoordsTool;

@@ -8,7 +8,7 @@ import {Component} from 'react';
 import {graphics} from '../models/graphics';
 // import '../../public/styles/App.css';
 let createjs = window.createjs;
-export class MeasureShapesTool extends Component {
+class MeasureShapesTool extends Component {
     constructor(params) {
         super();
         this.segment = new createjs.Shape();
@@ -118,3 +118,5 @@ export class MeasureShapesTool extends Component {
         return null;
     }
 }
+
+export default MeasureShapesTool;

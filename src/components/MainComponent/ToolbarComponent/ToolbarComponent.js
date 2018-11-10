@@ -3,14 +3,16 @@
  */
 
 import React, {Component} from 'react';
-import FontAwesome from 'react-fontawesome';
+// import FontAwesome from 'react-fontawesome';
+import Button from '../../../components/UI/Button/Button';
+import Separator from '../../../components/UI/ButtonSeparator/ButtonSeparator';
 
-import measureShapes from '../../../assets/icons/measureContour.png';
-import measurePoints from '../../../assets/icons/measurePoints.png';
-import width from '../../../assets/icons/WidthOn.png';
-import vertices from '../../../assets/icons/editContourVertextOnOff.png';
+// import measureShapes from '../../../assets/icons/measureContour.png';
+// import measurePoints from '../../../assets/icons/measurePoints.png';
+// import width from '../../../assets/icons/WidthOn.png';
+// import vertices from '../../../assets/icons/editContourVertextOnOff.png';
 
-import styles from './ToolbarComponent.module.css';
+import classes from './ToolbarComponent.module.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 
 class ToolbarComponent extends Component {
@@ -20,108 +22,84 @@ class ToolbarComponent extends Component {
 
     render() {
         return (
-            <div className={styles["App-toolbar"]}>
+            <div className={classes["App-toolbar"]}>
                 {/*<h4>Toolbar</h4>*/}
-                <button title="Open file" onClick={this.openJobButtonClicked}>
-                    {/*<img src={open} alt="open" />*/}
-                    <FontAwesome
-                        name='folder-open'
-                        size='2x'
-                        style={{color:"grey"}}
-                    />
-                </button>
+                <Button type="trigger" title="Open file" iconName='folder-open'
+                    onClick={this.openJobButtonClicked}
+                />
+
+                {/*<button title="Open file" onClick={this.openJobButtonClicked}>*/}
+                    {/*/!*<img src={open} alt="open" />*!/*/}
+                    {/*<FontAwesome*/}
+                        {/*name='folder-open'*/}
+                        {/*size='2x'*/}
+                        {/*style={{color:"grey"}}*/}
+                    {/*/>*/}
+                {/*</button>*/}
 
                 <input style={{fontSize: 16, marginTop: 5, marginBottom: 5, display: "none"}}
                        type="file" id="browseFiles" ref="browseFiles" name="files[]" multiple
                        onChange={this.props.onFileSelected}
                 />
 
-                <button title="Zoom and pan to home view" onClick={this.props.onHomeButtonPressed}>
-                    {/*<img src={home} alt="home" />*/}
-                    <FontAwesome
-                        name='home'
-                        size='2x'
-                        style={{color:"grey"}}
-                    />
-                </button>
-                <button title="Pan by drag" onClick={this.props.onPanByDragPressed}>
-                    {/*<img src={pan} alt="panByDrag" />*/}
-                    <FontAwesome
-                        name='arrows-alt'
-                        size='2x'
-                        style={{color:"grey"}}
-                    />
-                </button>
-                <button title="Measure distance between points" onClick={this.props.onMeasurePointsButtonPressed}>
-                    <img src={measurePoints} alt="measurePoints" />
-                </button>
-                <button title="Measure distance between shapes" onClick={this.props.onMeasureBetweenShapesButtonPressed}>
-                    <img src={measureShapes} alt="measureShapes" />
-                </button>
-                <button title="Display solid or wire" onClick={this.props.onToggleWidthModePressed}>
-                    <img src={width} alt="width" />
-                </button>
-                <button title="Display vertices on/off" onClick={this.props.onToggleVerticesPressed}>
-                    <img src={vertices} alt="vertices" />
-                </button>
-                <button title="Display labels on/off" onClick={this.props.onToggleLabelsPressed}>
-                    {/*<img src={label} alt="labels" />*/}
-                    <FontAwesome
-                        name='tag'
-                        size='2x'
-                        style={{color:"grey"}}
-                    />
-                </button>
-                {/*<button title="Settings" onClick={this.notImplemented}>*/}
-                    {/*<img src={setting} alt="setting" />*/}
-                {/*</button>*/}
+                <Separator />
 
-                {/*{this.props.showCollisionDemoToolButton ? (*/}
-                    {/*<button title="Collision Distance Demo" onClick={this.props.onCollisionDemoButtonPressed}>*/}
-                        {/*<FontAwesome*/}
-                            {/*name='arrows-h'*/}
-                            {/*size='2x'*/}
-                            {/*style={{color: "grey"}}*/}
-                        {/*/>*/}
-                    {/*</button>*/}
-                {/*) : null}*/}
+                <Button type="trigger" title="Zoom and pan to home view" iconName='home'
+                        onClick={this.props.onHomeButtonPressed}
+                />
+
+                <Separator />
+
+                <Button type="mode" title="Pan by drag" iconName='hand-paper'
+                        active={!this.props.measurePointsActive}
+                        onClick={this.props.onPanByDragPressed}
+                />
+
+                <Button type="mode" title="Measure distance" iconName='hand-lizard'
+                        active={this.props.measurePointsActive}
+                        onClick={this.props.onMeasurePointsButtonPressed}
+                />
+
+                <Separator />
+
+                <Button type="trigger" title="Measure distance between shapes" iconName='ruler'
+                        onClick={this.props.onMeasureBetweenShapesButtonPressed}
+                />
+
+                <Button type="trigger" title="Display solid or wire" iconName='fill-drip'
+                        onClick={this.props.onToggleWidthModePressed}
+                />
+
+                <Button type="trigger" title="Display vertices on/off" iconName='draw-polygon'
+                        onClick={this.props.onToggleVerticesPressed}
+                />
+
+                <Button type="trigger" title="Display labels on/off" iconName='tag'
+                        onClick={this.props.onToggleLabelsPressed}
+                />
 
                 {this.props.showSkeletonRecognitionButton ? (
-                    <button title="Skeleton Recognition Demo" onClick={this.props.onSkeletonRecognitionButtonPressed}>
-                        <FontAwesome
-                            name='tree'
-                            size='2x'
-                            style={{color: "grey"}}
-                        />
-                    </button>
+                    <Button type="trigger" title="Skeleton Recognition Demo" iconName='tree'
+                            onClick={this.props.onSkeletonRecognitionButtonPressed}
+                    />
                 ) : null}
 
-                <button title="About" onClick={this.props.onShowAboutPopupPressed}>
-                    {/*<img src={about} alt="about" />*/}
-                    <FontAwesome
-                        name='info'
-                        size='2x'
-                        style={{color:"grey"}}
-                    />
-                </button>
+                <Separator />
 
-                <button>
-                    <FontAwesome
-                        name='ellipsis-v'
-                        size='2x'
-                        style={{color:"white"}}
-                    />
-                </button>
-
-                <span style={{position:"relative", top:-3}}>
-                    Units:
-                </span>
-                <button
-                    style={{position:"relative", top:-3}}
+                <button className={classes["App-toolbar-units"]}
                     onClick={this.props.onUnitClicked}
                 >
-                    <h3>{this.props.units}</h3>
+                    {this.props.units}
                 </button>
+
+                <Separator />
+
+                <Button type="trigger" title="About" iconName='info'
+                        onClick={this.props.onShowAboutPopupPressed}
+                />
+
+                <Separator />
+
             </div>
         )
     }

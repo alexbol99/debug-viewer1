@@ -3,18 +3,23 @@
  */
 
 import React, {Component} from 'react';
+import { connect } from "react-redux";
+// import * as ActionTypes from "../../../store/actionTypes";
+import * as actions from '../store/actions/stageActions';
 
-export class MeasurePointsTool extends Component {
+class MeasurePointsTool extends Component {
     startX = undefined;
     startY = undefined;
     endX = undefined;
     endY = undefined;
     measureStarted = false;
 
+    measureCanvas = React.createRef();
+
     handleMouseDown = (event) => {
         event.preventDefault();
 
-        let canvas = this.refs.measureCanvas;
+        let canvas = this.measureCanvas.current;
         let stage = this.props.stage;
         canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
 
@@ -59,7 +64,10 @@ export class MeasurePointsTool extends Component {
 
         let delta = event.detail || event.wheelDelta;
         if (delta !== 0) {
-            this.props.onMouseWheelMove(event.offsetX, event.offsetY, delta);
+            // this.props.onMouseWheelMove(event.offsetX, event.offsetY, delta);
+            this.props.handleMouseWheelMove(this.props.stage, event.offsetX, event.offsetY, delta);
+
+            this.draw();
         }
     };
 
@@ -67,12 +75,15 @@ export class MeasurePointsTool extends Component {
         event.preventDefault();
 
         if (event.detail !== 0) {
-            this.props.onMousewheelMove(event.layerX, event.layerY, -event.detail);
+            // this.props.onMousewheelMove(event.layerX, event.layerY, -event.detail);
+            this.props.handleMouseWheelMove(this.props.stage, event.layerX, event.layerY, -event.detail);
+
+            this.draw();
         }
     };
 
     draw() {
-        let canvas = this.refs.measureCanvas;
+        let canvas = this.measureCanvas.current;
         let context = canvas.getContext('2d');
         let stage = this.props.stage;
 
@@ -153,7 +164,7 @@ export class MeasurePointsTool extends Component {
     }
 
     componentDidMount() {
-        let canvas = this.refs.measureCanvas;
+        let canvas = this.measureCanvas.current;
         canvas.addEventListener("mousedown", this.handleMouseDown);
         canvas.addEventListener("mousemove", this.handleMouseMove);
         canvas.addEventListener("mouseup", this.handleMouseUp);
@@ -169,7 +180,7 @@ export class MeasurePointsTool extends Component {
     }
 
     componentWillUnmount() {
-        let canvas = this.refs.measureCanvas;
+        let canvas = this.measureCanvas.current;
         canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
     }
 
@@ -180,7 +191,7 @@ export class MeasurePointsTool extends Component {
         let top = mainCanvas.offsetTop;
         let left = mainCanvas.offsetLeft;
         return (
-            <canvas tabIndex="1" ref="measureCanvas" id="measurePoints"
+            <canvas tabIndex="1" ref={this.measureCanvas}
                     width={width}
                     height={height}
                     style={{position:'absolute',top:top,left:left}}
@@ -189,3 +200,19 @@ export class MeasurePointsTool extends Component {
         )
     }
 }
+
+const mapStateToProps = ({app}) => {
+    return {
+        stage: app.stage,
+        divisor: app.divisor,
+        decimals: app.decimals
+    }
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        handleMouseWheelMove: (stage, x, y, delta) => dispatch(actions.handleMouseWheelMove(stage, x, y, delta))
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(MeasurePointsTool);

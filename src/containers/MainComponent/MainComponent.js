@@ -7,15 +7,15 @@ import ToolbarComponent from '../../components/MainComponent/ToolbarComponent/To
 import CanvasComponent from '../../components/MainComponent/CanvasComponent/CanvasComponent';
 import StatusComponent from '../../components/Layout/StatusComponent/StatusComponent';
 
-import {StageComponent} from "../../components/MainComponent/GraphicsEditor/stageComponent";
+import StageComponent from "../../components/MainComponent/GraphicsEditor/stageComponent";
 import LayersComponent from '../../components/MainComponent/GraphicsEditor/layersComponent';
 
 import * as actions from '../../store/actions/appActions';
 
 import {Layers} from '../../models/layers';
-import {MeasurePointsTool} from '../../tools/measurePointsTool';
-import {MeasureShapesTool} from "../../tools/measureShapesTool";
-import {DisplayCoordsTool} from "../../tools/displayCoordsTool";
+import MeasurePointsTool from '../../tools/measurePointsTool';
+import MeasureShapesTool from "../../tools/measureShapesTool";
+import DisplayCoordsTool from "../../tools/displayCoordsTool";
 
 import ModalPopup from "../../components/UI/ModalPopup/ModalPopup";
 import AboutPopup from "../../components/AboutPopup/AboutPopup";
@@ -89,15 +89,7 @@ class MainComponent extends Component {
             />
         ) : null;
 
-        let measurePointsTool =
-            this.props.measurePointsActive ? (
-                <MeasurePointsTool
-                    stage={this.props.stage}
-                    divisor={this.props.divisor}
-                    decimals={this.props.decimals}
-                    onMouseWheelMove={this.handleMouseWheelMove}
-                />
-            ) : null;
+        let measurePointsTool = this.props.measurePointsActive ? <MeasurePointsTool /> : null;
 
         let measuredLayersDisplayed = this.props.measureShapesTool.firstMeasuredShape &&
             this.props.measureShapesTool.secondMeasuredShape &&
@@ -123,6 +115,7 @@ class MainComponent extends Component {
         return (
             <main className={styles["Main-content"]}>
                 <ToolbarComponent
+                    measurePointsActive={this.props.measurePointsActive}
                     units={this.props.units}
                     showSkeletonRecognitionButton={this.props.showSkeletonRecognitionButton}
                     onFileSelected={this.handleFileSelect}

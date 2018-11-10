@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 // import Utils from "../utils";
 
-export class StageComponent extends Component {
+class StageComponent extends Component {
     // shouldComponentUpdate useless because always returns "true",
     // Don't know why, maybe because of children?
     // ----------------------------------------------------------
@@ -31,3 +31,5 @@ export class StageComponent extends Component {
         )
     }
 }
+
+export default StageComponent;

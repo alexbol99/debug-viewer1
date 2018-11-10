@@ -60,12 +60,6 @@ export const openAffectedLayerEditForm = () => {
     }
 };
 
-export const refreshLayerList = () => {
-    return {
-        type: ActionTypes.LAYER_LIST_PANEL_PRESSED
-    }
-};
-
 export const setAffectedNextLayer = () => {
     return {
         type: ActionTypes.LAYERS_LIST_ARROW_DOWN_PRESSED

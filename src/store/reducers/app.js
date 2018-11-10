@@ -149,8 +149,6 @@ const app = (state = defaultAppState, action) => {
             return Object.assign({}, state, {
                 showSpinner: false
             });
-        case ActionTypes.LAYER_LIST_PANEL_PRESSED:
-            return state;  // only to cause refresh of layers list component
         case ActionTypes.AABB_TREE_NEXT_LEVEL:
             return state;
         default:

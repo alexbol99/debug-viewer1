@@ -1,0 +1,25 @@
+.Button {
+    color: grey;
+    height:40px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-size: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+.Button:hover {
+    background: rgba(147, 128, 115, 0.1);
+}
+
+.IconTrigger {
+    color: grey;
+}
+
+.IconModeActive {
+    opacity: 1.0;
+}
+
+.IconModeNotActive {
+    opacity: 0.4;
+}
