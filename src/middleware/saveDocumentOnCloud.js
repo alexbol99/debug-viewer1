@@ -1,5 +1,6 @@
 import * as ActionTypes from '../store/actionTypes';
 import axios from '../axios-database';
+import Layers from '../models/layers';
 
 const saveDocumentOnCloud = ({ getState, dispatch }) => next => action => {
 
@@ -8,16 +9,22 @@ const saveDocumentOnCloud = ({ getState, dispatch }) => next => action => {
         let layers = state.layers;
         let stage = state.app.stage;
 
-        let document = [];
-        for (let layer of layers) {
-            let layerDoc = {
-                name: layer.name,
-                title: layer.title,
-                shapes: JSON.stringify(layer.shapes, null, ' '),
-                dataURL: stage.toDataURL()
-            };
-            document.push(layerDoc);
-        }
+        let document = {
+            name: "document_1",
+            description: "",
+            layers: Layers.toJSON(layers),
+            dataURL: stage.toDataURL()
+        };
+
+        // for (let layer of layers) {
+        //     let layerDoc = {
+        //         name: layer.name,
+        //         title: layer.title,
+        //         shapes: JSON.stringify(layer.shapes, null, ' '),
+        //         dataURL: stage.toDataURL()
+        //     };
+        //     document.push(layerDoc);
+        // }
 
         axios.post('/documents.json', document)
             .then( response => {

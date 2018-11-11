@@ -2,7 +2,7 @@
  * Created by alexanderbol on 20/04/2017.
  */
 
-import { Layer } from '../models/layer';
+import Layer from '../models/layer';
 
 const colors = [
     "#FF0303",
@@ -112,5 +112,9 @@ export class Layers {
             return 0;
         });
         return newLayers;
+    }
+
+    static toJSON(layers) {
+        return layers.map( layer => layer.toJSON() );
     }
 }

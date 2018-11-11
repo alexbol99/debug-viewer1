@@ -6,7 +6,7 @@ import Flatten from 'flatten-js';
 // import { Shape } from '../models/shape';
 import { Model } from './model';
 
-export class Layer {
+class Layer {
     constructor(stage) {
         // super();
         // cannot define Layer as extension of PlanarSet due to bug in compiler ?
@@ -106,4 +106,14 @@ export class Layer {
     //     }
     //     return this;
     // }
+
+    toJSON() {
+        return {
+            name: this.name,
+            title: this.title,
+            shapes: JSON.stringify(this.shapes, null, ' ')
+        };
+    }
 }
+
+export default Layer;

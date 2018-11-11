@@ -1,7 +1,7 @@
 import * as ActionTypes from '../store/actionTypes';
 import axios from '../axios-database';
 import Flatten from 'flatten-js';
-import {Layer} from '../models/layer';
+import Layer from '../models/layer';
 
 const saveDocumentOnCloud = ({ getState, dispatch }) => next => action => {
 

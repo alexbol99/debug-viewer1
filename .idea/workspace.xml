@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="Support save document on Firebase (not completed)">
-      <change afterPath="$PROJECT_DIR$/src/containers/DocumentsComponent/DocumentsComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/DocumentsComponent/DocumentsComponent.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/actions/documentsActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/documents.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/middleware/openDocumentOnCloud.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/openDocumentOnCloud.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/middleware/saveDocumentOnCloud.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/saveDocumentOnCloud.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/layer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/layer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/layers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/layers.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,18 +21,19 @@
     <session id="-1949180860">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="3" />
           <entry key="html" value="1" />
-          <entry key="js" value="51" />
+          <entry key="js" value="57" />
           <entry key="json" value="1" />
           <entry key="md" value="1" />
         </counts>
@@ -46,14 +43,14 @@
           <entry key="CSS" value="3" />
           <entry key="HTML" value="1" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="51" />
+          <entry key="JavaScript" value="57" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="1" />
-          <entry key="js" value="1854" />
+          <entry key="js" value="2121" />
           <entry key="json" value="2" />
           <entry key="txt" value="84" />
         </counts>
@@ -62,7 +59,7 @@
         <counts>
           <entry key="CSS" value="1" />
           <entry key="JSON" value="2" />
-          <entry key="JavaScript" value="1854" />
+          <entry key="JavaScript" value="2121" />
           <entry key="PLAIN_TEXT" value="84" />
         </counts>
       </usages-collector>
@@ -124,10 +121,59 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/reducers/documents.js">
+        <entry file="file://$PROJECT_DIR$/src/models/layer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+            <state relative-caret-position="1938">
+              <caret line="114" column="10" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/middleware/saveDocumentOnCloud.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#52#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/models/distance.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/job.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/middleware/openDocumentOnCloud.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/models/layers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1989">
+              <caret line="117" column="53" lean-forward="true" selection-start-line="117" selection-start-column="53" selection-end-line="117" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="65" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -135,8 +181,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBody.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="102">
+              <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -145,77 +200,8 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Preloader.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/DocumentsComponent/DocumentsComponent.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/DocumentsComponent/DocumentsComponent.module.css">
+        <entry file="file://$PROJECT_DIR$/src/tools/measureShapesTool.js">
           <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/actions/documentsActions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/actions/layersActions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1300">
-              <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/actions/appActions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="123" selection-start-line="123" selection-end-line="123" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/actionTypes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="73" column="61" selection-start-line="73" selection-start-column="61" selection-end-line="73" selection-end-column="61" />
-            </state>
-          </provider>
         </entry>
       </file>
     </leaf>
@@ -275,8 +261,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/Layout/Logo/Logo.js" />
-        <option value="$PROJECT_DIR$/src/components/MainComponent/CanvasComponent/CanvasComponent.js" />
         <option value="$PROJECT_DIR$/src/models/parserXML.js" />
         <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsEditor/labelsLayerComponent.js" />
         <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsEditor/LabelsLayerComponent/labelsLayer.model.css" />
@@ -315,9 +299,7 @@
         <option value="$PROJECT_DIR$/src/middleware/openDocument.js" />
         <option value="$PROJECT_DIR$/src/Preloader.js" />
         <option value="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" />
-        <option value="$PROJECT_DIR$/src/middleware/openDocumentOnCloud.js" />
         <option value="$PROJECT_DIR$/src/components/Layout/HeaderComponent/HeaderComponent.js" />
-        <option value="$PROJECT_DIR$/src/middleware/saveDocumentOnCloud.js" />
         <option value="$PROJECT_DIR$/src/store/reducer.js" />
         <option value="$PROJECT_DIR$/src/store/actionTypes.js" />
         <option value="$PROJECT_DIR$/src/store/actions/documentsActions.js" />
@@ -326,6 +308,10 @@
         <option value="$PROJECT_DIR$/src/containers/DocumentsComponent/DocumentsComponent.module.css" />
         <option value="$PROJECT_DIR$/src/containers/DocumentsComponent/DocumentsComponent.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/middleware/openDocumentOnCloud.js" />
+        <option value="$PROJECT_DIR$/src/models/layer.js" />
+        <option value="$PROJECT_DIR$/src/models/layers.js" />
+        <option value="$PROJECT_DIR$/src/middleware/saveDocumentOnCloud.js" />
       </list>
     </option>
   </component>
@@ -346,10 +332,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="136" />
-    <option name="y" value="25" />
-    <option name="width" value="1775" />
-    <option name="height" value="895" />
+    <option name="x" value="288" />
+    <option name="y" value="24" />
+    <option name="width" value="1547" />
+    <option name="height" value="1004" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -368,188 +354,7 @@
             <path>
               <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
               <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Constructions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="LayersList" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="LayersList" type="462c0819:PsiDirectoryNode" />
-              <item name="LayerListElement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Layout" type="462c0819:PsiDirectoryNode" />
-              <item name="AsideComponent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Layout" type="462c0819:PsiDirectoryNode" />
-              <item name="HeaderComponent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Layout" type="462c0819:PsiDirectoryNode" />
-              <item name="Logo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="CanvasComponent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="GraphicsEditor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="GraphicsEditor" type="462c0819:PsiDirectoryNode" />
-              <item name="domelements" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="GraphicsEditor" type="462c0819:PsiDirectoryNode" />
-              <item name="graphics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="GraphicsEditor" type="462c0819:PsiDirectoryNode" />
-              <item name="LabelsLayerComponent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="ToolbarComponent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="Button" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="ButtonSeparator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="ModalPopup" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="Spinner" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="DocumentsComponent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
@@ -562,6 +367,12 @@
               <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -662,6 +473,7 @@
       <workItem from="1541442128225" duration="22381000" />
       <workItem from="1541765068338" duration="23511000" />
       <workItem from="1541879752833" duration="3104000" />
+      <workItem from="1541946270544" duration="1241000" />
     </task>
     <task id="LOCAL-00001" summary="Added route /boolean-test, refactoring">
       <created>1539784239144</created>
@@ -744,51 +556,31 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131928000" />
+    <option name="totallyTimeSpent" value="135481000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="136" y="25" width="1775" height="895" extended-state="0" />
+    <frame x="288" y="24" width="1547" height="1004" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7826087" visible="true" weight="0.22855498" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7809187" visible="true" weight="0.26375082" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.2173913" side_tool="true" visible="true" weight="0.22855498" />
+      <window_info id="npm" order="2" sideWeight="0.21908127" side_tool="true" visible="true" weight="0.26375082" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.4601227" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22192152" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3432304" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.22192152" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32883435" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32779098" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32894737" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.29693252" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28067702" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32979977" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32520324" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -810,51 +602,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Support save document on Firebase (not completed)" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/UI/Spinner/Spinner.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Layout/AsideComponent/AsideComponent.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Constructions/Demo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="40" column="47" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Constructions/CollisionDemo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
-          <folding>
-            <element signature="e#258#313#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UI/ModalPopup/ModalPopup.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Constructions/BooleanTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructions/SkeletonRecognition.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -951,15 +698,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Layout/Logo/Logo.module.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tools/displayCoordsTool.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="340">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -970,26 +717,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tools/measureShapesTool.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="116" column="14" lean-forward="true" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/axios-database.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1021,51 +752,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1972">
           <caret line="135" column="35" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
-          <folding>
-            <element signature="e#51#90#0" expanded="true" />
-          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/middleware/openDocumentOnCloud.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/layer.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/parserODB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/parserXML.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/middleware/readFiles.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3026">
           <caret line="184" lean-forward="true" selection-start-line="184" selection-end-line="184" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-            <element signature="e#140#180#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1080,9 +779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
           <caret line="50" selection-start-line="41" selection-end-line="50" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1090,38 +786,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-          <folding>
-            <element signature="e#51#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/middleware/saveDocumentOnCloud.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/store/reducers/layers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/store/reducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding>
-            <element signature="e#51#89#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1160,16 +834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBody.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Preloader.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1190,15 +854,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsEditor/graphics/shapeComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/UI/ModalPopup/ModalPopup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="60" column="39" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="73" selection-start-line="32" selection-start-column="73" selection-end-line="32" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/layer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1938">
+          <caret line="114" column="10" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/job.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/middleware/openDocumentOnCloud.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/layers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1989">
+          <caret line="117" column="53" lean-forward="true" selection-start-line="117" selection-start-column="53" selection-end-line="117" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+        <state relative-caret-position="187">
+          <caret line="11" column="65" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBody.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tools/measureShapesTool.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/middleware/saveDocumentOnCloud.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/distance.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
