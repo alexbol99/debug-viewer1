@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import AppBody from './AppBody';
 
@@ -13,6 +13,7 @@ import BooleanTest from './components/Constructions/BooleanTest';
 import SkeletonRecognition from './components/Constructions/SkeletonRecognition';
 import CollisionDemo from "./components/Constructions/CollisionDemo";
 import Spinner from "./components/UI/Spinner/Spinner";
+import DocumentsComponent from "./containers/DocumentsComponent/DocumentsComponent";
 
 class App extends Component {
     render() {
@@ -23,12 +24,15 @@ class App extends Component {
                     version={this.props.version}
                 />
 
-                <Route path="/" component={AppBody}/>
+
+                <Route path="/" exact component={AppBody}/>
 
                 <Route path="/demo" component={Demo}/>
                 <Route path="/boolean-test" component={BooleanTest}/>
                 <Route path="/skeleton" component={SkeletonRecognition}/>
                 <Route path="/collision-distance" component={CollisionDemo}/>
+
+                <Route path="/documents" exact component={DocumentsComponent}/>
 
                 {this.props.showSpinner ? <Spinner /> : null}
             </div>
