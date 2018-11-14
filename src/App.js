@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route /*, Switch*/ } from 'react-router-dom';
 
 import AppBody from './AppBody';
 
@@ -8,6 +8,7 @@ import { connect } from 'react-redux';
 
 import './App.css';
 
+import CloudDocument from './components/Constructions/CloudDocument';
 import Demo from './components/Constructions/Demo';
 import BooleanTest from './components/Constructions/BooleanTest';
 import SkeletonRecognition from './components/Constructions/SkeletonRecognition';
@@ -16,6 +17,7 @@ import Spinner from "./components/UI/Spinner/Spinner";
 import DocumentsComponent from "./containers/DocumentsComponent/DocumentsComponent";
 
 class App extends Component {
+
     render() {
         return (
             <div className="App">
@@ -25,7 +27,9 @@ class App extends Component {
                 />
 
 
-                <Route path="/" exact component={AppBody}/>
+                <Route path="/" component={AppBody}/>
+
+                <Route path="/documents/:id" component={CloudDocument} />
 
                 <Route path="/demo" component={Demo}/>
                 <Route path="/boolean-test" component={BooleanTest}/>
@@ -40,11 +44,12 @@ class App extends Component {
     }
 }
 
-const mapStateToProps = ({app}) => {
+const mapStateToProps = ({app, cloudStorage}) => {
     return {
         title: app.title,
         version: app.version,
-        showSpinner: app.showSpinner
+        showSpinner: app.showSpinner,
+        document: cloudStorage.document
     }
 };
 

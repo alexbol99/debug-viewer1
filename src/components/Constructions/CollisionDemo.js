@@ -2,7 +2,7 @@ import /*React,*/ {Component} from 'react';
 import Flatten from 'flatten-js';
 import CollisionDistance from "../../models/collisionDistance";
 import axios from "axios";
-import {Layers} from "../../models/layers";
+import Layers from "../../models/layers";
 // import {Model} from "../../models/model";
 import * as ActionTypes from "../../store/actionTypes";
 import { connect } from "react-redux";

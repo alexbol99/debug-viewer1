@@ -9,7 +9,7 @@ const saveDocumentOnCloud = ({ getState, dispatch }) => next => action => {
         let state = getState();
         let layers = state.layers;
 
-        axios.get('/documents/-LQxnLEB82RFvfpC_wu6.json')
+        axios.get('/cloudStorage/-LQxnLEB82RFvfpC_wu6.json')
             .then( response => {
                 for (let data of response.data) {
                     let layer = new Layer();

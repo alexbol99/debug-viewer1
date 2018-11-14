@@ -30,7 +30,7 @@ const colors = [
     "#FFA900"
 ];
 
-export class Layers {
+class Layers {
 
     static newLayer(stage, layers) {
         let layer = new Layer(stage);
@@ -118,3 +118,5 @@ export class Layers {
         return layers.map( layer => layer.toJSON() );
     }
 }
+
+export default Layers;

@@ -1,5 +1,5 @@
 import * as ActionTypes from '../store/actionTypes';
-import { Layers } from '../models/layers';
+import Layers from '../models/layers';
 // import { Shape } from '../models/shape';
 import { Model } from "../models/model";
 import { parseXML } from '../models/parserXML';

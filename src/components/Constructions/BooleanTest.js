@@ -1,7 +1,7 @@
 import /*React,*/ {Component} from 'react';
 import Flatten from 'flatten-js';
 import BooleanOp from 'flatten-boolean-op';
-import {Layers} from "../../models/layers";
+import Layers from "../../models/layers";
 import * as ActionTypes from '../../store/actionTypes';
 import { connect } from 'react-redux';
 

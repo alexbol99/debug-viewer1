@@ -8,31 +8,52 @@ const saveDocumentOnCloud = ({ getState, dispatch }) => next => action => {
         let state = getState();
         let layers = state.layers;
         let stage = state.app.stage;
+        let storage = state.cloudStorage;
 
-        let document = {
-            name: "document_1",
-            description: "",
-            layers: Layers.toJSON(layers),
-            dataURL: stage.toDataURL()
-        };
+        if (layers.length > 0) {
+            let payload = {
+                name: storage.document.name,
+                layers: Layers.toJSON(layers),
+                dataURL: stage.toDataURL()
+            };
 
-        // for (let layer of layers) {
-        //     let layerDoc = {
-        //         name: layer.name,
-        //         title: layer.title,
-        //         shapes: JSON.stringify(layer.shapes, null, ' '),
-        //         dataURL: stage.toDataURL()
-        //     };
-        //     document.push(layerDoc);
-        // }
+            if (storage.document.id) {
+                axios.put(`/documents/${storage.document.id}.json`, payload)
+                    .then(response => {
+                        dispatch({
+                            type: ActionTypes.REQUEST_UPDATE_DOCUMENT_IN_DATABASE_SUCCEED,
+                            lastSaved: Date.now()
+                        });
+                        dispatch({
+                            type: ActionTypes.ASYNC_OPERATION_ENDED
+                        });
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    });
+            }
+            else {
+                axios.post('/documents.json', payload)
+                    .then(response => {
+                        dispatch({
+                            type: ActionTypes.REQUEST_ADD_DOCUMENT_TO_DATABASE_SUCCEED,
+                            id: response.data.name,
+                            lastSaved: Date.now()
+                        });
+                        dispatch({
+                            type: ActionTypes.ASYNC_OPERATION_ENDED
+                        });
+                        // this.props.history.push('/documents/'+response.data.name);
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    });
+            }
 
-        axios.post('/documents.json', document)
-            .then( response => {
-                console.log(response)
-            })
-            .catch( error => {
-                console.log(error);
+            dispatch({
+                type: ActionTypes.ASYNC_OPERATION_STARTED
             });
+        }
     }
 
     next(action);

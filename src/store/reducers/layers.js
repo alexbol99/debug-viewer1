@@ -1,5 +1,5 @@
 import * as ActionTypes from "../actionTypes";
-import {Layers} from "../../models/layers";
+import Layers from "../../models/layers";
 
 const layers = (state = [], action) => {
     let affectedLayer = state.find(layer => layer.affected);

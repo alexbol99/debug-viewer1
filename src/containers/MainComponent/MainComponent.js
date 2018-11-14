@@ -12,7 +12,7 @@ import LayersComponent from '../../components/MainComponent/GraphicsEditor/layer
 
 import * as actions from '../../store/actions/appActions';
 
-import {Layers} from '../../models/layers';
+import Layers from '../../models/layers';
 import MeasurePointsTool from '../../tools/measurePointsTool';
 import MeasureShapesTool from "../../tools/measureShapesTool";
 import DisplayCoordsTool from "../../tools/displayCoordsTool";

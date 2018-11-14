@@ -1,5 +1,5 @@
 import * as ActionTypes from "../store/actionTypes";
-import {Layers} from "../models/layers";
+import Layers from "../models/layers";
 
 const pasteData = ({ dispatch, getState }) => next => action => {
 

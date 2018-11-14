@@ -1,7 +1,7 @@
 import /*React,*/ {Component} from 'react';
 import axios from "axios";
 
-import {Layers} from "../../models/layers";
+import Layers from "../../models/layers";
 import {parseODB} from "../../models/parserODB";
 import {Model} from "../../models/model";
 import * as ActionTypes from "../../store/actionTypes";
