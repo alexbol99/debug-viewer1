@@ -2,25 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Constructions/CloudDocument.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/cloudStorage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Constructions/BooleanTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Constructions/BooleanTest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Constructions/CollisionDemo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Constructions/CollisionDemo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Constructions/Demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Constructions/Demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBody.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBody.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Preloader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Preloader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Constructions/CloudDocument.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Constructions/CloudDocument.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/openDocumentOnCloud.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/openDocumentOnCloud.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/pasteData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/pasteData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/readFiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/readFiles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/saveDocumentOnCloud.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/saveDocumentOnCloud.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/skeleton_recognition.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware/skeleton_recognition.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/layers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/layers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/documentsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/cloudStorageActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/documents.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/layers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/layers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/appActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/appActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/cloudStorageActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/cloudStorageActions.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -85,7 +74,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="36" />
-          <entry key="js" value="166" />
+          <entry key="js" value="178" />
           <entry key="json" value="3" />
           <entry key="png" value="4" />
           <entry key="svg" value="1" />
@@ -96,7 +85,7 @@
           <entry key="CSS" value="36" />
           <entry key="Image" value="4" />
           <entry key="JSON" value="3" />
-          <entry key="JavaScript" value="166" />
+          <entry key="JavaScript" value="178" />
           <entry key="SVG" value="1" />
         </counts>
       </usages-collector>
@@ -119,14 +108,14 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="844" />
-          <entry key="JavaScript" value="10883" />
+          <entry key="JavaScript" value="12009" />
           <entry key="PLAIN_TEXT" value="668" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="844" />
-          <entry key="js" value="10883" />
+          <entry key="js" value="12009" />
           <entry key="txt" value="668" />
         </counts>
       </usages-collector>
@@ -135,13 +124,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/middleware/saveDocumentOnCloud.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="45" column="50" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="50" />
+            <state relative-caret-position="525">
+              <caret line="45" column="85" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="85" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="252" column="83" lean-forward="true" selection-start-line="252" selection-start-column="83" selection-end-line="252" selection-end-column="83" />
+              <folding>
+                <element signature="e#51#90#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -160,24 +161,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/middleware/readFiles.js">
+        <entry file="file://$PROJECT_DIR$/src/store/actions/appActions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="82" column="15" selection-start-line="80" selection-start-column="12" selection-end-line="82" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#52#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="254">
+              <caret line="117" selection-start-line="117" selection-end-line="117" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/middleware/openDocumentOnCloud.js">
+        <entry file="file://$PROJECT_DIR$/src/components/Constructions/Demo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+            <state relative-caret-position="546">
+              <caret line="70" column="74" lean-forward="true" selection-start-line="69" selection-end-line="70" selection-end-column="74" />
               <folding>
-                <element signature="e#0#52#0" expanded="true" />
+                <element signature="e#0#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -186,34 +184,40 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="150">
+              <caret line="12" column="65" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Constructions/CloudDocument.js">
+        <entry file="file://$PROJECT_DIR$/src/Preloader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="24" />
+            <state relative-caret-position="301">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
               <folding>
-                <element signature="e#0#43#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Constructions/Demo.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/store/actionTypes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="36" column="50" lean-forward="true" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+            <state relative-caret-position="276">
+              <caret line="15" column="71" lean-forward="true" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/actions/cloudStorageActions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
               <folding>
-                <element signature="e#0#43#0" expanded="true" />
+                <element signature="e#0#46#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -222,17 +226,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBody.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/reducers/cloudStorage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+            <state relative-caret-position="138">
+              <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -249,10 +247,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>files</find>
-      <find>for (let</find>
-      <find>la</find>
-      <find>asyncOperationStarted</find>
       <find>handleFileSelect</find>
       <find>layerName</find>
       <find>onLayerListClicked</find>
@@ -276,9 +270,13 @@
       <find>measureCanvas</find>
       <find>ToolbarComponent</find>
       <find>saveDocumentOnCloud</find>
-      <find>onSaveDocumentButtonClicked</find>
       <find>onManageCloudStorageButtonClicked</find>
       <find>cloudStorage</find>
+      <find>actions</find>
+      <find>updateDocumentInDatabase</find>
+      <find>asyncOperationEnded</find>
+      <find>asyn</find>
+      <find>onSaveDocumentButtonClicked</find>
     </findStrings>
     <replaceStrings>
       <replace>state.app.stage</replace>
@@ -294,13 +292,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsEditor/graphics/shapeComponent.js" />
         <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsEditor/layerComponent.js" />
         <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsEditor/graphics/imageComponent.js" />
         <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsEditor/LabelsLayerComponent/labelsLayerComponent.js" />
         <option value="$PROJECT_DIR$/src/components/UI/Spinner/Spinner.js" />
         <option value="$PROJECT_DIR$/src/components/UI/Spinner/Spinner.module.css" />
-        <option value="$PROJECT_DIR$/src/AppBody.js" />
         <option value="$PROJECT_DIR$/src/components/UI/ModalPopup/ModalPopup.module.css" />
         <option value="$PROJECT_DIR$/src/containers/LayerList/LayersList.js" />
         <option value="$PROJECT_DIR$/src/store/actions/layersActions.js" />
@@ -317,10 +313,8 @@
         <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsEditor/stageComponent.js" />
         <option value="$PROJECT_DIR$/src/axios-database.js" />
         <option value="$PROJECT_DIR$/src/middleware/saveDocument.js" />
-        <option value="$PROJECT_DIR$/src/store/actions/appActions.js" />
         <option value="$PROJECT_DIR$/src/components/MainComponent/ToolbarComponent/ToolbarComponent.js" />
         <option value="$PROJECT_DIR$/src/middleware/openDocument.js" />
-        <option value="$PROJECT_DIR$/src/Preloader.js" />
         <option value="$PROJECT_DIR$/src/components/Layout/HeaderComponent/HeaderComponent.js" />
         <option value="$PROJECT_DIR$/src/store/actions/documentsActions.js" />
         <option value="$PROJECT_DIR$/src/containers/DocumentsList/DocumentsComponent.js" />
@@ -330,21 +324,25 @@
         <option value="$PROJECT_DIR$/src/models/layer.js" />
         <option value="$PROJECT_DIR$/src/models/layers.js" />
         <option value="$PROJECT_DIR$/src/components/Constructions/BooleanTest.js" />
-        <option value="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/layers.js" />
         <option value="$PROJECT_DIR$/src/components/Constructions/CollisionDemo.js" />
         <option value="$PROJECT_DIR$/src/components/Constructions/Demo.js" />
         <option value="$PROJECT_DIR$/src/middleware/readFiles.js" />
         <option value="$PROJECT_DIR$/src/middleware/pasteData.js" />
         <option value="$PROJECT_DIR$/src/middleware/skeleton_recognition.js" />
-        <option value="$PROJECT_DIR$/src/store/actionTypes.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/documents.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/cloudDB.js" />
         <option value="$PROJECT_DIR$/src/store/reducer.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/cloudStorage.js" />
-        <option value="$PROJECT_DIR$/src/components/Constructions/CloudDocument.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/middleware/saveDocumentOnCloud.js" />
+        <option value="$PROJECT_DIR$/src/components/Constructions/CloudDocument.js" />
+        <option value="$PROJECT_DIR$/src/store/actions/cloudStorageActions.js" />
+        <option value="$PROJECT_DIR$/src/AppBody.js" />
+        <option value="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" />
+        <option value="$PROJECT_DIR$/src/store/actions/appActions.js" />
+        <option value="$PROJECT_DIR$/src/Preloader.js" />
+        <option value="$PROJECT_DIR$/src/store/actionTypes.js" />
       </list>
     </option>
   </component>
@@ -365,10 +363,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="310" />
-    <option name="y" value="29" />
-    <option name="width" value="1532" />
-    <option name="height" value="988" />
+    <option name="x" value="109" />
+    <option name="y" value="33" />
+    <option name="width" value="1740" />
+    <option name="height" value="919" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -376,18 +374,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
               <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
@@ -406,6 +398,20 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Constructions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
@@ -462,6 +468,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -490,6 +497,135 @@
       <recent name="C:\Users\Alex Bol\WebstormProjects\debug-viewer1\public" />
       <recent name="C:\Users\Alex Bol\WebstormProjects\debug-viewer1\src\components\Layout" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/App.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/components/Constructions/BooleanTest.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/components/Constructions/CollisionDemo.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/components/Constructions/Demo.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/middleware/openDocumentOnCloud.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/middleware/pasteData.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/middleware/readFiles.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/middleware/saveDocumentOnCloud.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/middleware/skeleton_recognition.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/models/layers.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/store/actionTypes.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/store/reducer.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/store/reducers/layers.js</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/components/Constructions/CloudDocument.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/store/actions/cloudStorageActions.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/store/reducers/cloudStorage.js</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/store/actions/documentsActions.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/store/reducers/documents.js</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -648,25 +784,25 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149725000" />
+    <option name="totallyTimeSpent" value="156011000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="366" y="25" width="1532" height="988" extended-state="0" />
+    <frame x="109" y="33" width="1740" height="919" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.77829456" visible="true" weight="0.26639894" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.77834177" visible="true" weight="0.26321974" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.22170542" side_tool="true" visible="true" weight="0.26639894" />
+      <window_info id="npm" order="2" sideWeight="0.2216582" side_tool="true" visible="true" weight="0.26321974" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3432304" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22569028" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22542594" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32779098" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.327654" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3286219" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.29621124" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -793,13 +929,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/ToolbarComponent/ToolbarComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="49" column="77" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/parserODB.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -820,34 +949,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/appActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="123" selection-start-line="123" selection-end-line="123" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/actions/layersActions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1300">
           <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/cloudStorageActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Preloader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -896,15 +1001,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/layer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="118" column="21" lean-forward="true" selection-start-line="118" selection-start-column="21" selection-end-line="118" selection-end-column="21" />
+        <state relative-caret-position="1938">
+          <caret line="114" column="10" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/layers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="121" column="22" lean-forward="true" selection-start-line="121" selection-start-column="22" selection-end-line="121" selection-end-column="22" />
+        <state relative-caret-position="1989">
+          <caret line="117" column="53" selection-start-line="117" selection-start-column="53" selection-end-line="117" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -926,16 +1031,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-          <folding>
-            <element signature="e#258#313#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
@@ -950,13 +1045,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actionTypes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="75" column="58" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -984,12 +1072,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Constructions/Demo.js">
+    <entry file="file://$PROJECT_DIR$/src/middleware/openDocumentOnCloud.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="36" column="50" lean-forward="true" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+        <state relative-caret-position="51">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="43" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/ToolbarComponent/ToolbarComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="49" column="77" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Constructions/CloudDocument.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="32" column="51" lean-forward="true" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/middleware/saveDocumentOnCloud.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="45" column="85" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="85" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/cloudStorageActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Constructions/Demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="70" column="74" lean-forward="true" selection-start-line="69" selection-end-line="70" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="252" column="83" lean-forward="true" selection-start-line="252" selection-start-column="83" selection-end-line="252" selection-end-column="83" />
+          <folding>
+            <element signature="e#51#90#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1004,57 +1153,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/appActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="117" selection-start-line="117" selection-end-line="117" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBody.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        <state relative-caret-position="138">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="150">
+          <caret line="12" column="65" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Preloader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Constructions/CloudDocument.js">
+    <entry file="file://$PROJECT_DIR$/src/store/actionTypes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/middleware/openDocumentOnCloud.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="30" column="30" lean-forward="true" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/middleware/saveDocumentOnCloud.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="45" column="50" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="276">
+          <caret line="15" column="71" lean-forward="true" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
         </state>
       </provider>
     </entry>

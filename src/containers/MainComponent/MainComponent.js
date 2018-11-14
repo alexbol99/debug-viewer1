@@ -11,6 +11,7 @@ import StageComponent from "../../components/MainComponent/GraphicsEditor/stageC
 import LayersComponent from '../../components/MainComponent/GraphicsEditor/layersComponent';
 
 import * as actions from '../../store/actions/appActions';
+import * as cloudActions from '../../store/actions/cloudStorageActions';
 
 import Layers from '../../models/layers';
 import MeasurePointsTool from '../../tools/measurePointsTool';
@@ -34,6 +35,38 @@ class MainComponent extends Component {
         let layer = Layers.getAffected(this.props.layers);
         if (!layer) return;
         this.props.setHomeView(this.props.stage, layer);
+    };
+
+    onSaveDocumentButtonClicked = () => {
+        if (this.props.layers.length === 0) return;   // nothing to save
+        let payload = {
+            name: this.props.document.name,
+            layers: Layers.toJSON(this.props.layers),
+            dataURL: this.props.stage.toDataURL()
+        };
+        if (this.props.document.id) {
+            cloudActions.updateDocumentInDatabase(this.props.document.id, payload)
+                .then( response => {
+                    this.props.updateDocumentState(Date.now());
+                    this.props.asyncOperationEnded();
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+        }
+        else {
+            cloudActions.addDocumentToDatabase(payload)
+                .then( response => {
+                    this.props.registerDocumentAddedToDatabase( response.data.name, Date.now());
+                    this.props.asyncOperationEnded();
+                    // update url
+                    this.props.history.push('/documents/'+response.data.name);
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+        }
+        this.props.asyncOperationStarted();
     };
 
     handleKeyDown = (e) => {
@@ -129,7 +162,7 @@ class MainComponent extends Component {
                     onShowAboutPopupPressed={this.props.toggleAboutPopup}
                     onSkeletonRecognitionButtonPressed={this.props.applySkeletonRecognition}
                     onUnitClicked={this.props.toggleUnits}
-                    onSaveDocumentButtonClicked={this.props.onSaveDocumentButtonClicked}
+                    onSaveDocumentButtonClicked={this.onSaveDocumentButtonClicked}
                     onManageCloudStorageButtonClicked={this.props.onManageCloudStorageButtonClicked}
                 />
 
@@ -176,7 +209,7 @@ class MainComponent extends Component {
     }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
     return {
         stage: state.app.stage,
         title: state.app.title,
@@ -195,6 +228,8 @@ const mapStateToProps = state => {
         layers: state.layers,
         mouse: state.mouse,
         measureShapesTool: state.measureShapesTool,
+
+        document: state.cloudStorage.document
     }
 };
 
@@ -217,6 +252,11 @@ const mapDispatchToProps = dispatch => {
         handleClickOnShape: (shape, layer) => dispatch(actions.handleClickOnShape(shape, layer)),
         onSaveDocumentButtonClicked: () => dispatch(actions.saveDocumentOnCloud()),
         onManageCloudStorageButtonClicked: () => dispatch(actions.openDocumentOnCloud()),
+        asyncOperationStarted: () => dispatch(actions.asyncOperationStarted()),
+        asyncOperationEnded: () => dispatch(actions.asyncOperationEnded()),
+
+        registerDocumentAddedToDatabase: (id, timestamp) => dispatch(cloudActions.registerDocumentAddedToDatabase(id, timestamp)),
+        updateDocumentState: (timestamp) => dispatch(cloudActions.updateDocumentState(timestamp))
     }
 };
 

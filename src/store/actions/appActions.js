@@ -116,12 +116,6 @@ export const asyncOperationEnded = () => {
     }
 };
 
-export const saveDocumentOnCloud = () => {
-    return {
-        type: ActionTypes.SAVE_DOCUMENT_BUTTON_CLICKED
-    }
-};
-
 export const openDocumentOnCloud = () => {
     return {
         type: ActionTypes.MANAGE_CLOUD_STORAGE_BUTTON_CLICKED

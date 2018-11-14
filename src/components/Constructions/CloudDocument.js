@@ -66,7 +66,8 @@ class CloudDocument extends Component {
 const mapStateToProps = state => {
     return {
         layers: state.layers,
-        stage: state.app.stage
+        stage: state.app.stage,
+        document: state.cloudStorage.document
     }
 };
 
