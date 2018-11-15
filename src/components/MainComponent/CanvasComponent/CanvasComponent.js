@@ -40,7 +40,7 @@ class CanvasComponent extends Component {
     };
 
     handleMouseWheel = (event) => {
-        event.preventDefault();
+        /*event.preventDefault();*/
 
         let delta = event.detail || event.wheelDelta;
         if (delta !== 0) {
@@ -49,7 +49,7 @@ class CanvasComponent extends Component {
     };
 
     handleMouseWheelFox = (event) => {
-        event.preventDefault();
+        /*event.preventDefault();*/
         if (event.detail !== 0) {
             this.props.handleMouseWheelMove(this.props.stage, event.layerX, event.layerY, -event.detail);
         }
@@ -65,8 +65,8 @@ class CanvasComponent extends Component {
         stage.on("stagemousedown", this.handleMouseDown);
         stage.on("stagemouseup", this.handleMouseUp);
         stage.on("mouseleave", this.handleMouseLeave);
-        stage.canvas.addEventListener("mousewheel", this.handleMouseWheel);
-        stage.canvas.addEventListener("DOMMouseScroll", this.handleMouseWheelFox);
+        stage.canvas.addEventListener("mousewheel", this.handleMouseWheel, {passive: true});
+        stage.canvas.addEventListener("DOMMouseScroll", this.handleMouseWheelFox, {passive: true});
 
         this.props.registerStage(stage);
     }

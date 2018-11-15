@@ -2,8 +2,8 @@ import /*React,*/ {Component} from 'react';
 import axios from "axios";
 
 import Layers from "../../models/layers";
-import {parseODB} from "../../models/parserODB";
-import {Model} from "../../models/model";
+import {parseODB} from "../../dataParsers/parserODB";
+import Model from "../../models/model";
 import * as ActionTypes from "../../store/actionTypes";
 import * as actions from '../../store/actions/appActions';
 import { connect } from 'react-redux';

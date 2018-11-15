@@ -4,7 +4,7 @@
 
 import Flatten from 'flatten-js';
 // import { Shape } from '../models/shape';
-import { Model } from './model';
+import Model from './model';
 
 class Layer {
     constructor(stage) {

@@ -1,12 +1,12 @@
 import * as ActionTypes from '../store/actionTypes';
 import Layers from '../models/layers';
 // import { Shape } from '../models/shape';
-import { Model } from "../models/model";
-import { parseXML } from '../models/parserXML';
-import { parseODB } from "../models/parserODB";
-import { parseImage } from "../models/parsePGM";
-import { parseCSV } from "../models/parseCSV";
-import { parseTXT } from "../models/parseTXT";
+import Model from "../models/model";
+import { parseXML } from '../dataParsers/parserXML';
+import { parseODB } from "../dataParsers/parserODB";
+import { parseImage } from "../dataParsers/parsePGM";
+import { parseCSV } from "../dataParsers/parseCSV";
+import { parseTXT } from "../dataParsers/parseTXT";
 
 const readAsText = (reader, file, stage, layers, dispatch, files) => {
 

@@ -3,6 +3,9 @@
  */
 
 import React, {Component} from 'react';
+import {Route/*, Switch*/} from 'react-router-dom';
+import { connect } from "react-redux";
+
 import ToolbarComponent from '../../components/MainComponent/ToolbarComponent/ToolbarComponent';
 import CanvasComponent from '../../components/MainComponent/CanvasComponent/CanvasComponent';
 import StatusComponent from '../../components/Layout/StatusComponent/StatusComponent';
@@ -20,9 +23,9 @@ import DisplayCoordsTool from "../../tools/displayCoordsTool";
 
 import ModalPopup from "../../components/UI/ModalPopup/ModalPopup";
 import AboutPopup from "../../components/AboutPopup/AboutPopup";
+import CloudDocument from '../../components/Constructions/CloudDocument';
 
 import styles from './MainComponent.module.css';
-import { connect } from "react-redux";
 
 class MainComponent extends Component {
     handleFileSelect = (event) => {
@@ -204,6 +207,7 @@ class MainComponent extends Component {
                     />
                 </ModalPopup>
 
+                <Route path="/documents/:id" component={CloudDocument}/>
             </main>
         )
     }
@@ -250,7 +254,6 @@ const mapDispatchToProps = dispatch => {
         handleMouseRollOverShape: (shape) => dispatch(actions.handleMouseRollOverShape(shape)),
         handleMouseRollOutShape: () => dispatch(actions.handleMouseRollOutShape()),
         handleClickOnShape: (shape, layer) => dispatch(actions.handleClickOnShape(shape, layer)),
-        onSaveDocumentButtonClicked: () => dispatch(actions.saveDocumentOnCloud()),
         onManageCloudStorageButtonClicked: () => dispatch(actions.openDocumentOnCloud()),
         asyncOperationStarted: () => dispatch(actions.asyncOperationStarted()),
         asyncOperationEnded: () => dispatch(actions.asyncOperationEnded()),

@@ -5,7 +5,9 @@ import axios from "../../axios-database";
 import * as ActionTypes from "../../store/actionTypes";
 import * as actions from '../../store/actions/appActions';
 import Layer from "../../models/layer";
-import Flatten from "flatten-js";
+// import Model from "../../models/model";
+// import Flatten from "flatten-js";
+import { parseJSON} from "../../dataParsers/parseJSON";
 
 class CloudDocument extends Component {
     state={
@@ -15,28 +17,13 @@ class CloudDocument extends Component {
     componentDidUpdate() {
         if (this.props.stage && !this.state.done) {
             let stage = this.props.stage;
-            let layers = this.props.layers;
 
             axios.get('/documents/' + this.props.match.params.id + '.json')
                 .then( (response) => {
                     for (let data of response.data.layers) {
                         let layer = new Layer();
 
-                        let shapes = JSON.parse(data.shapes);
-
-                        for (let shape of shapes) {
-                            if (shape.geom instanceof Array) {
-                                let polygon = new Flatten.Polygon();
-                                for (let faceArray of shape.geom) {
-                                    polygon.addFace(faceArray);
-                                }
-                                layer.add(polygon);
-                            }
-                            else {
-                                layer.add(shape);
-                            }
-                        }
-
+                        layer.shapes = parseJSON(data.shapes);
                         layer.name = data.name;
                         // layer.title = data.title;
                         // layers.push(layer);

@@ -1,5 +1,5 @@
 import { Job } from '../models/job';
-import {Parser} from '../models/parser';
+import {Parser} from './parser';
 
 export function parseTXT(filename, str) {
     let job = new Job();

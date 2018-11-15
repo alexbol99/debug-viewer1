@@ -7,7 +7,7 @@ let defaultStyle = {
 };
 
 /* Class Model represents data model that will be added to layer */
-export class Model {
+class Model {
     constructor(geom = undefined, style = undefined, label = "") {
         this.geom = geom;
         this.style = style || defaultStyle;
@@ -75,3 +75,5 @@ export class Model {
     }
 */
 }
+
+export default Model;

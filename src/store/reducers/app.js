@@ -1,5 +1,5 @@
 import * as ActionTypes from "../actionTypes";
-import {Parser} from "../../models/parser";
+import {Parser} from "../../dataParsers/parser";
 
 const unitsList = [
     {

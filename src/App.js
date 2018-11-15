@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
-import { Route /*, Switch*/ } from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 
 import AppBody from './AppBody';
 
 import HeaderComponent from './components/Layout/HeaderComponent/HeaderComponent';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
 import './App.css';
 
-import CloudDocument from './components/Constructions/CloudDocument';
+// import CloudDocument from './components/Constructions/CloudDocument';
 import Demo from './components/Constructions/Demo';
 import BooleanTest from './components/Constructions/BooleanTest';
 import SkeletonRecognition from './components/Constructions/SkeletonRecognition';
@@ -27,30 +27,32 @@ class App extends Component {
                 />
 
 
-                <Route path="/" component={AppBody}/>
+                <Switch>
+                    <Route path="/documents" exact component={DocumentsComponent}/>
 
-                <Route path="/documents/:id" component={CloudDocument} />
+                    <Route path="/" component={AppBody}/>
+                    {/*<Route path="/documents/:id" component={CloudDocument}/>*/}
 
-                <Route path="/demo" component={Demo}/>
-                <Route path="/boolean-test" component={BooleanTest}/>
-                <Route path="/skeleton" component={SkeletonRecognition}/>
-                <Route path="/collision-distance" component={CollisionDemo}/>
+                    <Route path="/demo" component={Demo}/>
+                    <Route path="/boolean-test" component={BooleanTest}/>
+                    <Route path="/skeleton" component={SkeletonRecognition}/>
+                    <Route path="/collision-distance" component={CollisionDemo}/>
 
-                <Route path="/documents" exact component={DocumentsComponent}/>
+                </Switch>
 
-                {this.props.showSpinner ? <Spinner /> : null}
+                {this.props.showSpinner ? <Spinner/> : null}
             </div>
-        );
+    );
     }
-}
+    }
 
-const mapStateToProps = ({app, cloudStorage}) => {
-    return {
+    const mapStateToProps = ({app, cloudStorage}) => {
+        return {
         title: app.title,
         version: app.version,
         showSpinner: app.showSpinner,
         document: cloudStorage.document
     }
-};
+    };
 
-export default connect(mapStateToProps, null)(App);
+    export default connect(mapStateToProps, null)(App);
