@@ -16,6 +16,10 @@ export const addDocumentToDatabase = ( payload) => {
     return axios.post('/documents.json', payload);
 };
 
+export const fetchDocumentFromDatabase = (id) => {
+    return axios.get('/documents/' + id + '.json');
+};
+
 export const registerDocumentAddedToDatabase = (id, timestamp) => {
     return {
         type: ActionTypes.REQUEST_ADD_DOCUMENT_TO_DATABASE_SUCCEED,
@@ -30,5 +34,15 @@ export const updateDocumentState = (timestamp) => {
         lastSaved: timestamp
     }
 };
+
+export const requestFetchDocumentFromDatabaseSucceed = (id, name, owner) => {
+    return {
+        type: ActionTypes.REQUEST_FETCH_DOCUMENT_FROM_DATABASE_SUCCEED,
+        id,
+        name,
+        owner
+    }
+};
+
 
 

@@ -9,7 +9,9 @@ import { connect } from "react-redux";
 const appBody = (props) => {
     return (
         <div className="App-body" onPaste={props.pasteDataFromBuffer}>
-            <MainComponent history={props.history}/>
+            <MainComponent history={props.history}
+                           onManageCloudStorageButtonClicked={props.onManageCloudStorageButtonClicked}
+            />
             <LayersList />
             <AsideComponent />
         </div>

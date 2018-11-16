@@ -10,7 +10,7 @@ export const addEmptyLayer = (stage) => {
 export const addNewLayer = (layer) => {
     return {
         type: ActionTypes.ADD_NEW_LAYER,
-        stage: layer
+        layer
     }
 };
 
@@ -29,7 +29,7 @@ export const sortLayers = () => {
 export const toggleDisplayLayer = (layer) => {
     return {
         type: ActionTypes.TOGGLE_DISPLAY_LAYER_PRESSED,
-        layer: layer
+        layer
     }
 };
 
@@ -71,5 +71,12 @@ export const setAffectedPrevLayer = () => {
         type: ActionTypes.LAYERS_LIST_ARROW_UP_PRESSED
     }
 };
+
+export const deleteAllLayers = () => {
+    return {
+        type: ActionTypes.CLEAR_ALL,
+    }
+}
+
 
 

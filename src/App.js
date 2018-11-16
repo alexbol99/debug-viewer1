@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch, withRouter} from 'react-router-dom';
 
 import AppBody from './AppBody';
 
@@ -17,7 +17,9 @@ import Spinner from "./components/UI/Spinner/Spinner";
 import DocumentsComponent from "./containers/DocumentsComponent/DocumentsComponent";
 
 class App extends Component {
-
+    onManageCloudStorageButtonClicked = () => {
+        this.props.history.push('/documents');
+    }
     render() {
         return (
             <div className="App">
@@ -30,7 +32,10 @@ class App extends Component {
                 <Switch>
                     <Route path="/documents" exact component={DocumentsComponent}/>
 
-                    <Route path="/" component={AppBody}/>
+                    <Route path="/" render={props => (<AppBody
+                        {...props}
+                        onManageCloudStorageButtonClicked={this.onManageCloudStorageButtonClicked} />)}
+                    />
                     {/*<Route path="/documents/:id" component={CloudDocument}/>*/}
 
                     <Route path="/demo" component={Demo}/>
@@ -55,4 +60,4 @@ class App extends Component {
     }
     };
 
-    export default connect(mapStateToProps, null)(App);
+    export default withRouter(connect(mapStateToProps, null)(App));

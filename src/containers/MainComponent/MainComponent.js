@@ -233,7 +233,8 @@ const mapStateToProps = (state, ownProps) => {
         mouse: state.mouse,
         measureShapesTool: state.measureShapesTool,
 
-        document: state.cloudStorage.document
+        document: state.cloudStorage.document,
+        onManageCloudStorageButtonClicked: ownProps.onManageCloudStorageButtonClicked
     }
 };
 
@@ -254,7 +255,6 @@ const mapDispatchToProps = dispatch => {
         handleMouseRollOverShape: (shape) => dispatch(actions.handleMouseRollOverShape(shape)),
         handleMouseRollOutShape: () => dispatch(actions.handleMouseRollOutShape()),
         handleClickOnShape: (shape, layer) => dispatch(actions.handleClickOnShape(shape, layer)),
-        onManageCloudStorageButtonClicked: () => dispatch(actions.openDocumentOnCloud()),
         asyncOperationStarted: () => dispatch(actions.asyncOperationStarted()),
         asyncOperationEnded: () => dispatch(actions.asyncOperationEnded()),
 

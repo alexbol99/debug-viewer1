@@ -39,6 +39,11 @@ const stageController = ({ getState, dispatch }) => next => action => {
                 stage.zoomByMouse(action.x, action.y, bIn, 1.2);
                 break;
 
+            case ActionTypes.CLEAR_ALL:
+                stage.removeAllChildren();
+                stage.removeAllListeners();
+                break;
+
             default:
                 break;
         }

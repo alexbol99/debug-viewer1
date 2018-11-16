@@ -1,13 +1,10 @@
 import /*React,*/ {Component} from 'react';
 import { connect } from 'react-redux';
-import axios from "../../axios-database";
-
-import * as ActionTypes from "../../store/actionTypes";
 import * as actions from '../../store/actions/appActions';
+import * as layerActions from '../../store/actions/layersActions';
+import * as cloudActions from '../../store/actions/cloudStorageActions';
 import Layer from "../../models/layer";
-// import Model from "../../models/model";
-// import Flatten from "flatten-js";
-import { parseJSON} from "../../dataParsers/parseJSON";
+import {parseJSON} from "../../dataParsers/parseJSON";
 
 class CloudDocument extends Component {
     state={
@@ -18,32 +15,26 @@ class CloudDocument extends Component {
         if (this.props.stage && !this.state.done) {
             let stage = this.props.stage;
 
-            axios.get('/documents/' + this.props.match.params.id + '.json')
+            cloudActions.fetchDocumentFromDatabase(this.props.match.params.id)
                 .then( (response) => {
-                    for (let data of response.data.layers) {
+                    let firstLayer = undefined;
+                    for (let layerData of response.data.layers) {
                         let layer = new Layer();
+                        layer.shapes = parseJSON(layerData.shapes);
+                        layer.name = layerData.name;
 
-                        layer.shapes = parseJSON(data.shapes);
-                        layer.name = data.name;
-                        // layer.title = data.title;
-                        // layers.push(layer);
-
-                        this.props.panAndZoomToShape(stage, layer);
+                        if (!firstLayer) firstLayer = layer;
                         this.props.addNewLayer(layer);
-                        this.props.toggleLayer(layer);
-
                         this.props.asyncOperationEnded();
                     }
-
-
-
+                    this.props.updateDocument(this.props.match.params.id, response.data.name, "Alex Bol");
+                    this.props.panAndZoomToShape(stage, firstLayer);
+                    this.props.toggleLayer(firstLayer);
                 });
+            this.props.clearAll();
             this.setState({done:true});
             this.props.asyncOperationStarted();
         }
-    }
-    componentDidMount() {
-
     }
     render() {
         return null;
@@ -60,21 +51,15 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        panAndZoomToShape: (stage, layer) => dispatch({
-            type: ActionTypes.PAN_AND_ZOOM_TO_SHAPE,
-            stage: stage,
-            shape: layer
-        }),
-        addNewLayer: (layer) => dispatch({
-            type: ActionTypes.ADD_NEW_LAYER,
-            layer: layer
-        }),
-        toggleLayer: (layer) => dispatch({
-            type: ActionTypes.TOGGLE_DISPLAY_LAYER_PRESSED,
-            layer: layer
-        }),
+        panAndZoomToShape: (stage, layer) => dispatch(actions.setHomeView(stage, layer)),
         asyncOperationStarted: () => dispatch(actions.asyncOperationStarted()),
-        asyncOperationEnded: () => dispatch(actions.asyncOperationEnded())
+        asyncOperationEnded: () => dispatch(actions.asyncOperationEnded()),
+
+        addNewLayer: (layer) => dispatch(layerActions.addNewLayer(layer)),
+        toggleLayer: (layer) => dispatch(layerActions.toggleDisplayLayer(layer)),
+
+        clearAll: () => dispatch(layerActions.deleteAllLayers()),
+        updateDocument: (id, name, owner) => dispatch(cloudActions.requestFetchDocumentFromDatabaseSucceed(id, name, owner))
     }
 };
 

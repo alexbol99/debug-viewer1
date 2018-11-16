@@ -3,14 +3,8 @@
  */
 
 import React, {Component} from 'react';
-// import FontAwesome from 'react-fontawesome';
 import Button from '../../../components/UI/Button/Button';
 import Separator from '../../../components/UI/ButtonSeparator/ButtonSeparator';
-
-// import measureShapes from '../../../assets/icons/measureContour.png';
-// import measurePoints from '../../../assets/icons/measurePoints.png';
-// import width from '../../../assets/icons/WidthOn.png';
-// import vertices from '../../../assets/icons/editContourVertextOnOff.png';
 
 import classes from './ToolbarComponent.module.css';
 import '@fortawesome/fontawesome-free/css/all.css';
@@ -18,23 +12,21 @@ import '@fortawesome/fontawesome-free/css/all.css';
 class ToolbarComponent extends Component {
     openJobButtonClicked = () => this.refs.browseFiles.click();
 
-    notImplemented = () => alert("Not implemented yet");
-
     render() {
         return (
             <div className={classes["App-toolbar"]}>
                 {/*<h4>Toolbar</h4>*/}
                 <Button type="trigger" title="Open files" iconName='folder-open'
-                    onClick={this.openJobButtonClicked}
+                        onClick={this.openJobButtonClicked}
                 />
 
                 {/*<button title="Open file" onClick={this.openJobButtonClicked}>*/}
-                    {/*/!*<img src={open} alt="open" />*!/*/}
-                    {/*<FontAwesome*/}
-                        {/*name='folder-open'*/}
-                        {/*size='2x'*/}
-                        {/*style={{color:"grey"}}*/}
-                    {/*/>*/}
+                {/*/!*<img src={open} alt="open" />*!/*/}
+                {/*<FontAwesome*/}
+                {/*name='folder-open'*/}
+                {/*size='2x'*/}
+                {/*style={{color:"grey"}}*/}
+                {/*/>*/}
                 {/*</button>*/}
 
                 <input style={{fontSize: 16, marginTop: 5, marginBottom: 5, display: "none"}}
@@ -50,13 +42,13 @@ class ToolbarComponent extends Component {
                         onClick={this.props.onManageCloudStorageButtonClicked}
                 />
 
-                <Separator />
+                <Separator/>
 
                 <Button type="trigger" title="Zoom and pan to home view" iconName='home'
                         onClick={this.props.onHomeButtonPressed}
                 />
 
-                <Separator />
+                <Separator/>
 
                 <Button type="mode" title="Pan by drag" iconName='hand-paper'
                         active={!this.props.measurePointsActive}
@@ -68,7 +60,7 @@ class ToolbarComponent extends Component {
                         onClick={this.props.onMeasurePointsButtonPressed}
                 />
 
-                <Separator />
+                <Separator/>
 
                 <Button type="trigger" title="Measure distance between shapes" iconName='ruler'
                         onClick={this.props.onMeasureBetweenShapesButtonPressed}
@@ -92,21 +84,21 @@ class ToolbarComponent extends Component {
                     />
                 ) : null}
 
-                <Separator />
+                <Separator/>
 
                 <button className={classes["App-toolbar-units"]}
-                    onClick={this.props.onUnitClicked}
+                        onClick={this.props.onUnitClicked}
                 >
                     {this.props.units}
                 </button>
 
-                <Separator />
+                <Separator/>
 
                 <Button type="trigger" title="About" iconName='info'
                         onClick={this.props.onShowAboutPopupPressed}
                 />
 
-                <Separator />
+                <Separator/>
 
             </div>
         )

@@ -22,6 +22,9 @@ const layers = (state = [], action) => {
                 return state;
             }
 
+        case ActionTypes.CLEAR_ALL:
+            return [];
+
         case ActionTypes.SORT_LAYERS_BUTTON_PRESSED:
             return Layers.sort(state);
 

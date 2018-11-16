@@ -22,6 +22,15 @@ const cloudStorage = (state = cloudStorageDefaultState, action) => {
                     lastSaved: action.timestamp
                 }
             };
+        case ActionTypes.REQUEST_FETCH_DOCUMENT_FROM_DATABASE_SUCCEED:
+            return {
+                ...state,
+                document: {
+                    id: action.id,
+                    name: action.name,
+                    owner: action.owner,
+                }
+            };
         case ActionTypes.REQUEST_UPDATE_DOCUMENT_IN_DATABASE_SUCCEED:
             return {
                 ...state,
