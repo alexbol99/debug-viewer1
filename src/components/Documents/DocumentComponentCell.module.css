@@ -1,0 +1,28 @@
+.DocumentComponentCell {
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 0;
+    position: relative;
+    box-sizing: border-box;
+    padding: 1em;
+    border: 2px solid darkgrey;
+    border-radius: 5px;
+    text-align: left;
+    text-decoration: none;
+    background: rgba(147, 128, 108, 0.1);
+}
+
+.DocumentComponentCell a {
+    text-decoration: none;
+}
+
+.DocumentComponentCell img {
+    border: 1px solid darkgrey;
+    background-color: white;
+    width: 100%;
+}
+
+.DocumentComponentCell h4, h5 {
+    margin: 3px 0;
+    color: black;
+}

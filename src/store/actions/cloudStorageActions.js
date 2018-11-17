@@ -20,6 +20,10 @@ export const fetchDocumentFromDatabase = (id) => {
     return axios.get('/documents/' + id + '.json');
 };
 
+export const fetchDocumentsFromDatabase = () => {
+    return axios.get('/documents.json');
+};
+
 export const registerDocumentAddedToDatabase = (id, timestamp) => {
     return {
         type: ActionTypes.REQUEST_ADD_DOCUMENT_TO_DATABASE_SUCCEED,
@@ -41,6 +45,13 @@ export const requestFetchDocumentFromDatabaseSucceed = (id, name, owner) => {
         id,
         name,
         owner
+    }
+};
+
+export const requestFetchDocumentsFromDatabaseSucceed = (documentsList) => {
+    return {
+        type: ActionTypes.REQUEST_FETCH_DOCUMENTS_FROM_DATABASE_SUCCEED,
+        documentsList
     }
 };
 
