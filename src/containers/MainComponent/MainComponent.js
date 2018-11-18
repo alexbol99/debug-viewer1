@@ -3,7 +3,7 @@
  */
 
 import React, {Component} from 'react';
-import {Route, Switch/*, Switch*/} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import { connect } from "react-redux";
 
 import ToolbarComponent from '../../components/MainComponent/ToolbarComponent/ToolbarComponent';
@@ -14,6 +14,7 @@ import StageComponent from "../../components/MainComponent/GraphicsEditor/stageC
 import LayersComponent from '../../components/MainComponent/GraphicsEditor/layersComponent';
 
 import * as actions from '../../store/actions/appActions';
+// import * as layerActions from "../../store/actions/layersActions";
 import * as cloudActions from '../../store/actions/cloudStorageActions';
 
 import Layers from '../../models/layers';
@@ -26,6 +27,7 @@ import AboutPopup from "../../components/AboutPopup/AboutPopup";
 import CloudDocument from '../../components/Constructions/CloudDocument';
 
 import styles from './MainComponent.module.css';
+import Layer from "../../models/layer";
 
 class MainComponent extends Component {
     handleFileSelect = (event) => {
@@ -112,6 +114,10 @@ class MainComponent extends Component {
         document.addEventListener('keydown', this.handleKeyDown);
         // var _keyup = _.throttle(this.keyup, 500);
         document.addEventListener('keyup', this.handleKeyUp);
+
+        if (this.props.document.id !== undefined) {
+            this.props.history.push("/documents/" + this.props.document.id)
+        }
     }
 
     render() {
@@ -261,6 +267,9 @@ const mapDispatchToProps = dispatch => {
         handleClickOnShape: (shape, layer) => dispatch(actions.handleClickOnShape(shape, layer)),
         asyncOperationStarted: () => dispatch(actions.asyncOperationStarted()),
         asyncOperationEnded: () => dispatch(actions.asyncOperationEnded()),
+
+        // clearAll: () => dispatch(layerActions.deleteAllLayers()),
+        // addNewLayer: (layer) => dispatch(layerActions.addNewLayer(layer)),
 
         registerDocumentAddedToDatabase: (id, timestamp) => dispatch(cloudActions.registerDocumentAddedToDatabase(id, timestamp)),
         updateDocumentState: (timestamp) => dispatch(cloudActions.updateDocumentState(timestamp))

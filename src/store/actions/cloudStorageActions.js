@@ -41,14 +41,14 @@ export const registerDocumentAddedToDatabase = (id, timestamp) => {
     return {
         type: ActionTypes.REQUEST_ADD_DOCUMENT_TO_DATABASE_SUCCEED,
         id: id,
-        lastSaved: timestamp
+        lastUpdated: timestamp
     }
 };
 
 export const updateDocumentState = (timestamp) => {
     return {
         type: ActionTypes.REQUEST_UPDATE_DOCUMENT_IN_DATABASE_SUCCEED,
-        lastSaved: timestamp
+        lastUpdated: timestamp
     }
 };
 

@@ -7,14 +7,16 @@ import classes from './DocumentsComponent.module.css';
 import DocumentComponentCell from '../../components/Documents/DocumentComponentCell';
 
 class DocumentsComponent extends Component {
-    componentDidMount() {
+    componentDidMount = () => {
         cloudActions.fetchDocumentsFromDatabase()
             .then((response) => {
                 this.props.requestFetchDocumentsFromDatabaseSucceed(response.data);
                 this.props.asyncOperationEnded();
             });
-        this.props.asyncOperationStarted();
-    }
+        if (this.props.documentsList.length === 0) {
+            this.props.asyncOperationStarted();
+        }
+    };
 
     render() {
         return (

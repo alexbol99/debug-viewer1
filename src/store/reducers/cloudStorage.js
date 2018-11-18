@@ -5,10 +5,21 @@ const cloudStorageDefaultState = {
         id: undefined,
         name: "",
         owner: "Alex Bol",
-        lastSaved: undefined
+        lastUpdated: undefined
     },
     documentsList: []
 };
+
+function isUpToDate(list1, list2) {
+    if (Object.keys(list1).length !== Object.keys(list2).length)
+        return false;
+    for (let key in list1) {
+        if ( !(list2.hasOwnProperty(key) && (list1[key].lastUpdated !== list2[key].lastUpdated)) ) {
+            return false
+        }
+    }
+    return true;
+}
 
 const cloudStorage = (state = cloudStorageDefaultState, action) => {
     switch (action.type) {
@@ -19,7 +30,7 @@ const cloudStorage = (state = cloudStorageDefaultState, action) => {
                     id: action.id,
                     name: action.name,
                     owner: action.owner,
-                    lastSaved: action.timestamp
+                    lastUpdated: action.timestamp
                 }
             };
         case ActionTypes.REQUEST_FETCH_DOCUMENT_FROM_DATABASE_SUCCEED:
@@ -29,6 +40,7 @@ const cloudStorage = (state = cloudStorageDefaultState, action) => {
                     id: action.id,
                     name: action.name,
                     owner: action.owner,
+                    lastUpdated: action.timestamp
                 }
             };
         case ActionTypes.REQUEST_UPDATE_DOCUMENT_IN_DATABASE_SUCCEED:
@@ -36,11 +48,13 @@ const cloudStorage = (state = cloudStorageDefaultState, action) => {
                 ...state,
                 document: {
                     ...state.document,
-                    lastSaved: action.timestamp
+                    lastUpdated: action.timestamp
                 }
             };
         case ActionTypes.REQUEST_FETCH_DOCUMENTS_FROM_DATABASE_SUCCEED:
-            return {
+            return isUpToDate(state.documentsList, action.documentsList) ?
+                state :
+            {
                 ...state,
                 documentsList: action.documentsList
             };

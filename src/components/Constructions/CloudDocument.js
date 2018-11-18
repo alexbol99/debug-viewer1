@@ -27,12 +27,13 @@ class CloudDocument extends Component {
                         this.props.addNewLayer(layer);
                         this.props.asyncOperationEnded();
                     }
-                    this.props.updateDocument(this.props.match.params.id, response.data.name, "Alex Bol");
+                    this.props.updateDocument(this.props.match.params.id, response.data.name, "Alex Bol", response.data.lastUpdated);
                     this.props.panAndZoomToShape(stage, firstLayer);
                     this.props.toggleLayer(firstLayer);
                 });
-            this.props.clearAll();
             this.setState({done:true});
+
+            this.props.clearAll();
             this.props.asyncOperationStarted();
         }
     }
@@ -59,7 +60,7 @@ const mapDispatchToProps = dispatch => {
         toggleLayer: (layer) => dispatch(layerActions.toggleDisplayLayer(layer)),
 
         clearAll: () => dispatch(layerActions.deleteAllLayers()),
-        updateDocument: (id, name, owner) => dispatch(cloudActions.requestFetchDocumentFromDatabaseSucceed(id, name, owner))
+        updateDocument: (id, name, owner, lastUpdated) => dispatch(cloudActions.requestFetchDocumentFromDatabaseSucceed(id, name, owner, lastUpdated))
     }
 };
 
