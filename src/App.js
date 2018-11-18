@@ -15,6 +15,8 @@ import SkeletonRecognition from './components/Constructions/SkeletonRecognition'
 import CollisionDemo from "./components/Constructions/CollisionDemo";
 import Spinner from "./components/UI/Spinner/Spinner";
 import DocumentsComponent from "./containers/DocumentsComponent/DocumentsComponent";
+import ModalPopup from "./components/UI/ModalPopup/ModalPopup";
+import AboutPopup from "./components/AboutPopup/AboutPopup";
 
 class App extends Component {
     onManageCloudStorageButtonClicked = () => {
@@ -30,12 +32,26 @@ class App extends Component {
 
 
                 <Switch>
-                    <Route path="/documents" exact component={DocumentsComponent}/>
+                    <Route path="/documents" component={DocumentsComponent}/>
+
+                    <Route path="/about" render={ props => (<ModalPopup {...props}
+                                                                        showPopup={this.props.showAboutPopup}
+                                                                        closePopup={this.props.toggleAboutPopup}
+                    >
+                        <AboutPopup
+                            title={this.props.title}
+                            version={this.props.version}
+                            build={this.props.build}
+                            // onCloseAboutPopupPressed={this.closeAboutPopup}
+                        />
+                    </ModalPopup>)} />
 
                     <Route path="/" render={props => (<AppBody
                         {...props}
                         onManageCloudStorageButtonClicked={this.onManageCloudStorageButtonClicked} />)}
                     />
+
+
                     {/*<Route path="/documents/:id" component={CloudDocument}/>*/}
 
                     <Route path="/demo" component={Demo}/>

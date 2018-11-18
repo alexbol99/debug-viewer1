@@ -19,8 +19,8 @@ class DocumentsComponent extends Component {
     render() {
         return (
             <div className={classes.DocumentComponent}>
-                <h2>My Documents</h2>
-                <hr />
+                <h2>My Cloud Documents</h2>
+                {/*<hr />*/}
                 <div className={classes.DocumentComponentGrid}>
                     {Object.keys(this.props.documentsList).map(key => {
                         let document = this.props.documentsList[key];
@@ -50,4 +50,3 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(DocumentsComponent);
-;

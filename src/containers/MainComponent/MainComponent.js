@@ -3,7 +3,7 @@
  */
 
 import React, {Component} from 'react';
-import {Route/*, Switch*/} from 'react-router-dom';
+import {Route, Switch/*, Switch*/} from 'react-router-dom';
 import { connect } from "react-redux";
 
 import ToolbarComponent from '../../components/MainComponent/ToolbarComponent/ToolbarComponent';
@@ -210,6 +210,7 @@ class MainComponent extends Component {
                 </ModalPopup>
 
                 <Route path="/documents/:id" component={CloudDocument}/>
+
             </main>
         )
     }

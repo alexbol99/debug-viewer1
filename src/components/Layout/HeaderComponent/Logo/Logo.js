@@ -6,7 +6,7 @@ import classes from "./Logo.module.css";
 const logo = () => {
     return (
         <div className={classes.Logo}>
-            <img src={logoImg} alt="Debug Viewer Logo" height="120px" />
+            <img src={logoImg} alt="Debug Viewer Logo" />
         </div>
     );
 };

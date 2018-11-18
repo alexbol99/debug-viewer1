@@ -12,6 +12,11 @@
     background: rgba(147, 128, 108, 0.1);
 }
 
+.DocumentComponentCell:hover,
+.DocumentComponentCell:active {
+    background: rgba(147, 128, 108, 0.4);
+}
+
 .DocumentComponentCell a {
     text-decoration: none;
 }
