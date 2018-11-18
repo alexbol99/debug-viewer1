@@ -4,11 +4,15 @@
   min-height: 100vh;
   flex-direction: column;
   overflow: hidden;
+  margin: 0 2%;
 }
 
 .App-body {
   display: flex;
   flex:1 0 auto;
+  /*width:90%;*/
+  border: 2px solid darkgrey;
+  border-radius: 5px;
 }
 
 @keyframes App-logo-spin {

@@ -10,6 +10,7 @@ const documentComponentCell = ({id, document}) => {
                     <img src={document.dataURL} width="400px"/>
                     <div>
                         <h4>{document.name}</h4>
+                        <h6>Last updated: {document.lastUpdated}</h6>
                     </div>
                 </div>
             </Link>

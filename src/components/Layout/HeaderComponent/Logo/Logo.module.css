@@ -1,8 +1,8 @@
 .Logo {
     margin: 0 12px;
     height: 100%;
-    box-sizing: border-box;
-    border-radius: 5px;
+    /*box-sizing: border-box;*/
+    /*border-radius: 5px;*/
 }
 
 .Logo:hover {

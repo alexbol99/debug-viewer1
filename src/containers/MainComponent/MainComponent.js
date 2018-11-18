@@ -43,9 +43,11 @@ class MainComponent extends Component {
     onSaveDocumentButtonClicked = () => {
         if (this.props.layers.length === 0) return;   // nothing to save
         let payload = {
-            name: this.props.document.name,
+            name: this.props.document.name === "" ?
+                cloudActions.getNewName(this.props.documentsList) : this.props.document.name,
             layers: Layers.toJSON(this.props.layers),
-            dataURL: this.props.stage.toDataURL()
+            dataURL: this.props.stage.toDataURL(),
+            lastUpdated: new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString()
         };
         if (this.props.document.id) {
             cloudActions.updateDocumentInDatabase(this.props.document.id, payload)
@@ -234,6 +236,7 @@ const mapStateToProps = (state, ownProps) => {
         measureShapesTool: state.measureShapesTool,
 
         document: state.cloudStorage.document,
+        documentsList: state.cloudStorage.documentsList,
         onManageCloudStorageButtonClicked: ownProps.onManageCloudStorageButtonClicked
     }
 };

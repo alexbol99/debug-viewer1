@@ -22,7 +22,7 @@
     width: 100%;
 }
 
-.DocumentComponentCell h4, h5 {
+.DocumentComponentCell h4, h5, h6, h7 {
     margin: 3px 0;
     color: black;
 }

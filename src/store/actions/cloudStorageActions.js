@@ -1,6 +1,19 @@
 import * as ActionTypes from "../actionTypes";
 import axios from "../../axios-database";
 
+const defaultName = "document";
+
+export const getNewName = (documents) => {
+    let name = defaultName;
+    let inc = 1;
+    let comparator = (document) => document.name === name;
+    while (documents.find(comparator) ) {
+        name = defaultName + inc;
+        inc++;
+    }
+    return name;
+};
+
 // export const updateDocumentsList = (documents) => {
 //     return {
 //         type: ActionTypes.DOCUMENTS_LIST_LOADED,

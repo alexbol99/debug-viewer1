@@ -3,7 +3,7 @@ import * as ActionTypes from "../actionTypes";
 const cloudStorageDefaultState = {
     document: {
         id: undefined,
-        name: "document_1",
+        name: "",
         owner: "Alex Bol",
         lastSaved: undefined
     },
