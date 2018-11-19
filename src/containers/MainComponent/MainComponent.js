@@ -14,7 +14,7 @@ import StageComponent from "../../components/MainComponent/GraphicsEditor/stageC
 import LayersComponent from '../../components/MainComponent/GraphicsEditor/layersComponent';
 
 import * as actions from '../../store/actions/appActions';
-// import * as layerActions from "../../store/actions/layersActions";
+import * as layerActions from "../../store/actions/layersActions";
 import * as cloudActions from '../../store/actions/cloudStorageActions';
 
 import Layers from '../../models/layers';
@@ -173,6 +173,7 @@ class MainComponent extends Component {
                     onSkeletonRecognitionButtonPressed={this.props.applySkeletonRecognition}
                     onUnitClicked={this.props.toggleUnits}
                     onSaveDocumentButtonClicked={this.onSaveDocumentButtonClicked}
+                    onClearAllButtonClicked={this.props.clearAll}
                 />
 
                 <CanvasComponent />
@@ -270,7 +271,7 @@ const mapDispatchToProps = dispatch => {
         asyncOperationStarted: () => dispatch(actions.asyncOperationStarted()),
         asyncOperationEnded: () => dispatch(actions.asyncOperationEnded()),
 
-        // clearAll: () => dispatch(layerActions.deleteAllLayers()),
+        clearAll: () => dispatch(layerActions.deleteAllLayers()),
         // addNewLayer: (layer) => dispatch(layerActions.addNewLayer(layer)),
 
         registerDocumentAddedToDatabase: (id, timestamp) => dispatch(cloudActions.registerDocumentAddedToDatabase(id, timestamp)),

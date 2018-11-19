@@ -38,9 +38,9 @@ class ToolbarComponent extends Component {
                         onClick={this.props.onSaveDocumentButtonClicked}
                 />
 
-                {/*<Button type="trigger" title="Manage cloud documents" iconName='cloud'*/}
-                        {/*onClick={this.props.onManageCloudStorageButtonClicked}*/}
-                {/*/>*/}
+                <Button type="trigger" title="Clean current documents" iconName='broom'
+                        onClick={this.props.onClearAllButtonClicked}
+                />
 
                 <Separator/>
 
