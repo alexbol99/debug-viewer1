@@ -6,6 +6,12 @@ export const resizeStage = () => {
     }
 };
 
+export const destroyStage = () => {
+    return {
+        type: ActionTypes.STAGE_UNMOUNTED
+    }
+};
+
 export const toggleUnits = () => {
     return {
         type: ActionTypes.TOGGLE_UNITS_CLICKED

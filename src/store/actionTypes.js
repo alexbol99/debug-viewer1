@@ -5,6 +5,7 @@ export const NEW_STAGE_CREATED = "NEW_STAGE_CREATED";
 export const STAGE_RESIZED = "STAGE_RESIZED";
 export const NEW_SHAPE_PASTED = "NEW_SHAPE_PASTED";
 export const CLEAR_ALL = "CLEAR_ALL";
+export const STAGE_UNMOUNTED = "STAGE_UNMOUNTED";
 
 /** Toolbar buttons **/
 export const PAN_BY_DRAG_BUTTON_CLICKED = "PAN_BY_DRAG_BUTTON_CLICKED";

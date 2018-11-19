@@ -17,13 +17,10 @@ import Spinner from "./components/UI/Spinner/Spinner";
 import DocumentsComponent from "./containers/DocumentsComponent/DocumentsComponent";
 
 class App extends Component {
-    onManageCloudStorageButtonClicked = () => {
-        this.props.history.push('/documents');
-    };
+    // onManageCloudStorageButtonClicked = () => {
+    //     this.props.history.push('/documents');
+    // };
 
-    componentDidMount = () => {
-
-    };
     render() {
         return (
             <div className="App">
@@ -34,12 +31,9 @@ class App extends Component {
 
 
                 <Switch>
-                    <Route path="/documents" exact component={DocumentsComponent}/>
+                    <Route path="/documents" exact component={DocumentsComponent} />
 
-                    <Route path="/" render={props => (<AppBody
-                        {...props}
-                        onManageCloudStorageButtonClicked={this.onManageCloudStorageButtonClicked} />)}
-                    />
+                    <Route path="/" component={AppBody} />
 
                     {/*<Route path="/documents/:id" component={CloudDocument}/>*/}
 

@@ -52,6 +52,14 @@ const app = (state = defaultAppState, action) => {
                 originY: action.stage.origin.y,
             });
 
+        case ActionTypes.STAGE_UNMOUNTED:
+            return Object.assign({}, state, {
+                stage: null,
+                zoomFactor: undefined,
+                originX: undefined,
+                originY: undefined
+            });
+
         case ActionTypes.MOUSE_WHEEL_MOVE_ON_STAGE:
         case ActionTypes.PAN_AND_ZOOM_TO_SHAPE:
             return Object.assign({}, state, {

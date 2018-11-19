@@ -27,7 +27,6 @@ import AboutPopup from "../../components/AboutPopup/AboutPopup";
 import CloudDocument from '../../components/Constructions/CloudDocument';
 
 import styles from './MainComponent.module.css';
-import Layer from "../../models/layer";
 
 class MainComponent extends Component {
     handleFileSelect = (event) => {
@@ -174,13 +173,14 @@ class MainComponent extends Component {
                     onSkeletonRecognitionButtonPressed={this.props.applySkeletonRecognition}
                     onUnitClicked={this.props.toggleUnits}
                     onSaveDocumentButtonClicked={this.onSaveDocumentButtonClicked}
-                    onManageCloudStorageButtonClicked={this.props.onManageCloudStorageButtonClicked}
                 />
 
                 <CanvasComponent />
 
+                { this.props.stage ? (
                 <StageComponent
                     stage={this.props.stage}
+                    onStageUnmounted={this.props.destroyStage}
                 >
                     <LayersComponent
                         stage={this.props.stage}
@@ -195,11 +195,12 @@ class MainComponent extends Component {
                         onMouseOver={this.props.handleMouseRollOverShape}
                         onMouseOut={this.props.handleMouseRollOutShape}
                         onClick={this.props.handleClickOnShape}
+                        setHomeView={this.props.setHomeView}
                     />
                     {displayCoordsTool}
                     {measurePointsTool}
                     {measureShapesTool}
-                </StageComponent>
+                </StageComponent> ) : null }
 
                 <StatusComponent />
 
@@ -244,13 +245,14 @@ const mapStateToProps = (state, ownProps) => {
 
         document: state.cloudStorage.document,
         documentsList: state.cloudStorage.documentsList,
-        onManageCloudStorageButtonClicked: ownProps.onManageCloudStorageButtonClicked
+        // onManageCloudStorageButtonClicked: ownProps.onManageCloudStorageButtonClicked
     }
 };
 
 const mapDispatchToProps = dispatch => {
     return {
         resizeStage: () => dispatch(actions.resizeStage()),
+        destroyStage: () => dispatch(actions.destroyStage()),
         handleFileSelect: (files, stage, layers) => dispatch(actions.handleFileSelect(files, stage, layers)),
         setHomeView: (stage, shape) => dispatch(actions.setHomeView(stage, shape)),
         toggleUnits: () => dispatch(actions.toggleUnits()),

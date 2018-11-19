@@ -23,6 +23,10 @@ class StageComponent extends Component {
         }
     }
 
+    componentWillUnmount() {
+        this.props.onStageUnmounted();
+    }
+
     render() {
         return (
             <React.Fragment>
