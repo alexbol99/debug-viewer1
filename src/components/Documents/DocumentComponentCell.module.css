@@ -12,14 +12,19 @@
     background: rgba(147, 128, 108, 0.1);
 }
 
-.DocumentComponentCell:hover,
-.DocumentComponentCell:active {
-    background: rgba(147, 128, 108, 0.4);
-}
+/*.DocumentComponentCell:hover,*/
+/*.DocumentComponentCell:active {*/
+/*background: rgba(147, 128, 108, 0.4);*/
+/*}*/
 
 .DocumentComponentCell a {
     text-decoration: none;
 }
+
+/*.DocumentComponentCell a:hover,*/
+/*.DocumentComponentCell a:active {*/
+/*background: rgba(147, 128, 108, 0.4);*/
+/*}*/
 
 .DocumentComponentCell img {
     border: 1px solid darkgrey;
@@ -27,7 +32,28 @@
     width: 100%;
 }
 
-.DocumentComponentCell h4, h5, h6, h7 {
+.DocumentComponentCell img:hover,
+.DocumentComponentCell img:active {
+    background-color: rgba(147, 128, 108, 0.4);
+}
+
+.DocumentComponentCellBottom {
+    display: flex;
+    flex-flow: row;
+    box-sizing: border-box;
+}
+
+.DocumentComponentCellBottom h4, h5, h6, h7 {
     margin: 3px 0;
     color: black;
 }
+
+.DocumentComponentCellBottom div {
+    flex: 3;
+}
+
+DocumentComponentCellBottom button {
+    height: 100%;
+    flex: 1;
+}
+

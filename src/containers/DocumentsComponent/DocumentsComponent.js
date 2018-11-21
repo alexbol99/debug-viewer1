@@ -7,6 +7,16 @@ import classes from './DocumentsComponent.module.css';
 import DocumentComponentCell from '../../components/Documents/DocumentComponentCell';
 
 class DocumentsComponent extends Component {
+    deleteDocumentFromDatabase = (id) => {
+        cloudActions.deleteDocumentFromDatabase(id)
+            .then((response) => {
+                // const index = this.props.documentsList.findIndex((doc) => doc.id === id);
+                this.props.deleteDocumentFromDatabaseSucceed(id);
+                this.props.asyncOperationEnded();
+            });
+        this.props.asyncOperationStarted();
+    };
+
     componentDidMount = () => {
         cloudActions.fetchDocumentsFromDatabase()
             .then((response) => {
@@ -26,9 +36,12 @@ class DocumentsComponent extends Component {
                 <div className={classes.DocumentComponentGrid}>
                     {Object.keys(this.props.documentsList).map(key => {
                         let document = this.props.documentsList[key];
-                        return (<DocumentComponentCell key={key}
-                                                       id={key}
-                                                       document={document}/>)
+                        return (<DocumentComponentCell
+                            key={key}
+                            id={key}
+                            document={document}
+                            deleteDocumentFromDatabase={this.deleteDocumentFromDatabase}
+                        />)
                     })}
                 </div>
             </div>
@@ -47,7 +60,9 @@ const mapDispatchToProps = dispatch => {
         asyncOperationStarted: () => dispatch(actions.asyncOperationStarted()),
         asyncOperationEnded: () => dispatch(actions.asyncOperationEnded()),
         requestFetchDocumentsFromDatabaseSucceed: (documentsList) =>
-            dispatch(cloudActions.requestFetchDocumentsFromDatabaseSucceed(documentsList))
+            dispatch(cloudActions.requestFetchDocumentsFromDatabaseSucceed(documentsList)),
+        deleteDocumentFromDatabaseSucceed: (id) =>
+            dispatch(cloudActions.deleteDocumentFromDatabaseSucceed(id))
     }
 };
 

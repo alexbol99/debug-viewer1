@@ -1,23 +1,29 @@
 import * as ActionTypes from "../actionTypes";
 
-const cloudStorageDefaultState = {
-    document: {
-        id: undefined,
-        name: "",
-        owner: "Alex Bol",
-        lastUpdated: undefined
-    },
-    documentsList: []
+const documentDefaultState = {
+    id: undefined,
+    name: "",
+    owner: "Alex Bol",
+    lastUpdated: undefined
 };
 
-function isUpToDate(list1, list2) {
-    if (Object.keys(list1).length !== Object.keys(list2).length)
+const cloudStorageDefaultState = {
+    document: documentDefaultState,
+    documentsList: {}
+};
+
+function isUpToDate(stateDocumentsList, actionDocumentsList) {
+    if (actionDocumentsList === null || actionDocumentsList === undefined)
+        return true;
+
+    if (Object.keys(stateDocumentsList).length !== Object.keys(actionDocumentsList).length)
         return false;
-    for (let key in list1) {
-        if ( !(list2.hasOwnProperty(key) && (list1[key].lastUpdated !== list2[key].lastUpdated)) ) {
+    for (let key in stateDocumentsList) {
+        if (!(actionDocumentsList.hasOwnProperty(key) && (stateDocumentsList[key].lastUpdated !== actionDocumentsList[key].lastUpdated))) {
             return false
         }
     }
+
     return true;
 }
 
@@ -51,6 +57,15 @@ const cloudStorage = (state = cloudStorageDefaultState, action) => {
                     lastUpdated: action.timestamp
                 }
             };
+
+        case ActionTypes.DELETE_DOCUMENT_FROM_DATABASE_SUCCEED:
+            let { [action.id]: document, ...newList } = state.documentsList;
+            return {
+                ...state,
+                document: state.document.id === action.id ? documentDefaultState : state.document,
+                documentsList: newList
+            };
+
         case ActionTypes.REQUEST_FETCH_DOCUMENTS_FROM_DATABASE_SUCCEED:
             return isUpToDate(state.documentsList, action.documentsList) ?
                 state :
@@ -58,6 +73,7 @@ const cloudStorage = (state = cloudStorageDefaultState, action) => {
                 ...state,
                 documentsList: action.documentsList
             };
+
         default:
             return state;
     }

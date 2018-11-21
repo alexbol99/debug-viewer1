@@ -7,7 +7,7 @@ export const getNewName = (documents) => {
     let name = defaultName;
     let inc = 1;
     let comparator = (document) => document.name === name;
-    while (documents.find(comparator) ) {
+    while ( Object.values(documents).find(comparator) ) {
         name = defaultName + inc;
         inc++;
     }
@@ -32,6 +32,10 @@ export const addDocumentToDatabase = ( payload) => {
 export const fetchDocumentFromDatabase = (id) => {
     return axios.get('/documents/' + id + '.json');
 };
+
+export const deleteDocumentFromDatabase = (id) => {
+    return axios.delete('/documents/' + id + '.json');
+}
 
 export const fetchDocumentsFromDatabase = () => {
     return axios.get('/documents.json');
@@ -58,6 +62,13 @@ export const requestFetchDocumentFromDatabaseSucceed = (id, name, owner) => {
         id,
         name,
         owner
+    }
+};
+
+export const deleteDocumentFromDatabaseSucceed = (id) => {
+    return {
+        type: ActionTypes.DELETE_DOCUMENT_FROM_DATABASE_SUCCEED,
+        id
     }
 };
 

@@ -38,7 +38,7 @@ class ToolbarComponent extends Component {
                         onClick={this.props.onSaveDocumentButtonClicked}
                 />
 
-                <Button type="trigger" title="Clean current documents" iconName='broom'
+                <Button type="trigger" title="Clean current document" iconName='broom'
                         onClick={this.props.onClearAllButtonClicked}
                 />
 

@@ -114,7 +114,10 @@ class MainComponent extends Component {
         // var _keyup = _.throttle(this.keyup, 500);
         document.addEventListener('keyup', this.handleKeyUp);
 
-        if (this.props.document.id !== undefined) {
+        if (this.props.document.id === undefined) {
+            this.props.history.push("/");
+        }
+        else {
             this.props.history.push("/documents/" + this.props.document.id)
         }
     }
