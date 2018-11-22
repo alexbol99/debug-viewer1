@@ -1,0 +1,18 @@
+.DocumentName {
+    width: 100%;
+    border-bottom: 1px solid black;
+    text-align: left;
+    padding: 3px;
+    margin-bottom: 6px;
+    display: flex;
+}
+
+.DocumentName input {
+    text-decoration: none;
+    border: none;
+    width: 100%;
+    /*max-width: 100%;*/
+    font-size: medium;
+    margin: 0 15px;
+    padding: 4px 6px;
+}

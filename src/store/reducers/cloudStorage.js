@@ -58,12 +58,33 @@ const cloudStorage = (state = cloudStorageDefaultState, action) => {
                 }
             };
 
+        case ActionTypes.DOCUMENT_NAME_UPDATED:
+            return {
+                ...state,
+                document: {
+                    ...state.document,
+                    name: action.name
+                }
+            };
+
         case ActionTypes.DELETE_DOCUMENT_FROM_DATABASE_SUCCEED:
             let { [action.id]: document, ...newList } = state.documentsList;
             return {
                 ...state,
                 document: state.document.id === action.id ? documentDefaultState : state.document,
                 documentsList: newList
+            };
+
+        case ActionTypes.DOCUMENT_SELECTED_FROM_LIST:
+            return {
+                ...state,
+                document: action.document
+            };
+
+        case ActionTypes.CLEAR_ALL_BUTTON_CLICKED:
+            return {
+                ...state,
+                document: documentDefaultState
             };
 
         case ActionTypes.REQUEST_FETCH_DOCUMENTS_FROM_DATABASE_SUCCEED:

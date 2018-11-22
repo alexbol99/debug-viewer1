@@ -56,6 +56,19 @@ export const updateDocumentState = (timestamp) => {
     }
 };
 
+export const updateDocumentName = (name) => {
+    return {
+        type: ActionTypes.DOCUMENT_NAME_UPDATED,
+        name
+    }
+};
+
+export const clearCurrentDocument = () => {
+    return {
+        type: ActionTypes.CLEAR_ALL_BUTTON_CLICKED,
+    }
+};
+
 export const requestFetchDocumentFromDatabaseSucceed = (id, name, owner) => {
     return {
         type: ActionTypes.REQUEST_FETCH_DOCUMENT_FROM_DATABASE_SUCCEED,
@@ -71,6 +84,13 @@ export const deleteDocumentFromDatabaseSucceed = (id) => {
         id
     }
 };
+
+export const updateCurrentDocument = (document) => {
+    return {
+        type: ActionTypes.DOCUMENT_SELECTED_FROM_LIST,
+        document
+    }
+}
 
 export const requestFetchDocumentsFromDatabaseSucceed = (documentsList) => {
     return {

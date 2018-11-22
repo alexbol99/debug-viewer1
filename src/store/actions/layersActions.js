@@ -74,7 +74,7 @@ export const setAffectedPrevLayer = () => {
 
 export const deleteAllLayers = () => {
     return {
-        type: ActionTypes.CLEAR_ALL,
+        type: ActionTypes.CLEAR_ALL_BUTTON_CLICKED,
     }
 }
 

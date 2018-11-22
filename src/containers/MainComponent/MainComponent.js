@@ -75,6 +75,11 @@ class MainComponent extends Component {
         this.props.asyncOperationStarted();
     };
 
+    clearCurrentDocument = () => {
+        this.props.clearCurrentDocument();
+        this.props.clearAllLayers();
+    };
+
     handleKeyDown = (e) => {
         // let ctrl = e.ctrlKey;
         if (e.target.id !== "mainCanvas")
@@ -176,7 +181,7 @@ class MainComponent extends Component {
                     onSkeletonRecognitionButtonPressed={this.props.applySkeletonRecognition}
                     onUnitClicked={this.props.toggleUnits}
                     onSaveDocumentButtonClicked={this.onSaveDocumentButtonClicked}
-                    onClearAllButtonClicked={this.props.clearAll}
+                    onClearAllButtonClicked={this.clearCurrentDocument}
                 />
 
                 <CanvasComponent />
@@ -274,11 +279,12 @@ const mapDispatchToProps = dispatch => {
         asyncOperationStarted: () => dispatch(actions.asyncOperationStarted()),
         asyncOperationEnded: () => dispatch(actions.asyncOperationEnded()),
 
-        clearAll: () => dispatch(layerActions.deleteAllLayers()),
+        clearAllLayers: () => dispatch(layerActions.deleteAllLayers()),
         // addNewLayer: (layer) => dispatch(layerActions.addNewLayer(layer)),
 
         registerDocumentAddedToDatabase: (id, timestamp) => dispatch(cloudActions.registerDocumentAddedToDatabase(id, timestamp)),
-        updateDocumentState: (timestamp) => dispatch(cloudActions.updateDocumentState(timestamp))
+        updateDocumentState: (timestamp) => dispatch(cloudActions.updateDocumentState(timestamp)),
+        clearCurrentDocument: () => dispatch(cloudActions.clearCurrentDocument())
     }
 };
 

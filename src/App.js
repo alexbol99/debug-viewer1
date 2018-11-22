@@ -29,11 +29,10 @@ class App extends Component {
                     version={this.props.version}
                 />
 
-
                 <Switch>
-                    <Route path="/documents" exact component={DocumentsComponent} />
+                    <Route path="/documents" exact component={DocumentsComponent}/>
 
-                    <Route path="/" component={AppBody} />
+                    <Route path="/" component={AppBody}/>
 
                     {/*<Route path="/documents/:id" component={CloudDocument}/>*/}
 
@@ -46,17 +45,17 @@ class App extends Component {
 
                 {this.props.showSpinner ? <Spinner/> : null}
             </div>
-    );
+        );
     }
-    }
+}
 
-    const mapStateToProps = ({app, cloudStorage}) => {
-        return {
+const mapStateToProps = ({app, cloudStorage}) => {
+    return {
         title: app.title,
         version: app.version,
         showSpinner: app.showSpinner,
         document: cloudStorage.document
     }
-    };
+};
 
-    export default withRouter(connect(mapStateToProps, null)(App));
+export default withRouter(connect(mapStateToProps, null)(App));

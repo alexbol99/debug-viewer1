@@ -41,6 +41,7 @@ class DocumentsComponent extends Component {
                             id={key}
                             document={document}
                             deleteDocumentFromDatabase={this.deleteDocumentFromDatabase}
+                            documentSelectedFromList={this.props.documentSelectedFromList}
                         />)
                     })}
                 </div>
@@ -62,7 +63,8 @@ const mapDispatchToProps = dispatch => {
         requestFetchDocumentsFromDatabaseSucceed: (documentsList) =>
             dispatch(cloudActions.requestFetchDocumentsFromDatabaseSucceed(documentsList)),
         deleteDocumentFromDatabaseSucceed: (id) =>
-            dispatch(cloudActions.deleteDocumentFromDatabaseSucceed(id))
+            dispatch(cloudActions.deleteDocumentFromDatabaseSucceed(id)),
+        documentSelectedFromList: (document) => dispatch(cloudActions.updateCurrentDocument(document))
     }
 };
 

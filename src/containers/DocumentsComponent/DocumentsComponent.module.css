@@ -14,3 +14,10 @@
     box-sizing: border-box;
 }
 
+@media (max-width: 375px) {
+    .DocumentComponentGrid {
+        grid-template-columns: repeat(1,1fr);
+        font-size: smaller;
+    }
+}
+
