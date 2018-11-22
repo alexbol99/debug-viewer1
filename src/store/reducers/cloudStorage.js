@@ -36,9 +36,10 @@ const cloudStorage = (state = cloudStorageDefaultState, action) => {
                     id: action.id,
                     name: action.name,
                     owner: action.owner,
-                    lastUpdated: action.timestamp
+                    lastUpdated: action.lastUpdated
                 }
             };
+
         case ActionTypes.REQUEST_FETCH_DOCUMENT_FROM_DATABASE_SUCCEED:
             return {
                 ...state,
@@ -46,15 +47,16 @@ const cloudStorage = (state = cloudStorageDefaultState, action) => {
                     id: action.id,
                     name: action.name,
                     owner: action.owner,
-                    lastUpdated: action.timestamp
+                    lastUpdated: action.lastUpdated
                 }
             };
+
         case ActionTypes.REQUEST_UPDATE_DOCUMENT_IN_DATABASE_SUCCEED:
             return {
                 ...state,
                 document: {
                     ...state.document,
-                    lastUpdated: action.timestamp
+                    lastUpdated: action.lastUpdated
                 }
             };
 

@@ -17,10 +17,16 @@ import Spinner from "./components/UI/Spinner/Spinner";
 import DocumentsComponent from "./containers/DocumentsComponent/DocumentsComponent";
 
 class App extends Component {
-    // onManageCloudStorageButtonClicked = () => {
-    //     this.props.history.push('/documents');
-    // };
-
+    componentDidUpdate() {
+        if (this.props.location.pathname === '/' && this.props.document.id !== undefined) {
+            this.props.history.push("/documents/" + this.props.document.id)
+        }
+        // if (this.props.location.pathname.split('/').length > 2 &&
+        //     this.props.location.pathname.split('/')[2].length > 0 &&
+        //     this.props.document.id === undefined) {
+        //     this.props.history.push("/");
+        // }
+    }
     render() {
         return (
             <div className="App">

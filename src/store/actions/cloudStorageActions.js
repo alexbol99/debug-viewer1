@@ -41,18 +41,18 @@ export const fetchDocumentsFromDatabase = () => {
     return axios.get('/documents.json');
 };
 
-export const registerDocumentAddedToDatabase = (id, timestamp) => {
+export const registerDocumentAddedToDatabase = (id, lastUpdated) => {
     return {
         type: ActionTypes.REQUEST_ADD_DOCUMENT_TO_DATABASE_SUCCEED,
         id: id,
-        lastUpdated: timestamp
+        lastUpdated: lastUpdated
     }
 };
 
-export const updateDocumentState = (timestamp) => {
+export const updateDocumentState = (lastUpdated) => {
     return {
         type: ActionTypes.REQUEST_UPDATE_DOCUMENT_IN_DATABASE_SUCCEED,
-        lastUpdated: timestamp
+        lastUpdated: lastUpdated
     }
 };
 
@@ -69,12 +69,13 @@ export const clearCurrentDocument = () => {
     }
 };
 
-export const requestFetchDocumentFromDatabaseSucceed = (id, name, owner) => {
+export const requestFetchDocumentFromDatabaseSucceed = (id, name, owner, lastUpdated) => {
     return {
         type: ActionTypes.REQUEST_FETCH_DOCUMENT_FROM_DATABASE_SUCCEED,
         id,
         name,
-        owner
+        owner,
+        lastUpdated
     }
 };
 

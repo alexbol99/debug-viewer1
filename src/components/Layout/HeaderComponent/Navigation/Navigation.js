@@ -5,8 +5,8 @@ import classes from './Navigation.module.css';
 const navigation = () => {
     return (
         <ul className={classes.Navigation}>
-            <li><NavLink to="/" exact><h4>Editor</h4></NavLink></li>
-            <li><NavLink to="/documents"><h4>Cloud Storage</h4></NavLink></li>
+            <li><NavLink to="/" exact>Editor</NavLink></li>
+            <li><NavLink to="/documents">Cloud Storage</NavLink></li>
         </ul>
     );
 };

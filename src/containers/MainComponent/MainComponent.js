@@ -77,6 +77,7 @@ class MainComponent extends Component {
     clearCurrentDocument = () => {
         this.props.clearCurrentDocument();
         this.props.clearAllLayers();
+        this.props.history.push("/");
     };
 
     handleKeyDown = (e) => {
@@ -118,12 +119,12 @@ class MainComponent extends Component {
         // var _keyup = _.throttle(this.keyup, 500);
         document.addEventListener('keyup', this.handleKeyUp);
 
-        if (this.props.document.id === undefined) {
-            this.props.history.push("/");
-        }
-        else {
-            this.props.history.push("/documents/" + this.props.document.id)
-        }
+        // if (this.props.document.id === undefined) {
+        //     this.props.history.push("/");
+        // }
+        // if (this.props.document.id !== undefined) {
+        //     this.props.history.push("/documents/" + this.props.document.id)
+        // }
     }
 
     render() {

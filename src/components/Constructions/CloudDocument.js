@@ -18,18 +18,24 @@ class CloudDocument extends Component {
             cloudActions.fetchDocumentFromDatabase(this.props.match.params.id)
                 .then( (response) => {
                     let firstLayer = undefined;
-                    for (let layerData of response.data.layers) {
-                        let layer = new Layer();
-                        layer.shapes = parseJSON(layerData.shapes);
-                        layer.name = layerData.name;
+                    if (response.data) {
+                        for (let layerData of response.data.layers) {
+                            let layer = new Layer();
+                            layer.shapes = parseJSON(layerData.shapes);
+                            layer.name = layerData.name;
 
-                        if (!firstLayer) firstLayer = layer;
-                        this.props.addNewLayer(layer);
-                        this.props.asyncOperationEnded();
+                            if (!firstLayer) firstLayer = layer;
+                            this.props.addNewLayer(layer);
+                            this.props.asyncOperationEnded();
+                        }
+                        this.props.updateDocument(this.props.match.params.id, response.data.name, "Alex Bol", response.data.lastUpdated);
+                        this.props.panAndZoomToShape(stage, firstLayer);
+                        this.props.toggleLayer(firstLayer);
                     }
-                    this.props.updateDocument(this.props.match.params.id, response.data.name, "Alex Bol", response.data.lastUpdated);
-                    this.props.panAndZoomToShape(stage, firstLayer);
-                    this.props.toggleLayer(firstLayer);
+                })
+                .catch( (err) => {
+                    console.log(err);
+                    this.props.asyncOperationEnded();
                 });
             this.setState({done:true});
 
