@@ -16,3 +16,9 @@
     padding:0;
     overflow:auto;
 }
+
+@media (max-width: 375px) {
+    .App-layers {
+        display: none;
+    }
+}

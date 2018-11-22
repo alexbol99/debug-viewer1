@@ -1,3 +1,19 @@
 .AboutPopup {
 
 }
+
+.AboutPopup h3, h4 {
+    /*margin-top: 0.8em;*/
+    /*margin-bottom: 0.8em;*/
+    outline: none;
+    font: inherit;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.AboutPopup label {
+    /*font-weight: bolder;*/
+    box-sizing: border-box;
+}
+
+

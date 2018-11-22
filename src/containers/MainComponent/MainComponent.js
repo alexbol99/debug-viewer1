@@ -10,8 +10,8 @@ import ToolbarComponent from '../../components/MainComponent/ToolbarComponent/To
 import CanvasComponent from '../../components/MainComponent/CanvasComponent/CanvasComponent';
 import StatusComponent from '../../components/Layout/StatusComponent/StatusComponent';
 
-import StageComponent from "../../components/MainComponent/GraphicsEditor/stageComponent";
-import LayersComponent from '../../components/MainComponent/GraphicsEditor/layersComponent';
+import StageComponent from "../../components/MainComponent/GraphicsComponent/stageComponent";
+import LayersComponent from '../../components/MainComponent/GraphicsComponent/layersComponent';
 
 import * as actions from '../../store/actions/appActions';
 import * as layerActions from "../../store/actions/layersActions";
@@ -22,7 +22,6 @@ import MeasurePointsTool from '../../tools/measurePointsTool';
 import MeasureShapesTool from "../../tools/measureShapesTool";
 import DisplayCoordsTool from "../../tools/displayCoordsTool";
 
-import ModalPopup from "../../components/UI/ModalPopup/ModalPopup";
 import AboutPopup from "../../components/AboutPopup/AboutPopup";
 import CloudDocument from '../../components/Constructions/CloudDocument';
 
@@ -213,17 +212,13 @@ class MainComponent extends Component {
 
                 <StatusComponent />
 
-                <ModalPopup
-                    showPopup={this.props.showAboutPopup}
-                    closePopup={this.props.toggleAboutPopup}
-                >
-                    <AboutPopup
-                        title={this.props.title}
-                        version={this.props.version}
-                        build={this.props.build}
-                        // onCloseAboutPopupPressed={this.closeAboutPopup}
-                    />
-                </ModalPopup>
+                <AboutPopup
+                    showAboutPopup={this.props.showAboutPopup}
+                    toggleAboutPopup={this.props.toggleAboutPopup}
+                    title={this.props.title}
+                    version={this.props.version}
+                    build={this.props.build}
+                />
 
                 <Route path="/documents/:id" component={CloudDocument}/>
 

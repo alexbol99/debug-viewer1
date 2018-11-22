@@ -15,4 +15,5 @@
     font-size: medium;
     margin: 0 15px;
     padding: 4px 6px;
+    box-sizing: border-box;
 }

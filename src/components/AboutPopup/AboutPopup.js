@@ -4,13 +4,36 @@
 
 import React from 'react';
 import classes from './AboutPopup.module.css';
+import ModalPopup from "../UI/ModalPopup/ModalPopup";
 
 const AboutPopup = (props) => {
     return (
-        <div className={classes.AboutPopup}>
-            <h2>{props.title} v{props.version}</h2>
-            <h4>Build October 2018</h4>
-        </div>
+        <ModalPopup
+            showPopup={props.showAboutPopup}
+            closePopup={props.toggleAboutPopup}
+        >
+            <div className={classes.AboutPopup}>
+                <h2>{props.title} v{props.version}</h2>
+
+                <label>{`Build date: `}</label>
+                <span>November 2018</span>
+                <br/>
+
+                <label>{`Github depository: `}</label>
+                <a href="https://github.com/alexbol99/debug-viewer1" >
+                    https://github.com/alexbol99/debug-viewer1
+                </a>
+                <br/>
+
+                <label>{`3d party graphics library: `}</label>
+                <a href="https://github.com/CreateJS/EaselJS/tree/2.0" >
+                    https://github.com/CreateJS/EaselJS/tree/2.0
+                </a>
+                <br/>
+
+            </div>
+        </ModalPopup>
+
     )
 };
 

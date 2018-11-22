@@ -40,16 +40,16 @@
 .DocumentComponentCellBottom {
     display: flex;
     flex-flow: row;
-    box-sizing: border-box;
 }
 
-.DocumentComponentCellBottom h4, h5, h6, h7 {
+.DocumentComponentCellBottom h3, h4, h5, h6, h7 {
     margin: 3px 0;
     color: black;
 }
 
 .DocumentComponentCellBottom div {
     flex: 3;
+    box-sizing: border-box;
 }
 
 DocumentComponentCellBottom button {

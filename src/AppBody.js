@@ -5,7 +5,7 @@ import * as cloudActions from "./store/actions/cloudStorageActions";
 import MainComponent from "./containers/MainComponent/MainComponent";
 import LayersList from "./containers/LayerList/LayersList";
 import AsideComponent from "./components/Layout/AsideComponent/AsideComponent";
-import DocumentName from "./components/DocumentName/DocumentName";
+import DocumentName from "./components/MainComponent/DocumentName/DocumentName";
 
 const appBody = (props) => {
     return (
