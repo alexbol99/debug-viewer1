@@ -38,6 +38,7 @@ class MainComponent extends Component {
         let layer = Layers.getAffected(this.props.layers);
         if (!layer) return;
         this.props.setHomeView(this.props.stage, layer);
+        this.forceUpdate();       // ??? unclear why on Home button click not updated
     };
 
     onSaveDocumentButtonClicked = () => {

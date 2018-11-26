@@ -35,7 +35,7 @@ export const fetchDocumentFromDatabase = (id) => {
 
 export const deleteDocumentFromDatabase = (id) => {
     return axios.delete('/documents/' + id + '.json');
-}
+};
 
 export const fetchDocumentsFromDatabase = () => {
     return axios.get('/documents.json');
@@ -91,7 +91,7 @@ export const updateCurrentDocument = (document) => {
         type: ActionTypes.DOCUMENT_SELECTED_FROM_LIST,
         document
     }
-}
+};
 
 export const requestFetchDocumentsFromDatabaseSucceed = (documentsList) => {
     return {

@@ -73,7 +73,14 @@ class CanvasComponent extends Component {
 
     render() {
         return (
-            <canvas tabIndex="1" ref={this.canvasElement} id="mainCanvas" className={styles["App-canvas"]}>
+            <canvas
+                tabIndex="1"
+                ref={this.canvasElement}
+                id="mainCanvas"
+                className={styles["App-canvas"]}
+                width="100"
+                height="100"
+            >
             </canvas>
         )
     }
