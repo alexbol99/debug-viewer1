@@ -37,8 +37,9 @@ export const deleteDocumentFromDatabase = (id) => {
     return axios.delete('/documents/' + id + '.json');
 };
 
-export const fetchDocumentsFromDatabase = () => {
-    return axios.get('/documents.json');
+export const fetchDocumentsFromDatabase = (token, userId) => {
+    const queryParams = '?auth=' + token + '&orderBy="userId"&equalTo="' + userId + '"';
+    return axios.get('/documents.json' + queryParams);
 };
 
 export const registerDocumentAddedToDatabase = (id, lastUpdated) => {

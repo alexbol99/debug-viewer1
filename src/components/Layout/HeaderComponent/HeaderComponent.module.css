@@ -25,3 +25,11 @@
     /*color: white;*/
     /*flex: none;*/
 }
+
+.App-header span,
+.App-header-documents-page span {
+    font-weight: bolder;
+    color: #FF954A;
+    position: absolute;
+    right: 15%;
+}

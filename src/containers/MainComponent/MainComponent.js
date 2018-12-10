@@ -48,7 +48,9 @@ class MainComponent extends Component {
                 cloudActions.getNewName(this.props.documentsList) : this.props.document.name,
             layers: Layers.toJSON(this.props.layers),
             dataURL: this.props.stage.toDataURL(),
-            lastUpdated: new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString()
+            lastUpdated: new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString(),
+            token: this.props.token,
+            userId: this.props.userId
         };
         if (this.props.document.id) {
             cloudActions.updateDocumentInDatabase(this.props.document.id, payload)
@@ -252,6 +254,8 @@ const mapStateToProps = (state, ownProps) => {
         document: state.cloudStorage.document,
         documentsList: state.cloudStorage.documentsList,
         // onManageCloudStorageButtonClicked: ownProps.onManageCloudStorageButtonClicked
+        token: state.auth.token,
+        userId: state.auth.userId
     }
 };
 

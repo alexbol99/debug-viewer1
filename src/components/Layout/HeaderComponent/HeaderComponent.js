@@ -14,7 +14,8 @@ const HeaderComponent = (props) => {
     return (
         <header className={style}>
             <Logo />
-            <Navigation />
+            <Navigation isAuthenticated={props.isAuthenticated} />
+            {props.isAuthenticated ? <span>Hello {props.username}</span> : null}
             {props.location.pathname === "/documents" ? <hr/> : null}
         </header>
     )

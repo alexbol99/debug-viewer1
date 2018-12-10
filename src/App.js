@@ -2,8 +2,10 @@ import React, {Component} from 'react';
 import {Route, Switch, withRouter} from 'react-router-dom';
 
 import AppBody from './AppBody';
-
 import HeaderComponent from './components/Layout/HeaderComponent/HeaderComponent';
+import Signup from './containers/Auth/SignUp/Signup';
+import Login from './containers/Auth/Login/Login';
+import Logout from './containers/Auth/Logout';
 import {connect} from 'react-redux';
 
 import './App.css';
@@ -15,28 +17,39 @@ import SkeletonRecognition from './components/Constructions/SkeletonRecognition'
 import CollisionDemo from "./components/Constructions/CollisionDemo";
 import Spinner from "./components/UI/Spinner/Spinner";
 import DocumentsComponent from "./containers/DocumentsComponent/DocumentsComponent";
+import * as authActions from "./store/actions/auth";
 
 class App extends Component {
+    componentDidMount() {
+        this.props.authCheckState();
+    }
     componentDidUpdate() {
         if (this.props.location.pathname === '/' && this.props.document.id !== undefined) {
             this.props.history.push("/documents/" + this.props.document.id)
         }
+
         // if (this.props.location.pathname.split('/').length > 2 &&
         //     this.props.location.pathname.split('/')[2].length > 0 &&
         //     this.props.document.id === undefined) {
         //     this.props.history.push("/");
         // }
     }
+
     render() {
         return (
             <div className="App">
                 <HeaderComponent
                     title={this.props.title}
                     version={this.props.version}
+                    isAuthenticated={this.props.isAuthenticated}
+                    username={this.props.username}
                 />
 
                 <Switch>
                     <Route path="/documents" exact component={DocumentsComponent}/>
+                    <Route path="/signup" component={Signup} />
+                    <Route path="/login" component={Login} />
+                    <Route path="/logout" component={Logout} />
 
                     <Route path="/" component={AppBody}/>
 
@@ -55,13 +68,21 @@ class App extends Component {
     }
 }
 
-const mapStateToProps = ({app, cloudStorage}) => {
+const mapStateToProps = ({auth, app, cloudStorage}) => {
     return {
         title: app.title,
         version: app.version,
         showSpinner: app.showSpinner,
-        document: cloudStorage.document
+        document: cloudStorage.document,
+        isAuthenticated: auth.token !== null,
+        username: auth.username
     }
 };
 
-export default withRouter(connect(mapStateToProps, null)(App));
+const mapDispatchToProps = dispatch => {
+    return {
+        authCheckState: () => dispatch(authActions.authCheckState())
+    }
+};
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

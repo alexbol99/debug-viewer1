@@ -7,6 +7,10 @@ import classes from './DocumentsComponent.module.css';
 import DocumentComponentCell from '../../components/Documents/DocumentComponentCell';
 
 class DocumentsComponent extends Component {
+    state = {
+        updated: false
+    };
+
     deleteDocumentFromDatabase = (id) => {
         cloudActions.deleteDocumentFromDatabase(id)
             .then((response) => {
@@ -18,14 +22,18 @@ class DocumentsComponent extends Component {
     };
 
     componentDidMount = () => {
-        cloudActions.fetchDocumentsFromDatabase()
+        if (!this.props.token) return;
+        // if (this.state.updated) return;
+        cloudActions.fetchDocumentsFromDatabase(this.props.token, this.props.userId)
             .then((response) => {
                 this.props.requestFetchDocumentsFromDatabaseSucceed(response.data);
                 this.props.asyncOperationEnded();
+
             });
         if (this.props.documentsList.length === 0) {
             this.props.asyncOperationStarted();
         }
+        // this.setState({updated:true});
     };
 
     render() {
@@ -50,9 +58,11 @@ class DocumentsComponent extends Component {
     }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = ({auth,cloudStorage}) => {
     return {
-        documentsList: state.cloudStorage.documentsList
+        documentsList: cloudStorage.documentsList,
+        token: auth.token,
+        userId: auth.userId
     }
 };
 
