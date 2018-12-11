@@ -176,6 +176,10 @@ class Stage extends createjs.Stage {
         let dy = this.canvas.height / 2 - canvasY;
         this.panBy(dx, dy);
     }
+
+    clear() {
+        this.canvas.getContext('2d').clearRect(0, 0, this.canvas.width, this.canvas.height);
+    }
 }
 
 export default Stage;
