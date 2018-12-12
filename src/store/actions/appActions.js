@@ -128,3 +128,10 @@ export const openDocumentOnCloud = () => {
     }
 };
 
+export const toggleLayerList = () => {
+    return {
+        type: ActionTypes.TOGGLE_SHOW_LAYER_LIST_CLICKED
+    }
+};
+
+

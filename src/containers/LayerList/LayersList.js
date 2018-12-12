@@ -69,8 +69,9 @@ class LayersList extends Component {
     }
 
     render() {
+        const style = this.props.showLayerList ? styles["App-layers-displayed"] : styles["App-layers"];
         return (
-            <div className={styles["App-layers"]}
+            <div className={style}
                  ref="layersComponent"
                  onClick={this.onLayerListClicked}
             >
@@ -104,7 +105,8 @@ class LayersList extends Component {
 const mapStateToProps = state => {
     return {
         layers: state.layers,
-        stage: state.app.stage
+        stage: state.app.stage,
+        showLayerList: state.app.showLayerList         // on mobile device
     }
 };
 

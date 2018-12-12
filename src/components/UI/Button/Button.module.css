@@ -23,3 +23,13 @@
 .IconModeNotActive {
     opacity: 0.4;
 }
+
+.DrawerButton {
+    display: none;
+}
+
+@media only screen and (max-width: 360px) {
+    .DrawerButton {
+        display: inherit;
+    }
+}

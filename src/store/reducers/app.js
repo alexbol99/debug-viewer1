@@ -39,7 +39,8 @@ const defaultAppState = {
     showSkeletonRecognitionButton: false,
     applySkeletonRecognition: false,
     stage: null,
-    showSpinner: false
+    showSpinner: false,
+    showLayerList: false,
 };
 
 const app = (state = defaultAppState, action) => {
@@ -159,6 +160,11 @@ const app = (state = defaultAppState, action) => {
             });
         case ActionTypes.AABB_TREE_NEXT_LEVEL:
             return state;
+        case ActionTypes.TOGGLE_SHOW_LAYER_LIST_CLICKED:
+            return {
+                ...state,
+                showLayerList: !state.showLayerList
+            }
         default:
             return state;
     }

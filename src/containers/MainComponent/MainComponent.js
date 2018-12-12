@@ -185,6 +185,7 @@ class MainComponent extends Component {
                     onUnitClicked={this.props.toggleUnits}
                     onSaveDocumentButtonClicked={this.onSaveDocumentButtonClicked}
                     onClearAllButtonClicked={this.clearCurrentDocument}
+                    onLayerListButtonClicked={this.props.toggleLayerList}
                 />
 
                 <CanvasComponent />
@@ -273,6 +274,7 @@ const mapDispatchToProps = dispatch => {
         toggleMeasureBetweenPoints: () => dispatch(actions.toggleMeasureBetweenPoints()),
         toggleMeasureBetweenShapes: () => dispatch(actions.toggleMeasureBetweenShapes()),
         togglePanByDrag: () => dispatch(actions.togglePanByDrag()),
+        toggleLayerList: () => dispatch(actions.toggleLayerList()),
         applySkeletonRecognition: () => dispatch(actions.applySkeletonRecognition()),
         handleMouseRollOverShape: (shape) => dispatch(actions.handleMouseRollOverShape(shape)),
         handleMouseRollOutShape: () => dispatch(actions.handleMouseRollOutShape()),

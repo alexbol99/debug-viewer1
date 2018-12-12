@@ -22,4 +22,44 @@
     .App-layers {
         display: none;
     }
+
+    .App-layers-displayed {
+        position: fixed;
+        text-align: left;
+        /*width: 280px;*/
+        height: 65%;
+        max-width: 70%;
+        max-height: 70%;
+        left: 10px;
+        top: 190px;
+        z-index: 10;
+        background-color: rgba(255,255,255,0.9);
+        border: 1px solid darkgrey;
+        /*padding: 32px 16px;*/
+        box-sizing: border-box;
+        /*transition: transform 0.3s ease-out;*/
+        animation-name: fadeIn;
+        animation-duration: 1s;
+    }
+
+    .App-layers-displayed ul {
+        padding-left: 3px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.Open {
+    transform: translateX(0);
+}
+
+.Close {
+    transform: translateX(-100%);
 }

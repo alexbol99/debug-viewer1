@@ -15,8 +15,10 @@ const button = (props) => {
             iconStyle = classes.IconTrigger;
             break;
     }
+    // eslint-disable-next-line
+    let buttonStyle = props.drawerButton ? classes["Button","DrawerButton"] : classes["Button"];
     return (
-        <button title={props.title} onClick={props.onClick} className={classes.Button}>
+        <button title={props.title} onClick={props.onClick} className={buttonStyle}>
             <FontAwesome
                 name={props.iconName}
                 size='2x'

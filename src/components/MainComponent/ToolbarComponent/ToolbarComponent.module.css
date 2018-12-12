@@ -40,3 +40,23 @@
     /*background: rgba(147, 128, 115, 0.1);*/
 /*}*/
 
+.DrawerButton {
+    display: none;
+}
+
+@media only screen and (max-width: 360px) {
+    .App-toolbar {
+        overflow: auto;
+        max-width: 360px;
+    }
+
+    .App-toolbar-units {
+        height:30px;
+        font-size: inherit;
+        font-weight: bold;
+    }
+
+    .DrawerButton {
+        display: inherit;
+    }
+}

@@ -12,3 +12,9 @@
     position: relative;
     top: 3px;
 }
+
+@media only screen and (max-width: 360px) {
+    .ButtonSeparator {
+        /*display: none;*/
+    }
+}

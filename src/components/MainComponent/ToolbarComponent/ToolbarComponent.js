@@ -15,6 +15,11 @@ class ToolbarComponent extends Component {
     render() {
         return (
             <div className={classes["App-toolbar"]}>
+                <Button type="trigger" title="Show layers list" iconName='list'
+                        drawerButton={true}
+                        onClick={this.props.onLayerListButtonClicked}
+                />
+
                 {/*<h4>Toolbar</h4>*/}
                 <Button type="trigger" title="Open files" iconName='folder-open'
                         onClick={this.openJobButtonClicked}

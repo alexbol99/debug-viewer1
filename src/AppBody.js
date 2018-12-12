@@ -24,7 +24,7 @@ const appBody = (props) => {
 
 const mapStateToProps = ({app, cloudStorage}) => {
     return {
-        document: cloudStorage.document
+        document: cloudStorage.document,
     }
 };
 
