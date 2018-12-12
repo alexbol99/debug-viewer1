@@ -14,24 +14,39 @@ class CanvasComponent extends Component {
 
     handleMouseMove = (event) => {
         this.props.stage.canvas.focus();
-        this.props.handleMouseMove(
-            this.props.stage,
-            event.stageX,
-            event.stageY,
-            this.props.mouse.startX ? event.stageX - this.props.mouse.startX : undefined,
-            this.props.mouse.startY ? event.stageY - this.props.mouse.startY : undefined
-        );
+        if (event.pointerID === -1 || event.pointerID === 0) {
+            this.props.handleMouseMove(
+                this.props.stage,
+                event.stageX,
+                event.stageY,
+                this.props.mouse.startX ? event.stageX - this.props.mouse.startX : undefined,
+                this.props.mouse.startY ? event.stageY - this.props.mouse.startY : undefined
+            );
+        }
+        else if (event.pointerID === 1) {
+            this.props.handleSecondTouchMove(this.props.stage, event.stageX, event.stageY);
+        }
     };
 
     handleMouseDown = (event) => {
-        this.props.handleMouseDown(this.props.stage, event.stageX, event.stageY);
+        if (event.pointerID === -1 || event.pointerID === 0) {
+            this.props.handleMouseDown(this.props.stage, event.stageX, event.stageY);
+        }
+        else if (event.pointerID === 1) {
+            this.props.handleSecondTouchDown(this.props.stage, event.stageX, event.stageY);
+        }
     };
 
     handleMouseUp = (event) => {
         event.stopPropagation();
         event.preventDefault();
-        this.props.stage.panByMouseStop();
-        this.props.handleMouseUp(this.props.stage, event.stageX, event.stageY);
+        if (event.pointerID === -1 || event.pointerID === 0) {
+            this.props.stage.panByMouseStop();
+            this.props.handleMouseUp(this.props.stage, event.stageX, event.stageY, event.pointerID);
+        }
+        else if (event.pointerID === 1) {
+            this.props.handleSecondTouchUp();
+        }
     };
 
     handleMouseLeave = (event) => {   // nothing works except click
@@ -99,7 +114,10 @@ const mapDispatchToProps = dispatch => {
         handleMouseDown: (stage, x, y) => dispatch(actions.handleMouseDown(stage, x, y)),
         handleMouseUp: (stage, x, y) => dispatch(actions.handleMouseUp(stage, x, y)),
         handleMouseMove: (stage, x, y, dx, dy) => dispatch(actions.handleMouseMove(stage, x, y, dx, dy)),
-        handleMouseWheelMove: (stage, x, y, delta) => dispatch(actions.handleMouseWheelMove(stage, x, y, delta))
+        handleMouseWheelMove: (stage, x, y, delta) => dispatch(actions.handleMouseWheelMove(stage, x, y, delta)),
+        handleSecondTouchDown: (stage, x, y) => dispatch(actions.handleSecondTouchDown(stage, x, y)),
+        handleSecondTouchMove: (stage, x, y) => dispatch(actions.handleSecondTouchMove(stage, x, y)),
+        handleSecondTouchUp: () => dispatch(actions.handleSecondTouchUp())
     }
 };
 

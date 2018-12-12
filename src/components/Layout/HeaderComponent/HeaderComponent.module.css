@@ -33,3 +33,10 @@
     position: absolute;
     right: 15%;
 }
+
+@media only screen and (max-width: 360px) {
+    .App-header span,
+    .App-header-documents-page span {
+        display: none;
+    }
+}

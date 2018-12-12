@@ -1,9 +1,10 @@
 import * as ActionTypes from '../store/actionTypes';
 
-const stageController = ({ getState, dispatch }) => next => action => {
+const stageController = ({getState, dispatch}) => next => action => {
 
-    // let state = getState();
+    const mouse = getState().mouse;
     let stage = action.stage;
+
 
     if (stage) {
         switch (action.type) {
@@ -42,6 +43,27 @@ const stageController = ({ getState, dispatch }) => next => action => {
             case ActionTypes.CLEAR_ALL:
                 stage.removeAllChildren();
                 stage.removeAllListeners();
+                break;
+
+            case ActionTypes.SECOND_TOUCH_DOWN_ON_STAGE:
+                stage.zoomByPinchStart(action.x, action.y);
+                break;
+
+            case ActionTypes.SECOND_TOUCH_MOVED_ON_STAGE:
+                if (mouse.startX && mouse.startY && mouse.startX_2 && mouse.startY_2) {
+                    let dx = mouse.startX_2 - mouse.startX;
+                    let dy = mouse.startY_2 - mouse.startY;
+                    const distStart = Math.sqrt(dx*dx + dy*dy);
+                    dx = action.x - mouse.x;
+                    dy = action.y - mouse.y;
+                    const distCurrent = Math.sqrt(dx*dx + dy*dy);
+                    const ratio = distCurrent / distStart;
+                    stage.zoomByPinchMove(action.x, action.y, ratio);
+                }
+                break;
+
+            case ActionTypes.SECOND_TOUCH_UP_ON_STAGE:
+                stage.zoomByPinchStop();
                 break;
 
             default:

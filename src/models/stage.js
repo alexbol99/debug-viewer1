@@ -19,9 +19,15 @@ class Stage extends createjs.Stage {
             // this.updateViewport(this.canvas.width, this.canvas.height);
         }
         this.origin = {x: this.canvas.width / 2, y: this.canvas.height / 2};
-        this.oldOrigin = {x: undefined, y: undefined};   // used by pan
         this.resolution = 0.00001;          // MM 2 Pixels when zoomFactor = 1;
         this.zoomFactor = 1.0;
+
+        this.oldOrigin = {x: undefined, y: undefined};   // used by pan
+        // used by zoom by pinch
+        this.oldZoomFactor = undefined;
+        this.pinchAnchorX = undefined;
+        this.pinchAnchorY = undefined;
+        this.pinchStarted = false;
     }
 
     get box() {
@@ -152,6 +158,7 @@ class Stage extends createjs.Stage {
     }
 
     panByMouseMove(dx, dy) {
+        if (this.pinchStarted) return;
         if (dx !== undefined && dy !== undefined &&
             this.oldOrigin.x !== undefined && this.oldOrigin.y !== undefined) {
             this.origin = {
@@ -164,8 +171,6 @@ class Stage extends createjs.Stage {
     panByMouseStop() {
         this.oldOrigin.x = undefined;
         this.oldOrigin.y = undefined;
-        this.tx = undefined;
-        this.ty = undefined;
     }
 
     panToCoordinate(x, y) {
@@ -175,6 +180,28 @@ class Stage extends createjs.Stage {
         let dx = this.canvas.width / 2 - canvasX;
         let dy = this.canvas.height / 2 - canvasY;
         this.panBy(dx, dy);
+    }
+
+    zoomByPinchStart(x, y) {
+        this.oldZoomFactor = this.zoomFactor;
+        this.pinchAnchorX = this.C2W_X(x);
+        this.pinchAnchorY = this.C2W_Y(y);
+        this.pinchStarted = true;
+    }
+
+    zoomByPinchMove(canvasX, canvasY, ratio) {
+        this.zoomFactor = ratio * this.oldZoomFactor;
+        this.origin = {
+            x: canvasX - this.scalingFactor() * this.pinchAnchorX,
+            y: canvasY + this.scalingFactor() * this.pinchAnchorY
+        }
+    }
+
+    zoomByPinchStop(x, y) {
+        this.oldZoomFactor = undefined;
+        this.pinchAnchorX = undefined;
+        this.pinchAnchorY = undefined;
+        this.pinchStarted = false;
     }
 
     clear() {
