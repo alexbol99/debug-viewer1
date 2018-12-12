@@ -45,7 +45,7 @@ class CanvasComponent extends Component {
             this.props.handleMouseUp(this.props.stage, event.stageX, event.stageY, event.pointerID);
         }
         else if (event.pointerID === 1) {
-            this.props.handleSecondTouchUp();
+            this.props.handleSecondTouchUp(this.props.stage);
         }
     };
 
@@ -117,7 +117,7 @@ const mapDispatchToProps = dispatch => {
         handleMouseWheelMove: (stage, x, y, delta) => dispatch(actions.handleMouseWheelMove(stage, x, y, delta)),
         handleSecondTouchDown: (stage, x, y) => dispatch(actions.handleSecondTouchDown(stage, x, y)),
         handleSecondTouchMove: (stage, x, y) => dispatch(actions.handleSecondTouchMove(stage, x, y)),
-        handleSecondTouchUp: () => dispatch(actions.handleSecondTouchUp())
+        handleSecondTouchUp: (stage) => dispatch(actions.handleSecondTouchUp(stage))
     }
 };
 

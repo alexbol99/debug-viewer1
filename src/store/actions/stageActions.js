@@ -1,7 +1,4 @@
 import * as ActionTypes from '../actionTypes';
-import {SECOND_TOUCH_DOWN_ON_STAGE} from "../actionTypes";
-import {SECOND_TOUCH_UP_ON_STAGE} from "../actionTypes";
-import {SECOND_TOUCH_MOVED_ON_STAGE} from "../actionTypes";
 
 export const registerStage = (stage) => {
     return {
@@ -51,7 +48,7 @@ export const handleMouseWheelMove = (stage, x, y, delta) => {
 
 export const handleSecondTouchDown = (stage, x, y) => {
     return {
-        type: SECOND_TOUCH_DOWN_ON_STAGE,
+        type: ActionTypes.SECOND_TOUCH_DOWN_ON_STAGE,
         stage: stage,
         x,
         y
@@ -60,16 +57,17 @@ export const handleSecondTouchDown = (stage, x, y) => {
 
 export const handleSecondTouchMove = (stage, x, y) => {
     return {
-        type: SECOND_TOUCH_MOVED_ON_STAGE,
+        type: ActionTypes.SECOND_TOUCH_MOVED_ON_STAGE,
         stage: stage,
         x,
         y
     }
 };
 
-export const handleSecondTouchUp = () => {
+export const handleSecondTouchUp = (stage) => {
     return {
-        type: SECOND_TOUCH_UP_ON_STAGE
+        type: ActionTypes.SECOND_TOUCH_UP_ON_STAGE,
+        stage
     }
 };
 

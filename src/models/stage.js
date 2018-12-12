@@ -197,7 +197,7 @@ class Stage extends createjs.Stage {
         }
     }
 
-    zoomByPinchStop(x, y) {
+    zoomByPinchStop() {
         this.oldZoomFactor = undefined;
         this.pinchAnchorX = undefined;
         this.pinchAnchorY = undefined;
