@@ -77,6 +77,7 @@ class CanvasComponent extends Component {
         // stage.update();
 
         stage.on("stagemousemove", this.handleMouseMove);
+        // stage.on("click", this.handleMouseDown);
         stage.on("stagemousedown", this.handleMouseDown);
         stage.on("stagemouseup", this.handleMouseUp);
         stage.on("mouseleave", this.handleMouseLeave);

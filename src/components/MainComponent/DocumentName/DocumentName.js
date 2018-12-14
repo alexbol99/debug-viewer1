@@ -39,7 +39,7 @@ Click on the link below to open it:`,
             <div className={classes.DocumentName}>
                 <input type="text" placeholder="Document Name"  value={this.state.name} onChange={this.handleChange} />
                 {window.navigator.share ?
-                    <Button type="trigger" title="Share document" iconName='share-alt' onClick={this.shareDocument}/> :
+                    <Button type="trigger" mobileOnly title="Share document" iconName='share-alt' onClick={this.shareDocument}/> :
                     null
                 }
             </div>

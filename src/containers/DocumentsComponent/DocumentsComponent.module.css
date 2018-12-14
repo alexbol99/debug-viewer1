@@ -14,7 +14,7 @@
     box-sizing: border-box;
 }
 
-@media (max-width: 375px) {
+@media only screen and (max-width: 415px) {
     .DocumentComponentGrid {
         grid-template-columns: repeat(1,1fr);
         font-size: smaller;

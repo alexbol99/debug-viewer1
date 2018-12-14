@@ -34,7 +34,7 @@
     right: 15%;
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 415px) {
     .App-header span,
     .App-header-documents-page span {
         display: none;

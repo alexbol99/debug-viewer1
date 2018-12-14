@@ -16,7 +16,7 @@ const button = (props) => {
             break;
     }
     // eslint-disable-next-line
-    let buttonStyle = props.drawerButton ? classes["Button","DrawerButton"] : classes["Button"];
+    let buttonStyle = props.mobileOnly ? classes["Button","DrawerButton"] : classes["Button"];
     return (
         <button title={props.title} onClick={props.onClick} className={buttonStyle}>
             <FontAwesome

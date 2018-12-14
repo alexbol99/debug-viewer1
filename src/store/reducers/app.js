@@ -128,21 +128,6 @@ const app = (state = defaultAppState, action) => {
             return Object.assign({}, state, {
                 measurePointsActive: false
             });
-        case ActionTypes.MOUSE_DOWN_ON_STAGE:
-            if (state.hoveredShape) {
-                return state
-            }
-            else {
-                return Object.assign({}, state, {
-                    measureShapesFirstClick: true,
-                    firstMeasuredShape: null,
-                    firstMeasuredLayer: null,
-                    secondMeasuredShape: null,
-                    secondMeasuredLayer: null,
-                    distance: undefined,
-                    shortestSegment: null
-                });
-            }
         case ActionTypes.SKELETON_RECOGNITION_URI:
             return Object.assign({}, state, {
                 showSkeletonRecognitionButton: true

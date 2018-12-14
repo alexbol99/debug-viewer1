@@ -13,6 +13,8 @@ const defaultMeasureShapesTool = {
     shortestSegment: null
 };
 
+const is_mobile = window.mobilecheck();
+
 const measureShapesTool = (state = defaultMeasureShapesTool, action) => {
     switch (action.type) {
         case ActionTypes.MEASURE_SHAPES_BUTTON_PRESSED:
@@ -75,7 +77,7 @@ const measureShapesTool = (state = defaultMeasureShapesTool, action) => {
                 });
             }
         case ActionTypes.MOUSE_DOWN_ON_STAGE:
-            if (state.hoveredShape) {
+            if (state.hoveredShape || is_mobile) {
                 return state
             }
             else {

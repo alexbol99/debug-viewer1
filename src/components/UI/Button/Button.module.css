@@ -28,7 +28,7 @@
     display: none;
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 415px) {
     .DrawerButton {
         display: inherit;
     }
