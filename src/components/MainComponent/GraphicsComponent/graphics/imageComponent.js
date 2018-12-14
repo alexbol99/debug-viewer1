@@ -10,13 +10,6 @@ import Utils from '../../../../models/utils';
 let createjs = window.createjs;
 
 export class ImageComponent extends Component {
-    constructor(params) {
-        super();
-
-        this.bitmap = new createjs.Bitmap(params.model.geom.uri);
-        params.stage.addChild(this.bitmap);
-    }
-
     handleMouseOver = (event) => {
         this.props.onMouseOver(this.props.model);
     };
@@ -31,13 +24,10 @@ export class ImageComponent extends Component {
 
     redraw() {
         // Draw shape
-
-        let alpha = 0.5; // (this.props.hovered || this.props.selected) ? 1.0 : 0.6;
-
+        let alpha = 1; // (this.props.hovered || this.props.selected) ? 1.0 : 0.6;
         this.bitmap.alpha = this.props.displayed ? alpha : 0.0;
 
         let width = this.props.model.geom.width;
-
         let ratio = this.bitmap.image.naturalWidth/this.bitmap.image.naturalHeight;
         let scaleX = width/this.bitmap.image.naturalWidth; // 1. / (stage.zoomFactor * stage.resolution);
         let scaleY = width/(this.bitmap.image.naturalHeight*ratio);
@@ -54,13 +44,19 @@ export class ImageComponent extends Component {
     }
 
     componentDidMount() {
-        this.bitmap.on("mouseover", this.handleMouseOver);
-        this.bitmap.on("mouseout", this.handleMouseOut);
-        this.bitmap.on("click", this.handleClick);
+        const img = new Image();
+        img.onload = () => {
+            this.bitmap = new createjs.Bitmap(img);
+            this.props.stage.addChild(this.bitmap);
 
-        // this.shape.mouseEnabled = false;
+            // this.bitmap.on("mouseover", this.handleMouseOver);
+            // this.bitmap.on("mouseout", this.handleMouseOut);
+            // this.bitmap.on("click", this.handleClick);
 
-        this.redraw();
+            // this.shape.mouseEnabled = false;
+            this.redraw();
+        };
+        img.src = this.props.model.geom.uri;
     }
 
 
@@ -76,9 +72,11 @@ export class ImageComponent extends Component {
     }
 
     componentWillUnmount() {
-        this.bitmap.off("mouseover", this.handleMouseOver);
-        this.bitmap.off("mouseout", this.handleMouseOut);
-        this.bitmap.off("click", this.handleClick);
+        // this.bitmap.off("mouseover", this.handleMouseOver);
+        // this.bitmap.off("mouseout", this.handleMouseOut);
+        // this.bitmap.off("click", this.handleClick);
+
+        this.props.stage.removeChild(this.bitmap);
     }
 
     render() {
