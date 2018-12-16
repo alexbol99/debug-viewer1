@@ -45,24 +45,25 @@ const stageController = ({getState, dispatch}) => next => action => {
                 stage.removeAllListeners();
                 break;
 
-            case ActionTypes.SECOND_TOUCH_DOWN_ON_STAGE:
-                stage.zoomByPinchStart(action.x, action.y);
+            case ActionTypes.PINCH_DOWN_ON_STAGE:
+                stage.zoomByPinchStart(action.x1, action.y1);
                 break;
 
-            case ActionTypes.SECOND_TOUCH_MOVED_ON_STAGE:
-                if (mouse.startX && mouse.startY && mouse.startX_2 && mouse.startY_2) {
-                    let dx = mouse.startX_2 - mouse.startX;
-                    let dy = mouse.startY_2 - mouse.startY;
-                    const distStart = Math.sqrt(dx*dx + dy*dy);
-                    dx = action.x - mouse.x;
-                    dy = action.y - mouse.y;
-                    const distCurrent = Math.sqrt(dx*dx + dy*dy);
-                    const ratio = distCurrent / distStart;
-                    stage.zoomByPinchMove(action.x, action.y, ratio);
+            case ActionTypes.PINCH_MOVED_ON_STAGE:
+                if (mouse.touchPoints) {
+                    let dx = mouse.touchPoints[0].x - mouse.touchPoints[1].x;
+                    let dy = mouse.touchPoints[0].y - mouse.touchPoints[1].y;
+                    let distStart = Math.sqrt(dx*dx + dy*dy);
+
+                    dx = action.x2 - action.x1;
+                    dy = action.y2 - action.y1;
+                    let distCurrent = Math.sqrt(dx*dx + dy*dy);
+                    let ratio = distCurrent / distStart;
+                    stage.zoomByPinchMove(action.x1, action.y1, ratio);
                 }
                 break;
 
-            case ActionTypes.SECOND_TOUCH_UP_ON_STAGE:
+            case ActionTypes.PINCH_UP_ON_STAGE:
                 stage.zoomByPinchStop();
                 break;
 

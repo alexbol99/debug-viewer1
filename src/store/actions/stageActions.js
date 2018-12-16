@@ -46,27 +46,31 @@ export const handleMouseWheelMove = (stage, x, y, delta) => {
     }
 };
 
-export const handleSecondTouchDown = (stage, x, y) => {
+export const handlePinchDown = (stage, touchPoints) => {
     return {
-        type: ActionTypes.SECOND_TOUCH_DOWN_ON_STAGE,
+        type: ActionTypes.PINCH_DOWN_ON_STAGE,
         stage: stage,
-        x,
-        y
+        x1: touchPoints[0].x,
+        y1: touchPoints[0].y,
+        x2: touchPoints[1].x,
+        y2: touchPoints[1].y
     }
 };
 
-export const handleSecondTouchMove = (stage, x, y) => {
+export const handlePinchMove = (stage, touchPoints) => {
     return {
-        type: ActionTypes.SECOND_TOUCH_MOVED_ON_STAGE,
+        type: ActionTypes.PINCH_MOVED_ON_STAGE,
         stage: stage,
-        x,
-        y
+        x1: touchPoints[0].x,
+        y1: touchPoints[0].y,
+        x2: touchPoints[1].x,
+        y2: touchPoints[1].y
     }
 };
 
-export const handleSecondTouchUp = (stage) => {
+export const handlePinchUp = (stage) => {
     return {
-        type: ActionTypes.SECOND_TOUCH_UP_ON_STAGE,
+        type: ActionTypes.PINCH_UP_ON_STAGE,
         stage
     }
 };

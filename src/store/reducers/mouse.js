@@ -3,12 +3,9 @@ import * as ActionTypes from "../actionTypes";
 const defaultMouseState = {
     x: 0,
     y: 0,
-    x_2: undefined,
-    y_2: undefined,
     startX: undefined,
     startY: undefined,
-    startX_2: undefined,
-    startY_2: undefined
+    touchPoints: undefined
 };
 
 const mouse = (state = defaultMouseState, action) => {
@@ -29,27 +26,28 @@ const mouse = (state = defaultMouseState, action) => {
                 startY: undefined
             });
 
-        case ActionTypes.SECOND_TOUCH_DOWN_ON_STAGE: {
+        case ActionTypes.PINCH_DOWN_ON_STAGE: {
             return {
                 ...state,
-                startX_2: action.x,
-                startY_2: action.y
+                touchPoints: [
+                    {x: action.x1, y: action.y1},
+                    {x: action.x2, y: action.y2}
+                ]
             }
         }
-        case ActionTypes.SECOND_TOUCH_MOVED_ON_STAGE: {
+        // case ActionTypes.PINCH_MOVED_ON_STAGE: {
+        //     return {
+        //         ...state,
+        //         touchPoints: [
+        //             {x: action.x1, y: action.y1},
+        //             {x: action.x2, y: action.y2}
+        //         ]
+        //     }
+        // }
+        case ActionTypes.PINCH_UP_ON_STAGE: {
             return {
                 ...state,
-                x_2: action.x,
-                y_2: action.y
-            }
-        }
-        case ActionTypes.SECOND_TOUCH_UP_ON_STAGE: {
-            return {
-                ...state,
-                x_2: undefined,
-                y_2: undefined,
-                startX_2: undefined,
-                startY_2: undefined
+                touchPoints: undefined
             }
         }
 

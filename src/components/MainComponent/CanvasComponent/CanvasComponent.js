@@ -14,7 +14,7 @@ class CanvasComponent extends Component {
 
     handleMouseMove = (event) => {
         this.props.stage.canvas.focus();
-        if (event.pointerID === -1 || event.pointerID === 0) {
+        if (!event.nativeEvent.touches || event.nativeEvent.touches.length === 1) {
             this.props.handleMouseMove(
                 this.props.stage,
                 event.stageX,
@@ -23,29 +23,62 @@ class CanvasComponent extends Component {
                 this.props.mouse.startY ? event.stageY - this.props.mouse.startY : undefined
             );
         }
-        else if (event.pointerID === 1) {
-            this.props.handleSecondTouchMove(this.props.stage, event.stageX, event.stageY);
+        else if (event.nativeEvent.touches && event.nativeEvent.touches.length === 2) {
+            let touchPoints = [
+                {
+                    x: event.nativeEvent.touches[0].clientX - event.nativeEvent.target.offsetLeft,
+                    y: event.nativeEvent.touches[0].clientY - event.nativeEvent.target.offsetTop
+                },
+                {
+                    x: event.nativeEvent.touches[1].clientX - event.nativeEvent.target.offsetLeft,
+                    y: event.nativeEvent.touches[1].clientY - event.nativeEvent.target.offsetTop
+                },
+            ];
+            this.props.handlePinchMove(this.props.stage, touchPoints);
         }
+
+        // if (this.props.stage.pinchStarted) {
+        //     this.props.handleSecondTouchMove(this.props.stage, event.stageX, event.stageY);
+        // }
+        // else {
+        //     this.props.handleMouseMove(
+        //         this.props.stage,
+        //         event.stageX,
+        //         event.stageY,
+        //         this.props.mouse.startX ? event.stageX - this.props.mouse.startX : undefined,
+        //         this.props.mouse.startY ? event.stageY - this.props.mouse.startY : undefined
+        //     );
+        // }
     };
 
     handleMouseDown = (event) => {
-        if (event.pointerID === -1 || event.pointerID === 0) {
+        // if (event.pointerID === -1 || event.pointerID === 0) {
+        if (!event.nativeEvent.touches || event.nativeEvent.touches.length === 1) {
             this.props.handleMouseDown(this.props.stage, event.stageX, event.stageY);
         }
-        else if (event.pointerID === 1) {
-            this.props.handleSecondTouchDown(this.props.stage, event.stageX, event.stageY);
+        else if (event.nativeEvent.touches && event.nativeEvent.touches.length === 2) {
+            let touchPoints = [
+                {
+                    x: event.nativeEvent.touches[0].clientX - event.nativeEvent.target.offsetLeft,
+                    y: event.nativeEvent.touches[0].clientY - event.nativeEvent.target.offsetTop
+                },
+                {
+                    x: event.nativeEvent.touches[1].clientX - event.nativeEvent.target.offsetLeft,
+                    y: event.nativeEvent.touches[1].clientY - event.nativeEvent.target.offsetTop
+                },
+            ];
+            this.props.handlePinchDown(this.props.stage, touchPoints);
         }
     };
 
     handleMouseUp = (event) => {
         event.stopPropagation();
         event.preventDefault();
-        if (event.pointerID === -1 || event.pointerID === 0) {
-            this.props.stage.panByMouseStop();
-            this.props.handleMouseUp(this.props.stage, event.stageX, event.stageY, event.pointerID);
+        if (!event.nativeEvent.touches || event.nativeEvent.touches.length === 1) {
+            this.props.handleMouseUp(this.props.stage);
         }
-        else if (event.pointerID === 1) {
-            this.props.handleSecondTouchUp(this.props.stage);
+        else if (event.nativeEvent.touches && event.nativeEvent.touches.length === 2) {
+            this.props.handlePinchUp(this.props.stage);
         }
     };
 
@@ -76,9 +109,9 @@ class CanvasComponent extends Component {
         // stage.setClearColor("#FFFFFF");
         // stage.update();
 
+        stage.on("stagemousedown", this.handleMouseDown);
         stage.on("stagemousemove", this.handleMouseMove);
         // stage.on("click", this.handleMouseDown);
-        stage.on("stagemousedown", this.handleMouseDown);
         stage.on("stagemouseup", this.handleMouseUp);
         stage.on("mouseleave", this.handleMouseLeave);
         stage.canvas.addEventListener("mousewheel", this.handleMouseWheel, {passive: true});
@@ -116,9 +149,9 @@ const mapDispatchToProps = dispatch => {
         handleMouseUp: (stage, x, y) => dispatch(actions.handleMouseUp(stage, x, y)),
         handleMouseMove: (stage, x, y, dx, dy) => dispatch(actions.handleMouseMove(stage, x, y, dx, dy)),
         handleMouseWheelMove: (stage, x, y, delta) => dispatch(actions.handleMouseWheelMove(stage, x, y, delta)),
-        handleSecondTouchDown: (stage, x, y) => dispatch(actions.handleSecondTouchDown(stage, x, y)),
-        handleSecondTouchMove: (stage, x, y) => dispatch(actions.handleSecondTouchMove(stage, x, y)),
-        handleSecondTouchUp: (stage) => dispatch(actions.handleSecondTouchUp(stage))
+        handlePinchDown: (stage, touchPoints) => dispatch(actions.handlePinchDown(stage, touchPoints)),
+        handlePinchMove: (stage, touchPoints) => dispatch(actions.handlePinchMove(stage, touchPoints)),
+        handlePinchUp: (stage) => dispatch(actions.handlePinchUp(stage))
     }
 };
 

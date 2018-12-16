@@ -155,6 +155,7 @@ class Stage extends createjs.Stage {
     panByMouseStart() {
         this.oldOrigin.x = this.origin.x;
         this.oldOrigin.y = this.origin.y;
+        this.zoomByPinchStop();
     }
 
     panByMouseMove(dx, dy) {
@@ -182,11 +183,12 @@ class Stage extends createjs.Stage {
         this.panBy(dx, dy);
     }
 
-    zoomByPinchStart(x, y) {
+    zoomByPinchStart(canvasX, canvasY) {
         this.oldZoomFactor = this.zoomFactor;
-        this.pinchAnchorX = this.C2W_X(x);
-        this.pinchAnchorY = this.C2W_Y(y);
+        this.pinchAnchorX = this.C2W_X(canvasX);
+        this.pinchAnchorY = this.C2W_Y(canvasY);
         this.pinchStarted = true;
+        this.panByMouseStop();
     }
 
     zoomByPinchMove(canvasX, canvasY, ratio) {

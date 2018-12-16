@@ -63,7 +63,7 @@ const app = (state = defaultAppState, action) => {
 
         case ActionTypes.MOUSE_WHEEL_MOVE_ON_STAGE:
         case ActionTypes.PAN_AND_ZOOM_TO_SHAPE:
-        case ActionTypes.SECOND_TOUCH_MOVED_ON_STAGE:
+        case ActionTypes.PINCH_MOVED_ON_STAGE:
             return Object.assign({}, state, {
                 zoomFactor: action.stage.zoomFactor * action.stage.resolution,
                 originX: action.stage.origin.x,
