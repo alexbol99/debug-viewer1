@@ -4,6 +4,34 @@ import Flatten from 'flatten-js';
 let {Point, Segment, Arc, Polygon} = Flatten;
 let { vector } = Flatten;
 
+Flatten.Image = class Image {
+    constructor() {
+        this.uri = "";
+        /**
+         * Center in world coordinates
+         * @type {Flatten.Point}
+         */
+        this.center = new Flatten.Point();
+        /**
+         * Width in world units (inch/mm)
+         */
+        this.width = 0;
+        /**
+         * Height in world units (inch/mm)
+         */
+        this.height = 0;
+    }
+    get box() {
+        return new Flatten.Box(
+            this.center.x - this.width/2,
+            this.center.y - this.height/2,
+            this.center.x + this.height/2,
+            this.center.y + this.height/2
+        );
+
+    }
+};
+
 function parseEdges(edgesXML) {
     let edges = [];
 
@@ -121,6 +149,16 @@ function parsePoint(pointXML) {
 
     return point;
 }
+
+function parseImage(imageXML) {
+    let img = new Flatten.Image();
+    img.center = new Point(parseInt(imageXML.getAttribute('xc'),10), parseInt(imageXML.getAttribute('yc'),10));
+    img.width = parseInt(imageXML.getAttribute('width'),10);
+    img.height = parseInt(imageXML.getAttribute('height'),10);
+    img.uri = imageXML.getAttribute('uri');
+    return img;
+}
+
 export function parseXML(filename, str) {
     let job = new Job();
 
@@ -169,5 +207,13 @@ export function parseXML(filename, str) {
         let point = parsePoint(pointXML);
         job.shapes.push(point);
     }
+
+    // Parse images
+    let imagesXML = xmlDoc.getElementsByTagName('picture');
+    for (let imageXML of Array.from(imagesXML)) {
+        let image = parseImage(imageXML);
+        job.shapes.push(image);
+    }
+
     return job;
 }

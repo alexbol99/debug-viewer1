@@ -6,6 +6,7 @@ import {Component} from 'react';
 // import * as createjs from '@createjs/easeljs';
 import '../../../../models/graphics';
 import Utils from '../../../../models/utils';
+import storage from '../../../../firebase-storage';
 
 let createjs = window.createjs;
 
@@ -24,7 +25,7 @@ export class ImageComponent extends Component {
 
     redraw() {
         // Draw shape
-        let alpha = 1; // (this.props.hovered || this.props.selected) ? 1.0 : 0.6;
+        let alpha = 0.5; // (this.props.hovered || this.props.selected) ? 1.0 : 0.6;
         this.bitmap.alpha = this.props.displayed ? alpha : 0.0;
 
         let width = this.props.model.geom.width;
@@ -45,6 +46,7 @@ export class ImageComponent extends Component {
 
     componentDidMount() {
         const img = new Image();
+
         img.onload = () => {
             this.bitmap = new createjs.Bitmap(img);
             this.props.stage.addChild(this.bitmap);
@@ -56,7 +58,14 @@ export class ImageComponent extends Component {
             // this.shape.mouseEnabled = false;
             this.redraw();
         };
-        img.src = this.props.model.geom.uri;
+
+        // Create a reference from a Google Cloud Storage URI
+        const ref = storage.refFromURL(this.props.model.geom.uri);
+
+        ref.getDownloadURL()
+            .then( url => img.src = url)
+            .catch( error => console.log(error))
+        // img.src = this.props.model.geom.uri;
     }
 
 
