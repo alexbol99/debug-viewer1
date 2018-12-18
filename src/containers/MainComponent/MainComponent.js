@@ -43,11 +43,19 @@ class MainComponent extends Component {
 
     onSaveDocumentButtonClicked = () => {
         if (this.props.layers.length === 0) return;   // nothing to save
+        // this.props.stage.img.crossOrigin="anonymous";
+        let dataURL = null;
+        try {
+            dataURL = this.props.stage.toDataURL();
+        }
+        catch(e) {
+            console.log(e)
+        }
         let payload = {
             name: this.props.document.name === "" ?
                 cloudActions.getNewName(this.props.documentsList) : this.props.document.name,
             layers: Layers.toJSON(this.props.layers),
-            dataURL: this.props.stage.toDataURL(),
+            dataURL: dataURL,
             lastUpdated: new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString(),
             token: this.props.token,
             userId: this.props.userId

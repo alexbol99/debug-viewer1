@@ -24,6 +24,7 @@ export class ImageComponent extends Component {
     };
 
     redraw() {
+        if (!this.bitmap) return;
         // Draw shape
         let alpha = 0.5; // (this.props.hovered || this.props.selected) ? 1.0 : 0.6;
         this.bitmap.alpha = this.props.displayed ? alpha : 0.0;
@@ -44,10 +45,11 @@ export class ImageComponent extends Component {
         // this.shape.cache(box.xmin, box.ymin, box.xmax - box.xmin, box.ymax - box.ymin);
     }
 
-    componentDidMount() {
+    loadImage() {
         const img = new Image();
 
         img.onload = () => {
+            img.crossOrigin="Anonymous";
             this.bitmap = new createjs.Bitmap(img);
             this.props.stage.addChild(this.bitmap);
 
@@ -63,11 +65,18 @@ export class ImageComponent extends Component {
         const ref = storage.refFromURL(this.props.model.geom.uri);
 
         ref.getDownloadURL()
-            .then( url => img.src = url)
+            .then( url => {
+
+                img.src = url;
+            })
             .catch( error => console.log(error))
+
         // img.src = this.props.model.geom.uri;
     }
 
+    componentDidMount() {
+        this.loadImage()
+    }
 
     shouldComponentUpdate(nextProps, nextState) {
         if (Utils.is_equal(this.props, nextProps)) {

@@ -44,7 +44,14 @@ export const logout = () => {
 export const checkAuthTimeout = (expirationTime) => {
     return dispatch => {
         setTimeout(() => {
-            dispatch(logout())
+            const email = localStorage.getItem('email');
+            const password = localStorage.getItem('password');
+            if (email && password) {
+                dispatch(logIn(email, password))
+            }
+            else {
+                dispatch(logout())
+            }
         }, expirationTime * 1000)
     }
 };
@@ -57,6 +64,8 @@ export const logIn = (email, password) => {
             password,
             returnSecureToken: true
         };
+        localStorage.setItem('email', email);
+        localStorage.setItem('password', password);
         const url = "https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=" + apiKey;
         axios.post(url, authData)
             .then(response => {
