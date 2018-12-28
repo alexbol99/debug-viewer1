@@ -54,35 +54,18 @@ class MainComponent extends Component {
         let payload = {
             name: this.props.document.name === "" ?
                 cloudActions.getNewName(this.props.documentsList) : this.props.document.name,
-            layers: Layers.toJSON(this.props.layers),
             dataURL: dataURL,
             lastUpdated: new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString(),
-            token: this.props.token,
+            // token: this.props.token,
             userId: this.props.userId
         };
+
         if (this.props.document.id) {
-            cloudActions.updateDocumentInDatabase(this.props.document.id, payload)
-                .then( response => {
-                    this.props.updateDocumentState(Date.now());
-                    this.props.asyncOperationEnded();
-                })
-                .catch(error => {
-                    console.log(error);
-                });
+            this.props.updateDocumentInDatabase(this.props.document.id, payload, this.props.layers);
         }
         else {
-            cloudActions.addDocumentToDatabase(payload)
-                .then( response => {
-                    this.props.registerDocumentAddedToDatabase( response.data.name, Date.now());
-                    this.props.asyncOperationEnded();
-                    // update url
-                    this.props.history.push('/documents/'+response.data.name);
-                })
-                .catch(error => {
-                    console.log(error);
-                });
+            this.props.addDocumentToDatabase(payload, this.props.layers, this.props.history);
         }
-        this.props.asyncOperationStarted();
     };
 
     clearCurrentDocument = () => {
@@ -287,14 +270,11 @@ const mapDispatchToProps = dispatch => {
         handleMouseRollOverShape: (shape) => dispatch(actions.handleMouseRollOverShape(shape)),
         handleMouseRollOutShape: () => dispatch(actions.handleMouseRollOutShape()),
         handleClickOnShape: (shape, layer) => dispatch(actions.handleClickOnShape(shape, layer)),
-        asyncOperationStarted: () => dispatch(actions.asyncOperationStarted()),
-        asyncOperationEnded: () => dispatch(actions.asyncOperationEnded()),
 
         clearAllLayers: () => dispatch(layerActions.deleteAllLayers()),
-        // addNewLayer: (layer) => dispatch(layerActions.addNewLayer(layer)),
 
-        registerDocumentAddedToDatabase: (id, timestamp) => dispatch(cloudActions.registerDocumentAddedToDatabase(id, timestamp)),
-        updateDocumentState: (timestamp) => dispatch(cloudActions.updateDocumentState(timestamp)),
+        addDocumentToDatabase: (payload, layers, history) => dispatch(cloudActions.addDocumentToDatabase(payload, layers, history)),
+        updateDocumentInDatabase: (id, payload, layers) => dispatch(cloudActions.updateDocumentInDatabase(id, payload, layers)),
         clearCurrentDocument: () => dispatch(cloudActions.clearCurrentDocument())
     }
 };
