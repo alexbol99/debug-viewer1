@@ -129,31 +129,27 @@ export const fetchDocumentFromDatabase = (stage, id) => {
         let lastUpdated = undefined;
         let owner = "Alex Bol";
         let firstLayer = undefined;
-        const url = '/documents/' + id + '.json';
-        axios.get(url)
-            .then(response => {
-                if (response.data) {
-                    name = response.data.name;
-                    lastUpdated = response.data.lastUpdated;
-                }
 
-                // query geom by "id"
-                const queryParams = '?orderBy="id"&equalTo="' + id + '"';
-                const url = '/geom.json' + queryParams;
-                return axios.get(url);
-            })
-            .then( response => {
-                for (let layerData of Object.values(response.data)[0].layers) {
+        const docUrl = '/documents/' + id + '.json';
+        const queryParams = '?orderBy="id"&equalTo="' + id + '"';
+        const geomUrl = '/geom.json' + queryParams;
+        Promise.all([axios.get(docUrl),axios.get(geomUrl)])
+            .then( responses => {
+                name = responses[0].data.name;
+                lastUpdated = responses[0].data.lastUpdated;
+
+                for (let layerData of Object.values(responses[1].data)[0].layers) {
                     let layer = new Layer();
                     layer.shapes = parseJSON(layerData.shapes);
                     layer.name = layerData.name;
 
                     if (!firstLayer) firstLayer = layer;
                     dispatch(layerActions.addNewLayer(layer));
+                    dispatch(layerActions.toggleDisplayLayer(layer));
                 }
                 dispatch(requestFetchDocumentFromDatabaseSucceed(id, name, owner, lastUpdated));
                 dispatch(appActions.setHomeView(stage, firstLayer));
-                dispatch(layerActions.toggleDisplayLayer(firstLayer));
+                // dispatch(layerActions.toggleDisplayLayer(firstLayer));
                 dispatch(appActions.asyncOperationEnded());
             })
             .catch(error => {

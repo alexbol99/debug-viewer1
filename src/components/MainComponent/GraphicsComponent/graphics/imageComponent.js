@@ -31,6 +31,7 @@ export class ImageComponent extends Component {
 
         let width = this.props.model.geom.width;
         let ratio = this.bitmap.image.naturalWidth/this.bitmap.image.naturalHeight;
+        this.props.model.geom.height = this.props.model.geom.width / ratio;
         let scaleX = width/this.bitmap.image.naturalWidth; // 1. / (stage.zoomFactor * stage.resolution);
         let scaleY = width/(this.bitmap.image.naturalHeight*ratio);
         let tx = this.props.model.geom.center.x; // stage.canvas.offsetLeft / (stage.zoomFactor * stage.resolution) + point.x + dx;
@@ -59,6 +60,8 @@ export class ImageComponent extends Component {
 
             // this.shape.mouseEnabled = false;
             this.redraw();
+
+            this.props.onImageLoaded(this.props.model, this.props.layer, img);
         };
         img.setAttribute('crossOrigin', 'anonymous'); // works for me
 

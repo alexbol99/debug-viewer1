@@ -105,6 +105,11 @@ class MainComponent extends Component {
         }
     };
 
+    onImageLoaded = (model, layer, image) => {
+        this.props.setHomeView(this.props.stage, layer);
+        this.forceUpdate();       // ??? unclear why on Home button click not updated
+    }
+
     componentDidMount() {
         window.onresize = this.props.resizeStage;
         // Keyboard event
@@ -200,6 +205,7 @@ class MainComponent extends Component {
                         onMouseOut={this.props.handleMouseRollOutShape}
                         onClick={this.props.handleClickOnShape}
                         setHomeView={this.props.setHomeView}
+                        onImageLoaded={this.onImageLoaded}
                     />
                     {displayCoordsTool}
                     {measurePointsTool}

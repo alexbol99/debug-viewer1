@@ -25,6 +25,7 @@ export class LayerComponent extends Component {
                         onMouseOver={this.props.onMouseOver}
                         onMouseOut={this.props.onMouseOut}
                         onClick={this.props.onClick}
+                        onImageLoaded={this.props.onImageLoaded}
                     />
                     ) : (
                     <ShapeComponent
