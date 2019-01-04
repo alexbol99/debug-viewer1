@@ -100,6 +100,16 @@ export const deleteDocumentFromDatabase = (id) => {
         dispatch(appActions.asyncOperationStarted());
         const url = '/documents/' + id + '.json';
         axios.delete(url)
+            .then (response => {
+                // query geom by "id"
+                const queryParams = '?orderBy="id"&equalTo="' + id + '"';
+                const url = '/geom.json' + queryParams;
+                return axios.get(url)
+            })
+            .then (response => {
+                const geomId = Object.keys(response.data)[0];
+                return axios.delete(`/geom/${geomId}.json`)
+            })
             .then(response => {
                 dispatch(deleteDocumentFromDatabaseSucceed(id));
                 dispatch(appActions.asyncOperationEnded());
