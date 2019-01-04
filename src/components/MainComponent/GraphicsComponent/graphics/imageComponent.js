@@ -49,7 +49,7 @@ export class ImageComponent extends Component {
         const img = new Image();
 
         img.onload = () => {
-            img.crossOrigin="Anonymous";
+            // img.crossOrigin="Anonymous";
             this.bitmap = new createjs.Bitmap(img);
             this.props.stage.addChild(this.bitmap);
 
@@ -60,6 +60,7 @@ export class ImageComponent extends Component {
             // this.shape.mouseEnabled = false;
             this.redraw();
         };
+        img.setAttribute('crossOrigin', 'anonymous'); // works for me
 
         // Create a reference from a Google Cloud Storage URI
         const ref = storage.refFromURL(this.props.model.geom.uri);
