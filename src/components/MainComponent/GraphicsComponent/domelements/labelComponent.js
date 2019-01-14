@@ -6,7 +6,7 @@ const labelComponent = ( {stage, shape} ) => {
     let left = stage.canvas.offsetLeft + stage.W2C_X(center.x) + 6;
     let top = stage.canvas.offsetTop + stage.W2C_Y(center.y) - 4;
     let inside = left > stage.canvas.offsetLeft && left < stage.canvas.offsetLeft + stage.canvas.width &&
-        top > stage.canvas.offsetTop && top < stage.canvas.height;
+        top > stage.canvas.offsetTop && top < stage.canvas.offsetTop + stage.canvas.height;
 
     return inside ? (
         <div style={{position:"absolute", left:left+"px", top: top+"px"}} className={classes.LabelComponent}>
