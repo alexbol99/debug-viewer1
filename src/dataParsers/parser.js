@@ -80,7 +80,8 @@ export class Parser {
         let endAngle = vector(pc, pe).slope;
 
         if (Flatten.Utils.EQ(startAngle, endAngle)) {
-            endAngle += 2*Math.PI;
+            // endAngle += 2*Math.PI;
+            endAngle = counterClockwise ? endAngle + 2*Math.PI : endAngle - 2*Math.PI;
         }
         let r = vector(pc, ps).length;
 
