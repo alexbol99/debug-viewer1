@@ -2,7 +2,7 @@
  * Created by alexanderbol on 01/05/2017.
  */
 
-import Flatten from 'flatten-js';
+import Flatten from '@flatten-js/core';
 let {Point, Segment, Arc, Polygon} = Flatten;
 let { vector } = Flatten;
 

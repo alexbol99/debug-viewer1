@@ -1,5 +1,5 @@
 import { Job } from '../models/job';
-import Flatten from 'flatten-js';
+import Flatten from '@flatten-js/core';
 
 let {point} = Flatten;
 
@@ -23,7 +23,7 @@ export function parseCSV(filename, str) {
         let nx = Number(terms[2]);
         let ny = Number(terms[3]);
         let shape = point(px,py);
-        shape.nx = nx
+        shape.nx = nx;
         shape.ny = ny;
         job.shapes.push(shape)
     }

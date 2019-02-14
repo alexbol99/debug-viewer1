@@ -1,4 +1,4 @@
-import Flatten from 'flatten-js';
+import Flatten from '@flatten-js/core';
 
 let {Box} = Flatten;
 

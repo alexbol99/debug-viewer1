@@ -1,5 +1,5 @@
 import /*React,*/ {Component} from 'react';
-import Flatten from 'flatten-js';
+import Flatten from '@flatten-js/core';
 import BooleanOp from 'flatten-boolean-op';
 import Layers from "../../models/layers";
 import * as ActionTypes from '../../store/actionTypes';

@@ -1,4 +1,4 @@
-import Flatten from "flatten-js";
+import Flatten from "@flatten-js/core";
 // let Flatten = require('flatten-js');
 
 let {Vector, Segment, Arc, Line, Box, Polygon} = Flatten;

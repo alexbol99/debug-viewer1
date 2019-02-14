@@ -1,5 +1,5 @@
 import * as ActionTypes from "../actionTypes";
-import Flatten from "flatten-js";
+import Flatten from "@flatten-js/core";
 
 const defaultMeasureShapesTool = {
     measureShapesActive: false,

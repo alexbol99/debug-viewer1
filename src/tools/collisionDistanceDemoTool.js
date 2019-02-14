@@ -7,7 +7,7 @@ import {Component} from 'react';
 import {graphics} from '../models/graphics';
 import '../../public/styles/App.css';
 import CollisionDistance from '@alexbol99/collision_distance';
-import Flatten from 'flatten-js';
+import Flatten from '@flatten-js/core';
 let {vector} = Flatten;
 let createjs = window.createjs;
 export class CollisionDistanceDemoTool extends Component {

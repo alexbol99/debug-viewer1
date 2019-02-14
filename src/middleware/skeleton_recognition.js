@@ -1,7 +1,7 @@
 import * as ActionTypes from '../store/actionTypes';
 import Layers from "../models/layers";
 
-import Flatten from 'flatten-js';
+import Flatten from '@flatten-js/core';
 let {point, arc, segment} = Flatten;
 let Algorithmia = window.Algorithmia;
 

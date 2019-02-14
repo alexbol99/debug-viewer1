@@ -9,7 +9,7 @@
     "firebase": "^5.7.0",
     "flatten-boolean-op": "^1.0.12",
     "flatten-interval-tree": "^0.2.1",
-    "flatten-js": "^1.0.0",
+    "@flatten-js/core": "^1.0.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-fontawesome": "^1.6.1",
