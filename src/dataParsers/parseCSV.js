@@ -1,7 +1,5 @@
 import { Job } from '../models/job';
-import Flatten from '@flatten-js/core';
-
-let {point} = Flatten;
+import {point} from '@flatten-js/core';
 
 const micron2pixels = 400;
 function micronToPixels(str) {

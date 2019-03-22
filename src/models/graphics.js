@@ -1,8 +1,8 @@
-import Flatten from '@flatten-js/core';
+import {Point, Segment, Circle, Arc, Polygon, Box} from '@flatten-js/core';
 
 // import * as createjs from '@createjs/easeljs';
 let createjs = window.createjs;
-let {Point, Segment, Circle, Arc, Polygon, Box} = Flatten;
+// let {Point, Segment, Circle, Arc, Polygon, Box} = Flatten;
 
 /* Provide conversion methods from FlattenJS objects to CreateJS Graphics */
 export function graphics(shape, style = undefined) {

@@ -1,6 +1,4 @@
-import Flatten from '@flatten-js/core';
-
-let {Box} = Flatten;
+import {Box} from '@flatten-js/core';
 
 export class Job {
     constructor() {

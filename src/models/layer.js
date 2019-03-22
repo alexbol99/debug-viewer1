@@ -2,7 +2,7 @@
  * Created by alexanderbol on 17/04/2017.
  */
 
-import Flatten from '@flatten-js/core';
+import {Point, Box} from '@flatten-js/core';
 // import { Shape } from '../models/shape';
 import Model from './model';
 
@@ -45,7 +45,7 @@ class Layer {
     }
 
     get box() {
-        let box = new Flatten.Box();
+        let box = new Box();
         for (let shape of this.shapes) {
             box = box.merge(shape.box);
         }
@@ -54,7 +54,7 @@ class Layer {
 
     get center() {
         let box = this.box;
-        return new Flatten.Point((box.xmin + box.xmax)/2, (box.ymin + box.ymax)/2);
+        return new Point((box.xmin + box.xmax)/2, (box.ymin + box.ymax)/2);
     }
 
     toggleDisplayed(color) {

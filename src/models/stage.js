@@ -1,7 +1,7 @@
 /**
  * Created by alexanderbol on 21/04/2017.
  */
-import Flatten from '@flatten-js/core';
+import {Box} from '@flatten-js/core';
 let createjs = window.createjs;
 
 class Stage extends createjs.Stage {
@@ -36,7 +36,7 @@ class Stage extends createjs.Stage {
         let maxX = this.C2W_X(this.canvas.width);
         let maxY = this.C2W_Y(0);
 
-        return ( new Flatten.Box(minX, minY, maxX, maxY) );
+        return ( new Box(minX, minY, maxX, maxY) );
     }
 
     clone() {

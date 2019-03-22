@@ -1,7 +1,8 @@
 import Flatten from "@flatten-js/core";
+import {Vector, Segment, Arc, Line, Box, Polygon} from "@flatten-js/core";
 // let Flatten = require('flatten-js');
 
-let {Vector, Segment, Arc, Line, Box, Polygon} = Flatten;
+// let {Vector, Segment, Arc, Line, Box, Polygon} = Flatten;
 
 class CollisionDistance {
     static apply(polygon1, polygon2) {
