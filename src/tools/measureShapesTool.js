@@ -3,18 +3,16 @@
  */
 
 import {Component} from 'react';
-// import createjs from 'easel-js';
-// import * as createjs from '@createjs/easeljs';
+import {Shape, Text} from '@createjs/easeljs';
 import {graphics} from '../models/graphics';
-// import '../../public/styles/App.css';
-let createjs = window.createjs;
+
 class MeasureShapesTool extends Component {
     constructor(params) {
         super();
-        this.segment = new createjs.Shape();
+        this.segment = new Shape();
         params.stage.addChild(this.segment);
 
-        this.labelShape = new createjs.Text();
+        this.labelShape = new Text();
         this.labelShape.x = 0;
         this.labelShape.y = 0;
         params.stage.addChild(this.labelShape);

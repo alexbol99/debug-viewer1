@@ -1,8 +1,7 @@
 import * as ActionTypes from '../store/actionTypes';
 import Layers from "../models/layers";
-
-import Flatten from '@flatten-js/core';
 import {point, arc, segment} from '@flatten-js/core';
+import Flatten from '@flatten-js/core';
 let Algorithmia = window.Algorithmia;
 
 // function zoomHome(shape, stage) {

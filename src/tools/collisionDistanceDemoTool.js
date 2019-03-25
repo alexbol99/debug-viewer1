@@ -3,17 +3,16 @@
  */
 
 import {Component} from 'react';
-// import * as createjs from '@createjs/easeljs';
+import {Shape} from '@createjs/easeljs';
+import {vector} from '@flatten-js/core';
 import {graphics} from '../models/graphics';
 import '../../public/styles/App.css';
 import CollisionDistance from '@alexbol99/collision_distance';
-import Flatten from '@flatten-js/core';
-let {vector} = Flatten;
-let createjs = window.createjs;
+
 export class CollisionDistanceDemoTool extends Component {
     constructor(params) {
         super();
-        this.shape = new createjs.Shape();
+        this.shape = new Shape();
         params.stage.addChild(this.shape);
     }
 

@@ -1,8 +1,5 @@
 import {Point, Segment, Circle, Arc, Polygon, Box} from '@flatten-js/core';
-
-// import * as createjs from '@createjs/easeljs';
-let createjs = window.createjs;
-// let {Point, Segment, Circle, Arc, Polygon, Box} = Flatten;
+import {Graphics} from '@createjs/easeljs';
 
 /* Provide conversion methods from FlattenJS objects to CreateJS Graphics */
 export function graphics(shape, style = undefined) {
@@ -31,7 +28,7 @@ export function graphics(shape, style = undefined) {
 function graphics_point(point, style) {
     let radius = (style && style.radius) ? style.radius : 3;
     let fill = style && style.fill ? style.fill : "#FF0303";
-    let graphics = new createjs.Graphics();
+    let graphics = new Graphics();
     graphics.fill = graphics.beginFill(fill).command;
     graphics.circle = graphics.drawCircle(point.x, point.y, radius).command;
     return graphics;
@@ -39,7 +36,7 @@ function graphics_point(point, style) {
 
 // Segment.prototype.graphics = function(style) {
 function graphics_segment(segment, style) {
-    let graphics = new createjs.Graphics();
+    let graphics = new Graphics();
     let strokeStyle = style && style.strokeStyle !== undefined ? style.strokeStyle : 2;
     let ignoreScale = style && style.ignoreScale !== undefined ? style.ignoreScale : true;
     let stroke = style && style.stroke ? style.stroke : "black";
@@ -55,7 +52,7 @@ function graphics_segment(segment, style) {
 function graphics_arc(arc, style) {
     // let startAngle = 2 * Math.PI - this.startAngle;
     // let endAngle =  2 * Math.PI - this.endAngle;
-    let graphics = new createjs.Graphics();
+    let graphics = new Graphics();
     let strokeStyle = style && style.strokeStyle ? style.strokeStyle : 2;
     let ignoreScale = style && style.ignoreScale !== undefined ? style.ignoreScale : true;
     let stroke = style && style.stroke ? style.stroke : "black";
@@ -68,7 +65,7 @@ function graphics_arc(arc, style) {
 
 // Circle.prototype.graphics = function(style) {
 function graphics_circle(circle, style) {
-    let graphics = new createjs.Graphics();
+    let graphics = new Graphics();
     let strokeStyle = style && style.strokeStyle ? style.strokeStyle : 2;
     let stroke = style && style.stroke ? style.stroke : "black";
     // graphics.setStrokeStyle(2).beginStroke("black").beginFill("red").drawCircle(pcx, pcy, r);
@@ -81,7 +78,7 @@ function graphics_circle(circle, style) {
 
 // Box.prototype.graphics = function(style) {
 function graphics_box(box, style) {
-    let graphics = new createjs.Graphics();
+    let graphics = new Graphics();
     let strokeStyle = style && style.strokeStyle ? style.strokeStyle : 1;
     let stroke = style && style.stroke ? style.stroke : "black";
     // graphics.setStrokeStyle(2).beginStroke("black").beginFill("red").drawCircle(pcx, pcy, r);
@@ -121,7 +118,7 @@ function setGraphicsFace(graphics, face) {
 
 // Polygon.prototype.graphics = function(style) {
 function graphics_polygon(polygon, style) {
-    let graphics = new createjs.Graphics();
+    let graphics = new Graphics();
     let strokeStyle = style && style.strokeStyle ? style.strokeStyle : 1;
     let stroke = style && style.stroke ? style.stroke : "#FF0303";
     let fill = style && style.fill ? style.fill : "#FF0303";

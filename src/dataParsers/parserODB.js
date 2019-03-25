@@ -1,8 +1,6 @@
 import { Job } from '../models/job';
+import {Point, Segment, Arc, Polygon, Utils, vector} from '@flatten-js/core';
 import Flatten from '@flatten-js/core';
-
-let {Point, Segment, Arc, Polygon} = Flatten;
-let { vector } = Flatten;
 
 const inch2pixels = 10160000;
 const mils2pixels = 10160;
@@ -41,7 +39,7 @@ function parsePolygon(lines, start) {
 
                 let startAngle = vector(pc,ps).slope;
                 let endAngle = vector(pc, pe).slope;
-                if (Flatten.Utils.EQ(startAngle, endAngle)) {
+                if (Utils.EQ(startAngle, endAngle)) {
                     endAngle += 2*Math.PI;
                     counterClockwise = true;
                 }

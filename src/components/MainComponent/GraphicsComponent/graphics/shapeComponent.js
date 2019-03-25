@@ -3,22 +3,21 @@
  */
 
 import {Component} from 'react';
-// import * as createjs from '@createjs/easeljs';
+import {Shape} from '@createjs/easeljs';
 import {graphics} from '../../../../models/graphics';
 import Utils from '../../../../models/utils';
 
-let createjs = window.createjs;
 export class ShapeComponent extends Component {
     constructor(params) {
         super();
 
-        this.shape = new createjs.Shape();
+        this.shape = new Shape();
         params.stage.addChild(this.shape);
 
         this.vertexShapes = [];
 
         for (let vertex of params.model.geom.vertices) {
-            let vertexShape = new createjs.Shape();
+            let vertexShape = new Shape();
             vertexShape.geom = vertex;   // augment Shape with geom struct
             vertexShape.mouseEnabled = false;
             params.stage.addChild(vertexShape);
@@ -78,7 +77,7 @@ export class ShapeComponent extends Component {
                 radius: 3. / (stage.zoomFactor * stage.resolution)
             });
 
-            // this.skeletonShape = new createjs.Shape();
+            // this.skeletonShape = new Shape();
             // this.skeletonShape.graphics = this.props.model.geom.graphics({
             //     strokeStyle: 1,
             //     ignoreScale: true,

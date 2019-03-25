@@ -2,13 +2,13 @@
  * Created by alexanderbol on 21/04/2017.
  */
 import {Box} from '@flatten-js/core';
-let createjs = window.createjs;
+import { Stage as CreatejsStage, Touch } from "@createjs/easeljs";
 
-class Stage extends createjs.Stage {
+class Stage extends CreatejsStage {
     constructor(canvas) {
         super(canvas);
 
-        createjs.Touch.enable(this);
+        Touch.enable(this);
         this.mouseMoveOutside = false;   // true;
         // this.enableDOMEvents(false);
         this.enableMouseOver(20);

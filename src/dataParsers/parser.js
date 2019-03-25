@@ -2,9 +2,8 @@
  * Created by alexanderbol on 01/05/2017.
  */
 
+import {Point, Segment, Arc, Polygon, vector} from '@flatten-js/core';
 import Flatten from '@flatten-js/core';
-let {Point, Segment, Arc, Polygon} = Flatten;
-let { vector } = Flatten;
 
 /*
 let debug_str = `+		[0]	{nrec=27 nalloc=27 h_ind_id=-1 ...} mat_cont_hdr_struc	mat_cont_struc

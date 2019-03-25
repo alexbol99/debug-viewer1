@@ -1,4 +1,4 @@
-import Flatten from '@flatten-js/core';
+import {Point,Box} from '@flatten-js/core';
 
 const pgmResolution = 25.500025;
 const microns2pixels = 400;
@@ -22,9 +22,9 @@ export function parseImage(file) {
     let x = isNaN(xStr) ? 0 : toPixels(xStr) + 90000;
     let y = isNaN(yStr) ? 0 : toPixels(yStr) - 40000;
 
-    image.center = new Flatten.Point(x,y);
+    image.center = new Point(x,y);
     image.width = sizeX*microns2pixels*1000;    // 2 mm
-    image.box = new Flatten.Box(
+    image.box = new Box(
         image.center.x - image.width/2,
         image.center.y - image.width/2,
         image.center.x + image.width/2,

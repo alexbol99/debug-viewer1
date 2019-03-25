@@ -3,12 +3,10 @@
  */
 
 import {Component} from 'react';
-// import * as createjs from '@createjs/easeljs';
+import {Bitmap} from '@createjs/easeljs';
 import '../../../../models/graphics';
 import Utils from '../../../../models/utils';
 import storage from '../../../../firebase-storage';
-
-let createjs = window.createjs;
 
 export class ImageComponent extends Component {
     handleMouseOver = (event) => {
@@ -51,7 +49,7 @@ export class ImageComponent extends Component {
 
         img.onload = () => {
             // img.crossOrigin="Anonymous";
-            this.bitmap = new createjs.Bitmap(img);
+            this.bitmap = new Bitmap(img);
             this.props.stage.addChild(this.bitmap);
 
             // this.bitmap.on("mouseover", this.handleMouseOver);

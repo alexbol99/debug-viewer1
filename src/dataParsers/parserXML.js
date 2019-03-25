@@ -1,8 +1,6 @@
 import { Job } from '../models/job';
+import {Point, Segment, Arc, Polygon, vector} from '@flatten-js/core';
 import Flatten from '@flatten-js/core';
-
-let {Point, Segment, Arc, Polygon} = Flatten;
-let { vector } = Flatten;
 
 Flatten.Image = class Image {
     constructor() {

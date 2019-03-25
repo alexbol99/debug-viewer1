@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "private": true,
   "dependencies": {
-    "@createjs/easeljs": "^2.0.0-beta.3",
+    "@createjs/easeljs": "^2.0.0-beta.4",
     "@flatten-js/core": "^1.0.11",
     "@flatten-js/interval-tree": "^1.0.6",
     "@fortawesome/fontawesome-free": "^5.4.1",
