@@ -2,7 +2,7 @@
  * Created by alexanderbol on 01/05/2017.
  */
 
-import {Point, Segment, Arc, Polygon, vector} from '@flatten-js/core';
+import {Point, Segment, Arc, Circle, /*Box,*/ Polygon, vector} from '@flatten-js/core';
 import Flatten from '@flatten-js/core';
 
 /*
@@ -87,6 +87,16 @@ export class Parser {
         return new Arc(pc, r, startAngle, endAngle, counterClockwise);
     }
 
+    parseToCircle(line) {
+        let parenth = line.match(/\{([^)]+)\}/)[1];   // string inside {..}
+        let termArr = parenth.split(' ');             // array of terms "attr=value"
+
+        let pcArr = termArr[0].split('=')[1].split(',');
+        let pc = new Point(parseInt(pcArr[0],10), parseInt(pcArr[1],10));
+        let r = parseInt(termArr[1].split('=')[1],10);
+        return new Circle(pc, r);
+    }
+
     parseToPolygon(str) {
         let polygon = new Polygon();
         // let mulitystr = debug_str;
@@ -111,40 +121,10 @@ export class Parser {
                     if (line.search('mat_seg_struc') >= 0) {
                         let segment = this.parseToSegment(line);
                         edges.push(segment);
-
-                        // let psArr = termArr[0].split('=')[1].split(',');
-                        // let ps = new Point(parseInt(psArr[0],10), parseInt(psArr[1],10));
-                        //
-                        // let peArr = termArr[1].split('=')[1].split(',');
-                        // let pe = new Point(parseInt(peArr[0],10), parseInt(peArr[1],10));
-                        //
-                        // edges.push(new Segment(ps, pe));
                     }
                     else if (line.search('mat_curve_struc') >= 0) {
                         let arc = this.parseToArc(line);
                         edges.push(arc);
-
-                        // let psArr = termArr[0].split('=')[1].split(',');
-                        // let ps = new Point(parseInt(psArr[0],10), parseInt(psArr[1],10));
-                        //
-                        // let peArr = termArr[1].split('=')[1].split(',');
-                        // let pe = new Point(parseInt(peArr[0],10), parseInt(peArr[1],10));
-                        //
-                        // let pcArr = termArr[2].split('=')[1].split(',');
-                        // let pc = new Point(parseInt(pcArr[0],10), parseInt(pcArr[1],10));
-                        //
-                        // let cwStr = termArr[3].split('=')[1];
-                        // let counterClockwise = cwStr === '0' ? true : false;
-                        //
-                        // let startAngle = vector(pc,ps).slope;
-                        // let endAngle = vector(pc, pe).slope;
-                        //
-                        // if (Flatten.Utils.EQ(startAngle, endAngle)) {
-                        //     endAngle += 2*Math.PI;
-                        // }
-                        // let r = vector(pc, ps).length;
-                        //
-                        // edges.push(new Arc(pc, r, startAngle, endAngle, counterClockwise));
                     }
                 }
                 polygon.addFace(edges);
@@ -168,18 +148,24 @@ export class Parser {
         return points;
     }
 
-    parseToSegmentsArcs(str) {
+    parseToShapes(str) {
         let shapes = [];
+        let shape;
         let arrayOfLines = str.match(/[^\r\n]+/g);
         for (let line of arrayOfLines) {
             if (line.search('mat_seg_struc') >= 0) {
-                let segment = this.parseToSegment(line);
-                shapes.push(segment);
+                shape = this.parseToSegment(line);
             }
             else if (line.search('mat_curve_struc') >= 0) {
-                let arc = this.parseToArc(line);
-                shapes.push(arc);
+                shape = this.parseToArc(line);
             }
+            else if (line.search('mat_circle_struc') >= 0) {
+                shape = this.parseToCircle(line);
+            }
+            // else if (line.search('mat_rect_struc') >= 0) {
+            //     shape = this.parseToRectangle(line);
+            // }
+            shapes.push(shape);
         }
         return shapes;
     }
@@ -197,8 +183,8 @@ export class Parser {
             return points;
         }
 
-        /* try array of segments and arcs */
-        let shapes = this.parseToSegmentsArcs(str);
+        /* try array of segments and arcs and other mat_shapes excluding polygon */
+        let shapes = this.parseToShapes(str);
         if (shapes.length > 0) {
             return shapes;
         }

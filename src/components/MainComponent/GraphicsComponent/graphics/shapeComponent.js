@@ -16,12 +16,14 @@ export class ShapeComponent extends Component {
 
         this.vertexShapes = [];
 
-        for (let vertex of params.model.geom.vertices) {
-            let vertexShape = new Shape();
-            vertexShape.geom = vertex;   // augment Shape with geom struct
-            vertexShape.mouseEnabled = false;
-            params.stage.addChild(vertexShape);
-            this.vertexShapes.push(vertexShape);
+        if (params.model.geom.vertices) {
+            for (let vertex of params.model.geom.vertices) {
+                let vertexShape = new Shape();
+                vertexShape.geom = vertex;   // augment Shape with geom struct
+                vertexShape.mouseEnabled = false;
+                params.stage.addChild(vertexShape);
+                this.vertexShapes.push(vertexShape);
+            }
         }
     }
 
