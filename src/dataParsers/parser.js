@@ -2,8 +2,9 @@
  * Created by alexanderbol on 01/05/2017.
  */
 
-import {Point, Segment, Arc, Circle, /*Box,*/ Polygon, vector} from '@flatten-js/core';
+import {Point, Segment, Arc, Circle, Box, Polygon, vector} from '@flatten-js/core';
 import Flatten from '@flatten-js/core';
+import {offsetSegment, offsetArc} from "../models/polygonOffset";
 
 /*
 let debug_str = `+		[0]	{nrec=27 nalloc=27 h_ind_id=-1 ...} mat_cont_hdr_struc	mat_cont_struc
@@ -35,6 +36,15 @@ let debug_str = `+		[0]	{nrec=27 nalloc=27 h_ind_id=-1 ...} mat_cont_hdr_struc	m
 +		[26]	{ps=59156076,6326462 pe=59192738,6363124} mat_seg_struc	mat_cont_struc
 `;
 */
+
+/*
++		circle	{pc=40445880,-10500080 r=41327880}	mat_circle_struc
++		circle	{pc=38215880,-7700040 r=92456}	mat_circle_struc
++		rect	{pll=38215880,-7700040 w=92456 h=50000}	mat_rect_struc
++		shape1	{type=512 s={...} }	_mat_shape_struc
++		line	{ps=-18423,529080 pe=1047776,480195 r=60000 cap=0}	mat_line_struc
++		arc	{ps=1001217,249728 pe=752127,51853 pc=853697,179712 cw=??? r=60000 cap=0}	mat_arc_struc
+ */
 
 export class Parser {
     parseToWatchArray(str) {
@@ -94,7 +104,78 @@ export class Parser {
         let pcArr = termArr[0].split('=')[1].split(',');
         let pc = new Point(parseInt(pcArr[0],10), parseInt(pcArr[1],10));
         let r = parseInt(termArr[1].split('=')[1],10);
-        return new Circle(pc, r);
+        let circle = new Circle(pc, r);
+        let polygon = new Polygon();
+        polygon.addFace(circle);
+        return polygon;
+    }
+
+    parseToRectangle(line) {
+        let parenth = line.match(/\{([^)]+)\}/)[1];   // string inside {..}
+        let termArr = parenth.split(' ');             // array of terms "attr=value"
+
+        let pllArr = termArr[0].split('=')[1].split(',');
+        let xmin = parseInt(pllArr[0],10);
+        let ymin = parseInt(pllArr[1],10);
+        let width = parseInt(termArr[1].split('=')[1],10);
+        let height = parseInt(termArr[2].split('=')[1],10);
+
+        let box = new Box(xmin, ymin, xmin + width, ymin + height);
+        let polygon = new Polygon();
+        polygon.addFace(box);
+        return polygon;
+    }
+
+    parseToODBLine(line) {
+        let parenth = line.match(/\{([^)]+)\}/)[1];   // string inside {..}
+        let termArr = parenth.split(' ');             // array of terms "attr=value"
+
+        let psArr = termArr[0].split('=')[1].split(',');
+        let ps = new Point(parseInt(psArr[0],10), parseInt(psArr[1],10));
+
+        let peArr = termArr[1].split('=')[1].split(',');
+        let pe = new Point(parseInt(peArr[0],10), parseInt(peArr[1],10));
+
+        let w = parseInt(termArr[2].split('=')[1],10);
+
+        let segment = new Segment(ps, pe);
+        let polygon = w > 0 ? offsetSegment(segment, w) : new Polygon();
+
+        return polygon;
+    }
+
+    parseToODBArc(line) {
+        let parenth = line.match(/\{([^)]+)\}/)[1];   // string inside {..}
+        let termArr = parenth.split(' ');             // array of terms "attr=value"
+
+        let psArr = termArr[0].split('=')[1].split(',');
+        let ps = new Point(parseInt(psArr[0],10), parseInt(psArr[1],10));
+
+        let peArr = termArr[1].split('=')[1].split(',');
+        let pe = new Point(parseInt(peArr[0],10), parseInt(peArr[1],10));
+
+        let pcArr = termArr[2].split('=')[1].split(',');
+        let pc = new Point(parseInt(pcArr[0],10), parseInt(pcArr[1],10));
+
+        let cwStr = termArr[3].split('=')[1];
+        let counterClockwise = cwStr === '0' ? true : false;
+
+        let startAngle = vector(pc,ps).slope;
+        let endAngle = vector(pc, pe).slope;
+
+        if (Flatten.Utils.EQ(startAngle, endAngle)) {
+            // endAngle += 2*Math.PI;
+            endAngle = counterClockwise ? endAngle + 2*Math.PI : endAngle - 2*Math.PI;
+        }
+        let r = vector(pc, ps).length;
+
+        let arc = new Arc(pc, r, startAngle, endAngle, counterClockwise);
+
+        let w = parseInt(termArr[4].split('=')[1],10);
+
+        let polygon = w > 0 ? offsetArc(arc, w) : new Polygon();
+
+        return polygon;
     }
 
     parseToPolygon(str) {
@@ -162,9 +243,15 @@ export class Parser {
             else if (line.search('mat_circle_struc') >= 0) {
                 shape = this.parseToCircle(line);
             }
-            // else if (line.search('mat_rect_struc') >= 0) {
-            //     shape = this.parseToRectangle(line);
-            // }
+            else if (line.search('mat_rect_struc') >= 0) {
+                shape = this.parseToRectangle(line);
+            }
+            else if (line.search('mat_line_struc') >= 0) {
+                shape = this.parseToODBLine(line);
+            }
+            else if (line.search('mat_arc_struc') >= 0) {
+                shape = this.parseToODBArc(line);
+            }
             shapes.push(shape);
         }
         return shapes;
