@@ -118,7 +118,7 @@ function parseCurve(curveXML) {
     let pe = new Point(parseInt(curveXML.getAttribute('xe'),10), parseInt(curveXML.getAttribute('ye'),10));
     let pc = new Point(parseInt(curveXML.getAttribute('xc'),10), parseInt(curveXML.getAttribute('yc'),10));
 
-    let counterClockwise = curveXML.getAttribute('cw') === 'yes' ? true : false;
+    let counterClockwise = curveXML.getAttribute('cw') === 'no' ? true : false;
 
     let startAngle = vector(pc,ps).slope;
     let endAngle = vector(pc, pe).slope;
