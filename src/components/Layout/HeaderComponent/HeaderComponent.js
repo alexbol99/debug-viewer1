@@ -4,8 +4,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import classes from './HeaderComponent.module.css';
-import Logo from './Logo/Logo';
-import Navigation from './Navigation/Navigation';
+// import Logo from './Logo/Logo';
+// import Navigation from './Navigation/Navigation';
 
 const HeaderComponent = (props) => {
     const style = props.location.pathname === "/documents" ?
@@ -13,12 +13,18 @@ const HeaderComponent = (props) => {
         classes["App-header"];
     return (
         <header className={style}>
-            <Logo />
-            <Navigation isAuthenticated={props.isAuthenticated} />
-            {props.isAuthenticated ? <span>Hello {props.username}</span> : null}
-            {props.location.pathname === "/documents" ? <hr/> : null}
+            <h2>Debug Viewer</h2>
         </header>
     )
 };
 
 export default withRouter(HeaderComponent);
+
+/*
+<header className={style}>
+    <Logo />
+    <Navigation isAuthenticated={props.isAuthenticated} />
+    {props.isAuthenticated ? <span>Hello {props.username}</span> : null}
+    {props.location.pathname === "/documents" ? <hr/> : null}
+</header>
+*/

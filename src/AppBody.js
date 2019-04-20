@@ -10,9 +10,9 @@ import DocumentName from "./components/MainComponent/DocumentName/DocumentName";
 const appBody = (props) => {
     return (
         <React.Fragment>
-            <DocumentName name={props.document.name}
-                          username={props.username}
-                          updateDocumentName={props.updateDocumentName} />
+            {/*<DocumentName name={props.document.name}*/}
+                          {/*username={props.username}*/}
+                          {/*updateDocumentName={props.updateDocumentName} />*/}
             <div className="App-body" onPaste={props.pasteDataFromBuffer}>
                 <MainComponent history={props.history}
                                onManageCloudStorageButtonClicked={props.onManageCloudStorageButtonClicked}

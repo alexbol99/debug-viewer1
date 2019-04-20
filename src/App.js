@@ -3,9 +3,9 @@ import {Route, Switch, withRouter} from 'react-router-dom';
 
 import AppBody from './AppBody';
 import HeaderComponent from './components/Layout/HeaderComponent/HeaderComponent';
-import Signup from './containers/Auth/SignUp/Signup';
-import Login from './containers/Auth/Login/Login';
-import Logout from './containers/Auth/Logout';
+// import Signup from './containers/Auth/SignUp/Signup';
+// import Login from './containers/Auth/Login/Login';
+// import Logout from './containers/Auth/Logout';
 import {connect} from 'react-redux';
 
 import './App.css';
@@ -16,7 +16,7 @@ import Demo from './components/Constructions/Demo';
 import SkeletonRecognition from './components/Constructions/SkeletonRecognition';
 import CollisionDemo from "./components/Constructions/CollisionDemo";
 import Spinner from "./components/UI/Spinner/Spinner";
-import DocumentsComponent from "./containers/DocumentsComponent/DocumentsComponent";
+// import DocumentsComponent from "./containers/DocumentsComponent/DocumentsComponent";
 import * as authActions from "./store/actions/auth";
 
 class App extends Component {
@@ -46,10 +46,10 @@ class App extends Component {
                 />
 
                 <Switch>
-                    <Route path="/documents" exact component={DocumentsComponent}/>
-                    <Route path="/signup" component={Signup} />
-                    <Route path="/login" component={Login} />
-                    <Route path="/logout" component={Logout} />
+                    {/*<Route path="/documents" exact component={DocumentsComponent}/>*/}
+                    {/*<Route path="/signup" component={Signup} />*/}
+                    {/*<Route path="/login" component={Login} />*/}
+                    {/*<Route path="/logout" component={Logout} />*/}
 
                     <Route path="/" component={AppBody}/>
 

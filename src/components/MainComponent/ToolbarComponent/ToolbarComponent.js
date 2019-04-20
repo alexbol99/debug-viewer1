@@ -22,23 +22,14 @@ class ToolbarComponent extends Component {
                         onClick={this.openJobButtonClicked}
                 />
 
-                {/*<button title="Open file" onClick={this.openJobButtonClicked}>*/}
-                {/*/!*<img src={open} alt="open" />*!/*/}
-                {/*<FontAwesome*/}
-                {/*name='folder-open'*/}
-                {/*size='2x'*/}
-                {/*style={{color:"grey"}}*/}
-                {/*/>*/}
-                {/*</button>*/}
-
                 <input style={{fontSize: 16, marginTop: 5, marginBottom: 5, display: "none"}}
                        type="file" id="browseFiles" ref="browseFiles" name="files[]" multiple
                        onChange={this.props.onFileSelected}
                 />
 
-                <Button type="trigger" title="Save document on cloud" iconName='save'
-                        onClick={this.props.onSaveDocumentButtonClicked}
-                />
+                {/*<Button type="trigger" title="Save document on cloud" iconName='save'*/}
+                        {/*onClick={this.props.onSaveDocumentButtonClicked}*/}
+                {/*/>*/}
 
                 <Button type="trigger" title="Clean current document" iconName='broom'
                         onClick={this.props.onClearAllButtonClicked}
