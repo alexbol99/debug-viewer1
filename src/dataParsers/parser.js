@@ -56,6 +56,14 @@ export class Parser {
         return watchArray;
     }
 
+    parseToPoint(line) {
+        let parenth = line.match(/\{([^)]+)\}/)[1];   // string inside {..}
+        let pointArr = parenth.split('=')[1].split(',');
+        let point = new Point(parseInt(pointArr[0],10), parseInt(pointArr[1],10));
+        point.label = line.split(/\s+/)[1];
+        return point;
+    }
+
     parseToSegment(line) {
         let parenth = line.match(/\{([^)]+)\}/)[1];   // string inside {..}
         let termArr = parenth.split(' ');             // array of terms "attr=value"
@@ -234,22 +242,25 @@ export class Parser {
         let shape;
         let arrayOfLines = str.match(/[^\r\n]+/g);
         for (let line of arrayOfLines) {
-            if (line.search('mat_seg_struc') >= 0) {
+            if (line.search('point_struc') >= 0) {
+                shape = this.parseToPoint(line);
+            }
+            else if (line.search('_seg_struc') >= 0) {
                 shape = this.parseToSegment(line);
             }
-            else if (line.search('mat_curve_struc') >= 0) {
+            else if (line.search('_curve_struc') >= 0) {
                 shape = this.parseToArc(line);
             }
-            else if (line.search('mat_circle_struc') >= 0) {
+            else if (line.search('_circle_struc') >= 0) {
                 shape = this.parseToCircle(line);
             }
-            else if (line.search('mat_rect_struc') >= 0) {
+            else if (line.search('_rect_struc') >= 0) {
                 shape = this.parseToRectangle(line);
             }
-            else if (line.search('mat_line_struc') >= 0) {
+            else if (line.search('_line_struc') >= 0) {
                 shape = this.parseToODBLine(line);
             }
-            else if (line.search('mat_arc_struc') >= 0) {
+            else if (line.search('_arc_struc') >= 0) {
                 shape = this.parseToODBArc(line);
             }
             shapes.push(shape);
@@ -264,17 +275,18 @@ export class Parser {
             return [polygon];
         }
 
+        /* try array of shapes excluding polygon */
+        let shapes = this.parseToShapes(str);
+        if (shapes.length > 0) {
+            return shapes;
+        }
+
         /* try array of points */
         let points = this.parseToPoints(str);
         if (points.length > 0) {
             return points;
         }
 
-        /* try array of segments and arcs and other mat_shapes excluding polygon */
-        let shapes = this.parseToShapes(str);
-        if (shapes.length > 0) {
-            return shapes;
-        }
     }
 }
 
