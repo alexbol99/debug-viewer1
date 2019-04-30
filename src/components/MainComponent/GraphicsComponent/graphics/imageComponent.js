@@ -6,7 +6,7 @@ import {Component} from 'react';
 import {Bitmap} from '@createjs/easeljs';
 import '../../../../models/graphics';
 import Utils from '../../../../models/utils';
-import storage from '../../../../firebase-storage';
+// import storage from '../../../../firebase-storage';
 
 export class ImageComponent extends Component {
     handleMouseOver = (event) => {
@@ -24,7 +24,7 @@ export class ImageComponent extends Component {
     redraw() {
         if (!this.bitmap) return;
         // Draw shape
-        let alpha = 0.5; // (this.props.hovered || this.props.selected) ? 1.0 : 0.6;
+        let alpha = 1; // (this.props.hovered || this.props.selected) ? 1.0 : 0.6;
         this.bitmap.alpha = this.props.displayed ? alpha : 0.0;
 
         let width = this.props.model.geom.width;
@@ -64,16 +64,16 @@ export class ImageComponent extends Component {
         img.setAttribute('crossOrigin', 'anonymous'); // works for me
 
         // Create a reference from a Google Cloud Storage URI
-        const ref = storage.refFromURL(this.props.model.geom.uri);
+        //const ref = storage.refFromURL(this.props.model.geom.uri);
 
-        ref.getDownloadURL()
-            .then( url => {
+        // ref.getDownloadURL()
+        //    .then( url => {
+        //
+        //         img.src = url;
+        //     })
+        //     .catch( error => console.log(error))
 
-                img.src = url;
-            })
-            .catch( error => console.log(error))
-
-        // img.src = this.props.model.geom.uri;
+        img.src = this.props.model.geom.uri;
     }
 
     componentDidMount() {
