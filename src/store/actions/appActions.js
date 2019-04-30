@@ -134,4 +134,10 @@ export const toggleLayerList = () => {
     }
 };
 
+export const toggleDownloadPopup = () => {
+    return {
+        type: ActionTypes.TOGGLE_DOWNLOAD_POPUP_CLICKED
+    }
+};
+
 

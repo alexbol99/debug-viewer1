@@ -23,6 +23,8 @@ import MeasureShapesTool from "../../tools/measureShapesTool";
 import DisplayCoordsTool from "../../tools/displayCoordsTool";
 
 import AboutPopup from "../../components/AboutPopup/AboutPopup";
+import DownloadPopup from "../../components/DownloadPopup/DownloadPopup";
+
 import CloudDocument from '../../components/Constructions/CloudDocument';
 
 import styles from './MainComponent.module.css';
@@ -182,6 +184,7 @@ class MainComponent extends Component {
                     onSaveDocumentButtonClicked={this.onSaveDocumentButtonClicked}
                     onClearAllButtonClicked={this.clearCurrentDocument}
                     onLayerListButtonClicked={this.props.toggleLayerList}
+                    onShowDownloadPopupPressed={this.props.toggleDownloadPopup}
                 />
 
                 <CanvasComponent />
@@ -222,6 +225,13 @@ class MainComponent extends Component {
                     build={this.props.build}
                 />
 
+                <DownloadPopup
+                    showPopup={this.props.showDownloadPopup}
+                    closePopup={this.props.toggleDownloadPopup}
+                    title="Download document"
+                    layers={this.props.layers}
+                />
+
                 <Route path="/documents/:id" component={CloudDocument}/>
 
             </main>
@@ -245,6 +255,7 @@ const mapStateToProps = (state, ownProps) => {
         decimals: state.app.decimals,
         measurePointsActive: state.app.measurePointsActive,
         showAboutPopup: state.app.showAboutPopup,
+        showDownloadPopup: state.app.showDownloadPopup,
         layers: state.layers,
         mouse: state.mouse,
         measureShapesTool: state.measureShapesTool,
@@ -272,6 +283,7 @@ const mapDispatchToProps = dispatch => {
         toggleMeasureBetweenShapes: () => dispatch(actions.toggleMeasureBetweenShapes()),
         togglePanByDrag: () => dispatch(actions.togglePanByDrag()),
         toggleLayerList: () => dispatch(actions.toggleLayerList()),
+        toggleDownloadPopup: () => dispatch(actions.toggleDownloadPopup()),
         applySkeletonRecognition: () => dispatch(actions.applySkeletonRecognition()),
         handleMouseRollOverShape: (shape) => dispatch(actions.handleMouseRollOverShape(shape)),
         handleMouseRollOutShape: () => dispatch(actions.handleMouseRollOutShape()),

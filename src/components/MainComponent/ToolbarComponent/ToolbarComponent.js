@@ -35,6 +35,10 @@ class ToolbarComponent extends Component {
                         onClick={this.props.onClearAllButtonClicked}
                 />
 
+                <Button type="trigger" title="Download current document" iconName='file-download'
+                        onClick={this.props.onShowDownloadPopupPressed}
+                />
+
                 <Separator/>
 
                 <Button type="trigger" title="Zoom and pan to home view" iconName='home'

@@ -4,20 +4,21 @@
   "private": true,
   "dependencies": {
     "@createjs/easeljs": "^2.0.0-beta.4",
+    "@flatten-js/boolean-op": "^1.1.1",
     "@flatten-js/core": "^1.0.14",
     "@flatten-js/interval-tree": "^1.0.6",
-    "@flatten-js/boolean-op": "^1.1.1",
     "@fortawesome/fontawesome-free": "^5.4.1",
     "axios": "^0.18.0",
     "firebase": "^5.7.0",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-fontawesome": "^1.6.1",
     "react-redux": "^5.1.0",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "^2.1.8",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "^3.0.0",
     "redux": "^4.0.0",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "xml-writer": "^1.7.0"
   },
   "scripts": {
     "start": "react-scripts start",
