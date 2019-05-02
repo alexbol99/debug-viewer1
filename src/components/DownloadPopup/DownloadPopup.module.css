@@ -1,4 +1,56 @@
 .DownloadPopup {
-
+    animation-name: fadeIn;
+    animation-duration: 1s;
 }
+
+.DownloadPopup ul {
+    text-decoration: none;
+}
+
+.DownloadPopup h5, li {
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    font: inherit;
+    padding: 6px 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/*.DownloadPopup input, textarea {*/
+/*    outline: none;*/
+/*    border: 1px solid #ccc;*/
+/*    background-color: white;*/
+/*    font: inherit;*/
+/*    padding: 6px 10px;*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*.DownloadPopup button {*/
+/*    float: right;*/
+/*    height: 24px;*/
+/*    border-radius: 5px;*/
+/*    margin-left: 1em;*/
+/*    margin-right: 1em;*/
+/*}*/
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.Open {
+    transform: translateX(0);
+}
+
+.Close {
+    transform: translateX(-100%);
+}
+
 

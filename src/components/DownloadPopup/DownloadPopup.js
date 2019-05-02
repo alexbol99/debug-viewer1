@@ -18,7 +18,7 @@ class DownloadPopup extends Component {
                 closePopup={this.props.closePopup}
             >
                 <div className={classes.DownloadPopup}>
-                    Click to the following links to start download
+                    <h5>Click to the following links to start download</h5>
                     <ul>
 
                         {downloadData.map(data =>

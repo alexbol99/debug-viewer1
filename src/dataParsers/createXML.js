@@ -3,23 +3,46 @@ import {CW, ORIENTATION} from "@flatten-js/core";
 
 import XMLWriter from "xml-writer";
 
-function pointToXMLString(xw, point) {
-
+function pointToXMLString(xw, shape) {
+    xw.startElement('point');
+        xw.writeAttribute('x', shape.geom.x);
+        xw.writeAttribute('y', shape.geom.y);
+        xw.writeAttribute('label', shape.label);
+    xw.endElement();
 }
 
-function segmentToXMLString(xw, segment) {
-
+function segmentToXMLString(xw, shape) {
+    xw.startElement('segment');
+        xw.writeAttribute('xs', shape.geom.ps.x);
+        xw.writeAttribute('ys', shape.geom.ps.y);
+        xw.writeAttribute('xe', shape.geom.pe.x);
+        xw.writeAttribute('ye', shape.geom.pe.y);
+        xw.writeAttribute('label', shape.label);
+    xw.endElement();
 }
 
-function arcToXMLString(xw, arc) {
-
+function arcToXMLString(xw, shape) {
+    xw.startElement('arc');
+        xw.writeAttribute('xs', Math.round(shape.geom.start.x));
+        xw.writeAttribute('ys', Math.round(shape.geom.start.y));
+        xw.writeAttribute('xe', Math.round(shape.geom.end.x));
+        xw.writeAttribute('ye', Math.round(shape.geom.end.y));
+        xw.writeAttribute('xc', shape.geom.center.x);
+        xw.writeAttribute('yc', shape.geom.center.y);
+        xw.writeAttribute('cw', shape.geom.counterClockwise === CW ? "yes" : "no");
+        xw.writeAttribute('label', shape.label);
+    xw.endElement();
 }
 
-function circleToXMLString(xw, circle) {
-
+function circleToXMLString(xw, shape) {
+    xw.startElement('circle');
+        xw.writeAttribute('xc', shape.geom.center.x);
+        xw.writeAttribute('yc', shape.geom.center.y);
+        xw.writeAttribute('label', shape.label);
+    xw.endElement();
 }
 
-function boxToXMLString(xw, box) {
+function boxToXMLString(xw, shape) {
 
 }
 
@@ -75,19 +98,19 @@ export function createXMLString(shapes) {
 
     for (let shape of shapes) {
         if (shape.geom instanceof Point) {
-            pointToXMLString();
+            pointToXMLString(xw, shape);
         }
         else if (shape.geom instanceof Segment) {
-            segmentToXMLString();
+            segmentToXMLString(xw, shape);
         }
         else if (shape.geom instanceof Arc) {
-            arcToXMLString();
+            arcToXMLString(xw, shape);
         }
         else if (shape.geom instanceof Circle) {
-            circleToXMLString();
+            circleToXMLString(xw, shape);
         }
         else if (shape.geom instanceof Box) {
-            boxToXMLString()
+            boxToXMLString(xw, shape)
         }
         else if (shape.geom instanceof Polygon) {
             polygonToXMlString(xw, shape.geom);
