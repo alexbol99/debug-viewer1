@@ -2,107 +2,49 @@
  * Created by alexanderbol on 21/04/2017.
  */
 
-import React, {Component} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {connect} from "react-redux";
 import Stage from "../models/stage";
 import * as actions from '../store/actions/stageActions';
 
-class MeasurePointsTool extends Component {
-    measureCanvas = React.createRef();
-    measureStage = null;
+const MeasurePointsTool = (props) => {
+    const measureCanvas = useRef(null);
+    const measureStageRef = useRef(null);
 
-    state = {
-        startX: undefined,
-        startY: undefined,
-        endX: undefined,
-        endY: undefined,
-        measureStarted: false
-    };
+    // const [{startX,startY,endX,endY,measureStarted}, setMeasureState] = useState(initialState);
+    const [startX, setStartX] = useState(undefined);
+    const [startY, setStartY] = useState(undefined);
+    const [endX, setEndX] = useState(undefined);
+    const [endY, setEndY] = useState(undefined);
+    const [measureStarted, setMeasureStarted] = useState(false);
 
-    handleMouseDown = (event) => {
-        event.preventDefault();
+    let {stage, divisor, decimals} = props;
 
-        this.measureStage.clear();
-
-        if (this.state.measureStarted) {   // second click - clear measurement
-            this.setState({
-                startX: undefined,
-                startY: undefined,
-                endX: undefined,
-                endY: undefined,
-                measureStarted: false
-            });
-            this.measureStage.canvas.style.cursor = "auto";
-        }
-        else {                       // first click - start measurment
-            this.setState({
-                startX: this.measureStage.C2W_X(event.stageX),
-                startY: this.measureStage.C2W_Y(event.stageY),
-                measureStarted: true
-            });
-            this.measureStage.canvas.style.cursor = "crosshair";
-        }
-    };
-
-    handleMouseMove = (event) => {
-        if (this.state.measureStarted) {
-            this.setState({
-                endX: this.measureStage.C2W_X(event.stageX),
-                endY: this.measureStage.C2W_Y(event.stageY)
-            })
-        }
-    };
-
-    handleMouseUp = (event) => {
-    }
-
-    handleMouseWheel = (event) => {
-        event.preventDefault();
-
-        let delta = event.detail || event.wheelDelta;
-        if (delta !== 0) {
-            // this.props.onMouseWheelMove(event.offsetX, event.offsetY, delta);
-            this.props.handleMouseWheelMove(this.props.stage, event.offsetX, event.offsetY, delta);
-
-            this.draw();
-        }
-    };
-
-    handleMouseWheelFox = (event) => {
-        event.preventDefault();
-
-        if (event.detail !== 0) {
-            // this.props.onMousewheelMove(event.layerX, event.layerY, -event.detail);
-            this.props.handleMouseWheelMove(this.props.stage, event.layerX, event.layerY, -event.detail);
-
-            this.draw();
-        }
-    };
-
-    draw() {
-        // let canvas = this.measureCanvas.current;
-        let stage = this.measureStage; // this.props.stage;
-        let canvas = stage.canvas;
+    const draw = () => {
+        // let canvas = measureCanvas.current;
+        let measureStage = measureStageRef.current;
+        // let stage = measureStage; // props.stage;
+        let canvas = measureStage.canvas;
         let context = canvas.getContext('2d');
 
-        this.measureStage.origin = this.props.stage.origin;
-        this.measureStage.resolution = this.props.stage.resolution;
-        this.measureStage.zoomFactor = this.props.stage.zoomFactor;
+        measureStage.origin = stage.origin;
+        measureStage.resolution = stage.resolution;
+        measureStage.zoomFactor = stage.zoomFactor;
 
-        this.measureStage.clear();
+        measureStage.clear();
 
         // Draw rectangle
-        let pllX = Math.min(stage.W2C_X(this.state.startX), stage.W2C_X(this.state.endX));
-        let pllY = Math.min(stage.W2C_Y(this.state.startY), stage.W2C_Y(this.state.endY));
-        let width = Math.abs(stage.W2C_Scalar(this.state.startX - this.state.endX));
-        let height = Math.abs(stage.W2C_Scalar(this.state.startY - this.state.endY));
+        let pllX = Math.min(measureStage.W2C_X(startX), measureStage.W2C_X(endX));
+        let pllY = Math.min(measureStage.W2C_Y(startY), measureStage.W2C_Y(endY));
+        let width = Math.abs(measureStage.W2C_Scalar(startX - endX));
+        let height = Math.abs(measureStage.W2C_Scalar(startY - endY));
 
         context.beginPath();
         context.rect(pllX, pllY, width, height);
 
         // Draw segment
-        context.moveTo(stage.W2C_X(this.state.startX), stage.W2C_Y(this.state.startY));
-        context.lineTo(stage.W2C_X(this.state.endX), stage.W2C_Y(this.state.endY));
+        context.moveTo(measureStage.W2C_X(startX), measureStage.W2C_Y(startY));
+        context.lineTo(measureStage.W2C_X(endX), measureStage.W2C_Y(endY));
 
         context.lineWidth = 1;
         context.strokeStyle = 'black';
@@ -111,7 +53,7 @@ class MeasurePointsTool extends Component {
         // Draw text
         let textX, textY, textHeight, textWidth;
         let backX, backY;                      // background rectangle
-        let text = this.measurement();
+        let text = measurement();
 
         context.font = "12pt Arial";
 
@@ -120,7 +62,7 @@ class MeasurePointsTool extends Component {
         textWidth = context.measureText(text).width;
 
         // Rectangle to the right of current point, text aligned left
-        if (Math.abs(stage.W2C_X(this.state.endX) - pllX) <= 2) {
+        if (Math.abs(stage.W2C_X(endX) - pllX) <= 2) {
             context.textAlign = "left";
             textX = pllX + 3;
             backX = pllX;
@@ -132,10 +74,9 @@ class MeasurePointsTool extends Component {
             backX = textX - textWidth - 3;
         }
 
-        if (Math.abs(stage.W2C_Y(this.state.endY) - pllY) <= 2) {
+        if (Math.abs(measureStage.W2C_Y(endY) - pllY) <= 2) {
             textY = pllY - 3;
-        }
-        else {
+        } else {
             textY = pllY + height + textHeight + 3;
         }
         backY = textY - textHeight - 3;
@@ -146,64 +87,118 @@ class MeasurePointsTool extends Component {
 
         context.fillStyle = "black";
         context.globalAlpha = 1;
-        context.fillText(this.measurement(), textX, textY);
-    }
+        context.fillText(measurement(), textX, textY);
+    };
 
-    measurement() {
-        let dx = this.state.endX - this.state.startX;
-        let dy = this.state.endY - this.state.startY;
+    const measurement = () => {
+        let dx = endX - startX;
+        let dy = endY - startY;
         let dist = Math.sqrt(dx * dx + dy * dy);
-        let message = "DX=" + this.format(dx) + ",DY=" + this.format(dy) + ",D=" + this.format(dist);
+        let message = "DX=" + format(dx) + ",DY=" + format(dy) + ",D=" + format(dist);
         return message;
-    }
+    };
 
-    format(num) {
-        return (num / this.props.divisor).toFixed(this.props.decimals);
-    }
+    const format = (num) => {
+        return (num / divisor).toFixed(decimals);
+    };
 
-    componentDidMount() {
-        // let canvas = this.measureCanvas.current;
-        this.measureStage = new Stage(this.measureCanvas.current);
-        this.measureStage.origin = this.props.stage.origin;
-        this.measureStage.resolution = this.props.stage.resolution;
-        this.measureStage.zoomFactor = this.props.stage.zoomFactor;
+    useEffect(() => {
+        let measureStage;
 
-        this.measureStage.on("stagemousedown", this.handleMouseDown);
-        this.measureStage.on("stagemousemove", this.handleMouseMove);
-        this.measureStage.on("stagemouseup", this.handleMouseUp);
+        const handleMouseDown = (event) => {
+            event.preventDefault();
 
-        this.measureStage.canvas.addEventListener("mousewheel", this.handleMouseWheel);
-        this.measureStage.canvas.addEventListener("DOMMouseScroll", this.handleMouseWheelFox);
-    }
+            measureStage.clear();
 
-    componentDidUpdate() {
-        if (this.state.measureStarted) {
-            this.draw();
+            if (measureStarted) {   // second click - clear measurement
+                setStartX(undefined);
+                setStartY(undefined);
+                setEndX(undefined);
+                setEndY(undefined);
+                setMeasureStarted(false);
+                measureStage.canvas.style.cursor = "auto";
+            } else {                       // first click - start measurment
+                setStartX(measureStage.C2W_X(event.stageX));
+                setStartY(measureStage.C2W_Y(event.stageY));
+                setMeasureStarted(true);
+                measureStage.canvas.style.cursor = "crosshair";
+            }
+        };
+
+        const handleMouseMove = (event) => {
+            // if (measureStarted) {
+                setEndX(measureStage.C2W_X(event.stageX));
+                setEndY(measureStage.C2W_Y(event.stageY));
+            // }
+        };
+
+        const handleMouseWheel = (event) => {
+            event.preventDefault();
+
+            let delta = event.detail || event.wheelDelta;
+            if (delta !== 0) {
+                // props.onMouseWheelMove(event.offsetX, event.offsetY, delta);
+                props.handleMouseWheelMove(stage, event.offsetX, event.offsetY, delta);
+
+                // draw();
+            }
+        };
+
+        const handleMouseWheelFox = (event) => {
+            event.preventDefault();
+
+            if (event.detail !== 0) {
+                // props.onMousewheelMove(event.layerX, event.layerY, -event.detail);
+                props.handleMouseWheelMove(stage, event.layerX, event.layerY, -event.detail);
+
+                // draw();
+            }
+        };
+
+        if (!measureStage) {
+            measureStageRef.current = new Stage(measureCanvas.current);
+            measureStage = measureStageRef.current;
+            measureStage.origin = stage.origin;
+            measureStage.resolution = stage.resolution;
+            measureStage.zoomFactor = stage.zoomFactor;
+
+            measureStage.on("stagemousedown", handleMouseDown);
+            measureStage.on("stagemousemove", handleMouseMove);
+            // measureStage.on("stagemouseup", handleMouseUp);
+
+            measureStage.canvas.addEventListener("mousewheel", handleMouseWheel);
+            measureStage.canvas.addEventListener("DOMMouseScroll", handleMouseWheelFox);
         }
-    }
 
-    componentWillUnmount() {
-        this.measureStage.clear();
-        this.measureStage.removeAllChildren();
-        this.measureStage.removeAllEventListeners();
-    }
+        return function componentWillUnmount() {
+            measureStage.clear();
+            measureStage.removeAllChildren();
+            measureStage.removeAllEventListeners();
+        }
 
-    render() {
-        let mainCanvas = this.props.stage.canvas;
-        let width = mainCanvas.width;
-        let height = mainCanvas.height;
-        let top = mainCanvas.offsetTop;
-        let left = mainCanvas.offsetLeft;
-        return (
-            <canvas tabIndex="1" ref={this.measureCanvas}
-                    width={width}
-                    height={height}
-                    style={{position: 'absolute', top: top, left: left}}
-            >
-            </canvas>
-        )
-    }
-}
+    }, [measureStarted, stage, props]);
+
+    useEffect(() => {
+        if (measureStarted) {
+            draw();
+        }
+    })
+
+    let mainCanvas = stage.canvas;
+    let width = mainCanvas.width;
+    let height = mainCanvas.height;
+    let top = mainCanvas.offsetTop;
+    let left = mainCanvas.offsetLeft;
+
+    return (
+        <canvas tabIndex="1" ref={measureCanvas}
+                width={width}
+                height={height}
+                style={{position: 'absolute', top: top, left: left}}
+        >
+        </canvas>
+    )
+};
 
 const mapStateToProps = ({app}) => {
     return {
