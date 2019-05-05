@@ -73,25 +73,21 @@ function graphics_circle(circle, style) {
     graphics.setStrokeStyle(strokeStyle,0,0,10,true);
     graphics.stroke = graphics.beginStroke(stroke).command;
     graphics.fill = graphics.beginFill(fill).command;
-
-    // graphics.setStrokeStyle(2).beginStroke("black").beginFill("red").drawCircle(pcx, pcy, r);
-    return graphics
-        .setStrokeStyle(strokeStyle,0,0,10,true)
-        .beginStroke(stroke)
-        .drawCircle(circle.pc.x, circle.pc.y, circle.r)
-        .endStroke();
+    graphics.drawCircle(circle.pc.x, circle.pc.y, circle.r);
+    return graphics;
 };
 
-// Box.prototype.graphics = function(style) {
+
 function graphics_box(box, style) {
     let graphics = new Graphics();
     let strokeStyle = style && style.strokeStyle ? style.strokeStyle : 1;
-    let stroke = style && style.stroke ? style.stroke : "black";
-    // graphics.setStrokeStyle(2).beginStroke("black").beginFill("red").drawCircle(pcx, pcy, r);
-    return graphics
-        .setStrokeStyle(strokeStyle,0,0,10,true)
-        .beginStroke(stroke)
-        .drawRect(box.xmin, box.ymin, box.xmax-box.xmin, box.ymax-box.ymin);
+    let stroke = style && style.stroke ? style.stroke : "#FF0303";
+    let fill = style && style.fill ? style.fill : "#FF0303";
+    graphics.setStrokeStyle(strokeStyle,0,0,10,true);
+    graphics.stroke = graphics.beginStroke(stroke).command;
+    graphics.fill = graphics.beginFill(fill).command;
+    graphics.drawRect(box.xmin, box.ymin, box.xmax-box.xmin, box.ymax-box.ymin);
+    return graphics;
 };
 
 function setGraphicsEdgeSegment(graphics, segment) {

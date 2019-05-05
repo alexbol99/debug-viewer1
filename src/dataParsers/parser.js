@@ -112,10 +112,10 @@ export class Parser {
         let pcArr = termArr[0].split('=')[1].split(',');
         let pc = new Point(parseInt(pcArr[0],10), parseInt(pcArr[1],10));
         let r = parseInt(termArr[1].split('=')[1],10);
-        let circle = new Circle(pc, r);
-        let polygon = new Polygon();
-        polygon.addFace(circle);
-        return polygon;
+        // let circle = new Circle(pc, r);
+        // let polygon = new Polygon();
+        // polygon.addFace(circle);
+        return new Circle(pc, r);;
     }
 
     parseToRectangle(line) {
@@ -132,6 +132,7 @@ export class Parser {
         let polygon = new Polygon();
         polygon.addFace(box);
         return polygon;
+        // return new Box(xmin, ymin, xmin + width, ymin + height);
     }
 
     parseToODBLine(line) {

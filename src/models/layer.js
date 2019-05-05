@@ -47,7 +47,7 @@ class Layer {
     get box() {
         let box = new Box();
         for (let shape of this.shapes) {
-            box = box.merge(shape.box);
+            box = box.merge(shape.geom instanceof Box ? shape.clone() : shape.box);
         }
         return box;
     }

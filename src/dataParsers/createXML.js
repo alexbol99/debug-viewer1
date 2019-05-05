@@ -54,7 +54,7 @@ function polygonToXMlString(xw, polygon) {
             xw.startElement('island');
         }
         else {
-            xw.start('hole');
+            xw.startElement('hole');
         }
 
         xw.writeAttribute('n_edges', `${face.size}`);

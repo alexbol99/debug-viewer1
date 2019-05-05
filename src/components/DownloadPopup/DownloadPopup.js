@@ -6,12 +6,13 @@ import classes from "./DownloadPopup.module.css";
 
 class DownloadPopup extends Component {
     render() {
-        let downloadData = this.props.layers.map( layer => {
+        let downloadData = this.props.showPopup ?
+            this.props.layers.map( layer => {
             return layer.displayed ? {
                 filename: `${layer.name}.xml`,
                 xmlString: createXMLString(layer.shapes)
             } : null
-        });
+        }) : [];
         return this.props.showPopup ? (
             <ModalPopup
                 showPopup={this.props.showPopup}
