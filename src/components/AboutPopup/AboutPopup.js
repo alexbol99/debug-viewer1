@@ -11,6 +11,7 @@ const AboutPopup = (props) => {
         <ModalPopup
             showPopup={props.showAboutPopup}
             closePopup={props.toggleAboutPopup}
+            header="Info"
         >
             <div className={classes.AboutPopup}>
                 <h2>{props.title} v{props.version}</h2>

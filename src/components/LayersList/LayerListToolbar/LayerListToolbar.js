@@ -26,7 +26,7 @@ const LayerListToolbar = (props) => {
             </button>
             <button title="Delete selected layer" onClick={props.onDeleteLayerButtonClicked}>
                 <FontAwesome
-                    name='times'
+                    name='trash-alt'
                     size='2x'
                     style={{color: "grey"}}
                 />

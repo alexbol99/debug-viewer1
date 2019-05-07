@@ -68,6 +68,7 @@ class ModalPopup extends Component {
                     <div className={classes.ModalPopup}
                          onMouseDown={this.dragMouseDown}
                     >
+                        <header>{this.props.header}</header>
                         {this.props.children}
                     </div>
                 </div>

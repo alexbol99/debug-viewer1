@@ -2,7 +2,7 @@
     /* put the layer list on the left */
     /*list-style-type:none;*/
     /* 12em is the width of the columns */
-    flex: 0 0 12em;
+    flex: 0 0 13em;
     flex-grow: 0;
     order: -1;
     background: rgba(147, 128, 108, 0.1);

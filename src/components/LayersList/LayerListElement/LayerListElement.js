@@ -77,6 +77,7 @@ class LayerListElement extends Component {
                 key={2}
                 showPopup={this.props.layer.edited}
                 closePopup={this.props.onEscapeLayerEditForm}
+                header="Layer properties"
             >
                 <LayerEditForm
                     layer={this.props.layer}

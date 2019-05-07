@@ -13,7 +13,7 @@
 
 .ModalPopup {
     background-color: rgba(240, 240, 240, 1.0);
-    padding: 1.2em;
+    padding: 0.8em;
     border-color: rgba(147, 128, 108, 0.1);
     border-width: 0.1em;
     border-top-width: 2.4em;
@@ -24,6 +24,14 @@
     position: absolute;
     animation-name: fadeIn;
     animation-duration: 0.5s;
+}
+
+.ModalPopup header {
+    position: absolute;
+    top: -2em;
+    font-weight: bolder;
+    /*opacity: 30%;*/
+    color: darkgrey;
 }
 
 @keyframes fadeIn {

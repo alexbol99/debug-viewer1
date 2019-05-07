@@ -17,6 +17,7 @@ class DownloadPopup extends Component {
             <ModalPopup
                 showPopup={this.props.showPopup}
                 closePopup={this.props.closePopup}
+                header="Download files"
             >
                 <div className={classes.DownloadPopup}>
                     <h5>Click to the following links to start download</h5>
@@ -24,7 +25,7 @@ class DownloadPopup extends Component {
 
                         {downloadData.map(data =>
                             data === null ? null :
-                            <li>
+                            <li key={data.filename}>
                                 <a href={'data:text/json;charset=utf-8,' + encodeURIComponent(data.xmlString)}
                                    download={data.filename}>
                                     {data.filename}
