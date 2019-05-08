@@ -7,6 +7,7 @@ import { parseODB } from "../dataParsers/parserODB";
 import { parseImage } from "../dataParsers/parsePGM";
 import { parseCSV } from "../dataParsers/parseCSV";
 import { parseTXT } from "../dataParsers/parseTXT";
+import { parseJSON} from "../dataParsers/parseJSON";
 
 const readAsText = (reader, file, stage, layers, dispatch, files) => {
 
@@ -26,6 +27,9 @@ const readAsText = (reader, file, stage, layers, dispatch, files) => {
             }
             else if (extension === 'txt') {
                 job = parseTXT(theFile.name, string);
+            }
+            else if (extension === 'json') {
+                job = parseJSON(theFile.name, string);
             }
             else {
                 job = parseODB(theFile.name, string);
