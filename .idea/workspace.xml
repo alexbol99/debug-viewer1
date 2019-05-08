@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="- Support circle and fix bug with display rectangle">
+    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AboutPopup/AboutPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutPopup/AboutPopup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DownloadPopup/DownloadPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DownloadPopup/DownloadPopup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LayersList/LayerEditForm/LayerEditForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LayersList/LayerEditForm/LayerEditForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LayersList/LayerEditForm/LayerEditForm.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LayersList/LayerEditForm/LayerEditForm.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LayersList/LayerListElement/LayerListElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LayersList/LayerListElement/LayerListElement.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LayersList/LayerListToolbar/LayerListToolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LayersList/LayerListToolbar/LayerListToolbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/ModalPopup/ModalPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/ModalPopup/ModalPopup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/ModalPopup/ModalPopup.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/ModalPopup/ModalPopup.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/ToolbarComponent/ToolbarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/ToolbarComponent/ToolbarComponent.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,83 +17,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/LayersList/LayerEditForm/LayerEditForm.js">
+        <entry file="file://$PROJECT_DIR$/src/dataParsers/parser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="50" column="65" selection-start-line="50" selection-start-column="65" selection-end-line="50" selection-end-column="65" />
+            <state relative-caret-position="-3951">
+              <caret line="35" column="86" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="35" selection-end-column="86" />
               <folding>
-                <element signature="e#51#77#0" expanded="true" />
+                <element signature="e#51#134#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/LayersList/LayerListToolbar/LayerListToolbar.module.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+            <state relative-caret-position="483">
+              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/LayersList/LayerListElement/LayerListElement.module.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/UI/ModalPopup/ModalPopup.js">
+        <entry file="file://$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1071">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/LayersList/LayerListToolbar/LayerListToolbar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
-              <folding>
-                <element signature="e#50#76#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/UI/ModalPopup/ModalPopup.module.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/LayersList/LayerEditForm/LayerEditForm.module.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/LayersList/LayerListElement/LayerListElement.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="80" column="13" lean-forward="true" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
+            <state relative-caret-position="240">
+              <caret line="228" column="59" selection-start-line="228" selection-start-column="42" selection-end-line="228" selection-end-column="59" />
               <folding>
                 <element signature="e#51#90#0" expanded="true" />
               </folding>
@@ -110,12 +50,80 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/DownloadPopup/DownloadPopup.js">
+        <entry file="file://$PROJECT_DIR$/src/middleware/readFiles.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+            <state relative-caret-position="-2694">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#0#52#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dataParsers/parseTXT.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dataParsers/parserXML.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="215" column="15" lean-forward="true" selection-start-line="215" selection-start-column="4" selection-end-line="215" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dataParsers/parserODB.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="94" column="67" selection-start-line="94" selection-start-column="51" selection-end-line="94" selection-end-column="67" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dataParsers/parseJSON.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="73" selection-start-line="73" selection-end-line="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/MainComponent/ToolbarComponent/ToolbarComponent.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="17" column="96" selection-start-line="17" selection-start-column="96" selection-end-line="17" selection-end-column="96" />
+              <folding>
+                <element signature="e#51#90#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/containers/LayerList/LayersList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="609">
+              <caret line="86" column="50" selection-start-line="86" selection-start-column="50" selection-end-line="86" selection-end-column="50" />
+              <folding>
+                <element signature="e#51#90#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,7 +141,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>setHomeView</find>
       <find>import Flatten from 'flatten-js'</find>
       <find>flatten-boolean-op</find>
       <find>BooleanTest</find>
@@ -163,6 +170,7 @@
       <find>showDownloadPopup</find>
       <find>pointToXMLString</find>
       <find>boxToXMLString</find>
+      <find>parseTXT</find>
     </findStrings>
     <replaceStrings>
       <replace>state.app.stage</replace>
@@ -191,7 +199,6 @@
         <option value="$PROJECT_DIR$/src/firebase-storage.js" />
         <option value="$PROJECT_DIR$/src/containers/DocumentsComponent/DocumentsComponent.js" />
         <option value="$PROJECT_DIR$/src/components/Constructions/CloudDocument.js" />
-        <option value="$PROJECT_DIR$/src/middleware/readFiles.js" />
         <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/layerComponent.js" />
         <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/layersComponent.js" />
         <option value="$PROJECT_DIR$/src/store/actions/cloudStorageActions.js" />
@@ -201,7 +208,6 @@
         <option value="$PROJECT_DIR$/src/models/collisionDistance.js" />
         <option value="$PROJECT_DIR$/src/models/job.js" />
         <option value="$PROJECT_DIR$/src/dataParsers/parseCSV.js" />
-        <option value="$PROJECT_DIR$/src/dataParsers/parseJSON.js" />
         <option value="$PROJECT_DIR$/src/models/stage.js" />
         <option value="$PROJECT_DIR$/src/dataParsers/parserODB.js" />
         <option value="$PROJECT_DIR$/src/middleware/skeleton_recognition.js" />
@@ -213,7 +219,6 @@
         <option value="$PROJECT_DIR$/src/components/Layout/HeaderComponent/HeaderComponent.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/AppBody.js" />
         <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/imageComponent.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
@@ -222,7 +227,6 @@
         <option value="$PROJECT_DIR$/src/store/reducers/app.js" />
         <option value="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" />
         <option value="$PROJECT_DIR$/src/components/DownloadPopup/DownloadPopup.module.css" />
-        <option value="$PROJECT_DIR$/src/components/MainComponent/ToolbarComponent/ToolbarComponent.js" />
         <option value="$PROJECT_DIR$/src/models/graphics.js" />
         <option value="$PROJECT_DIR$/node_modules/@flatten-js/core/src/classes/box.js" />
         <option value="$PROJECT_DIR$/src/models/layer.js" />
@@ -237,14 +241,18 @@
         <option value="$PROJECT_DIR$/src/components/LayersList/LayerEditForm/LayerEditForm.js" />
         <option value="$PROJECT_DIR$/src/components/LayersList/LayerListToolbar/LayerListToolbar.js" />
         <option value="$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/middleware/readFiles.js" />
+        <option value="$PROJECT_DIR$/src/dataParsers/parseJSON.js" />
+        <option value="$PROJECT_DIR$/src/components/MainComponent/ToolbarComponent/ToolbarComponent.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="233" />
-    <option name="y" value="14" />
-    <option name="width" value="1678" />
-    <option name="height" value="1000" />
+    <option name="x" value="170" />
+    <option name="y" value="34" />
+    <option name="width" value="1709" />
+    <option name="height" value="993" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -321,6 +329,21 @@
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="LayersList" type="462c0819:PsiDirectoryNode" />
               <item name="LayerListToolbar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
+              <item name="ToolbarComponent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
@@ -786,11 +809,25 @@
       <option name="project" value="LOCAL" />
       <updated>1557092275842</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="- Add header to popups, improve styling&#10;- Fix bug: in Layer Properties popup do not loose focus on mouse move">
+      <created>1557268689793</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1557268689793</updated>
+    </task>
+    <task id="LOCAL-00037" summary="- Added support for file in JSON format, polygons only&#10;- Added snapshot of the viewer to README.md, also added example to copy">
+      <created>1557327800119</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1557327800119</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="417661000" />
+    <option name="totallyTimeSpent" value="424363000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -802,15 +839,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="233" y="14" width="1678" height="1000" extended-state="0" />
+    <frame x="170" y="34" width="1709" height="993" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.73540145" visible="true" weight="0.36219513" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.73370576" visible="true" weight="0.35547575" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" sideWeight="0.26459855" side_tool="true" visible="true" weight="0.36219513" />
+      <window_info id="npm" order="2" sideWeight="0.26629424" side_tool="true" visible="true" weight="0.35547575" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3558394" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49970078" visible="true" weight="0.35842294" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39930555" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
@@ -818,8 +855,8 @@
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49939024" weight="0.32511738" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.3286219" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49634147" visible="true" weight="0.3507109" />
-      <window_info anchor="bottom" x="241" y="732" width="1622" height="198" id="Run" order="10" sideWeight="0.50365853" side_tool="true" visible="true" weight="0.3507109" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49634147" weight="0.3507109" />
+      <window_info anchor="bottom" x="241" y="732" width="1622" height="198" id="Run" order="10" sideWeight="0.5002992" side_tool="true" visible="true" weight="0.35842294" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -850,8 +887,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Support save document on Firebase (not completed)" />
-    <MESSAGE value="Added toJSON methods to layers" />
     <MESSAGE value="Set router to switch between Viewer and Cloud" />
     <MESSAGE value="Logic and styling for Documents Component (cloud storage manager)" />
     <MESSAGE value="Clean stage before switching from Editor to other component.&#10;When switching back to Editor, restore previous content" />
@@ -875,19 +910,11 @@
     <MESSAGE value="- Support circle, rectangle, odb arc and odb line in Copy/Paste parser as polygons" />
     <MESSAGE value="- Upgrade react and other dependencies&#10;- Remove Preloader&#10;- Implement Download current document (not completed)" />
     <MESSAGE value="- Support circle and fix bug with display rectangle" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Support circle and fix bug with display rectangle" />
+    <MESSAGE value="- Add header to popups, improve styling&#10;- Fix bug: in Layer Properties popup do not loose focus on mouse move" />
+    <MESSAGE value="- Added support for file in JSON format, polygons only&#10;- Added snapshot of the viewer to README.md, also added example to copy" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added support for file in JSON format, polygons only&#10;- Added snapshot of the viewer to README.md, also added example to copy" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/CanvasComponent/CanvasComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#51#90#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Constructions/CollisionDemo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -932,26 +959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataParsers/parseJSON.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-          <folding>
-            <element signature="e#40#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataParsers/parserODB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="94" column="67" selection-start-line="94" selection-start-column="51" selection-end-line="94" selection-end-column="67" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MainComponent/DocumentName/DocumentName.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -990,16 +997,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="221">
-            <caret line="13" selection-start-line="13" selection-end-line="13" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1097,26 +1094,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/ToolbarComponent/ToolbarComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
-          <folding>
-            <element signature="e#51#90#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataParsers/parserXML.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1020">
-          <caret line="120" column="24" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@flatten-js/core/src/classes/box.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1155,45 +1132,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataParsers/parseTXT.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataParsers/parser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="42" column="70" lean-forward="true" selection-start-line="42" selection-start-column="70" selection-end-line="42" selection-end-column="70" />
-          <folding>
-            <element signature="e#51#134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="228" column="59" selection-start-line="228" selection-start-column="42" selection-end-line="228" selection-end-column="59" />
-          <folding>
-            <element signature="e#51#90#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/LayerList/LayersList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="86" column="50" selection-start-line="86" selection-start-column="50" selection-end-line="86" selection-end-column="50" />
-          <folding>
-            <element signature="e#51#90#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1239,7 +1177,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/UI/ModalPopup/ModalPopup.module.css">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1249,14 +1187,14 @@
     <entry file="file://$PROJECT_DIR$/src/components/LayersList/LayerEditForm/LayerEditForm.module.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
-          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/LayersList/LayerListElement/LayerListElement.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
-          <caret line="80" column="13" lean-forward="true" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
+          <caret line="80" column="13" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
           <folding>
             <element signature="e#51#90#0" expanded="true" />
           </folding>
@@ -1286,10 +1224,106 @@
     <entry file="file://$PROJECT_DIR$/src/components/LayersList/LayerListToolbar/LayerListToolbar.module.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="272">
+            <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dataParsers/parserODB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="94" column="67" selection-start-line="94" selection-start-column="51" selection-end-line="94" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/middleware/readFiles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2694">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dataParsers/parseTXT.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dataParsers/parser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3951">
+          <caret line="35" column="86" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="35" selection-end-column="86" />
+          <folding>
+            <element signature="e#51#134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dataParsers/parserXML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="215" column="15" lean-forward="true" selection-start-line="215" selection-start-column="4" selection-end-line="215" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dataParsers/parseJSON.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/ToolbarComponent/ToolbarComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="17" column="96" selection-start-line="17" selection-start-column="96" selection-end-line="17" selection-end-column="96" />
+          <folding>
+            <element signature="e#51#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        <state relative-caret-position="483">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="228" column="59" selection-start-line="228" selection-start-column="42" selection-end-line="228" selection-end-column="59" />
+          <folding>
+            <element signature="e#51#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/LayerList/LayersList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="86" column="50" selection-start-line="86" selection-start-column="50" selection-end-line="86" selection-end-column="50" />
+          <folding>
+            <element signature="e#51#90#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
