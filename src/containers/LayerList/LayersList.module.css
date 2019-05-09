@@ -1,24 +1,23 @@
-.App-layers {
-    /* put the layer list on the left */
-    /*list-style-type:none;*/
-    /* 12em is the width of the columns */
-    flex: 0 0 13em;
-    flex-grow: 0;
-    order: -1;
-    background: rgba(147, 128, 108, 0.1);
-    overflow-y: auto;
-    padding-left: 0px;
-    margin-top: 0;
-    margin-bottom: 0;
-}
+/*.App-layers {*/
+    /*!* put the layer list on the left *!*/
+    /*!*list-style-type:none;*!*/
+    /*!* 12em is the width of the columns *!*/
+    /*flex: 0 0 13em;*/
+    /*flex-grow: 0;*/
+    /*order: -1;*/
+    /*background: rgba(147, 128, 108, 0.1);*/
+    /*overflow-y: auto;*/
+    /*padding-left: 0px;*/
+    /*margin-top: 0;*/
+    /*margin-bottom: 0;*/
+/*}*/
 
-.App-layers ul {
-    padding:0;
-    overflow:auto;
-}
+/*.App-layers ul {*/
+    /*padding:0;*/
+    /*overflow:auto;*/
+/*}*/
 
-/*@media (max-width: 415px) {*/
-@media only screen and (max-width: 415px) {
+/*@media only screen and (max-width: 415px) {*/
     .App-layers {
         display: none;
     }
@@ -30,8 +29,8 @@
         height: 65%;
         max-width: 70%;
         max-height: 70%;
-        left: 10px;
-        top: 190px;
+        left: 26px;
+        top: 110px;
         z-index: 10;
         background-color: rgba(255,255,255,0.9);
         border: 1px solid darkgrey;
@@ -43,9 +42,11 @@
     }
 
     .App-layers-displayed ul {
-        padding-left: 3px;
+        padding: 0 4px;
+        margin-block-start: 4px;
+        margin-block-end: 4px;
     }
-}
+/*}*/
 
 @keyframes fadeIn {
     from {

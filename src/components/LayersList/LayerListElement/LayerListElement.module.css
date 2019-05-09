@@ -1,11 +1,12 @@
 .Layer {
-    padding: 3px;
-    /*border-bottom: 1px solid black;*/
+    padding: 4px;
+    border-bottom: 1px inset rgba(147, 128, 108, 0.1);
     display: flex;
     flex-direction: row;
     tab-index: 1;
     z-index: -1;
-    /*margin-bottom: 2px;*/
+    margin-top: 0;
+    margin-bottom: 0;
     /*margin-right: 2px;*/
     /*background-color: aliceblue;*/
 }
@@ -17,14 +18,16 @@
 }
 
 .LayerSelectionBox {
-    flex: 2;
-    marginRight: 3
+    /*flex: 2;*/
+    marginRight: 3;
+    /*border: 1px solid black;*/
 }
 
 .LayerSelectionMark {
     width: 16px;
     marginLeft: 2px;
     cursor: default;
+    font-weight: bolder;
 }
 
 .LayerNameBox {

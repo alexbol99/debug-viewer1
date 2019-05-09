@@ -11,7 +11,7 @@
   display: flex;
   flex:1 0 auto;
   /*width:90%;*/
-  /* border: 2px solid darkgrey;*/
+   border-left: 1.5em solid rgba(147, 128, 108, 0.1);
   /*border-radius: 5px;*/
 }
 

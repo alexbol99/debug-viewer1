@@ -13,7 +13,7 @@ class DownloadPopup extends Component {
                 xmlString: createXMLString(layer.shapes)
             } : null
         }) : [];
-        return this.props.showPopup ? (
+        return this.props.showPopup && this.props.layers.length > 0 ? (
             <ModalPopup
                 showPopup={this.props.showPopup}
                 closePopup={this.props.closePopup}

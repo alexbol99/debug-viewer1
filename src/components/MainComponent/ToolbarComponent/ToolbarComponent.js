@@ -15,10 +15,8 @@ class ToolbarComponent extends Component {
     render() {
         return (
             <div className={classes["App-toolbar"]}>
-                <Button type="trigger" mobileOnly title="Show layers list" iconName='layer-group' onClick={this.props.onLayerListButtonClicked} />
-
                 {/*<h4>Toolbar</h4>*/}
-                <Button type="trigger" title="Open files" iconName='folder-open'
+                <Button type="trigger" title="Upload files" iconName='folder-open'
                         onClick={this.openJobButtonClicked}
                 />
 
@@ -27,15 +25,17 @@ class ToolbarComponent extends Component {
                        onChange={this.props.onFileSelected}
                 />
 
-                {/*<Button type="trigger" title="Save document on cloud" iconName='save'*/}
+                <Button type="trigger" title="Show/hide layers" iconName='layer-group' onClick={this.props.onLayerListButtonClicked} />
+
+                    {/*<Button type="trigger" title="Save document on cloud" iconName='save'*/}
                         {/*onClick={this.props.onSaveDocumentButtonClicked}*/}
                 {/*/>*/}
 
-                <Button type="trigger" title="Clean current document" iconName='broom'
+                <Button type="trigger" title="Delete all layers" iconName='broom'
                         onClick={this.props.onClearAllButtonClicked}
                 />
 
-                <Button type="trigger" title="Download current document" iconName='file-download'
+                <Button type="trigger" title="Download layers" iconName='file-download'
                         onClick={this.props.onShowDownloadPopupPressed}
                 />
 
@@ -47,19 +47,19 @@ class ToolbarComponent extends Component {
 
                 <Separator/>
 
-                <Button type="mode" title="Pan by drag" iconName='hand-paper'
+                <Button type="mode" title="Pan by drag" iconName='arrows-alt'
                         active={!this.props.measurePointsActive}
                         onClick={this.props.onPanByDragPressed}
                 />
 
-                <Button type="mode" title="Measure distance" iconName='hand-lizard'
+                <Button type="mode" title="Measure distance between points" iconName='drafting-compass'
                         active={this.props.measurePointsActive}
                         onClick={this.props.onMeasurePointsButtonPressed}
                 />
 
                 <Separator/>
 
-                <Button type="trigger" title="Measure distance between shapes" iconName='ruler'
+                <Button type="trigger" title="Measure distance between selected shapes" iconName='ruler'
                         onClick={this.props.onMeasureBetweenShapesButtonPressed}
                 />
 

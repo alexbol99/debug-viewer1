@@ -9,7 +9,7 @@ const DisplayCoordsTool = ({stage, coordX, coordY, divisor, decimals}) => {
 
     let mainCanvas = stage.canvas;
     let top = mainCanvas.offsetTop + 10;
-    let left = mainCanvas.offsetLeft + 10;
+    let left = mainCanvas.width - 200; //  mainCanvas.offsetLeft + 10;
     let x = stage.C2W_X(coordX);
     let y = stage.C2W_Y(coordY);
     return (
