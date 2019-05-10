@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import ModalPopup from "../UI/ModalPopup/ModalPopup";
-// import {createXMLString} from "../../dataParsers/createXML";
 
 import classes from "./UploadPopup.module.css";
 
 class UploadPopup extends Component {
     inputElement = React.createRef();
+    state = {
+        dragOver:false
+    };
 
     openFilesButtonClicked = () => this.inputElement.current.click();
 
@@ -27,23 +29,26 @@ class UploadPopup extends Component {
                 if (ev.dataTransfer.items[i].kind === 'file') {
                     let file = ev.dataTransfer.items[i].getAsFile();
                     files.push(file);
-                    // console.log('... file[' + i + '].name = ' + file.name);
                 }
             }
         } else {
             // Use DataTransfer interface to access the file(s)
             files = ev.dataTransfer.files;
-            // for (let i = 0; i < ev.dataTransfer.files.length; i++) {
-                // console.log('... file[' + i + '].name = ' + ev.dataTransfer.files[i].name);
-            // }
         }
 
         this.props.onFileDrop(files);
+        this.setState({dragOver:false});
     };
 
     dragOverHandler = (ev) => {
         // Prevent default behavior (Prevent file from being opened)
         ev.preventDefault();
+        this.setState({dragOver:true})
+    };
+
+    dragLeaveHandler = (ev) => {
+        ev.preventDefault();
+        this.setState({dragOver:false})
     };
 
     render() {
@@ -54,10 +59,13 @@ class UploadPopup extends Component {
                 header="Upload files"
             >
                 <div className={classes.UploadPopup}>
-                    <div className={classes.UploadTarget}
+                    <div className={this.state.dragOver ?
+                        `${classes.UploadTarget} ${classes.UploadTargetDragOver}` :
+                        `${classes.UploadTarget} ${classes.UploadTargetDragLeave}`}
                          onPaste={this.pasteHandler}
                          onDrop={this.dropHandler}
-                         onDragOver={this.dragOverHandler}
+                         onDragOverCapture={this.dragOverHandler}
+                         onDragLeaveCapture={this.dragLeaveHandler}
                     >
                         <span>Paste from buffer / Drop files</span>
                     </div>
@@ -72,11 +80,6 @@ class UploadPopup extends Component {
                            type="file" ref={this.inputElement} name="files[]" multiple
                            onChange={this.props.onFileSelected}
                     />
-
-                    {/*<hr/>*/}
-
-                    {/*<button>close</button>*/}
-
                 </div>
             </ModalPopup>
         ) : null;
