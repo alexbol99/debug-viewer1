@@ -1,0 +1,53 @@
+.UploadPopup {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    padding-bottom: 0.6em;
+}
+
+.UploadPopup h2 {
+    opacity: 0.4;
+}
+
+.UploadPopup button {
+    height: 10%;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.UploadTarget {
+    border: 1px dashed;
+    padding: 5em 3em;
+}
+
+.UploadTarget:hover {
+    background-color: lightgrey;
+}
+
+.UploadTarget span {
+    opacity: 0.2;
+    font-size: 3em;
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.Open {
+    transform: translateX(0);
+}
+
+.Close {
+    transform: translateX(-100%);
+}

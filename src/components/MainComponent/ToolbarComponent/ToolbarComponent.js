@@ -10,20 +10,20 @@ import classes from './ToolbarComponent.module.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 
 class ToolbarComponent extends Component {
-    openJobButtonClicked = () => this.refs.browseFiles.click();
+    // openJobButtonClicked = () => this.refs.browseFiles.click();
 
     render() {
         return (
             <div className={classes["App-toolbar"]}>
                 {/*<h4>Toolbar</h4>*/}
                 <Button type="trigger" title="Upload files" iconName='folder-open'
-                        onClick={this.openJobButtonClicked}
+                        onClick={this.props.onShowUploadPopupPressed}
                 />
 
-                <input style={{fontSize: 16, marginTop: 5, marginBottom: 5, display: "none"}}
-                       type="file" id="browseFiles" ref="browseFiles" name="files[]" multiple
-                       onChange={this.props.onFileSelected}
-                />
+                {/*<input style={{fontSize: 16, marginTop: 5, marginBottom: 5, display: "none"}}*/}
+                       {/*type="file" id="browseFiles" ref="browseFiles" name="files[]" multiple*/}
+                       {/*onChange={this.props.onFileSelected}*/}
+                {/*/>*/}
 
                 <Button type="trigger" title="Show/hide layers" iconName='layer-group' onClick={this.props.onLayerListButtonClicked} />
 

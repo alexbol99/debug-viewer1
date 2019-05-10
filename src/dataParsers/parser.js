@@ -7,8 +7,9 @@ import Flatten from '@flatten-js/core';
 import {offsetSegment, offsetArc} from "../models/polygonOffset";
 
 /*
-let debug_str = `+		[0]	{nrec=27 nalloc=27 h_ind_id=-1 ...} mat_cont_hdr_struc	mat_cont_struc
-    +		[1]	{pmin=59146400,5973200 pmax=59606001,6438000} mat_cont_lim_struc	mat_cont_struc
+let debug_str = `
++		[0]	{nrec=27 nalloc=27 h_ind_id=-1 ...} mat_cont_hdr_struc	mat_cont_struc
++		[1]	{pmin=59146400,5973200 pmax=59606001,6438000} mat_cont_lim_struc	mat_cont_struc
 +		[2]	{nedge=23 nalloc=25 ntop=2 ...} mat_cont_poly_struc	mat_cont_struc
 +		[3]	{pmin=59146400,5973200 pmax=59606001,6438000} mat_cont_lim_struc	mat_cont_struc
 +		[4]	{ps=59192738,6363124 pe=59216000,6372800 pc=59216000,6340000 cw=1} mat_curve_struc	mat_cont_struc

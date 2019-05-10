@@ -41,7 +41,8 @@ const defaultAppState = {
     stage: null,
     showSpinner: false,
     showLayerList: false,
-    showDownloadPopup: false
+    showDownloadPopup: false,
+    showUploadPopup: false
 };
 
 const app = (state = defaultAppState, action) => {
@@ -157,6 +158,11 @@ const app = (state = defaultAppState, action) => {
                 ...state,
                 showDownloadPopup: !state.showDownloadPopup
             };
+        case ActionTypes.TOGGLE_UPLOAD_POPUP_CLICKED:
+            return {
+                ...state,
+                showUploadPopup: !state.showUploadPopup
+            }
         default:
             return state;
     }

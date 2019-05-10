@@ -24,7 +24,7 @@ import DisplayCoordsTool from "../../tools/displayCoordsTool";
 
 import AboutPopup from "../../components/AboutPopup/AboutPopup";
 import DownloadPopup from "../../components/DownloadPopup/DownloadPopup";
-
+import UploadPopup from '../../components/UploadPopup/UploadPopup';
 import CloudDocument from '../../components/Constructions/CloudDocument';
 
 import styles from './MainComponent.module.css';
@@ -33,6 +33,10 @@ class MainComponent extends Component {
     handleFileSelect = (event) => {
         if (!(File && FileReader && FileList)) return;
         let files = event.target.files; // FileList object
+        this.props.handleFileSelect(files, this.props.stage, this.props.layers);
+    };
+
+    handleFileDrop = (files) => {
         this.props.handleFileSelect(files, this.props.stage, this.props.layers);
     };
 
@@ -185,6 +189,7 @@ class MainComponent extends Component {
                     onClearAllButtonClicked={this.clearCurrentDocument}
                     onLayerListButtonClicked={this.props.toggleLayerList}
                     onShowDownloadPopupPressed={this.props.toggleDownloadPopup}
+                    onShowUploadPopupPressed={this.props.toggleUploadPopup}
                 />
 
                 <CanvasComponent />
@@ -232,6 +237,15 @@ class MainComponent extends Component {
                     layers={this.props.layers}
                 />
 
+                <UploadPopup
+                    showPopup={this.props.showUploadPopup}
+                    closePopup={this.props.toggleUploadPopup}
+                    title="Upload files"
+                    onFileSelected={this.handleFileSelect}
+                    onFileDrop={this.handleFileDrop}
+                    onPaste={this.props.pasteDataFromBuffer}
+                />
+
                 <Route path="/documents/:id" component={CloudDocument}/>
 
             </main>
@@ -256,6 +270,7 @@ const mapStateToProps = (state, ownProps) => {
         measurePointsActive: state.app.measurePointsActive,
         showAboutPopup: state.app.showAboutPopup,
         showDownloadPopup: state.app.showDownloadPopup,
+        showUploadPopup: state.app.showUploadPopup,
         layers: state.layers,
         mouse: state.mouse,
         measureShapesTool: state.measureShapesTool,
@@ -284,10 +299,12 @@ const mapDispatchToProps = dispatch => {
         togglePanByDrag: () => dispatch(actions.togglePanByDrag()),
         toggleLayerList: () => dispatch(actions.toggleLayerList()),
         toggleDownloadPopup: () => dispatch(actions.toggleDownloadPopup()),
+        toggleUploadPopup: () => dispatch(actions.toggleUploadPopup()),
         applySkeletonRecognition: () => dispatch(actions.applySkeletonRecognition()),
         handleMouseRollOverShape: (shape) => dispatch(actions.handleMouseRollOverShape(shape)),
         handleMouseRollOutShape: () => dispatch(actions.handleMouseRollOutShape()),
         handleClickOnShape: (shape, layer) => dispatch(actions.handleClickOnShape(shape, layer)),
+        pasteDataFromBuffer: (clipboardData) => dispatch(actions.pasteDataFromBuffer(clipboardData)),
 
         clearAllLayers: () => dispatch(layerActions.deleteAllLayers()),
 

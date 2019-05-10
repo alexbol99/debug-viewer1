@@ -140,4 +140,17 @@ export const toggleDownloadPopup = () => {
     }
 };
 
+export const toggleUploadPopup = () => {
+    return {
+        type: ActionTypes.TOGGLE_UPLOAD_POPUP_CLICKED
+    }
+};
+
+export const pasteDataFromBuffer = (clipboardData) => {
+    return {
+        type: ActionTypes.DATA_FROM_BUFFER_PASTED,
+        data: clipboardData
+    }
+};
+
 
