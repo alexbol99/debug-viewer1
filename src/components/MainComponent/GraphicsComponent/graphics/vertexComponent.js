@@ -5,7 +5,7 @@
 import React,{Component} from 'react';
 import {Shape, Shadow} from '@createjs/easeljs';
 import {graphics} from '../../../../models/graphics';
-import Utils from '../../../../models/utils';
+import {is_equal} from '../../../../models/utils';
 import VertexLabel from '../domelements/VertexLabel/VertexLabel';
 
 class VertexComponent extends Component {
@@ -69,7 +69,7 @@ class VertexComponent extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        if (Utils.is_equal(this.props, nextProps) && Utils.is_equal(this.state, nextState)) {
+        if (is_equal(this.props, nextProps) && is_equal(this.state, nextState)) {
             return false;
         }
         return true;
@@ -93,6 +93,8 @@ class VertexComponent extends Component {
             <VertexLabel
                 stage={this.props.stage}
                 vertex={this.props.vertex}
+                divisor={this.props.divisor}
+                decimals={this.props.decimals}
             />
             ) : null;
     }

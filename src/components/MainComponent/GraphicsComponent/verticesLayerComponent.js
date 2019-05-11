@@ -2,15 +2,19 @@ import React from 'react'
 import VerticesComponent from './graphics/verticesComponent';
 import { connect } from "react-redux";
 
-const verticesLayerComponent = ({stage, layer, displayVertices, zoomFactor}) => {
-    return (layer.displayed && displayVertices) ? (
-        layer.shapes.map((shape, index) =>
+const verticesLayerComponent = (props) => {
+    return (props.layer.displayed && props.displayVertices) ? (
+        props.layer.shapes.map((shape, index) =>
             <VerticesComponent
                 key={index}
-                stage={stage}
+                stage={props.stage}
                 model={shape}
-                color={layer.color}
-                zoomFactor={zoomFactor}
+                color={props.layer.color}
+                divisor={props.divisor}
+                decimals={props.decimals}
+                zoomFactor={props.zoomFactor}
+                originX={props.originX}
+                originY={props.originY}
             />
         )
     ) : null;
@@ -21,8 +25,10 @@ const mapStateToProps = (state) => {
         stage: state.app.stage,
         displayVertices: state.app.displayVertices,
         zoomFactor: state.app.zoomFactor,
+        originX: state.app.originX,
+        originaY: state.app.originY,
         divisor: state.app.divisor,
-        decimals: state.app.decimals
+        decimals: state.app.decimals,
     }
 };
 

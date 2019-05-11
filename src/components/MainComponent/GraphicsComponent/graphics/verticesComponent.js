@@ -10,9 +10,13 @@ const VerticesComponent = (props) => {
         props.model.geom.vertices.map((vertex, index) =>
             <VertexComponent key={index}
                              stage={props.stage}
-                             color={props.color}
-                             zoomFactor={props.zoomFactor}
                              vertex={vertex}
+                             color={props.color}
+                             divisor={props.divisor}
+                             decimals={props.decimals}
+                             zoomFactor={props.zoomFactor}
+                             originX={props.originX}
+                             originY={props.originY}
             />
         ) : null;
 

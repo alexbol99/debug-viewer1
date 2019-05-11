@@ -5,7 +5,7 @@
 import {Component} from 'react';
 import {Shape} from '@createjs/easeljs';
 import {graphics} from '../../../../models/graphics';
-import Utils from '../../../../models/utils';
+import {is_equal} from '../../../../models/utils';
 
 export class ShapeComponent extends Component {
     constructor(params) {
@@ -79,7 +79,7 @@ export class ShapeComponent extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        if (Utils.is_equal(this.props, nextProps)) {
+        if (is_equal(this.props, nextProps)) {
             return false;
         }
         return true;

@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="- Display vertices in separate VerticesLayer component">
-      <change afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/VertexLabel/VertexLabel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/VertexLabel/VertexLabel.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/vertexComponent.js" afterDir="false" />
+    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="- Start to implement vertex coordinates tooltip">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/LabelsLayerComponent/labelsLayerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/LabelsLayerComponent/labelsLayerComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/VertexLabel/VertexLabel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/VertexLabel/VertexLabel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/imageComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/imageComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/shapeComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/shapeComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/vertexComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/vertexComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/verticesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/verticesComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/layerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/layerComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/layersComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/layersComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/verticesLayerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/verticesLayerComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tools/displayCoordsTool.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/displayCoordsTool.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,16 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="labelsLayer.module.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/LabelsLayerComponent/labelsLayer.module.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="vertexComponent.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="vertexComponent.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/vertexComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+            <state relative-caret-position="134">
+              <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
               <folding>
                 <element signature="e#51#87#0" expanded="true" />
               </folding>
@@ -43,14 +36,68 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VertexLabel.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VertexLabel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/VertexLabel/VertexLabel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" lean-forward="true" selection-start-line="7" selection-end-line="9" />
+            <state relative-caret-position="240">
+              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="verticesLayerComponent.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/verticesLayerComponent.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="149">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="verticesComponent.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/verticesComponent.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+              <folding>
+                <element signature="e#50#76#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layersComponent.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/layersComponent.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="appActions.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/actions/appActions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2220">
+              <caret line="148" column="32" selection-start-line="148" selection-start-column="13" selection-end-line="148" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/reducers/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="35" column="23" lean-forward="true" selection-start-line="34" selection-end-line="35" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -76,56 +123,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToolbarComponent.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/MainComponent/ToolbarComponent/ToolbarComponent.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="12" column="66" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="66" />
-              <folding>
-                <element signature="e#51#90#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="VertexLabel.module.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/VertexLabel/VertexLabel.module.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
               <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="graphics.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/models/graphics.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="43" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#75#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="verticesComponent.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/verticesComponent.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="13" column="58" lean-forward="true" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
-              <folding>
-                <element signature="e#50#76#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="labelsLayerComponent.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/LabelsLayerComponent/labelsLayerComponent.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-64">
-              <caret column="26" lean-forward="true" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -195,8 +197,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/dataParsers/parseCSV.js" />
-        <option value="$PROJECT_DIR$/src/models/stage.js" />
         <option value="$PROJECT_DIR$/src/dataParsers/parserODB.js" />
         <option value="$PROJECT_DIR$/src/middleware/skeleton_recognition.js" />
         <option value="$PROJECT_DIR$/src/models/polygonOffset.js" />
@@ -206,7 +206,6 @@
         <option value="$PROJECT_DIR$/src/components/Layout/HeaderComponent/HeaderComponent.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/AppBody.js" />
-        <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/imageComponent.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/DownloadPopup/DownloadPopup.module.css" />
         <option value="$PROJECT_DIR$/src/models/graphics.js" />
@@ -235,17 +234,20 @@
         <option value="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" />
         <option value="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.module.css" />
         <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/verticesComponent.js" />
-        <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/shapeComponent.js" />
         <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/layerComponent.js" />
         <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/layersComponent.js" />
         <option value="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" />
-        <option value="$PROJECT_DIR$/src/tools/displayCoordsTool.js" />
-        <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/verticesLayerComponent.js" />
         <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/LabelsLayerComponent/labelsLayerComponent.js" />
-        <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/verticesComponent.js" />
         <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/VertexLabel/VertexLabel.module.css" />
-        <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/vertexComponent.js" />
+        <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/shapeComponent.js" />
+        <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/imageComponent.js" />
+        <option value="$PROJECT_DIR$/src/models/utils.js" />
+        <option value="$PROJECT_DIR$/src/tools/displayCoordsTool.js" />
+        <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/VertexLabel/VertexLabelComponent.js" />
         <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/VertexLabel/VertexLabel.js" />
+        <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/verticesLayerComponent.js" />
+        <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/verticesComponent.js" />
+        <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/vertexComponent.js" />
       </list>
     </option>
   </component>
@@ -583,8 +585,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.deploy" />
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.deploy" />
         <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
@@ -639,7 +641,7 @@
       <workItem from="1555243406611" duration="6997000" />
       <workItem from="1555312633135" duration="1869000" />
       <workItem from="1555565298065" duration="1812000" />
-      <workItem from="1557493536609" duration="27255000" />
+      <workItem from="1557493536609" duration="31307000" />
     </task>
     <task id="LOCAL-00001" summary="Added route /boolean-test, refactoring">
       <created>1539784239144</created>
@@ -928,11 +930,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557554793215</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="- Start to implement vertex coordinates tooltip">
+      <created>1557587563432</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1557587563432</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="458032000" />
+    <option name="totallyTimeSpent" value="462084000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -975,7 +984,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implement Delete Document" />
     <MESSAGE value="Implement Document Name" />
     <MESSAGE value="Fix logic of different situation of Edit URL" />
     <MESSAGE value="Fixed bug: Home button does not trigger reloading (fixed by forceReload)" />
@@ -1000,26 +1008,10 @@
     <MESSAGE value="- New Upload Popup implements OpenFile, Drag&amp;Drap File and Copy&amp;Paste" />
     <MESSAGE value="- Style drag target onOver changes background" />
     <MESSAGE value="- Display vertices in separate VerticesLayer component" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Display vertices in separate VerticesLayer component" />
+    <MESSAGE value="- Start to implement vertex coordinates tooltip" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Start to implement vertex coordinates tooltip" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/LayersList/LayerListElement/LayerListElement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="80" column="13" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
-          <folding>
-            <element signature="e#51#90#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/LayersList/LayerEditForm/LayerEditForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="50" column="65" selection-start-line="50" selection-start-column="65" selection-end-line="50" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/LayersList/LayerListToolbar/LayerListToolbar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="463">
@@ -1224,13 +1216,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/appActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="148" column="32" selection-start-line="148" selection-start-column="13" selection-end-line="148" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12">
@@ -1255,13 +1240,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/reducers/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-309">
@@ -1273,16 +1251,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="94" lean-forward="true" selection-start-line="62" selection-end-line="94" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/layersComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -1306,46 +1274,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tools/displayCoordsTool.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/verticesLayerComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="4" column="81" lean-forward="true" selection-start-line="4" selection-start-column="81" selection-end-line="4" selection-end-column="81" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/shapeComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-          <folding>
-            <element signature="e#51#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/verticesComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="58" lean-forward="true" selection-start-line="13" selection-start-column="58" selection-end-line="13" selection-end-column="58" />
-          <folding>
-            <element signature="e#50#76#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/graphics.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1366,16 +1294,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/ToolbarComponent/ToolbarComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="66" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="66" />
-          <folding>
-            <element signature="e#51#90#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/DownloadPopup/DownloadPopup.module.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1390,6 +1308,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/shapeComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="81" column="12" selection-start-line="81" selection-start-column="12" selection-end-line="81" selection-end-column="12" />
+          <folding>
+            <element signature="e#51#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/imageComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="83" column="12" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#51#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tools/displayCoordsTool.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="75" selection-start-line="6" selection-start-column="75" selection-end-line="6" selection-end-column="75" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#50#76#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/ToolbarComponent/ToolbarComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="66" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="66" />
+          <folding>
+            <element signature="e#51#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/labelComponent.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1400,22 +1367,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/vertexComponent.js">
+    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/VertexLabel/VertexLabel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+        <state relative-caret-position="240">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
           <folding>
-            <element signature="e#51#87#0" expanded="true" />
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/VertexLabel/VertexLabel.js">
+    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/layersComponent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="7" selection-end-line="9" />
+        <state relative-caret-position="296">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/appActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2220">
+          <caret line="148" column="32" selection-start-line="148" selection-start-column="13" selection-end-line="148" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/reducers/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="35" column="23" lean-forward="true" selection-start-line="34" selection-end-line="35" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/verticesLayerComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/verticesComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+          <folding>
+            <element signature="e#50#76#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/vertexComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="30" column="38" lean-forward="true" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+          <folding>
+            <element signature="e#51#87#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -5,7 +5,7 @@
 import {Component} from 'react';
 import {Bitmap} from '@createjs/easeljs';
 import '../../../../models/graphics';
-import Utils from '../../../../models/utils';
+import {is_equal} from '../../../../models/utils';
 // import storage from '../../../../firebase-storage';
 
 export class ImageComponent extends Component {
@@ -81,7 +81,7 @@ export class ImageComponent extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        if (Utils.is_equal(this.props, nextProps)) {
+        if (is_equal(this.props, nextProps)) {
             return false;
         }
         return true;
