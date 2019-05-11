@@ -13,7 +13,8 @@ const DisplayCoordsTool = ({stage, coordX, coordY, divisor, decimals}) => {
     let x = stage.C2W_X(coordX);
     let y = stage.C2W_Y(coordY);
     return (
-        <div style={{position: 'absolute', top: top, left: left}}>
+        <div style={{position: 'absolute', top: top, left: left,
+        backgroundColor: 'white', opacity:0.8}}>
             <h5 style={{margin: 0, padding: 3}}>
                 X: {format(x)} Y: {format(y)}
             </h5>

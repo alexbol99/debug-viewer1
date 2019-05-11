@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {LayerComponent} from "./layerComponent";
 import LabelsLayerComponent from "./LabelsLayerComponent/labelsLayerComponent";
+import VerticesLayerComponent from './verticesLayerComponent';
 import Layers from "../../../models/layers";
 
 class LayersComponent extends Component {
@@ -37,7 +38,13 @@ class LayersComponent extends Component {
                     layer={layer}
                     displayed={layer.displayed}
                     displayLabels={this.props.displayLabels}
-
+                />
+                <VerticesLayerComponent
+                    stage={this.props.stage}
+                    layer={layer}
+                    displayVertices={this.props.displayVertices}
+                    color={layer.color}
+                    zoomFactor={this.props.zoomFactor}
                 />
             </React.Fragment>
         )
