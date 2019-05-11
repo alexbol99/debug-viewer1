@@ -1,13 +1,15 @@
 import React from 'react';
 import LabelComponent from '../domelements/labelComponent';
+import { connect } from "react-redux";
 
-const labelsLayerComponent = ({stage, layer, displayLabels}) => {
-    return (layer.displayed && displayLabels) ? (
-        layer.shapes.map((shape, index) => {
+const labelsLayerComponent = (props) => {
+
+    return (props.layer.displayed && props.displayLabels) ? (
+        props.layer.shapes.map((shape, index) => {
                 return (shape.label && shape.label.trim() !== "") ? (
                     <LabelComponent
                         key={index}
-                        stage={stage}
+                        stage={props.stage}
                         shape={shape}
                     />) : null;
             }
@@ -15,4 +17,13 @@ const labelsLayerComponent = ({stage, layer, displayLabels}) => {
     ) : null;
 };
 
-export default labelsLayerComponent;
+const mapStateToProps = (state) => {
+    return {
+        stage: state.app.stage,
+        displayLabels: state.app.displayLabels
+    }
+};
+
+const mapDispatchToProps = dispatch => {return {}};
+
+export default connect(mapStateToProps, mapDispatchToProps)(labelsLayerComponent);

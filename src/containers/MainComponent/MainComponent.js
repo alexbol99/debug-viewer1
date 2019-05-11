@@ -111,11 +111,6 @@ class MainComponent extends Component {
         }
     };
 
-    onImageLoaded = (model, layer, image) => {
-        this.props.setHomeView(this.props.stage, layer);
-        this.forceUpdate();       // ??? unclear why on Home button click not updated
-    }
-
     componentDidMount() {
         window.onresize = this.props.resizeStage;
         // Keyboard event
@@ -174,7 +169,7 @@ class MainComponent extends Component {
                     measurePointsActive={this.props.measurePointsActive}
                     units={this.props.units}
                     showSkeletonRecognitionButton={this.props.showSkeletonRecognitionButton}
-                    onFileSelected={this.handleFileSelect}
+                    // onFileSelected={this.handleFileSelect}
                     onHomeButtonPressed={this.setHomeView}
                     onPanByDragPressed={this.props.togglePanByDrag}
                     onMeasurePointsButtonPressed={this.props.toggleMeasureBetweenPoints}
@@ -199,22 +194,8 @@ class MainComponent extends Component {
                     stage={this.props.stage}
                     onStageUnmounted={this.props.destroyStage}
                 >
-                    <LayersComponent
-                        stage={this.props.stage}
-                        layers={this.props.layers}
-                        displayVertices={this.props.displayVertices}
-                        displayLabels={this.props.displayLabels}
-                        widthOn={this.props.widthOn}
-                        zoomFactor={this.props.zoomFactor}
-                        hoveredShape={this.props.measureShapesTool.hoveredShape}
-                        firstMeasuredShape={this.props.measureShapesTool.firstMeasuredShape}
-                        secondMeasuredShape={this.props.measureShapesTool.secondMeasuredShape}
-                        onMouseOver={this.props.handleMouseRollOverShape}
-                        onMouseOut={this.props.handleMouseRollOutShape}
-                        onClick={this.props.handleClickOnShape}
-                        setHomeView={this.props.setHomeView}
-                        onImageLoaded={this.onImageLoaded}
-                    />
+                    <LayersComponent layers={this.props.layers} />
+
                     {displayCoordsTool}
                     {measurePointsTool}
                     {measureShapesTool}
@@ -301,9 +282,6 @@ const mapDispatchToProps = dispatch => {
         toggleDownloadPopup: () => dispatch(actions.toggleDownloadPopup()),
         toggleUploadPopup: () => dispatch(actions.toggleUploadPopup()),
         applySkeletonRecognition: () => dispatch(actions.applySkeletonRecognition()),
-        handleMouseRollOverShape: (shape) => dispatch(actions.handleMouseRollOverShape(shape)),
-        handleMouseRollOutShape: () => dispatch(actions.handleMouseRollOutShape()),
-        handleClickOnShape: (shape, layer) => dispatch(actions.handleClickOnShape(shape, layer)),
         pasteDataFromBuffer: (clipboardData) => dispatch(actions.pasteDataFromBuffer(clipboardData)),
 
         clearAllLayers: () => dispatch(layerActions.deleteAllLayers()),
