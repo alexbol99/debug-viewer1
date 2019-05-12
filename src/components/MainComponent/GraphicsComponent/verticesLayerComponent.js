@@ -26,7 +26,7 @@ const mapStateToProps = (state) => {
         displayVertices: state.app.displayVertices,
         zoomFactor: state.app.zoomFactor,
         originX: state.app.originX,
-        originaY: state.app.originY,
+        originY: state.app.originY,
         divisor: state.app.divisor,
         decimals: state.app.decimals,
     }

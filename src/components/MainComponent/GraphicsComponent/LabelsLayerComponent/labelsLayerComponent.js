@@ -11,6 +11,9 @@ const labelsLayerComponent = (props) => {
                         key={index}
                         stage={props.stage}
                         shape={shape}
+                        zoomFactor={props.zoomFactor}
+                        originX={props.originX}
+                        originY={props.originY}
                     />) : null;
             }
         )
@@ -20,7 +23,10 @@ const labelsLayerComponent = (props) => {
 const mapStateToProps = (state) => {
     return {
         stage: state.app.stage,
-        displayLabels: state.app.displayLabels
+        displayLabels: state.app.displayLabels,
+        zoomFactor: state.app.zoomFactor,
+        originX: state.app.originX,
+        originY: state.app.originY
     }
 };
 
