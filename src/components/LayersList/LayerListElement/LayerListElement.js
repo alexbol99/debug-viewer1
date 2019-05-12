@@ -64,7 +64,7 @@ class LayerListElement extends Component {
                 <div className={styles.LayerNameBox}
                      style={{backgroundColor: bgcolor, opacity: layerNameOpacity}}>
                     <h4 ref="layerName"
-                        title={this.props.layer.name}
+                        title={this.props.layer.title}
                         tabIndex='1'
                     >
                         {this.props.layer.name}

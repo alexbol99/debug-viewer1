@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ModalPopup from "../UI/ModalPopup/ModalPopup";
+import Snackbar from "../UI/Snackbar/Snackbar";
 
 import classes from "./UploadPopup.module.css";
 
@@ -14,6 +15,9 @@ class UploadPopup extends Component {
     pasteHandler = (ev) => {
         ev.stopPropagation();
         this.props.onPaste(ev.clipboardData);
+        // let item = ev.clipboardData.items[0];
+        // item.getAsString( this.addData );
+        // this.setState({clipboardData:data})
     };
 
     dropHandler = (ev) => {
@@ -80,6 +84,10 @@ class UploadPopup extends Component {
                            type="file" ref={this.inputElement} name="files[]" multiple
                            onChange={this.props.onFileSelected}
                     />
+
+                    <Snackbar
+                        message="Added new layer"
+                        />
                 </div>
             </ModalPopup>
         ) : null;

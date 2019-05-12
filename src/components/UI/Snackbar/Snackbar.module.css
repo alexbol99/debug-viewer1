@@ -1,0 +1,43 @@
+.Snackbar {
+    background-color: ghostwhite;
+    position: absolute;
+    top: 25%;
+    left:70%;
+    text-align: center;
+    padding: 0.5em;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    color: royalblue;
+    box-sizing: border-box;
+    z-index: 75;
+}
+
+.Snackbar h3 {
+    margin: 0;
+}
+.SnackbarFadeIn {
+    animation: fadeIn 3s;
+}
+
+.SnackbarFadeOut {
+    animation: fadeOut 3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
