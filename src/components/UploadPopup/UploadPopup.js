@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ModalPopup from "../UI/ModalPopup/ModalPopup";
-import Snackbar from "../UI/Snackbar/Snackbar";
+// import Snackbar from "../UI/Snackbar/Snackbar";
 
 import classes from "./UploadPopup.module.css";
 
@@ -85,9 +85,9 @@ class UploadPopup extends Component {
                            onChange={this.props.onFileSelected}
                     />
 
-                    <Snackbar
-                        message="Added new layer"
-                        />
+                    {/*<Snackbar*/}
+                        {/*message="Added new layer"*/}
+                        {/*/>*/}
                 </div>
             </ModalPopup>
         ) : null;

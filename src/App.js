@@ -45,17 +45,20 @@ class App extends Component {
                     username={this.props.username}
                 />
 
+                <AppBody/>
+
                 <Switch>
                     {/*<Route path="/documents" exact component={DocumentsComponent}/>*/}
                     {/*<Route path="/signup" component={Signup} />*/}
                     {/*<Route path="/login" component={Login} />*/}
                     {/*<Route path="/logout" component={Logout} />*/}
 
-                    <Route path="/" component={AppBody}/>
+                    <Route path="/demo" exact component={Demo}/>
+                    {/*<Route path="/" component={AppBody}/>*/}
 
                     {/*<Route path="/documents/:id" component={CloudDocument}/>*/}
 
-                    <Route path="/demo" component={Demo}/>
+
                     <Route path="/skeleton" component={SkeletonRecognition}/>
                     <Route path="/collision-distance" component={CollisionDemo}/>
 

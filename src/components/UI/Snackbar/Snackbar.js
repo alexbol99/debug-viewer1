@@ -23,6 +23,7 @@ class Snackbar extends Component {
         clearTimeout(timeout1);
         clearTimeout(timeout2);
     }
+
     render() {
         const styleName = this.state.finished ?
             [classes.Snackbar, classes.SnackbarFadeOut].join(' ') :

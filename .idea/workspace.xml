@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="- Use Promise.all for faster document loading&#10;- Update size of image after loading&#10;- Set displayed all layers from JSON">
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/UI/SnackbarRoot.js" afterDir="false" />
+    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="- Added self-disappearing Snackbar component to display messages (not completed)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LayersList/LayerListElement/LayerListElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LayersList/LayerListElement/LayerListElement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,11 +20,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="UploadPopup.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-50">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="54">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -34,11 +41,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Snackbar.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.js">
+      <file leaf-file-name="LayersList.module.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+            <state relative-caret-position="870">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Demo.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Constructions/Demo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="56" column="60" lean-forward="true" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="60" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#378#414#0" expanded="true" />
+                <element signature="e#631#712#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -46,44 +88,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VertexLabel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/VertexLabel/VertexLabel.js">
+      <file leaf-file-name="Snackbar.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            <state relative-caret-position="450">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
-                <element signature="e#0#25#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vertexComponent.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/vertexComponent.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="81" column="24" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainComponent.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="807">
-              <caret line="263" column="5" lean-forward="true" selection-start-line="263" selection-start-column="5" selection-end-line="263" selection-end-column="5" />
-              <folding>
-                <element signature="e#51#90#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/reducers/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="35" column="23" selection-start-line="34" selection-end-line="35" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -98,31 +110,10 @@
       <file leaf-file-name="pasteData.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/middleware/pasteData.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-185">
+            <state relative-caret-position="-679">
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parser.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dataParsers/parser.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="37" selection-start-line="10" selection-end-line="37" />
-              <folding>
-                <element signature="e#51#134#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Snackbar.module.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-126">
-              <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -192,8 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/store/actions/stageActions.js" />
-        <option value="$PROJECT_DIR$/src/store/reducers/mouse.js" />
         <option value="$PROJECT_DIR$/src/middleware/stageController.js" />
         <option value="$PROJECT_DIR$/src/components/MainComponent/CanvasComponent/CanvasComponent.js" />
         <option value="$PROJECT_DIR$/src/firebase-instance.js" />
@@ -224,7 +213,6 @@
         <option value="$PROJECT_DIR$/src/models/polygonOffset.js" />
         <option value="$PROJECT_DIR$/src/dataParsers/parser.js" />
         <option value="$PROJECT_DIR$/src/dataParsers/parserXML.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/Layout/HeaderComponent/HeaderComponent.module.css" />
         <option value="$PROJECT_DIR$/src/components/Layout/HeaderComponent/HeaderComponent.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
@@ -241,8 +229,11 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/UI/SnackbarRoot.js" />
         <option value="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css" />
-        <option value="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" />
         <option value="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.js" />
+        <option value="$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css" />
+        <option value="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/components/Constructions/Demo.js" />
       </list>
     </option>
   </component>
@@ -253,10 +244,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="12" />
-    <option name="y" value="72" />
-    <option name="width" value="1264" />
-    <option name="height" value="665" />
+    <option name="x" value="129" />
+    <option name="y" value="90" />
+    <option name="width" value="1237" />
+    <option name="height" value="656" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -320,82 +311,6 @@
               <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="CanvasComponent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="DocumentName" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="GraphicsComponent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="GraphicsComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="domelements" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="GraphicsComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="domelements" type="462c0819:PsiDirectoryNode" />
-              <item name="VertexLabel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="GraphicsComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="graphics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="GraphicsComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="LabelsLayerComponent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
-              <item name="ToolbarComponent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -434,6 +349,13 @@
               <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="LayerList" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
@@ -510,18 +432,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/data" />
       <recent name="C:\Users\alexbol\WebstormProjects\debug-viewer1\src\models" />
       <recent name="C:\Users\Alex Bol\WebstormProjects\debug-viewer1\src\containers\Auth\Login" />
       <recent name="C:\Users\Alex Bol\WebstormProjects\debug-viewer1\src\containers\Auth" />
       <recent name="C:\Users\Alex Bol\WebstormProjects\debug-viewer1\src\components\UI" />
-      <recent name="C:\Users\Alex Bol\WebstormProjects\debug-viewer1\src\assets\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/data" />
       <recent name="$PROJECT_DIR$/src/components/UI" />
       <recent name="C:\Users\Alex Bol\WebstormProjects\debug-viewer1\src\containers\Auth\SignUp" />
       <recent name="C:\Users\alexbol\WebstormProjects\debug-viewer1\src\components\MainComponent" />
       <recent name="C:\Users\Alex Bol\WebstormProjects\debug-viewer1\src\components\Layout\HeaderComponent" />
-      <recent name="C:\Users\Alex Bol\WebstormProjects\debug-viewer1\src\components" />
     </key>
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
@@ -973,11 +895,18 @@
       <option name="project" value="LOCAL" />
       <updated>1555251253228</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="- Added self-disappearing Snackbar component to display messages (not completed)">
+      <created>1557698044265</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1557698044265</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="400701000" />
+    <option name="totallyTimeSpent" value="405408000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -989,17 +918,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="12" y="72" width="1264" height="665" extended-state="0" />
+    <frame x="129" y="90" width="1237" height="656" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.59266055" visible="true" weight="0.3515688" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.59266055" visible="true" weight="0.359375" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32942554" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.3286219" />
-      <window_info anchor="bottom" x="241" y="732" width="1622" height="198" id="Run" order="10" sideWeight="0.50120676" side_tool="true" visible="true" weight="0.3235832" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49879324" visible="true" weight="0.3235832" />
+      <window_info active="true" anchor="bottom" x="241" y="732" width="1622" height="198" id="Run" order="10" sideWeight="0.5041118" side_tool="true" visible="true" weight="0.34758365" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49835527" weight="0.32899627" />
       <window_info id="Structure" order="1" sideWeight="0.40733945" side_tool="true" weight="0.36569038" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49637973" weight="0.34917733" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49588814" visible="true" weight="0.34758365" />
       <window_info anchor="bottom" id="Debug" order="2" sideWeight="0.49874476" weight="0.3985375" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1047,7 +976,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added spinner on read files and detch data in demo" />
     <MESSAGE value="New Button component, Toolbar redesign without old images, also logic and styling" />
     <MESSAGE value="Support save document on Firebase (not completed)" />
     <MESSAGE value="Added toJSON methods to layers" />
@@ -1072,7 +1000,8 @@
     <MESSAGE value="- Upgrade to flatten-js@1.0.0-beta, not published yet" />
     <MESSAGE value="- Support circle shape in Copy/Paste parser (to be fixed: some bug with stoke colors)" />
     <MESSAGE value="- Support circle, rectangle, odb arc and odb line in Copy/Paste parser as polygons" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Support circle, rectangle, odb arc and odb line in Copy/Paste parser as polygons" />
+    <MESSAGE value="- Added self-disappearing Snackbar component to display messages (not completed)" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added self-disappearing Snackbar component to display messages (not completed)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1086,27 +1015,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/Constructions/SkeletonRecognition.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/middleware/skeleton_recognition.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="4" selection-start-column="7" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/layerComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="27" column="64" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/shapeComponent.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1163,6 +1071,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#50#76#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1177,6 +1089,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="61">
           <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1202,13 +1117,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -1236,13 +1144,6 @@
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1280,13 +1181,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1358,16 +1255,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UI/SnackbarRoot.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/UI/Button/Button.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1425,20 +1312,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/appActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2025" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/middleware/pasteData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-185">
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dataParsers/parser.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
@@ -1466,22 +1339,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js">
+    <entry file="file://$PROJECT_DIR$/src/components/UI/SnackbarRoot.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="265">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        <state relative-caret-position="450">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/appActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2025" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/middleware/pasteData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-679">
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="56" column="60" lean-forward="true" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#378#414#0" expanded="true" />
+            <element signature="e#631#712#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/data/poly1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Constructions/Demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
