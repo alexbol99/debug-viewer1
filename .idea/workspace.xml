@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="- Added self-disappearing Snackbar component to display messages (not completed)">
+    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="- Add Snackbar Component - self-disappearing message popup (not completed)&#10;- Upload Popup: add styling on hover (not completed)&#10;- Added demo rout page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Constructions/Demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Constructions/Demo.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -53,10 +50,44 @@
       <file leaf-file-name="Demo.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Constructions/Demo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+            <state relative-caret-position="190">
+              <caret line="30" column="47" lean-forward="true" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
+                <element signature="e#171#223#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CollisionDemo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Constructions/CollisionDemo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-481">
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cloudStorageActions.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/store/actions/cloudStorageActions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1929">
+              <folding>
+                <element signature="e#0#46#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parseTXT.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dataParsers/parseTXT.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -66,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="193">
-              <caret line="56" column="60" lean-forward="true" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="60" />
+              <caret line="56" column="60" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="60" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
                 <element signature="e#378#414#0" expanded="true" />
@@ -85,25 +116,6 @@
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Snackbar.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="appActions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/actions/appActions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2025" />
           </provider>
         </entry>
       </file>
@@ -244,7 +256,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="129" />
+    <option name="x" value="34" />
     <option name="y" value="90" />
     <option name="width" value="1237" />
     <option name="height" value="656" />
@@ -902,11 +914,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557698044265</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="- Add Snackbar Component - self-disappearing message popup (not completed)&#10;- Upload Popup: add styling on hover (not completed)&#10;- Added demo rout page">
+      <created>1558027972730</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1558027972730</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="405408000" />
+    <option name="totallyTimeSpent" value="408290000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -918,14 +937,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="129" y="90" width="1237" height="656" extended-state="0" />
+    <frame x="34" y="90" width="1237" height="656" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.59266055" visible="true" weight="0.359375" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.59266055" visible="true" weight="0.359375" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32942554" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.3286219" />
-      <window_info active="true" anchor="bottom" x="241" y="732" width="1622" height="198" id="Run" order="10" sideWeight="0.5041118" side_tool="true" visible="true" weight="0.34758365" />
+      <window_info anchor="bottom" x="241" y="732" width="1622" height="198" id="Run" order="10" sideWeight="0.5041118" side_tool="true" visible="true" weight="0.34758365" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49835527" weight="0.32899627" />
       <window_info id="Structure" order="1" sideWeight="0.40733945" side_tool="true" weight="0.36569038" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49588814" visible="true" weight="0.34758365" />
@@ -976,8 +995,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="New Button component, Toolbar redesign without old images, also logic and styling" />
-    <MESSAGE value="Support save document on Firebase (not completed)" />
     <MESSAGE value="Added toJSON methods to layers" />
     <MESSAGE value="Set router to switch between Viewer and Cloud" />
     <MESSAGE value="Logic and styling for Documents Component (cloud storage manager)" />
@@ -1001,7 +1018,9 @@
     <MESSAGE value="- Support circle shape in Copy/Paste parser (to be fixed: some bug with stoke colors)" />
     <MESSAGE value="- Support circle, rectangle, odb arc and odb line in Copy/Paste parser as polygons" />
     <MESSAGE value="- Added self-disappearing Snackbar component to display messages (not completed)" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Added self-disappearing Snackbar component to display messages (not completed)" />
+    <MESSAGE value="- Add Snackbar Component - self-disappearing message popup (not completed)&#10;- Upload Popup: add styling on hover (not completed)" />
+    <MESSAGE value="- Add Snackbar Component - self-disappearing message popup (not completed)&#10;- Upload Popup: add styling on hover (not completed)&#10;- Added demo rout page" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Add Snackbar Component - self-disappearing message popup (not completed)&#10;- Upload Popup: add styling on hover (not completed)&#10;- Added demo rout page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1015,20 +1034,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/shapeComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="41" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/polygonOffset.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dataParsers/parseCSV.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1135,15 +1140,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1564">
           <caret line="94" column="67" selection-start-line="94" selection-start-column="51" selection-end-line="94" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataParsers/parseTXT.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1410,7 +1406,7 @@
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
-          <caret line="56" column="60" lean-forward="true" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="60" />
+          <caret line="56" column="60" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="60" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <element signature="e#378#414#0" expanded="true" />
@@ -1422,12 +1418,40 @@
     <entry file="file://$PROJECT_DIR$/src/assets/data/poly1.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Constructions/Demo.js">
+    <entry file="file://$PROJECT_DIR$/src/dataParsers/parseTXT.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+        <state>
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/cloudStorageActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1929">
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Constructions/CollisionDemo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-481">
           <folding>
             <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Constructions/Demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="30" column="47" lean-forward="true" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#171#223#0" expanded="true" />
           </folding>
         </state>
       </provider>
