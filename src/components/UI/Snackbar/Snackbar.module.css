@@ -1,14 +1,14 @@
 .Snackbar {
     background-color: ghostwhite;
     position: absolute;
-    top: 25%;
-    left:70%;
+    top: 10%;
+    right:5%;
     text-align: center;
     padding: 0.5em;
     border: none;
     border-radius: 10px;
     font-size: 20px;
-    color: royalblue;
+    color: black;
     box-sizing: border-box;
     z-index: 75;
 }

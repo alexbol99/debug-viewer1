@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="- Add Snackbar Component - self-disappearing message popup (not completed)&#10;- Upload Popup: add styling on hover (not completed)&#10;- Added demo rout page">
+    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="- Paste text into upload buffer replace prompter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Constructions/Demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Constructions/Demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,23 +18,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="UploadPopup.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+            <state relative-caret-position="116">
+              <caret line="114" column="46" lean-forward="true" selection-start-line="114" selection-start-column="46" selection-end-line="114" selection-end-column="46" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UploadPopup.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js">
+      <file leaf-file-name="Snackbar.module.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="150">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UploadPopup.module.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.module.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="49" column="27" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -47,84 +57,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Demo.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Constructions/Demo.js">
+      <file leaf-file-name="parser.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dataParsers/parser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="30" column="47" lean-forward="true" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+            <state relative-caret-position="288">
+              <caret line="37" selection-start-line="10" selection-end-line="37" />
               <folding>
-                <element signature="e#0#43#0" expanded="true" />
-                <element signature="e#171#223#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CollisionDemo.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Constructions/CollisionDemo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-481">
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cloudStorageActions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/actions/cloudStorageActions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1929">
-              <folding>
-                <element signature="e#0#46#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parseTXT.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dataParsers/parseTXT.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="56" column="60" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="60" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#378#414#0" expanded="true" />
-                <element signature="e#631#712#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pasteData.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/middleware/pasteData.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-679">
-              <folding>
-                <element signature="e#0#52#0" expanded="true" />
+                <element signature="e#51#134#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -142,7 +81,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>payload, layers, history</find>
       <find>addDocumentToDatabase</find>
       <find>updateDocumentInDatabase</find>
       <find>axios.put</find>
@@ -172,6 +110,7 @@
       <find>parseToODBArc</find>
       <find>counterClockwise</find>
       <find>DocumentName</find>
+      <find>addData</find>
     </findStrings>
     <replaceStrings>
       <replace>state.app.stage</replace>
@@ -195,7 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/middleware/stageController.js" />
         <option value="$PROJECT_DIR$/src/components/MainComponent/CanvasComponent/CanvasComponent.js" />
         <option value="$PROJECT_DIR$/src/firebase-instance.js" />
         <option value="$PROJECT_DIR$/src/cors.json.js" />
@@ -206,7 +144,6 @@
         <option value="$PROJECT_DIR$/src/middleware/readFiles.js" />
         <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/layerComponent.js" />
         <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/layersComponent.js" />
-        <option value="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" />
         <option value="$PROJECT_DIR$/src/store/actions/cloudStorageActions.js" />
         <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/labelComponent.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/measureShapesTool.js" />
@@ -240,12 +177,14 @@
         <option value="$PROJECT_DIR$/src/components/LayersList/LayerListElement/LayerListElement.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/UI/SnackbarRoot.js" />
-        <option value="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css" />
         <option value="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.js" />
         <option value="$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css" />
-        <option value="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/Constructions/Demo.js" />
+        <option value="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" />
+        <option value="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.module.css" />
+        <option value="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css" />
+        <option value="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" />
       </list>
     </option>
   </component>
@@ -256,8 +195,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="34" />
-    <option name="y" value="90" />
+    <option name="x" value="41" />
+    <option name="y" value="62" />
     <option name="width" value="1237" />
     <option name="height" value="656" />
   </component>
@@ -921,11 +860,25 @@
       <option name="project" value="LOCAL" />
       <updated>1558027972730</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="- Changed demo file">
+      <created>1558030995368</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1558030995368</updated>
+    </task>
+    <task id="LOCAL-00037" summary="- Paste text into upload buffer replace prompter">
+      <created>1558080985935</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1558080985935</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="408290000" />
+    <option name="totallyTimeSpent" value="417952000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -937,7 +890,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="34" y="90" width="1237" height="656" extended-state="0" />
+    <frame x="41" y="62" width="1237" height="656" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.59266055" visible="true" weight="0.359375" />
@@ -995,8 +948,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added toJSON methods to layers" />
-    <MESSAGE value="Set router to switch between Viewer and Cloud" />
     <MESSAGE value="Logic and styling for Documents Component (cloud storage manager)" />
     <MESSAGE value="Clean stage before switching from Editor to other component.&#10;When switching back to Editor, restore previous content" />
     <MESSAGE value="Added Clean Current Document button" />
@@ -1020,7 +971,9 @@
     <MESSAGE value="- Added self-disappearing Snackbar component to display messages (not completed)" />
     <MESSAGE value="- Add Snackbar Component - self-disappearing message popup (not completed)&#10;- Upload Popup: add styling on hover (not completed)" />
     <MESSAGE value="- Add Snackbar Component - self-disappearing message popup (not completed)&#10;- Upload Popup: add styling on hover (not completed)&#10;- Added demo rout page" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Add Snackbar Component - self-disappearing message popup (not completed)&#10;- Upload Popup: add styling on hover (not completed)&#10;- Added demo rout page" />
+    <MESSAGE value="- Changed demo file" />
+    <MESSAGE value="- Paste text into upload buffer replace prompter" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Paste text into upload buffer replace prompter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1104,6 +1057,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1133,6 +1089,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2006">
           <caret line="120" column="24" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1227,13 +1186,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/VertexLabel/VertexLabel.module.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1277,44 +1229,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="24" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
-          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="807">
-          <caret line="263" column="5" lean-forward="true" selection-start-line="263" selection-start-column="5" selection-end-line="263" selection-end-column="5" />
-          <folding>
-            <element signature="e#51#90#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/reducers/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="35" column="23" selection-start-line="34" selection-end-line="35" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataParsers/parser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="37" selection-start-line="10" selection-end-line="37" />
-          <folding>
-            <element signature="e#51#134#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1358,25 +1276,6 @@
     <entry file="file://$PROJECT_DIR$/src/store/actions/appActions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2025" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/middleware/pasteData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-679">
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css">
@@ -1448,10 +1347,70 @@
     <entry file="file://$PROJECT_DIR$/src/components/Constructions/Demo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="30" column="47" lean-forward="true" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+          <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
             <element signature="e#171#223#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="228" column="30" lean-forward="true" selection-start-line="228" selection-start-column="30" selection-end-line="228" selection-end-column="30" />
+          <folding>
+            <element signature="e#51#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.module.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="49" column="27" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/middleware/pasteData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300">
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dataParsers/parser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="37" selection-start-line="10" selection-end-line="37" />
+          <folding>
+            <element signature="e#51#134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="114" column="46" lean-forward="true" selection-start-line="114" selection-start-column="46" selection-end-line="114" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
