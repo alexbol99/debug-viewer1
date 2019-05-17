@@ -6,8 +6,14 @@ import classes from "./UploadPopup.module.css";
 
 class UploadPopup extends Component {
     inputElement = React.createRef();
+    clipboardWindowRef = React.createRef();
+
+    clipboardWindowWidth = 0;
+    clipboardWindowHeight = 0;
+
     state = {
-        dragOver:false
+        dragOver:false,
+        clipboardData: ""
     };
 
     openFilesButtonClicked = () => this.inputElement.current.click();
@@ -15,9 +21,12 @@ class UploadPopup extends Component {
     pasteHandler = (ev) => {
         ev.stopPropagation();
         this.props.onPaste(ev.clipboardData);
-        // let item = ev.clipboardData.items[0];
-        // item.getAsString( this.addData );
-        // this.setState({clipboardData:data})
+        let item = ev.clipboardData.items[0];
+        item.getAsString( string =>
+            this.setState({
+                clipboardData: string
+            })
+        );
     };
 
     dropHandler = (ev) => {
@@ -55,7 +64,14 @@ class UploadPopup extends Component {
         this.setState({dragOver:false})
     };
 
+    componentDidMount() {
+        this.clipboardWindowWidth = this.clipboardWindowRef.current.clientWidth;
+        this.clipboardWindowHeight = this.clipboardWindowRef.current.clientHeight;
+    }
+
     render() {
+        let pX = this.state.clipboardData === "" ? 30 : 0;
+        let pY = this.state.clipboardData === "" ? 60 : 0;
         return this.props.showPopup ? (
             <ModalPopup
                 showPopup={this.props.showPopup}
@@ -66,12 +82,21 @@ class UploadPopup extends Component {
                     <div className={this.state.dragOver ?
                         `${classes.UploadTarget} ${classes.UploadTargetDragOver}` :
                         `${classes.UploadTarget} ${classes.UploadTargetDragLeave}`}
+                         style={{paddingLeft: pX, paddingRight: pX, paddingTop: pY, paddingBottom: pY}}
                          onPaste={this.pasteHandler}
                          onDrop={this.dropHandler}
                          onDragOverCapture={this.dragOverHandler}
                          onDragLeaveCapture={this.dragLeaveHandler}
+                         ref={this.clipboardWindowRef}
                     >
-                        <span>Paste from buffer / Drop files</span>
+                        {
+                            this.state.clipboardData === "" ?
+                                <span>Paste from buffer / Drop files</span> :
+                                <p style={{width:this.clipboardWindowWidth, height:this.clipboardWindowHeight}}>
+                                    {this.state.clipboardData}
+                                </p>
+                        }
+
                     </div>
 
                     <h2>or</h2>
@@ -86,8 +111,9 @@ class UploadPopup extends Component {
                     />
 
                     {/*<Snackbar*/}
-                        {/*message="Added new layer"*/}
-                        {/*/>*/}
+                        {/*message="New layers added"*/}
+                    {/*/>*/}
+
                 </div>
             </ModalPopup>
         ) : null;

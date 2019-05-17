@@ -218,14 +218,15 @@ class MainComponent extends Component {
                     layers={this.props.layers}
                 />
 
-                <UploadPopup
-                    showPopup={this.props.showUploadPopup}
-                    closePopup={this.props.toggleUploadPopup}
-                    title="Upload files"
-                    onFileSelected={this.handleFileSelect}
-                    onFileDrop={this.handleFileDrop}
-                    onPaste={this.props.pasteDataFromBuffer}
-                />
+                {this.props.showUploadPopup ?
+                    <UploadPopup
+                        showPopup={this.props.showUploadPopup}
+                        closePopup={this.props.toggleUploadPopup}
+                        title="Upload files"
+                        onFileSelected={this.handleFileSelect}
+                        onFileDrop={this.handleFileDrop}
+                        onPaste={this.props.pasteDataFromBuffer}
+                    /> : null}
 
                 <Route path="/documents/:id" component={CloudDocument}/>
 

@@ -22,7 +22,8 @@
 
 .UploadTarget {
     border: 1px dashed;
-    padding: 5em 3em;
+    padding: 60px 30px;
+    text-align: center;
 }
 
 .UploadTargetDragLeave {
@@ -36,7 +37,17 @@
 .UploadTarget span {
     opacity: 0.2;
     font-size: 3em;
+}
 
+.UploadTarget p {
+    text-align: left;
+    overflow: auto;
+    white-space: pre-line;
+    padding: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    animation-name: fadeIn;
+    animation-duration: 3s;
 }
 
 @keyframes fadeIn {
