@@ -42,7 +42,7 @@ const defaultAppState = {
     showSpinner: false,
     showLayerList: false,
     showDownloadPopup: false,
-    showUploadPopup: false
+    showUploadPopup: false,
 };
 
 const app = (state = defaultAppState, action) => {

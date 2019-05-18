@@ -9,7 +9,7 @@ import * as serviceWorker from './serviceWorker';
 
 import reducer from './store/reducer';
 import log from './middleware/log';
-import readFiles from './middleware/readFiles';
+// import readFiles from './middleware/readFiles';
 import pasteData from './middleware/pasteData';
 import stageController from './middleware/stageController';
 import skeleton_recognition from './middleware/skeleton_recognition';
@@ -21,7 +21,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(reducer,
     composeEnhancers(
-        applyMiddleware(log, readFiles, pasteData, skeleton_recognition, stageController, thunk)
+        applyMiddleware(log, pasteData, skeleton_recognition, stageController, thunk)
     )
 );
 

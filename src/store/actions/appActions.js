@@ -66,14 +66,14 @@ export const applySkeletonRecognition = () => {
     }
 };
 
-export const handleFileSelect = (files, stage, layers) => {
-    return {
-        type: ActionTypes.FILENAME_LIST_SELECTED,
-        files,
-        stage,
-        layers
-    }
-};
+// export const handleFileSelect = (files, stage, layers) => {
+//     return {
+//         type: ActionTypes.FILENAME_LIST_SELECTED,
+//         files,
+//         stage,
+//         layers
+//     }
+// };
 
 export const setHomeView = (stage, shape) => {
     return {

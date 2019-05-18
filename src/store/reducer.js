@@ -10,11 +10,13 @@ import layers from "./reducers/layers";
 import mouse from "./reducers/mouse";
 import measureShapesTool from "./reducers/measureShapesTool";
 import cloudStorage from "./reducers/cloudStorage";
+import upload from "./reducers/upload";
 
 const reducer = combineReducers({
     auth,
     app,
     layers,
+    upload,
     cloudStorage,
     measureShapesTool,
     mouse

@@ -31,7 +31,7 @@ class Snackbar extends Component {
 
         return ( this.state.display ?
             <SnackbarRoot>
-                <div className={styleName}>
+                <div className={styleName} onAnimationEnd={this.props.onAnimationEnd}>
                     <h3>{this.props.message}</h3>
                 </div>
             </SnackbarRoot> : null

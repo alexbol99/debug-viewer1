@@ -30,16 +30,6 @@ import CloudDocument from '../../components/Constructions/CloudDocument';
 import styles from './MainComponent.module.css';
 
 class MainComponent extends Component {
-    handleFileSelect = (event) => {
-        if (!(File && FileReader && FileList)) return;
-        let files = event.target.files; // FileList object
-        this.props.handleFileSelect(files, this.props.stage, this.props.layers);
-    };
-
-    handleFileDrop = (files) => {
-        this.props.handleFileSelect(files, this.props.stage, this.props.layers);
-    };
-
     setHomeView = () => {
         let layer = Layers.getAffected(this.props.layers);
         if (!layer) return;
@@ -189,42 +179,43 @@ class MainComponent extends Component {
 
                 <CanvasComponent />
 
-                { this.props.stage ? (
-                <StageComponent
-                    stage={this.props.stage}
-                    onStageUnmounted={this.props.destroyStage}
-                >
-                    <LayersComponent layers={this.props.layers} />
+                {this.props.stage ? (
+                    <StageComponent
+                        stage={this.props.stage}
+                        onStageUnmounted={this.props.destroyStage}
+                    >
+                        <LayersComponent layers={this.props.layers}/>
 
-                    {displayCoordsTool}
-                    {measurePointsTool}
-                    {measureShapesTool}
-                </StageComponent> ) : null }
+                        {displayCoordsTool}
+                        {measurePointsTool}
+                        {measureShapesTool}
+                    </StageComponent>) : null }
 
                 <StatusComponent />
 
-                <AboutPopup
-                    showAboutPopup={this.props.showAboutPopup}
-                    toggleAboutPopup={this.props.toggleAboutPopup}
-                    title={this.props.title}
-                    version={this.props.version}
-                    build={this.props.build}
-                />
+                { this.props.showAboutPopup ?
+                    <AboutPopup
+                        showAboutPopup={this.props.showAboutPopup}
+                        toggleAboutPopup={this.props.toggleAboutPopup}
+                        title={this.props.title}
+                        version={this.props.version}
+                        build={this.props.build}
+                    /> : null}
 
-                <DownloadPopup
-                    showPopup={this.props.showDownloadPopup}
-                    closePopup={this.props.toggleDownloadPopup}
-                    title="Download document"
-                    layers={this.props.layers}
-                />
+
+                { this.props.showDownloadPopup ?
+                    <DownloadPopup
+                        showPopup={this.props.showDownloadPopup}
+                        closePopup={this.props.toggleDownloadPopup}
+                        title="Download document"
+                        layers={this.props.layers}
+                    /> : null }
 
                 {this.props.showUploadPopup ?
                     <UploadPopup
                         showPopup={this.props.showUploadPopup}
                         closePopup={this.props.toggleUploadPopup}
                         title="Upload files"
-                        onFileSelected={this.handleFileSelect}
-                        onFileDrop={this.handleFileDrop}
                         onPaste={this.props.pasteDataFromBuffer}
                     /> : null}
 
@@ -269,7 +260,6 @@ const mapDispatchToProps = dispatch => {
     return {
         resizeStage: () => dispatch(actions.resizeStage()),
         destroyStage: () => dispatch(actions.destroyStage()),
-        handleFileSelect: (files, stage, layers) => dispatch(actions.handleFileSelect(files, stage, layers)),
         setHomeView: (stage, shape) => dispatch(actions.setHomeView(stage, shape)),
         toggleUnits: () => dispatch(actions.toggleUnits()),
         toggleWidthMode: () => dispatch(actions.toggleWidthMode()),

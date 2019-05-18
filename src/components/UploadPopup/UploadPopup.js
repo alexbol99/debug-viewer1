@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import ModalPopup from "../UI/ModalPopup/ModalPopup";
 import Snackbar from "../UI/Snackbar/Snackbar";
-
+import { connect } from 'react-redux';
 import classes from "./UploadPopup.module.css";
+import * as actions from '../../store/actions/upload';
 
 class UploadPopup extends Component {
     inputElement = React.createRef();
@@ -49,7 +50,8 @@ class UploadPopup extends Component {
             files = ev.dataTransfer.files;
         }
 
-        this.props.onFileDrop(files);
+        this.props.readFiles(files, this.props.stage, this.props.layers);
+        // this.fileDropHandler(files);
         this.setState({dragOver:false});
     };
 
@@ -64,6 +66,21 @@ class UploadPopup extends Component {
         this.setState({dragOver:false})
     };
 
+    filesSelectedHandler = (event) => {
+        if (!(File && FileReader && FileList)) return;
+        let files = event.target.files; // FileList object
+        this.props.readFiles(files, this.props.stage, this.props.layers);
+    };
+
+    closePopup = () => {
+        this.props.initUploadState();
+        this.props.closePopup();
+    };
+
+    componentDidUpdate() {
+        if (this.props.uploadCompleted) {}
+    }
+
     componentDidMount() {
         this.clipboardWindowWidth = this.clipboardWindowRef.current.clientWidth;
         this.clipboardWindowHeight = this.clipboardWindowRef.current.clientHeight;
@@ -72,10 +89,20 @@ class UploadPopup extends Component {
     render() {
         let pX = this.state.clipboardData === "" ? 30 : 0;
         let pY = this.state.clipboardData === "" ? 60 : 0;
+        let snackbarMessage = "";
+
+        if (this.state.clipboardData !== "") snackbarMessage = "New layer added";
+
+        if (this.props.uploadCompleted && this.props.uploadedFiles.length > 0) {
+            let newFilesNum = this.props.uploadedFiles.length;
+            if (newFilesNum === 1) snackbarMessage = "New layer added";
+            if (newFilesNum > 1) snackbarMessage = `${newFilesNum} new layers added`;
+        }
+
         return this.props.showPopup ? (
             <ModalPopup
                 showPopup={this.props.showPopup}
-                closePopup={this.props.closePopup}
+                closePopup={this.closePopup}
                 header="Upload files"
             >
                 <div className={classes.UploadPopup}>
@@ -107,13 +134,13 @@ class UploadPopup extends Component {
 
                     <input style={{display: "none"}}
                            type="file" ref={this.inputElement} name="files[]" multiple
-                           onChange={this.props.onFileSelected}
+                           onChange={this.filesSelectedHandler}
                     />
 
-                    { this.state.clipboardData !== "" ?
+                    { snackbarMessage !== "" ?
                         <Snackbar
-                            message="New layer added"
-                        /> : null
+                            onAnimationEnd = {this.props.initUploadState}
+                            message={snackbarMessage} /> : null
                     }
 
                 </div>
@@ -122,4 +149,20 @@ class UploadPopup extends Component {
     }
 }
 
-export default UploadPopup;
+const mapStateToProps = state => {
+    return {
+        layers: state.layers,
+        stage: state.app.stage,
+        uploadCompleted: state.upload.uploadCompleted,
+        uploadedFiles: state.upload.uploadedFiles
+    }
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        readFiles: (files, stage, layers) => dispatch(actions.readFiles(files, stage, layers)),
+        initUploadState: () => dispatch(actions.initUploadState())
+    }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(UploadPopup);
