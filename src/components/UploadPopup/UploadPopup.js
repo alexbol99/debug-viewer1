@@ -91,12 +91,12 @@ class UploadPopup extends Component {
         let pY = this.state.clipboardData === "" ? 60 : 0;
         let snackbarMessage = "";
 
-        if (this.state.clipboardData !== "") snackbarMessage = "New layer added";
+        if (this.state.clipboardData !== "") snackbarMessage = "Added 1 layer";
 
         if (this.props.uploadCompleted && this.props.uploadedFiles.length > 0) {
             let newFilesNum = this.props.uploadedFiles.length;
-            if (newFilesNum === 1) snackbarMessage = "New layer added";
-            if (newFilesNum > 1) snackbarMessage = `${newFilesNum} new layers added`;
+            if (newFilesNum === 1) snackbarMessage = "File uploaded. Added 1 layer";
+            if (newFilesNum > 1) snackbarMessage = `Files uploaded. Added ${newFilesNum} layers`;
         }
 
         return this.props.showPopup ? (

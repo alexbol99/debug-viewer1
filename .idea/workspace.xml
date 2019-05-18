@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="- Added snackbar after pasted text">
-      <change afterPath="$PROJECT_DIR$/src/store/actions/upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/upload.js" afterDir="false" />
+    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="- Complete snackbar with a message &quot;XX new files added&quot;&#10;- Trigger snackbar after all files loaded (Promise.all resolved)&#10;- Removed readFiles from middleware to reducer named &quot;upload&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware/readFiles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/appActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/appActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/app.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UploadPopup.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UploadPopup.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="145" column="22" lean-forward="true" selection-start-line="145" selection-start-column="22" selection-end-line="145" selection-end-column="22" />
+            <state relative-caret-position="181">
+              <caret line="98" column="68" selection-start-line="98" selection-start-column="68" selection-end-line="98" selection-end-column="68" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -42,17 +34,20 @@
       <file leaf-file-name="Snackbar.module.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            <state relative-caret-position="91">
+              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Snackbar.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Snackbar.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/src/store/reducer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#51#89#0" expanded="true" />
@@ -94,7 +89,7 @@
       <file leaf-file-name="parser.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dataParsers/parser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="94">
               <caret line="37" selection-start-line="10" selection-end-line="37" />
               <folding>
                 <element signature="e#51#134#0" expanded="true" />
@@ -214,7 +209,6 @@
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/Constructions/Demo.js" />
         <option value="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.module.css" />
-        <option value="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css" />
         <option value="$PROJECT_DIR$/src/store/reducers/app.js" />
         <option value="$PROJECT_DIR$/src/middleware/readFiles.js" />
         <option value="$PROJECT_DIR$/src/store/actions/appActions.js" />
@@ -224,8 +218,9 @@
         <option value="$PROJECT_DIR$/src/store/actionTypes.js" />
         <option value="$PROJECT_DIR$/src/store/actions/upload.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/upload.js" />
-        <option value="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" />
+        <option value="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css" />
         <option value="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.js" />
+        <option value="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" />
       </list>
     </option>
   </component>
@@ -922,11 +917,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558081870177</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="- Complete snackbar with a message &quot;XX new files added&quot;&#10;- Trigger snackbar after all files loaded (Promise.all resolved)&#10;- Removed readFiles from middleware to reducer named &quot;upload&quot;">
+      <created>1558183959549</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1558183959549</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="432828000" />
+    <option name="totallyTimeSpent" value="435004000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -941,15 +943,15 @@
     <frame x="36" y="49" width="1237" height="656" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.59266055" visible="true" weight="0.359375" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.59266055" visible="true" weight="0.359375" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32942554" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.3286219" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3558394" />
-      <window_info anchor="bottom" x="241" y="732" width="1622" height="198" id="Run" order="10" sideWeight="0.5024671" side_tool="true" visible="true" weight="0.32899627" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4975329" visible="true" weight="0.32899627" />
+      <window_info active="true" anchor="bottom" x="241" y="732" width="1622" height="198" id="Run" order="10" sideWeight="0.5049342" side_tool="true" visible="true" weight="0.34758365" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4975329" weight="0.52230483" />
       <window_info id="Structure" order="1" sideWeight="0.40733945" side_tool="true" weight="0.36569038" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49588814" weight="0.34758365" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49506578" visible="true" weight="0.34758365" />
       <window_info anchor="bottom" id="Debug" order="2" sideWeight="0.49874476" weight="0.3985375" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -976,7 +978,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Clean stage before switching from Editor to other component.&#10;When switching back to Editor, restore previous content" />
     <MESSAGE value="Added Clean Current Document button" />
     <MESSAGE value="Implement Delete Document" />
     <MESSAGE value="Implement Document Name" />
@@ -1001,7 +1002,8 @@
     <MESSAGE value="- Changed demo file" />
     <MESSAGE value="- Paste text into upload buffer replace prompter" />
     <MESSAGE value="- Added snackbar after pasted text" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Added snackbar after pasted text" />
+    <MESSAGE value="- Complete snackbar with a message &quot;XX new files added&quot;&#10;- Trigger snackbar after all files loaded (Promise.all resolved)&#10;- Removed readFiles from middleware to reducer named &quot;upload&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Complete snackbar with a message &quot;XX new files added&quot;&#10;- Trigger snackbar after all files loaded (Promise.all resolved)&#10;- Removed readFiles from middleware to reducer named &quot;upload&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1375,16 +1377,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataParsers/parser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="37" selection-start-line="10" selection-end-line="37" />
-          <folding>
-            <element signature="e#51#134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/actions/appActions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1395,7 +1387,7 @@
     <entry file="file://$PROJECT_DIR$/src/store/reducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#51#89#0" expanded="true" />
@@ -1427,27 +1419,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js">
+    <entry file="file://$PROJECT_DIR$/src/dataParsers/parser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="145" column="22" lean-forward="true" selection-start-line="145" selection-start-column="22" selection-end-line="145" selection-end-column="22" />
+        <state relative-caret-position="94">
+          <caret line="37" selection-start-line="10" selection-end-line="37" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#51#134#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        <state relative-caret-position="91">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="35" column="22" lean-forward="true" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="98" column="68" selection-start-line="98" selection-start-column="68" selection-end-line="98" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
