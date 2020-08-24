@@ -60,19 +60,50 @@ Flatten.Image = class Image {
 //     return models;
 // }
 
-export function parseJSON(filename, str) {
+function parseJSONShape(jsonShape) {
+    if (jsonShape.name === "segment") {
+        return new Flatten.Segment(jsonShape);
+    }
+
+    if (jsonShape.name === "arc") {
+        return new Flatten.Arc(jsonShape);
+    }
+
+    if (jsonShape.name === "point") {
+        return new Flatten.Point(jsonShape);
+    }
+}
+
+export function parseJSON(filename="", str) {
     let job = new Job();
 
     job.filename = filename;
 
-    let jsonArray = JSON.parse(str);
+    let jsonArray;
 
-    let polygon = new Flatten.Polygon();
-    for (let faceArray of jsonArray) {
-        polygon.addFace(faceArray);
+    try {
+        jsonArray = JSON.parse(str);
+    } catch (e) {
+        throw new Error("Illegal JSON string")
     }
 
-    job.shapes.push(polygon);
+    if (jsonArray instanceof Array) {
+        try {
+            let polygon = new Flatten.Polygon();
+            for (let faceArray of jsonArray) {
+                polygon.addFace(faceArray);
+            }
+            job.shapes.push(polygon);
+        }
+        catch (e) {
+            for (let jsonShape of jsonArray) {
+                job.shapes.push( parseJSONShape(jsonShape) );
+            }
+        }
+    }
+    else {
+        job.shapes.push( parseJSONShape(jsonArray) );
+    }
 
     return job;
 }

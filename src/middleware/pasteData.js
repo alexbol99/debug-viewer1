@@ -1,5 +1,6 @@
 import * as ActionTypes from "../store/actionTypes";
 import Layers from "../models/layers";
+import {parseJSON} from "../dataParsers/parseJSON";
 
 const pasteData = ({ dispatch, getState }) => next => action => {
 
@@ -28,7 +29,15 @@ const pasteData = ({ dispatch, getState }) => next => action => {
     // Paste data from ClipBoard
     for (let item of action.data.items) {
         item.getAsString((string) => {
-            let shapesArray = parser.parse(string);
+            let shapesArray;
+
+            try {
+                let job = parseJSON("",string);
+                shapesArray = job.shapes
+            } catch (e) {
+                console.log(e.message)
+                shapesArray = parser.parse(string);
+            }
 
             // TODO: add something like poly.valid()
 
