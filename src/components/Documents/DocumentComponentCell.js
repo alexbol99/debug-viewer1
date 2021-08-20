@@ -1,4 +1,3 @@
-import React from 'react';
 import classes from "./DocumentComponentCell.module.css";
 import {Link} from "react-router-dom";
 

@@ -1,7 +1,6 @@
 /**
  * Created by alexanderbol on 19/06/2017.
  */
-import React from 'react';
 import VertexComponent from './vertexComponent';
 
 const VerticesComponent = (props) => {

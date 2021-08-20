@@ -1,4 +1,3 @@
-import React from 'react'
 import {format} from "../../../../../models/utils";
 import classes from './VertexLabel.module.css';
 

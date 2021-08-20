@@ -2,7 +2,7 @@
  * Created by alexanderbol on 17/04/2017.
  */
 
-import React, {Component} from 'react';
+import {Component} from 'react';
 import LayerListToolbar from "../../components/LayersList/LayerListToolbar/LayerListToolbar";
 import LayerListElement from '../../components/LayersList/LayerListElement/LayerListElement';
 import * as actions from '../../store/actions/layersActions';

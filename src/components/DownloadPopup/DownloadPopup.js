@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import {Component} from 'react';
 import ModalPopup from "../UI/ModalPopup/ModalPopup";
 import {createXMLString} from "../../dataParsers/createXML";
 

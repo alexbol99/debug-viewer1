@@ -1,4 +1,3 @@
-import React from 'react';
 import classes from '../LabelsLayerComponent/labelsLayer.module.css';
 
 const labelComponent = ( {stage, shape} ) => {

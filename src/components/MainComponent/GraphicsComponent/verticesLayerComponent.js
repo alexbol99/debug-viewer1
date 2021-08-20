@@ -1,4 +1,3 @@
-import React from 'react'
 import VerticesComponent from './graphics/verticesComponent';
 import { connect } from "react-redux";
 

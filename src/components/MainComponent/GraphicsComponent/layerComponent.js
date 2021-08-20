@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import {Component} from 'react';
 import {ShapeComponent} from './graphics/shapeComponent';
 import {ImageComponent} from "./graphics/imageComponent";
 import { connect } from "react-redux";

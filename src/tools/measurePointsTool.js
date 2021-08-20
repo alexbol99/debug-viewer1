@@ -2,13 +2,13 @@
  * Created by alexanderbol on 21/04/2017.
  */
 
-import React, {Component} from 'react';
+import {Component, createRef} from 'react';
 import {connect} from "react-redux";
 import Stage from "../models/stage";
 import * as actions from '../store/actions/stageActions';
 
 class MeasurePointsTool extends Component {
-    measureCanvas = React.createRef();
+    measureCanvas = createRef();
     measureStage = null;
 
     state = {

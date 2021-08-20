@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import {Component, Fragment} from 'react';
 // import Utils from "../utils";
 
 class StageComponent extends Component {
@@ -29,9 +29,9 @@ class StageComponent extends Component {
 
     render() {
         return (
-            <React.Fragment>
+            <Fragment>
                 {this.props.children}
-            </React.Fragment>
+            </Fragment>
         )
     }
 }

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import {Component, createRef} from 'react';
 import ModalPopup from "../UI/ModalPopup/ModalPopup";
 import Snackbar from "../UI/Snackbar/Snackbar";
 import { connect } from 'react-redux';
@@ -6,8 +6,8 @@ import classes from "./UploadPopup.module.css";
 import * as actions from '../../store/actions/upload';
 
 class UploadPopup extends Component {
-    inputElement = React.createRef();
-    clipboardWindowRef = React.createRef();
+    inputElement = createRef();
+    clipboardWindowRef = createRef();
 
     clipboardWindowWidth = 0;
     clipboardWindowHeight = 0;

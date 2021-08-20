@@ -1,8 +1,6 @@
 /**
  * Created by alexanderbol on 06/05/2017.
  */
-
-import React from 'react';
 import styles from './AsideComponent.module.css';
 
 const AsideComponent = () => {

@@ -2,7 +2,7 @@
  * Created by alexanderbol on 19/06/2017.
  */
 
-import React,{Component} from 'react';
+import {Component} from 'react';
 import {Shape, Shadow} from '@createjs/easeljs';
 import {graphics} from '../../../../models/graphics';
 import {is_equal} from '../../../../models/utils';

@@ -1,4 +1,4 @@
-import /*React,*/ {Component} from 'react';
+import {Component} from 'react';
 import Flatten from '@flatten-js/core';
 import CollisionDistance from "../../models/collisionDistance";
 import axios from "axios";

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import {Component, Fragment} from 'react';
 import LayerComponent from "./layerComponent";
 import LabelsLayerComponent from "./LabelsLayerComponent/labelsLayerComponent";
 import VerticesLayerComponent from './verticesLayerComponent';
@@ -15,14 +15,14 @@ class LayersComponent extends Component {
     }
     render() {
         return this.props.layers.map((layer) =>
-            <React.Fragment key={layer.name}>
+            <Fragment key={layer.name}>
 
                 <LayerComponent layer={layer} />
 
                 <LabelsLayerComponent layer={layer} />
 
                 <VerticesLayerComponent layer={layer} />
-            </React.Fragment>
+            </Fragment>
         )
     }
 }

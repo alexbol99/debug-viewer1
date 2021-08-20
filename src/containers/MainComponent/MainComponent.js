@@ -2,7 +2,7 @@
  * Created by alexanderbol on 17/04/2017.
  */
 
-import React, {Component} from 'react';
+import {Component} from 'react';
 import {Route} from 'react-router-dom';
 import { connect } from "react-redux";
 

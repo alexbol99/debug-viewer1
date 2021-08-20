@@ -1,8 +1,6 @@
 /**
  * Created by alexanderbol on 13/04/2017.
  */
-
-import React from 'react';
 import styles from './LayerEditForm.module.css';
 
 const LayerEditForm = (props) => {

@@ -2,7 +2,7 @@
  * Created by alexanderbol on 21/04/2017.
  */
 
-import React, {Component} from 'react';
+import {Component, createRef} from 'react';
 import styles from "./CanvasComponent.module.css";
 import Stage from '../../../models/stage';
 import { connect } from "react-redux";
@@ -10,7 +10,7 @@ import { connect } from "react-redux";
 import * as actions from '../../../store/actions/stageActions';
 
 class CanvasComponent extends Component {
-    canvasElement = React.createRef();
+    canvasElement = createRef();
 
     handleMouseMove = (event) => {
         this.props.stage.canvas.focus();

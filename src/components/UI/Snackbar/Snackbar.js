@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import {Component} from 'react';
 import SnackbarRoot from '../SnackbarRoot';
 import classes from './Snackbar.module.css';
 

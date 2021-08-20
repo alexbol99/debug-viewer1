@@ -1,111 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="- Complete snackbar with a message &quot;XX new files added&quot;&#10;- Trigger snackbar after all files loaded (Promise.all resolved)&#10;- Removed readFiles from middleware to reducer named &quot;upload&quot;">
+    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="- Remove timers from snackbar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AboutPopup/AboutPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutPopup/AboutPopup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Constructions/CloudDocument.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Constructions/CloudDocument.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Constructions/CollisionDemo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Constructions/CollisionDemo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Constructions/Demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Constructions/Demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Constructions/SkeletonRecognition.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Constructions/SkeletonRecognition.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Documents/DocumentComponentCell.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Documents/DocumentComponentCell.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DownloadPopup/DownloadPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DownloadPopup/DownloadPopup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LayersList/LayerEditForm/LayerEditForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LayersList/LayerEditForm/LayerEditForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LayersList/LayerListElement/LayerListElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LayersList/LayerListElement/LayerListElement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LayersList/LayerListToolbar/LayerListToolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LayersList/LayerListToolbar/LayerListToolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/AsideComponent/AsideComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/AsideComponent/AsideComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/HeaderComponent/HeaderComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/HeaderComponent/HeaderComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/HeaderComponent/Logo/Logo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/HeaderComponent/Logo/Logo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/HeaderComponent/Navigation/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/HeaderComponent/Navigation/Navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/StatusComponent/StatusComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/StatusComponent/StatusComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/CanvasComponent/CanvasComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/CanvasComponent/CanvasComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/DocumentName/DocumentName.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/DocumentName/DocumentName.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/LabelsLayerComponent/labelsLayerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/LabelsLayerComponent/labelsLayerComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/VertexLabel/VertexLabel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/VertexLabel/VertexLabel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/labelComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/labelComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/vertexComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/vertexComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/verticesComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/verticesComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/layerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/layerComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/layersComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/layersComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/stageComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/stageComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/verticesLayerComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/verticesLayerComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/ToolbarComponent/ToolbarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/ToolbarComponent/ToolbarComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Button/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Button/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/ButtonSeparator/ButtonSeparator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/ButtonSeparator/ButtonSeparator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/ModalPopup/ModalPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/ModalPopup/ModalPopup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Spinner/Spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Spinner/Spinner.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Auth/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Auth/Login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Auth/Logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Auth/Logout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Auth/SignUp/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Auth/SignUp/Signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/DocumentsComponent/DocumentsComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/DocumentsComponent/DocumentsComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/LayerList/LayersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LayerList/LayersList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataParsers/parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataParsers/parser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/asyncComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/asyncComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/displayCoordsTool.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/displayCoordsTool.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tools/measurePointsTool.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/tools/measurePointsTool.js" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/.tmp/" />
-    <ignored path="$PROJECT_DIR$/temp/" />
-    <ignored path="$PROJECT_DIR$/tmp/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UploadPopup.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="98" column="68" selection-start-line="98" selection-start-column="68" selection-end-line="98" selection-end-column="68" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Snackbar.module.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Snackbar.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="actionTypes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/actionTypes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="63" column="63" selection-start-line="63" selection-start-column="63" selection-end-line="63" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reducer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/reducer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#51#89#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="upload.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/actions/upload.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1700">
-              <caret line="217" column="2" selection-start-line="217" selection-start-column="2" selection-end-line="217" selection-end-column="2" />
-              <folding>
-                <element signature="e#0#46#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parser.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dataParsers/parser.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="37" selection-start-line="10" selection-end-line="37" />
-              <folding>
-                <element signature="e#51#134#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stageActions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/store/actions/stageActions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-917" />
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -167,239 +116,11 @@
       </map>
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/components/Constructions/CloudDocument.js" />
-        <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/layerComponent.js" />
-        <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/layersComponent.js" />
-        <option value="$PROJECT_DIR$/src/store/actions/cloudStorageActions.js" />
-        <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/labelComponent.js" />
-        <option value="$PROJECT_DIR$/src/store/reducers/measureShapesTool.js" />
-        <option value="$PROJECT_DIR$/node_modules/@flatten-js/core/index.js" />
-        <option value="$PROJECT_DIR$/src/models/collisionDistance.js" />
-        <option value="$PROJECT_DIR$/src/models/job.js" />
-        <option value="$PROJECT_DIR$/src/models/layer.js" />
-        <option value="$PROJECT_DIR$/src/dataParsers/parseCSV.js" />
-        <option value="$PROJECT_DIR$/src/dataParsers/parseJSON.js" />
-        <option value="$PROJECT_DIR$/src/models/stage.js" />
-        <option value="$PROJECT_DIR$/src/dataParsers/parserODB.js" />
-        <option value="$PROJECT_DIR$/src/middleware/skeleton_recognition.js" />
-        <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/shapeComponent.js" />
-        <option value="$PROJECT_DIR$/src/models/graphics.js" />
-        <option value="$PROJECT_DIR$/src/models/polygonOffset.js" />
-        <option value="$PROJECT_DIR$/src/dataParsers/parser.js" />
-        <option value="$PROJECT_DIR$/src/dataParsers/parserXML.js" />
-        <option value="$PROJECT_DIR$/src/components/Layout/HeaderComponent/HeaderComponent.module.css" />
-        <option value="$PROJECT_DIR$/src/components/Layout/HeaderComponent/HeaderComponent.js" />
-        <option value="$PROJECT_DIR$/src/App.css" />
-        <option value="$PROJECT_DIR$/src/components/MainComponent/ToolbarComponent/ToolbarComponent.js" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/components/AboutPopup/AboutPopup.js" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/AppBody.js" />
-        <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/imageComponent.js" />
-        <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/verticesLayerComponent.js" />
-        <option value="$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/LabelsLayerComponent/labelsLayerComponent.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/components/LayersList/LayerListElement/LayerListElement.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/components/UI/SnackbarRoot.js" />
-        <option value="$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css" />
-        <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/components/Constructions/Demo.js" />
-        <option value="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.module.css" />
-        <option value="$PROJECT_DIR$/src/store/reducers/app.js" />
-        <option value="$PROJECT_DIR$/src/middleware/readFiles.js" />
-        <option value="$PROJECT_DIR$/src/store/actions/appActions.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" />
-        <option value="$PROJECT_DIR$/src/store/reducer.js" />
-        <option value="$PROJECT_DIR$/src/store/actionTypes.js" />
-        <option value="$PROJECT_DIR$/src/store/actions/upload.js" />
-        <option value="$PROJECT_DIR$/src/store/reducers/upload.js" />
-        <option value="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css" />
-        <option value="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.js" />
-        <option value="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" />
-      </list>
-    </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="36" />
-    <option name="y" value="49" />
-    <option name="width" value="1237" />
-    <option name="height" value="656" />
-  </component>
+  <component name="ProjectId" id="1eDNN8lBCivJaEwQJQjq90OCKlS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="AboutPopup" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Constructions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="DownloadPopup" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="Button" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="ModalPopup" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="Snackbar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="UploadPopup" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="LayerList" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="MainComponent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dataParsers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="middleware" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="debug-viewer1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="debug-viewer1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -407,15 +128,19 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/models" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="node.js.selected.package.prettier" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -433,134 +158,8 @@
       <recent name="C:\Users\Alex Bol\WebstormProjects\debug-viewer1\src\components\Layout\HeaderComponent" />
     </key>
   </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.gitignore</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/package-lock.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/LabelsLayerComponent/labelsLayerComponent.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/verticesLayerComponent.js</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="npm.start">
-    <configuration name="build" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -568,8 +167,9 @@
       </scripts>
       <node-interpreter value="project" />
       <envs />
+      <method v="2" />
     </configuration>
-    <configuration name="deploy" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -577,8 +177,9 @@
       </scripts>
       <node-interpreter value="project" />
       <envs />
+      <method v="2" />
     </configuration>
-    <configuration name="start" type="js.build_tools.npm" factoryName="npm" temporary="true" nameIsGenerated="true">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -586,6 +187,7 @@
       </scripts>
       <node-interpreter value="project" />
       <envs />
+      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="npm.start" />
@@ -594,12 +196,13 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.deploy" />
-        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -650,6 +253,17 @@
       <workItem from="1555243406611" duration="6997000" />
       <workItem from="1555312633135" duration="1869000" />
       <workItem from="1555565298065" duration="1812000" />
+      <workItem from="1572464799326" duration="587000" />
+      <workItem from="1573215338306" duration="495000" />
+      <workItem from="1573572364590" duration="39000" />
+      <workItem from="1575571732478" duration="1567000" />
+      <workItem from="1593852164716" duration="3550000" />
+      <workItem from="1594110106900" duration="792000" />
+      <workItem from="1596632777392" duration="752000" />
+      <workItem from="1596804778614" duration="13000" />
+      <workItem from="1604678386930" duration="651000" />
+      <workItem from="1604731429006" duration="8201000" />
+      <workItem from="1626525828200" duration="4133000" />
     </task>
     <task id="LOCAL-00001" summary="Added route /boolean-test, refactoring">
       <created>1539784239144</created>
@@ -924,11 +538,15 @@
       <option name="project" value="LOCAL" />
       <updated>1558183959549</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="- Remove timers from snackbar">
+      <created>1558193427166</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1558193427166</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="435004000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -939,46 +557,10 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="36" y="49" width="1237" height="656" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.59266055" visible="true" weight="0.359375" />
-      <window_info anchor="bottom" id="TODO" order="5" weight="0.32942554" />
-      <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.3286219" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3558394" />
-      <window_info active="true" anchor="bottom" x="241" y="732" width="1622" height="198" id="Run" order="10" sideWeight="0.5049342" side_tool="true" visible="true" weight="0.34758365" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4975329" weight="0.52230483" />
-      <window_info id="Structure" order="1" sideWeight="0.40733945" side_tool="true" weight="0.36569038" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49506578" visible="true" weight="0.34758365" />
-      <window_info anchor="bottom" id="Debug" order="2" sideWeight="0.49874476" weight="0.3985375" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
-      <window_info id="npm" order="2" sideWeight="0.26434782" side_tool="true" visible="true" weight="0.36219513" />
-      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.73565215" visible="true" weight="0.27189222" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="5" weight="0.32942554" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49939024" visible="true" weight="0.32511738" />
-      <window_info anchor="bottom" x="241" y="732" width="1622" height="198" id="Run" order="10" sideWeight="0.5021433" side_tool="true" visible="true" weight="0.3297491" />
-      <window_info anchor="bottom" id="Debug" order="2" weight="0.39930555" />
-      <window_info anchor="bottom" id="Messages" order="11" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.3286219" />
-      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4978567" weight="0.3297491" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Clean Current Document button" />
     <MESSAGE value="Implement Delete Document" />
     <MESSAGE value="Implement Document Name" />
     <MESSAGE value="Fix logic of different situation of Edit URL" />
@@ -1003,7 +585,8 @@
     <MESSAGE value="- Paste text into upload buffer replace prompter" />
     <MESSAGE value="- Added snackbar after pasted text" />
     <MESSAGE value="- Complete snackbar with a message &quot;XX new files added&quot;&#10;- Trigger snackbar after all files loaded (Promise.all resolved)&#10;- Removed readFiles from middleware to reducer named &quot;upload&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Complete snackbar with a message &quot;XX new files added&quot;&#10;- Trigger snackbar after all files loaded (Promise.all resolved)&#10;- Removed readFiles from middleware to reducer named &quot;upload&quot;" />
+    <MESSAGE value="- Remove timers from snackbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Remove timers from snackbar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1015,446 +598,5 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/AboutPopup/AboutPopup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/imageComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#51#83#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Preloader.js" />
-    <entry file="file://$PROJECT_DIR$/src/AppBody.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/src/dataParsers/parserXML.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2006">
-          <caret line="120" column="24" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataParsers/parserODB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="94" column="67" selection-start-line="94" selection-start-column="51" selection-end-line="94" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/layersComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/verticesLayerComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/labelComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="5" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/LabelsLayerComponent/labelsLayerComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/verticesComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
-          <folding>
-            <element signature="e#50#76#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/LayersList/LayerEditForm/LayerEditForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-594">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/LayersList/LayerListElement/LayerListElement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="66" column="54" lean-forward="true" selection-start-line="66" selection-start-column="54" selection-end-line="66" selection-end-column="54" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#51#90#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DownloadPopup/DownloadPopup.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="1" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/VertexLabel/VertexLabel.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UI/Modal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" selection-end-line="37" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UI/Button/Button.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UI/ModalPopup/ModalPopup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-958">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UI/ModalPopup/ModalPopup.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/domelements/VertexLabel/VertexLabel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MainComponent/GraphicsComponent/graphics/vertexComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="81" column="24" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UI/SnackbarRoot.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/data/poly1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataParsers/parseTXT.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Constructions/CollisionDemo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-481">
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Constructions/Demo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-            <element signature="e#171#223#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="49" column="27" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/middleware/pasteData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="64" column="34" lean-forward="true" selection-start-line="64" selection-start-column="34" selection-end-line="64" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DownloadPopup/DownloadPopup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-523">
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/LayerList/LayersList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="128" lean-forward="true" selection-start-line="104" selection-end-line="128" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#51#90#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="56" column="60" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#378#414#0" expanded="true" />
-            <element signature="e#631#712#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#419#466#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="191" column="46" selection-start-line="191" selection-start-column="46" selection-end-line="191" selection-end-column="46" />
-          <folding>
-            <element signature="e#51#90#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/middleware/readFiles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="193" column="22" lean-forward="true" selection-start-line="193" selection-start-column="22" selection-end-line="193" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/reducers/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2096">
-          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/stageActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-917" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/cloudStorageActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1419">
-          <caret line="73" column="67" selection-start-line="73" selection-start-column="67" selection-end-line="73" selection-end-column="67" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/appActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="70" column="51" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#51#89#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="217" column="2" selection-start-line="217" selection-start-column="2" selection-end-line="217" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/reducers/upload.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actionTypes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="63" column="63" selection-start-line="63" selection-start-column="63" selection-end-line="63" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataParsers/parser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="37" selection-start-line="10" selection-end-line="37" />
-          <folding>
-            <element signature="e#51#134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="98" column="68" selection-start-line="98" selection-start-column="68" selection-end-line="98" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

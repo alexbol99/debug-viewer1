@@ -2,7 +2,7 @@
  * Created by alexanderbol on 17/04/2017.
  */
 
-import React, {Component} from 'react';
+import {Component} from 'react';
 import ModalPopup from "../../UI/ModalPopup/ModalPopup";
 import LayerEditForm from "../LayerEditForm/LayerEditForm";
 import styles from './LayerListElement.module.css';

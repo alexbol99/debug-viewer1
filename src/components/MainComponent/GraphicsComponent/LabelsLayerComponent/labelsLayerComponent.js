@@ -1,4 +1,3 @@
-import React from 'react';
 import LabelComponent from '../domelements/labelComponent';
 import { connect } from "react-redux";
 

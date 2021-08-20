@@ -1,7 +1,6 @@
 /**
  * Created by alexanderbol on 13/04/2017.
  */
-import React from 'react';
 import { withRouter } from 'react-router-dom';
 import classes from './HeaderComponent.module.css';
 // import Logo from './Logo/Logo';

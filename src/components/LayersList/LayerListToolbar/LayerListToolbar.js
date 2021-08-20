@@ -1,7 +1,6 @@
 /**
  * Created by alexanderbol on 17/04/2017.
  */
-import React from 'react';
 import FontAwesome from 'react-fontawesome';
 
 import styles from './LayerListToolbar.module.css';

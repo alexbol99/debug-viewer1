@@ -1,7 +1,6 @@
 /**
  * Created by alexanderbol on 21/04/2017.
  */
-import React from 'react';
 import {format} from '../models/utils';
 
 const DisplayCoordsTool = ({stage, coordX, coordY, divisor, decimals}) => {

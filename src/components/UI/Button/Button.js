@@ -1,4 +1,3 @@
-import React from 'react';
 import FontAwesome from "react-fontawesome";
 import classes from "./Button.module.css";
 

@@ -1,8 +1,6 @@
 /**
  * Created by alexanderbol on 13/04/2017.
  */
-
-import React from 'react';
 import classes from './AboutPopup.module.css';
 import ModalPopup from "../UI/ModalPopup/ModalPopup";
 
