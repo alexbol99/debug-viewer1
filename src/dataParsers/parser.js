@@ -5,6 +5,7 @@
 import {Point, Segment, Arc, Circle, Box, Polygon, vector} from '@flatten-js/core';
 import Flatten from '@flatten-js/core';
 import {offsetSegment, offsetArc} from "../models/polygonOffset";
+import {parseToFlightaShapes} from "./parseFlighta";
 
 /*
 let debug_str = `
@@ -253,6 +254,12 @@ export class Parser {
         let shapes = [];
         let shape;
         let arrayOfLines = str.match(/[^\r\n]+/g);
+
+        if (arrayOfLines[0].length === 1 && arrayOfLines[0] === "N") {
+            shapes = parseToFlightaShapes(str);
+            return shapes;
+        }
+
         for (let line of arrayOfLines) {
             if (line.search('point_struc') >= 0) {
                 shape = this.parseToPoint(line);
@@ -287,7 +294,7 @@ export class Parser {
             return [polygon];
         }
 
-        /* try array of shapes excluding polygon */
+        /* try array of shapes excluding polygon or array of shapes in "Flighta" format */
         let shapes = this.parseToShapes(str);
         if (shapes.length > 0) {
             return shapes;

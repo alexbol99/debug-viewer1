@@ -6,7 +6,6 @@ import {Component, createRef} from 'react';
 import styles from "./CanvasComponent.module.css";
 import Stage from '../../../models/stage';
 import { connect } from "react-redux";
-// import * as ActionTypes from "../../../store/actionTypes";
 import * as actions from '../../../store/actions/stageActions';
 
 class CanvasComponent extends Component {
@@ -103,19 +102,20 @@ class CanvasComponent extends Component {
         }
     };
 
+    // handlePaste = (event) => {
+    //     let a = event;
+    // }
+
     componentDidMount() {
         let stage = new Stage(this.canvasElement.current);
 
-        // stage.setClearColor("#FFFFFF");
-        // stage.update();
-
         stage.on("stagemousedown", this.handleMouseDown);
         stage.on("stagemousemove", this.handleMouseMove);
-        // stage.on("click", this.handleMouseDown);
         stage.on("stagemouseup", this.handleMouseUp);
         stage.on("mouseleave", this.handleMouseLeave);
         stage.canvas.addEventListener("mousewheel", this.handleMouseWheel, {passive: true});
         stage.canvas.addEventListener("DOMMouseScroll", this.handleMouseWheelFox, {passive: true});
+        // stage.canvas.addEventListener("paste", this.handlePaste);
 
         this.props.registerStage(stage);
     }

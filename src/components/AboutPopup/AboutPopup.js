@@ -15,7 +15,7 @@ const AboutPopup = (props) => {
                 <h2>{props.title} v{props.version}</h2>
 
                 <label>{`Build date: `}</label>
-                <span>April 2019</span>
+                <span>September, 27 2021</span>
                 <br/>
 
                 <label>{`Github depository: `}</label>

@@ -7,7 +7,8 @@ import { parseODB } from "../../dataParsers/parserODB";
 import { parseImage } from "../../dataParsers/parsePGM";
 import { parseCSV } from "../../dataParsers/parseCSV";
 import { parseTXT } from "../../dataParsers/parseTXT";
-import { parseJSON} from "../../dataParsers/parseJSON";
+import { parseJSON } from "../../dataParsers/parseJSON";
+import { parseFlighta } from "../../dataParsers/parseFlighta";
 
 // Closure to capture file information and parameters
 const readAsText = (reader, file, stage, layers, dispatch, files) => {
@@ -33,7 +34,13 @@ const readAsText = (reader, file, stage, layers, dispatch, files) => {
                     job = parseJSON(theFile.name, string);
                 }
                 else {
-                    job = parseODB(theFile.name, string);
+                    let arrayOfLines = string.match(/[^\r\n]+/g);
+                    if (arrayOfLines[0].length === 1 && arrayOfLines[0] === "N") {
+                        job = parseFlighta(theFile.name, string);
+                    }
+                    else {
+                        job = parseODB(theFile.name, string);
+                    }
                 }
                 let layer = Layers.newLayer(stage, layers);
                 if (theFile.name !== "") {
