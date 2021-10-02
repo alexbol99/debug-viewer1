@@ -95,15 +95,15 @@ class UploadPopup extends Component {
 
         if (this.props.uploadCompleted && this.props.uploadedFiles.length > 0) {
             let newFilesNum = this.props.uploadedFiles.length;
-            if (newFilesNum === 1) snackbarMessage = "File uploaded. Added 1 layer";
-            if (newFilesNum > 1) snackbarMessage = `Files uploaded. Added ${newFilesNum} layers`;
+            if (newFilesNum === 1) snackbarMessage = "1 layer added";
+            if (newFilesNum > 1) snackbarMessage = `${newFilesNum} layers added`;
         }
 
         return this.props.showPopup ? (
             <ModalPopup
                 showPopup={this.props.showPopup}
                 closePopup={this.closePopup}
-                header="Upload files"
+                header="Open files"
             >
                 <div className={classes.UploadPopup}>
                     <div className={this.state.dragOver ?
@@ -118,7 +118,7 @@ class UploadPopup extends Component {
                     >
                         {
                             this.state.clipboardData === "" ?
-                                <span>Paste from buffer / Drop files</span> :
+                                <span>Drop files here</span> :
                                 <p style={{width:this.clipboardWindowWidth, height:this.clipboardWindowHeight}}>
                                     {this.state.clipboardData}
                                 </p>
@@ -129,7 +129,7 @@ class UploadPopup extends Component {
                     <h2>or</h2>
 
                     <button onClick={this.openFilesButtonClicked}>
-                        Open local files
+                        Use system Open Dialog
                     </button>
 
                     <input style={{display: "none"}}

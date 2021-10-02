@@ -67,7 +67,7 @@ class MainComponent extends Component {
     clearCurrentDocument = () => {
         this.props.clearCurrentDocument();
         this.props.clearAllLayers();
-        this.props.history.push("/");
+        this.props.history?.push("/");
     };
 
     handleKeyDown = (e) => {
@@ -101,6 +101,13 @@ class MainComponent extends Component {
         }
     };
 
+    handlePaste = (event) => {
+        if (event.currentTarget.activeElement.tagName === 'CANVAS') {
+            event.stopPropagation();
+            this.props.pasteDataFromBuffer(event.clipboardData)
+        }
+    }
+
     componentDidMount() {
         window.onresize = this.props.resizeStage;
         // Keyboard event
@@ -108,6 +115,8 @@ class MainComponent extends Component {
         document.addEventListener('keydown', this.handleKeyDown);
         // var _keyup = _.throttle(this.keyup, 500);
         document.addEventListener('keyup', this.handleKeyUp);
+
+        document.addEventListener('paste', this.handlePaste);
 
         // if (this.props.document.id === undefined) {
         //     this.props.history.push("/");
@@ -160,6 +169,13 @@ class MainComponent extends Component {
                     units={this.props.units}
                     showSkeletonRecognitionButton={this.props.showSkeletonRecognitionButton}
                     // onFileSelected={this.handleFileSelect}
+                    onShowUploadPopupPressed={this.props.toggleUploadPopup}
+
+                    onLayerListButtonClicked={this.props.toggleLayerList}
+                    onSortLayersButtonClicked={this.props.sortLayersList}
+                    onShowDownloadPopupPressed={this.props.toggleDownloadPopup}
+                    onClearAllButtonClicked={this.clearCurrentDocument}
+
                     onHomeButtonPressed={this.setHomeView}
                     onPanByDragPressed={this.props.togglePanByDrag}
                     onMeasurePointsButtonPressed={this.props.toggleMeasureBetweenPoints}
@@ -171,10 +187,6 @@ class MainComponent extends Component {
                     onSkeletonRecognitionButtonPressed={this.props.applySkeletonRecognition}
                     onUnitClicked={this.props.toggleUnits}
                     onSaveDocumentButtonClicked={this.onSaveDocumentButtonClicked}
-                    onClearAllButtonClicked={this.clearCurrentDocument}
-                    onLayerListButtonClicked={this.props.toggleLayerList}
-                    onShowDownloadPopupPressed={this.props.toggleDownloadPopup}
-                    onShowUploadPopupPressed={this.props.toggleUploadPopup}
                 />
 
                 <CanvasComponent />
@@ -275,6 +287,7 @@ const mapDispatchToProps = dispatch => {
         applySkeletonRecognition: () => dispatch(actions.applySkeletonRecognition()),
         pasteDataFromBuffer: (clipboardData) => dispatch(actions.pasteDataFromBuffer(clipboardData)),
 
+        sortLayersList: () => dispatch(layerActions.sortLayers()),
         clearAllLayers: () => dispatch(layerActions.deleteAllLayers()),
 
         addDocumentToDatabase: (payload, layers, history) => dispatch(cloudActions.addDocumentToDatabase(payload, layers, history)),

@@ -16,7 +16,7 @@ class ToolbarComponent extends Component {
         return (
             <div className={classes["App-toolbar"]}>
                 {/*<h4>Toolbar</h4>*/}
-                <Button type="trigger" title="Upload files" iconName='folder-open'
+                <Button type="trigger" title="Open files" iconName='folder-open'
                         onClick={this.props.onShowUploadPopupPressed}
                 />
 
@@ -25,18 +25,25 @@ class ToolbarComponent extends Component {
                        {/*onChange={this.props.onFileSelected}*/}
                 {/*/>*/}
 
-                <Button type="trigger" title="Show/hide layers" iconName='layer-group' onClick={this.props.onLayerListButtonClicked} />
+                <Separator/>
 
-                    {/*<Button type="trigger" title="Save document on cloud" iconName='save'*/}
+                <Button type="trigger" title="Show/hide layers" iconName='layer-group'
+                        onClick={this.props.onLayerListButtonClicked} />
+
+                {/*<Button type="trigger" title="Save document on cloud" iconName='save'*/}
                         {/*onClick={this.props.onSaveDocumentButtonClicked}*/}
                 {/*/>*/}
 
-                <Button type="trigger" title="Delete all layers" iconName='broom'
-                        onClick={this.props.onClearAllButtonClicked}
+                <Button type="trigger" title="Sort layers" iconName='sort-alpha-down'
+                            onClick={this.props.onSortLayersButtonClicked}
                 />
 
                 <Button type="trigger" title="Download layers" iconName='file-download'
                         onClick={this.props.onShowDownloadPopupPressed}
+                />
+
+                <Button type="trigger" title="Delete all layers" iconName='broom'
+                            onClick={this.props.onClearAllButtonClicked}
                 />
 
                 <Separator/>

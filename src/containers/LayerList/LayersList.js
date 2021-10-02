@@ -77,7 +77,7 @@ class LayersList extends Component {
             >
                 {/*<h5>Layers</h5>*/}
                 <LayerListToolbar
-                    onAddLayerButtonClicked={() => this.props.onAddLayerButtonClicked(this.props.stage)}
+                    // onAddLayerButtonClicked={() => this.props.onAddLayerButtonClicked(this.props.stage)}
                     onEditLayerButtonClicked={this.props.onEditLayerButtonClicked}
                     onDeleteLayerButtonClicked={this.props.onDeleteLayerButtonClicked}
                     onSortLayersButtonClicked={this.props.onSortLayersButtonClicked}
@@ -112,10 +112,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onAddLayerButtonClicked: (stage) => dispatch(actions.addEmptyLayer(stage)),
+        // onAddLayerButtonClicked: (stage) => dispatch(actions.addEmptyLayer(stage)),
         onEditLayerButtonClicked: () => dispatch(actions.openAffectedLayerEditForm()),
         onDeleteLayerButtonClicked: () => dispatch(actions.deleteAffectedLayer()),
-        onSortLayersButtonClicked: () => dispatch(actions.sortLayers()),
+        // onSortLayersButtonClicked: () => dispatch(actions.sortLayers()),
         onLayerClicked: (layer) => dispatch(actions.toggleDisplayLayer(layer)),
         onAffectedBoxClicked: (event, layer) => dispatch(actions.toggleAffectedLayer(event, layer)),
         onSubmitLayerEditForm: (newLayer) => dispatch(actions.updateLayer(newLayer)),

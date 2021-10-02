@@ -12,7 +12,8 @@ const HeaderComponent = (props) => {
         classes["App-header"];
     return (
         <header className={style}>
-            <h2>Debug Viewer</h2>
+            {/*<h2>Debug Viewer</h2>*/}
+            <h2>{props.title}</h2>
         </header>
     )
 };

@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="- Remove timers from snackbar">
-      <change afterPath="$PROJECT_DIR$/src/dataParsers/parseFlighta.js" afterDir="false" />
+    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/AboutPopup/AboutPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutPopup/AboutPopup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/CanvasComponent/CanvasComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/CanvasComponent/CanvasComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataParsers/parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataParsers/parser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/upload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LayersList/LayerListToolbar/LayerListToolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LayersList/LayerListToolbar/LayerListToolbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout/HeaderComponent/HeaderComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/HeaderComponent/HeaderComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/ToolbarComponent/ToolbarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/ToolbarComponent/ToolbarComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/LayerList/LayersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LayerList/LayersList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +235,7 @@
       <workItem from="1626525828200" duration="4133000" />
       <workItem from="1632234668304" duration="1670000" />
       <workItem from="1632238459459" duration="594000" />
-      <workItem from="1632674303097" duration="6192000" />
+      <workItem from="1632674303097" duration="13929000" />
     </task>
     <task id="LOCAL-00001" summary="Added route /boolean-test, refactoring">
       <created>1539784239144</created>
@@ -514,7 +517,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558193427166</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="- Support &quot;Flighta&quot; format : paste buffer and upload file&#10;- Release v2.1.1">
+      <created>1632748294357</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1632748294357</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TodoView">
@@ -530,7 +540,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implement Delete Document" />
     <MESSAGE value="Implement Document Name" />
     <MESSAGE value="Fix logic of different situation of Edit URL" />
     <MESSAGE value="Fixed bug: Home button does not trigger reloading (fixed by forceReload)" />
@@ -555,7 +564,8 @@
     <MESSAGE value="- Added snackbar after pasted text" />
     <MESSAGE value="- Complete snackbar with a message &quot;XX new files added&quot;&#10;- Trigger snackbar after all files loaded (Promise.all resolved)&#10;- Removed readFiles from middleware to reducer named &quot;upload&quot;" />
     <MESSAGE value="- Remove timers from snackbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Remove timers from snackbar" />
+    <MESSAGE value="- Support &quot;Flighta&quot; format : paste buffer and upload file&#10;- Release v2.1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Support &quot;Flighta&quot; format : paste buffer and upload file&#10;- Release v2.1.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
