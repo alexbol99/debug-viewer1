@@ -33,6 +33,9 @@ const readAsText = (reader, file, stage, layers, dispatch, files) => {
                 else if (extension === 'json') {
                     job = parseJSON(theFile.name, string);
                 }
+                else if (extension === 'cdbg') {
+                    job = parseFlighta(theFile.name, string);
+                }
                 else {
                     let arrayOfLines = string.match(/[^\r\n]+/g);
                     if (arrayOfLines[0].length === 1 && arrayOfLines[0] === "N") {
@@ -173,7 +176,7 @@ const readFile = (file, stage, layers, dispatch, files) => {
 
     let reader = new FileReader();
 
-    if (file.type.match('text.*') || file.type.match('application.*') || file.name.match('features*')) {
+    if (file.type.match('text.*') || file.type.match('application.*') || file.name.match('features*') || file.name.includes('.cdbg')) {
         return readAsText(reader, file, stage, layers, dispatch, files);
     }
 

@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="">
+    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="- Complete snackbar with a message &quot;XX new files added&quot;&#10;- Trigger snackbar after all files loaded (Promise.all resolved)&#10;- Removed readFiles from middleware to reducer named &quot;upload&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AboutPopup/AboutPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutPopup/AboutPopup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LayersList/LayerListToolbar/LayerListToolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LayersList/LayerListToolbar/LayerListToolbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/HeaderComponent/HeaderComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout/HeaderComponent/HeaderComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainComponent/ToolbarComponent/ToolbarComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainComponent/ToolbarComponent/ToolbarComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UploadPopup/UploadPopup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/LayerList/LayersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LayerList/LayersList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LayerList/LayersList.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MainComponent/MainComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/Snackbar/Snackbar.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/upload.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -538,6 +532,18 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Implement Document Name" />
