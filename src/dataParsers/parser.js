@@ -63,7 +63,7 @@ export class Parser {
         let x, y;
         // try to parse format: {p=7496986,-4460045}
         x = parseInt(parenth.split('=')[1].split(',')[0],10);
-        y = parseInt(parenth.split('=')[1].split(',')[0],10);
+        y = parseInt(parenth.split('=')[1].split(',')[1],10);
         if (isNaN(x) || isNaN(y)) {
             // try to parse format: {x=7169200 y=3521200 }
             x = parseInt(parenth.trim().split(' ')[0].split('=')[1],10);
