@@ -118,18 +118,21 @@ const app = (state = defaultAppState, action) => {
         //     });
 
         case ActionTypes.PAN_BY_DRAG_BUTTON_CLICKED:
-            return Object.assign({}, state, {
+            return {
+                ...state,
                 measurePointsActive: false
-            });
+            };
 
         case ActionTypes.MEASURE_POINTS_BUTTON_PRESSED:
-            return Object.assign({}, state, {
+            return {
+                ...state,
                 measurePointsActive: true
-            });
+            };
         case ActionTypes.MEASURE_SHAPES_BUTTON_PRESSED:
-            return Object.assign({}, state, {
+            return {
+                ...state,
                 measurePointsActive: false
-            });
+            };
         case ActionTypes.SKELETON_RECOGNITION_URI:
             return Object.assign({}, state, {
                 showSkeletonRecognitionButton: true

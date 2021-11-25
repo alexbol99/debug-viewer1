@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="- Allow open files with extension &quot;.cdbg&quot;">
+    <list default="true" id="2cd99ee9-f046-4a99-bb8c-737c1bec903d" name="Default Changelist" comment="- Fix bug with parsing point in format &quot;p=x,y&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataParsers/parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataParsers/parser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,9 +156,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
-        <item itemvalue="npm.deploy" />
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +229,9 @@
       <workItem from="1632674303097" duration="13929000" />
       <workItem from="1633349894469" duration="596000" />
       <workItem from="1633588123941" duration="12000" />
-      <workItem from="1633955814409" duration="657000" />
+      <workItem from="1633955814409" duration="1392000" />
+      <workItem from="1637765175408" duration="1855000" />
+      <workItem from="1637822476672" duration="2174000" />
     </task>
     <task id="LOCAL-00001" summary="Added route /boolean-test, refactoring">
       <created>1539784239144</created>
@@ -525,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633274513887</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="- Fix bug with parsing point in format &quot;p=x,y&quot;">
+      <created>1634134292232</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1634134292232</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TodoView">
@@ -553,7 +562,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix logic of different situation of Edit URL" />
     <MESSAGE value="Fixed bug: Home button does not trigger reloading (fixed by forceReload)" />
     <MESSAGE value="Implement authentication (Sign Up, Login, Logout, Username, filtered fetch)" />
     <MESSAGE value="- Fix bug with shape to shape measurement on mobile&#10;- Extend media max-width to catch iphone (from 360 to 415)&#10;- Remove share button in desktop mode, mobile only&#10;- Keep menu in row on mobile" />
@@ -578,7 +586,8 @@
     <MESSAGE value="- Remove timers from snackbar" />
     <MESSAGE value="- Support &quot;Flighta&quot; format : paste buffer and upload file&#10;- Release v2.1.1" />
     <MESSAGE value="- Allow open files with extension &quot;.cdbg&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Allow open files with extension &quot;.cdbg&quot;" />
+    <MESSAGE value="- Fix bug with parsing point in format &quot;p=x,y&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Fix bug with parsing point in format &quot;p=x,y&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
