@@ -196,7 +196,12 @@ class MainComponent extends Component {
                         stage={this.props.stage}
                         onStageUnmounted={this.props.destroyStage}
                     >
-                        <LayersComponent layers={this.props.layers}/>
+                        <LayersComponent
+                            layers={this.props.layers}
+                            widthOn={this.props.widthOn}
+                            displayVertices={this.props.displayVertices}
+                            zoomFactor={this.props.zoomFactor}
+                        />
 
                         {displayCoordsTool}
                         {measurePointsTool}

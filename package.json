@@ -1,6 +1,6 @@
 {
   "name": "debug-viewer1",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "private": true,
   "dependencies": {
     "@createjs/easeljs": "^2.0.0-beta.4",
