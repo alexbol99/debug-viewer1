@@ -1,28 +1,15 @@
-import {Component} from 'react';
-import SnackbarRoot from '../SnackbarRoot';
 import classes from './Snackbar.module.css';
+import ReactDOM from "react-dom";
 
-class Snackbar extends Component {
-    state = {
-        display: true
-    };
-
-    animationEndHandler() {
-        this.setState({
-            display: false
-        });
-        this.props.onAnimationEnd();
-    }
-
-    render() {
-        return ( this.state.display ?
-            <SnackbarRoot>
-                <div className={classes.Snackbar} onAnimationEnd={this.props.onAnimationEnd}>
-                    <h3>{this.props.message}</h3>
-                </div>
-            </SnackbarRoot> : null
-        )
-    }
+const Snackbar = ({message, onAnimationEnd}) => {
+    return ReactDOM.createPortal(
+        // Any valid React child: JSX, strings, arrays, etc.
+        <div className={classes.Snackbar} onAnimationEnd={onAnimationEnd}>
+            <h3>{message}</h3>
+        </div>,
+        // A DOM element
+        document.getElementById('snackbar-root'),
+    );
 }
 
 export default Snackbar;

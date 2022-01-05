@@ -1,80 +1,77 @@
-import {Component} from 'react';
+import {useEffect, useRef} from 'react';
 import Modal from '../Modal';
 import classes from './ModalPopup.module.css';
 
-class ModalPopup extends Component {
-    offsetX;
-    offsetY;
-    dragX;
-    dragY;
+const BackDrop = (props) => {
+    const backDropRef = useRef();
 
-    onBackDropClicked = (ev) => {
-        if (ev.target.id === "backDrop") {
-            this.props.closePopup();
+    const onBackDropClicked = (ev) => {
+        if (ev.target === backDropRef.current) {
+            props.closePopup();
         }
     };
 
-    handleKeyDown = (ev) => {
-        if (ev.code === "Escape") {
-            this.props.closePopup();
-        }
-    };
+    return <div ref={backDropRef} className={classes.BackDrop} onClick={onBackDropClicked}>
+        {props.children}
+    </div>
+}
 
-    elementDrag = (ev) => {
+const ModalPopup = (props) => {
+    let offsetX;
+    let offsetY;
+    let dragX;
+    let dragY;
+
+    const elementDrag = (ev) => {
         ev = ev || window.event;
         // calculate the new cursor position:
-        this.offsetX = this.dragX - ev.clientX;
-        this.offsetY = this.dragY - ev.clientY;
-        this.dragX = ev.clientX;
-        this.dragY = ev.clientY;
+        offsetX = dragX - ev.clientX;
+        offsetY = dragY - ev.clientY;
+        dragX = ev.clientX;
+        dragY = ev.clientY;
         // set the element's new position:
         let element = ev.target;
-        element.style.top = (element.offsetTop - this.offsetY) + "px";
-        element.style.left = (element.offsetLeft - this.offsetX) + "px";
+        element.style.top = (element.offsetTop - offsetY) + "px";
+        element.style.left = (element.offsetLeft - offsetX) + "px";
     };
 
-    closeDragElement = (ev) => {
+    const closeDragElement = (ev) => {
         /* stop moving when mouse button is released:*/
         ev.target.onmouseup = null;
         ev.target.onmousemove = null;
     };
 
-    dragMouseDown = (ev) => {
+    const dragMouseDown = (ev) => {
         ev = ev || window.event;
         // get the mouse cursor position at startup:
-        this.dragX = ev.clientX;
-        this.dragY = ev.clientY;
-        ev.target.onmouseup = this.closeDragElement;
+        dragX = ev.clientX;
+        dragY = ev.clientY;
+        ev.target.onmouseup = closeDragElement;
         // call a function whenever the cursor moves:
-        ev.target.onmousemove = this.elementDrag;
+        ev.target.onmousemove = elementDrag;
     };
 
-    componentDidMount() {
-        document.addEventListener('keydown', this.handleKeyDown);
-    }
+    useEffect( () => {
+        const handleKeyDown = (ev) => {
+            if (ev.code === "Escape") {
+                props.closePopup();
+            }
+        };
 
-    componentWillUnmount() {
-        document.removeEventListener('keydown', this.handleKeyDown);
-    }
+        document.addEventListener('keydown', handleKeyDown);
+        return () => document.removeEventListener('keydown', handleKeyDown);
+    }, [props])
 
-    render() {
-        return this.props.showPopup ? (
-            <Modal>
-                <div
-                    id="backDrop"
-                    className={classes.BackDrop}
-                    onClick={this.onBackDropClicked}
-                >
-                    <div className={classes.ModalPopup}
-                         onMouseDown={this.dragMouseDown}
-                    >
-                        <header>{this.props.header}</header>
-                        {this.props.children}
-                    </div>
+    return props.showPopup && (
+        <Modal>
+            <BackDrop closePopup={props.closePopup}>
+                <div className={classes.ModalPopup} onMouseDown={dragMouseDown}>
+                    <header>{props.header}</header>
+                    {props.children}
                 </div>
-            </Modal>
-        ) : null;
-    }
+            </BackDrop>
+        </Modal>
+    )
 }
 
 export default ModalPopup;

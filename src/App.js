@@ -22,6 +22,10 @@ import * as authActions from "./store/actions/auth";
 class App extends Component {
     componentDidMount() {
         this.props.authCheckState();
+        window.addEventListener('beforeunload', function (e) {
+            e.preventDefault();
+            e.returnValue = '';
+        });
     }
     componentDidUpdate() {
         if (this.props.location.pathname === '/' && this.props.document.id !== undefined) {
