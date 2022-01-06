@@ -2,21 +2,22 @@
  * Created by alexanderbol on 13/04/2017.
  */
 import styles from './LayerEditForm.module.css';
+import {useEffect, useRef} from "react";
 
 const LayerEditForm = (props) => {
+    const layerNameRef = useRef();
+    const layerTitleRef = useRef();
+
     let onSubmitLayerEditForm = (ev) => {
         if (!ev)
-            return false;
+            return;
         ev.stopPropagation();
         ev.preventDefault();
-        let name = ev.currentTarget[0].value;
-        let title = ev.currentTarget[1].value;
-        let newLayer = Object.assign({}, props.layer, {
-            name: name,
-            title: title
-        });
+        const name = layerNameRef.current.value.trim();
+        let title = layerTitleRef.current.value.trim();
+        let newLayer = { ...props.layer, name: name, title: title};
         props.onSubmitLayerEditForm(newLayer);
-        return false;
+        return;
     };
 
     let setFocus = (ev) => {
@@ -32,22 +33,24 @@ const LayerEditForm = (props) => {
         ev.stopPropagation();
     };
 
+    useEffect( () => {
+        layerNameRef.current.focus();
+    },[layerNameRef])
+
     return (
         <form className={styles["Layer-edit-form"]}
-              id="layerEditForm"
-              action=""
               onSubmit={onSubmitLayerEditForm}
               onMouseMove={onMouseMoveHandler}
         >
             <article>
-            <label>Name:</label>
-            <input type="text" id="layer-name" name="layerName" defaultValue={props.layer.name}
-                   onClick={setFocus}  />
+                <label htmlFor="layerName">Name:</label>
+                <input type="text" id="layerName" ref={layerNameRef} defaultValue={props.layer.name}
+                       onClick={setFocus}/>
             </article>
             <article>
-            <label>Description:</label>
-            <textarea id="layer-title" name="layerTitle" cols="70" rows="3" defaultValue={props.layer.title}
-                      onClick={setFocus}>
+
+                <textarea id="layerTitle" ref={layerTitleRef} cols="70" rows="3" defaultValue={props.layer.title}
+                          onClick={setFocus}>
             </textarea>
             </article>
             <input type="submit" style={{display:"none"}}/>
